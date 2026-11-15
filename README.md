@@ -1,4 +1,4 @@
-# Theory of the One · CRAM
+# Theory of the One 
 
 **Configurable Residue Arithmetic Machines**  
 Anthony Diaz (Acid) · Research repository
