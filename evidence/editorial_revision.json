@@ -2,8 +2,9 @@
   "date": "2026-11-15",
   "reason": "Author-directed framing: Euclid text, explicit consequences, Theory of the One, CRAM realization",
   "manuscript_before_sha256": "c6bd344913dbe9bc26e0c69302854aa690c91c93ce13d4b419f17023a18ed7be",
-  "manuscript_after_sha256": "4f53ef0dcec93e0a79e57c9517e86764102a4342a4aa2ddce29e5a71c951c7e6",
+  "manuscript_after_sha256": "df3d883931daf402e4a6ab3ea281642786d7ac40efc50c384cd1159541e6885b",
   "source_appendices_unchanged": true,
   "mathematical_code_changed": false,
-  "original_packet_checksum_file": "historical/theory_packet_original_SHA256SUMS.txt"
+  "original_packet_checksum_file": "historical/theory_packet_original_SHA256SUMS.txt",
+  "source_citation_cleanup": "An owner-only working-notes link is represented by its bibliographic title in the public manuscript."
 }

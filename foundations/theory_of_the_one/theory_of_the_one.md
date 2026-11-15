@@ -913,4 +913,4 @@ The Acidlabz account connection authenticated but exposed no installed accounts 
 
 **[R10] Skyelabz210/MANA-definitive.** [Observed README](https://github.com/Skyelabz210/MANA-definitive/blob/02d00576eca6a7ac8f8e38851f604f3855fc6e4b/README.md). The specific MANA anchor connection is recorded in the NINE65 implementation inventory [R4].
 
-**[N1] Author’s working notes.** [acts.md](https://chatgpt.com/library?file_id=libfile_aa735481ec008191af4260cf518348b2&account_id=personal), version available 9 November 2026. Used as research lineage and for the explicitly corrected 500/7 example; older architecture variants are not substituted for current contracts.
+**[N1] Author’s working notes.** acts.md (author-supplied source, retained separately), version available 9 November 2026. Used as research lineage and for the explicitly corrected 500/7 example; older architecture variants are not substituted for current contracts.
