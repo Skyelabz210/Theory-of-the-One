@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.lake/
+target/
+*.olean
+*.ilean
+.env
+.env.*
+!.env.example

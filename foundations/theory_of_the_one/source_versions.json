@@ -1,0 +1,71 @@
+{
+  "research_date": "2026-11-11",
+  "scope": "41 repositories discovered; focused source inspection of nine listed repositories. No repository tests, CI or Lean builds run in this research task. Mathematical checker execution is separate.",
+  "repositories": [
+    {
+      "repository": "Skyelabz210/NINE65_v7",
+      "branch": "main",
+      "commit": "5481a1bec7c2c34e28b067d8365450d95b090753",
+      "thesis_role": "Current integration contract, multiple implementation routes, application integration",
+      "commit_url": "https://github.com/Skyelabz210/NINE65_v7/commit/5481a1bec7c2c34e28b067d8365450d95b090753"
+    },
+    {
+      "repository": "Skyelabz210/NINE65-Rust-Guide",
+      "branch": "main",
+      "commit": "ebe062ce33e196fb79f30138f38665186a0e774e",
+      "thesis_role": "Older exposition; subordinate to current source",
+      "commit_url": "https://github.com/Skyelabz210/NINE65-Rust-Guide/commit/ebe062ce33e196fb79f30138f38665186a0e774e"
+    },
+    {
+      "repository": "Skyelabz210/cram-substrate",
+      "branch": "main",
+      "commit": "c9148ba65f80cfd2b3873d2d1b6b336f829a4137",
+      "thesis_role": "Compact current executable model, magnitude on demand, bounded transduction, proof sketches",
+      "commit_url": "https://github.com/Skyelabz210/cram-substrate/commit/c9148ba65f80cfd2b3873d2d1b6b336f829a4137"
+    },
+    {
+      "repository": "Skyelabz210/dccms",
+      "branch": "main",
+      "commit": "40a76158970c41440ec7e4c10437fa1c2e271d03",
+      "thesis_role": "Owner's archeo-mathematical hypothesis and explicit evidence register",
+      "commit_url": "https://github.com/Skyelabz210/dccms/commit/40a76158970c41440ec7e4c10437fa1c2e271d03"
+    },
+    {
+      "repository": "Skyelabz210/k-elimination-lean4",
+      "branch": "main",
+      "commit": "7cae414c0c33a36774cdf9793a0fa7d279b69634",
+      "thesis_role": "Standalone formal source for bounded winding recovery",
+      "commit_url": "https://github.com/Skyelabz210/k-elimination-lean4/commit/7cae414c0c33a36774cdf9793a0fa7d279b69634"
+    },
+    {
+      "repository": "Skyelabz210/QMNF_System",
+      "branch": "master",
+      "commit": "82b47141236fb8551c8de14ac23655a77f47bf14",
+      "thesis_role": "Earlier PLMG / dual-manifold lineage; unfinished formal files must not be promoted",
+      "commit_url": "https://github.com/Skyelabz210/QMNF_System/commit/82b47141236fb8551c8de14ac23655a77f47bf14"
+    },
+    {
+      "repository": "Skyelabz210/NS-Regularity",
+      "branch": "main",
+      "commit": "bcc3587be16241295a85beceb7b15f006079169a",
+      "thesis_role": "Finite exact-arithmetic conservation application; continuum bridge separate",
+      "commit_url": "https://github.com/Skyelabz210/NS-Regularity/commit/bcc3587be16241295a85beceb7b15f006079169a"
+    },
+    {
+      "repository": "Skyelabz210/MANA-definitive",
+      "branch": "main",
+      "commit": "02d00576eca6a7ac8f8e38851f604f3855fc6e4b",
+      "thesis_role": "Historical NINE65/MANA lineage, broad README claims not independently validated",
+      "commit_url": "https://github.com/Skyelabz210/MANA-definitive/commit/02d00576eca6a7ac8f8e38851f604f3855fc6e4b"
+    },
+    {
+      "repository": "Skyelabz210/cram-dsp",
+      "branch": "main",
+      "commit": "39fbe1ccdd0a31f3cb43cc97982fa196ed5c2b3b",
+      "thesis_role": "Image/signal application, exact banding versus physical-layer interpretation",
+      "commit_url": "https://github.com/Skyelabz210/cram-dsp/commit/39fbe1ccdd0a31f3cb43cc97982fa196ed5c2b3b"
+    }
+  ],
+  "citations": "Exact source-file URLs and standard literature appear in Appendix D of the manuscript.",
+  "access_limit": "Acidlabz authenticated but no installed accounts or accessible repositories were returned; this does not imply no projects exist."
+}

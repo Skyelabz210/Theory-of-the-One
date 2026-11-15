@@ -1,0 +1,901 @@
+{
+  "provenance": "Modern explanatory illustrations created for Theory of the One; not ancient diagrams.",
+  "calculation_policy": "All counts, residues, quotients, and capacities are exact integers. Noninteger values occur only in display geometry.",
+  "figures": {
+    "compatible_residue_grids": {
+      "panels": [
+        {
+          "moduli": [
+            3,
+            5
+          ],
+          "gcd": 1,
+          "product_cells": 15,
+          "lcm_period": 15,
+          "compatible_cells_drawn": 15,
+          "incompatible_cells_drawn": 0,
+          "canonical_integer_labels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "moduli": [
+            6,
+            10
+          ],
+          "gcd": 2,
+          "product_cells": 60,
+          "lcm_period": 30,
+          "compatible_cells_drawn": 30,
+          "incompatible_cells_drawn": 30,
+          "canonical_integer_labels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29
+          ]
+        }
+      ]
+    },
+    "phase_recovery_36_37": {
+      "M": 36,
+      "A": 37,
+      "source_x": 1001,
+      "source_range_lower": 0,
+      "source_range_upper_exclusive": 1332,
+      "r_M": 29,
+      "r_A": 2,
+      "derived_K": 27,
+      "target_modulus": 11,
+      "target_reduced_operands": [
+        7,
+        3,
+        5
+      ],
+      "target_integer_sum_before_mod": 22,
+      "target_residue": 0,
+      "identity_check": true
+    },
+    "euclid_plate_01": {
+      "definitions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "unit_circles_drawn": 28,
+      "numbering_preserved": true
+    },
+    "euclid_plate_02": {
+      "definitions": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "unit_circles_drawn": 37,
+      "numbering_preserved": true
+    },
+    "euclid_plate_03": {
+      "definitions": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "unit_circles_drawn": 45,
+      "numbering_preserved": true
+    },
+    "euclid_plate_04": {
+      "definitions": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "unit_circles_drawn": 48,
+      "numbering_preserved": true
+    },
+    "euclid_plate_05": {
+      "definitions": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "unit_circles_drawn": 75,
+      "numbering_preserved": true
+    },
+    "euclid_plate_06": {
+      "definitions": [
+        21,
+        22
+      ],
+      "unit_circles_drawn": 36,
+      "numbering_preserved": true
+    }
+  },
+  "euclid_definitions": {
+    "1": {
+      "unit_circles_drawn": 1,
+      "expected_units_in_display": 1,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "unit",
+          "units": 1,
+          "rows": 1,
+          "columns": 1,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 1,
+      "remainder_units": 0
+    },
+    "2": {
+      "unit_circles_drawn": 6,
+      "expected_units_in_display": 6,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "number",
+          "units": 6,
+          "rows": 1,
+          "columns": 6,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 6,
+      "remainder_units": 0
+    },
+    "3": {
+      "unit_circles_drawn": 12,
+      "expected_units_in_display": 12,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "measure_1",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "measure_2",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "context"
+        },
+        {
+          "id": "measure_3",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "context"
+        },
+        {
+          "id": "measure_4",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "context"
+        }
+      ],
+      "highlighted_units": 3,
+      "remainder_units": 0
+    },
+    "4": {
+      "unit_circles_drawn": 9,
+      "expected_units_in_display": 9,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "third_1",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "third_2",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "third_3",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "context"
+        }
+      ],
+      "highlighted_units": 6,
+      "remainder_units": 0
+    },
+    "5": {
+      "unit_circles_drawn": 12,
+      "expected_units_in_display": 12,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "measure_1",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "measure_2",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "measure_3",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "measure_4",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 12,
+      "remainder_units": 0
+    },
+    "6": {
+      "unit_circles_drawn": 6,
+      "expected_units_in_display": 6,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "half_1",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "half_2",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 6,
+      "remainder_units": 0
+    },
+    "7": {
+      "unit_circles_drawn": 7,
+      "expected_units_in_display": 7,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "part_1",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "part_2",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "unpaired",
+          "units": 1,
+          "rows": 1,
+          "columns": 1,
+          "role": "remainder"
+        }
+      ],
+      "highlighted_units": 6,
+      "remainder_units": 1
+    },
+    "8": {
+      "unit_circles_drawn": 12,
+      "expected_units_in_display": 12,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "copy_1",
+          "units": 6,
+          "rows": 2,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "copy_2",
+          "units": 6,
+          "rows": 2,
+          "columns": 3,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 12,
+      "remainder_units": 0
+    },
+    "9": {
+      "unit_circles_drawn": 12,
+      "expected_units_in_display": 12,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "copy_1",
+          "units": 4,
+          "rows": 2,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "copy_2",
+          "units": 4,
+          "rows": 2,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "copy_3",
+          "units": 4,
+          "rows": 2,
+          "columns": 2,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 12,
+      "remainder_units": 0
+    },
+    "10": {
+      "unit_circles_drawn": 9,
+      "expected_units_in_display": 9,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "copy_1",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "copy_2",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "copy_3",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 9,
+      "remainder_units": 0
+    },
+    "11": {
+      "unit_circles_drawn": 7,
+      "expected_units_in_display": 7,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "unit_1",
+          "units": 1,
+          "rows": 1,
+          "columns": 1,
+          "role": "main"
+        },
+        {
+          "id": "unit_2",
+          "units": 1,
+          "rows": 1,
+          "columns": 1,
+          "role": "main"
+        },
+        {
+          "id": "unit_3",
+          "units": 1,
+          "rows": 1,
+          "columns": 1,
+          "role": "main"
+        },
+        {
+          "id": "unit_4",
+          "units": 1,
+          "rows": 1,
+          "columns": 1,
+          "role": "main"
+        },
+        {
+          "id": "unit_5",
+          "units": 1,
+          "rows": 1,
+          "columns": 1,
+          "role": "main"
+        },
+        {
+          "id": "unit_6",
+          "units": 1,
+          "rows": 1,
+          "columns": 1,
+          "role": "main"
+        },
+        {
+          "id": "unit_7",
+          "units": 1,
+          "rows": 1,
+          "columns": 1,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 7,
+      "remainder_units": 0
+    },
+    "12": {
+      "unit_circles_drawn": 17,
+      "expected_units_in_display": 17,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "eight_part_1",
+          "units": 4,
+          "rows": 1,
+          "columns": 4,
+          "role": "main"
+        },
+        {
+          "id": "eight_part_2",
+          "units": 4,
+          "rows": 1,
+          "columns": 4,
+          "role": "main"
+        },
+        {
+          "id": "nine_part_1",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "nine_part_2",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "nine_part_3",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 17,
+      "remainder_units": 0
+    },
+    "13": {
+      "unit_circles_drawn": 8,
+      "expected_units_in_display": 8,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "factor_1",
+          "units": 4,
+          "rows": 2,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "factor_2",
+          "units": 4,
+          "rows": 2,
+          "columns": 2,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 8,
+      "remainder_units": 0
+    },
+    "14": {
+      "unit_circles_drawn": 16,
+      "expected_units_in_display": 16,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "six_pair_1",
+          "units": 2,
+          "rows": 1,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "six_pair_2",
+          "units": 2,
+          "rows": 1,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "six_pair_3",
+          "units": 2,
+          "rows": 1,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "ten_pair_1",
+          "units": 2,
+          "rows": 1,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "ten_pair_2",
+          "units": 2,
+          "rows": 1,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "ten_pair_3",
+          "units": 2,
+          "rows": 1,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "ten_pair_4",
+          "units": 2,
+          "rows": 1,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "ten_pair_5",
+          "units": 2,
+          "rows": 1,
+          "columns": 2,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 16,
+      "remainder_units": 0
+    },
+    "15": {
+      "unit_circles_drawn": 12,
+      "expected_units_in_display": 12,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "summand_1",
+          "units": 4,
+          "rows": 2,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "summand_2",
+          "units": 4,
+          "rows": 2,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "summand_3",
+          "units": 4,
+          "rows": 2,
+          "columns": 2,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 12,
+      "remainder_units": 0
+    },
+    "16": {
+      "unit_circles_drawn": 12,
+      "expected_units_in_display": 12,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "plane",
+          "units": 12,
+          "rows": 3,
+          "columns": 4,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 12,
+      "remainder_units": 0
+    },
+    "17": {
+      "unit_circles_drawn": 24,
+      "expected_units_in_display": 24,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "layer_1",
+          "units": 12,
+          "rows": 3,
+          "columns": 4,
+          "role": "main"
+        },
+        {
+          "id": "layer_2",
+          "units": 12,
+          "rows": 3,
+          "columns": 4,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 24,
+      "remainder_units": 0
+    },
+    "18": {
+      "unit_circles_drawn": 9,
+      "expected_units_in_display": 9,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "square",
+          "units": 9,
+          "rows": 3,
+          "columns": 3,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 9,
+      "remainder_units": 0
+    },
+    "19": {
+      "unit_circles_drawn": 27,
+      "expected_units_in_display": 27,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "layer_1",
+          "units": 9,
+          "rows": 3,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "layer_2",
+          "units": 9,
+          "rows": 3,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "layer_3",
+          "units": 9,
+          "rows": 3,
+          "columns": 3,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 27,
+      "remainder_units": 0
+    },
+    "20": {
+      "unit_circles_drawn": 15,
+      "expected_units_in_display": 15,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "first",
+          "units": 2,
+          "rows": 1,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "second",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "third",
+          "units": 4,
+          "rows": 1,
+          "columns": 4,
+          "role": "main"
+        },
+        {
+          "id": "fourth",
+          "units": 6,
+          "rows": 1,
+          "columns": 6,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 15,
+      "remainder_units": 0
+    },
+    "21": {
+      "unit_circles_drawn": 30,
+      "expected_units_in_display": 30,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "small_plane",
+          "units": 6,
+          "rows": 2,
+          "columns": 3,
+          "role": "main"
+        },
+        {
+          "id": "large_plane",
+          "units": 24,
+          "rows": 4,
+          "columns": 6,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 30,
+      "remainder_units": 0
+    },
+    "22": {
+      "unit_circles_drawn": 6,
+      "expected_units_in_display": 6,
+      "count_verified": true,
+      "groups": [
+        {
+          "id": "proper_divisor_1",
+          "units": 1,
+          "rows": 1,
+          "columns": 1,
+          "role": "main"
+        },
+        {
+          "id": "proper_divisor_2",
+          "units": 2,
+          "rows": 1,
+          "columns": 2,
+          "role": "main"
+        },
+        {
+          "id": "proper_divisor_3",
+          "units": 3,
+          "rows": 1,
+          "columns": 3,
+          "role": "main"
+        }
+      ],
+      "highlighted_units": 6,
+      "remainder_units": 0
+    }
+  },
+  "all_euclid_counts_verified": true,
+  "definitions_numbered": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "total_unit_circles_across_euclid_plates": 269,
+  "visual_review": {
+    "reviewed_pngs": [
+      "compatible_residue_grids.png",
+      "euclid_plate_01.png",
+      "euclid_plate_02.png",
+      "euclid_plate_03.png",
+      "euclid_plate_04.png",
+      "euclid_plate_05.png",
+      "euclid_plate_06.png",
+      "phase_recovery_36_37.png"
+    ],
+    "status": "All eight PNGs inspected with view_image. Caption and arrow collisions corrected; all labels and unit counts legible.",
+    "review_scope": "PNG visual inspection; SVG files are generated from the same Matplotlib figures."
+  },
+  "render_dimensions_pixels": {
+    "compatible_residue_grids.png": [
+      2299,
+      2018
+    ],
+    "euclid_plate_01.png": [
+      2666,
+      2245
+    ],
+    "euclid_plate_02.png": [
+      2666,
+      2245
+    ],
+    "euclid_plate_03.png": [
+      2666,
+      2245
+    ],
+    "euclid_plate_04.png": [
+      2666,
+      2245
+    ],
+    "euclid_plate_05.png": [
+      2666,
+      2245
+    ],
+    "euclid_plate_06.png": [
+      2666,
+      1287
+    ],
+    "phase_recovery_36_37.png": [
+      2694,
+      1791
+    ]
+  }
+}
