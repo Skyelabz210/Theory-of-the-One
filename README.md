@@ -1,4 +1,6 @@
-# Theory of the One 
+# Theory of the One — Draft
+
+> **Research draft.** Active coherence review and formal verification. See [evidence status](evidence/STATUS.md) for the scope of checked results.
 
 **Configurable Residue Arithmetic Machines**  
 Anthony Diaz (Acid) · Research repository
@@ -70,4 +72,4 @@ Read [AGENTS.md](AGENTS.md) before changing the project. Preserve integer-only i
 
 Euclid's account of units and measurement is the starting text of Theory of the One. The work develops consequences through explicit definitions and proofs, then realizes them in CRAM's representations and operators. Modern modular arithmetic, CRT and RNS research supply established mathematical context; see [sources](docs/SOURCES.md).
 
-No new open-source license is selected by this publication. Preserve the authorship, citations and any existing license notices of imported material. Original research archives are held separately from this public core.
+No new open-source license is selected by this publication. Preserve the authorship, citations and any existing license notices of imported material. Original research archives are held separately from this research core.
