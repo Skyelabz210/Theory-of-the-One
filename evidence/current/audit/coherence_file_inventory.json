@@ -1,0 +1,374 @@
+{
+  "source_head": "f66b9a74eecf76ce5b4ecc978879b60d17f71df7",
+  "original_file_count": 61,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 76,
+      "sha256": "3edc7d29a5fc534acb8e72ecd57a33f306b34929e33460bbdd44c28095d5289d",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2712,
+      "sha256": "4a6e496d267d52fe7227f410db4488e52c6ef3eb2145c58dd28e5133e2fda195",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "PUBLICATION_SCOPE.md",
+      "bytes": 861,
+      "sha256": "60717e7eedaccbe81bf55dfa98a643445a44cdfc321394145af9abc866822e46",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5065,
+      "sha256": "e924a161960afba7b7c0ea60350f26ae1398b5ed12d6ad2006917e7fff96b8c8",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "docs/APPLICATIONS.md",
+      "bytes": 2339,
+      "sha256": "b175744a9c371a45edef678921880d77d9c22aedc706e3f6785f647c215a0839",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 3340,
+      "sha256": "b2cb914bcd2aa47fddbdb28258d826a613a720cbeac3bf7ff0f5d8239991d974",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "docs/EUCLID_TO_CRAM.md",
+      "bytes": 3970,
+      "sha256": "52df8c66d34ab22d03e361fbc10733cc01c216ccb63c44df084f738d30c0eada",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "docs/FOUNDATIONS.md",
+      "bytes": 3478,
+      "sha256": "3894cbcad6282e1e3b6b7a74e0c8f81183b43a87c8a987a7e06f3967875c45e4",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "bytes": 2127,
+      "sha256": "b2179583089a8a5c293e9e45a9da4eaeb200740edb521e26aac271142f984db7",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "docs/SOURCE_RECONCILIATION.md",
+      "bytes": 2167,
+      "sha256": "bee26a1857777ff49463e83529b151ace95233885804d500e7c78738cb18f65f",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "evidence/PUBLICATION_SHA256SUMS.txt",
+      "bytes": 6471,
+      "sha256": "9f4f1e580209f775613c7cef583d3d497dbdd60ed164e4884b1295ed4d282450",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "evidence/STATUS.md",
+      "bytes": 1414,
+      "sha256": "f81e554746942560418969e1cb321f0b9d5a45d5f2c82571ed24817c06654fa0",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "evidence/current/execution.json",
+      "bytes": 338,
+      "sha256": "2baf025f11d2e1e46f029b65536e4c7b4c7d4f5e88452f32094fa352762800e4",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "evidence/current/reference-check.log",
+      "bytes": 2470,
+      "sha256": "bbd183f4c59014de8d0bb7e027d0757f335226d414914ba8135abe5af0273271",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "evidence/current/residue_core_verification.json",
+      "bytes": 2470,
+      "sha256": "bbd183f4c59014de8d0bb7e027d0757f335226d414914ba8135abe5af0273271",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "evidence/editorial_revision.json",
+      "bytes": 631,
+      "sha256": "df0771fd0ff6cba16f078d442629987a890e93615c858ae6b4e869eeff4d30cc",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "evidence/historical/formal/verification.json",
+      "bytes": 24507,
+      "sha256": "29e8edaca3dc8feda52811a9bb0c10e0b431ab55b6efe35b75fba9493d8c01ab",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "evidence/historical/formal/verification.log",
+      "bytes": 13164,
+      "sha256": "829f49fd61b57f36a5e1ed80a3bc2f78a2920debe25858c212c7e6faf8437a94",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "evidence/historical/theory_packet_original_SHA256SUMS.txt",
+      "bytes": 2152,
+      "sha256": "e335e05afdd80077606ad5441304895f61de3299ae8eb598befb8b43abf4d0ea",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "formal/universal/ClosureSmoke.lean",
+      "bytes": 2187,
+      "sha256": "be184f35cb9c82256e9b55ead4fee6e5ce7e7c8df447f31c538fea74cab2a43e",
+      "review_scope": "Hash/package inventory; semantic proof review delegated to formal reviewer; ClosureSmoke read in full"
+    },
+    {
+      "path": "formal/universal/CostedReadout.lean",
+      "bytes": 5230,
+      "sha256": "2946863aa7d1252b8687f0feb9073f073b4ba769368567cc9ea9cc3987a534d7",
+      "review_scope": "Hash/package inventory; semantic proof review delegated to formal reviewer; ClosureSmoke read in full"
+    },
+    {
+      "path": "formal/universal/CoupledAnchors.lean",
+      "bytes": 11150,
+      "sha256": "4357100f2e4b0632d36c1e16cfcaa5da10fe2285a8029773aa1b2112a8b9e95d",
+      "review_scope": "Hash/package inventory; semantic proof review delegated to formal reviewer; ClosureSmoke read in full"
+    },
+    {
+      "path": "formal/universal/ExactObservation.lean",
+      "bytes": 6074,
+      "sha256": "3e4f0dc07d9ecb189b4b3a7e490d07fad3a0f828e4ad773fa251876263a3f195",
+      "review_scope": "Hash/package inventory; semantic proof review delegated to formal reviewer; ClosureSmoke read in full"
+    },
+    {
+      "path": "formal/universal/IntegerSpecialization.lean",
+      "bytes": 18563,
+      "sha256": "c7788921b59a7244e54d53cf1bda2013e3bacea98b9392b29c67b1fe91a3fa88",
+      "review_scope": "Hash/package inventory; semantic proof review delegated to formal reviewer; ClosureSmoke read in full"
+    },
+    {
+      "path": "formal/universal/README.md",
+      "bytes": 1320,
+      "sha256": "c9d59a67b9b2ac1fb995ea4f9cc167573e8e6cfe935ba7662ec626b372712cf6",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "formal/universal/ReferenceChange.lean",
+      "bytes": 2855,
+      "sha256": "ecd6296ba0e850d03a6cd7093947a0d1803b37f3502c1c77256c8f242711b0e1",
+      "review_scope": "Hash/package inventory; semantic proof review delegated to formal reviewer; ClosureSmoke read in full"
+    },
+    {
+      "path": "formal/universal/ResidueAlgorithms.lean",
+      "bytes": 7247,
+      "sha256": "852030cea0a3404654d2a77f677e35a147efc917be33d26ba85ceb6b6d5b7b67",
+      "review_scope": "Hash/package inventory; semantic proof review delegated to formal reviewer; ClosureSmoke read in full"
+    },
+    {
+      "path": "formal/universal/ResiduePrimitives.lean",
+      "bytes": 7992,
+      "sha256": "61ad481a6dd7e7c9831259416a883a90c8b82162ab326dbc293945425ef9de95",
+      "review_scope": "Hash/package inventory; semantic proof review delegated to formal reviewer; ClosureSmoke read in full"
+    },
+    {
+      "path": "formal/universal/RingReadout.lean",
+      "bytes": 8540,
+      "sha256": "033dc2f2903b7fcffcb7576fcbdfba70dff2cf247b9a9f0d8ce2dd5495d1e67b",
+      "review_scope": "Hash/package inventory; semantic proof review delegated to formal reviewer; ClosureSmoke read in full"
+    },
+    {
+      "path": "formal/universal/StarLift.lean",
+      "bytes": 6186,
+      "sha256": "90947ad64ef314f2e4f07af16a1586f2685ba9e453e74da097b5ea9b44cdde9c",
+      "review_scope": "Hash/package inventory; semantic proof review delegated to formal reviewer; ClosureSmoke read in full"
+    },
+    {
+      "path": "formal/universal/UniversalKElimination.lean",
+      "bytes": 225,
+      "sha256": "0b1ea7311dc2ed7d1259668649e35e63d9ac71a5899f24345bdff4bc1bdbd458",
+      "review_scope": "Hash/package inventory; semantic proof review delegated to formal reviewer; ClosureSmoke read in full"
+    },
+    {
+      "path": "formal/universal/UniversalLift.lean",
+      "bytes": 11114,
+      "sha256": "00da716f76d10806dc86f3d5a4206c380ea8f6b5a99c6d4f788c4053efba2924",
+      "review_scope": "Hash/package inventory; semantic proof review delegated to formal reviewer; ClosureSmoke read in full"
+    },
+    {
+      "path": "formal/universal/check_proofs.py",
+      "bytes": 5811,
+      "sha256": "436f095a353609644ec8144f9f0d7f29a1e01d71a39ed31d6768511e0c5710d2",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "formal/universal/lake-manifest.json",
+      "bytes": 129,
+      "sha256": "cd0fa1eeeeab2f4e5fcb97850d37c871a495349737aa5699113f68bfd08f12e0",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "formal/universal/lakefile.toml",
+      "bytes": 358,
+      "sha256": "85620606b10273014739fcbf1a7ad5a0f3453504dcce75efb4827cb63654bf6a",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "formal/universal/lean-toolchain",
+      "bytes": 29,
+      "sha256": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "foundations/theory_of_the_one/README.txt",
+      "bytes": 2952,
+      "sha256": "1ce2c099ad89219b797b65457ae8eb41de23149910e317deef62f3add9befb07",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "foundations/theory_of_the_one/SHA256SUMS.txt",
+      "bytes": 2152,
+      "sha256": "1ffce41a463181dd59f3c4e92656b9be74bed6de2b8472ba49ca3034471921cd",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "foundations/theory_of_the_one/build_thesis_figures.py",
+      "bytes": 19394,
+      "sha256": "831c8a5c66384b62e887ae56cf7bd9dac4e38c8f04f87a547057071fc04861b6",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/compatible_residue_grids.png",
+      "bytes": 295989,
+      "sha256": "e2d978152f53f8164b43663204efb1e5b04ce33d903378600b4711ce52e5ffe3",
+      "review_scope": "Integrity, PNG byte-for-byte regeneration, direct visual inspection: labels, counts, captions, boundaries and arrows legible; no visible clipping/collisions found"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/compatible_residue_grids.svg",
+      "bytes": 41583,
+      "sha256": "41e503f149ca1cce36585152487d1b1666b9a2ebdb6bc04379e22c2e410a4070",
+      "review_scope": "Integrity, generator derivation, PNG byte-for-byte regeneration, SVG metadata audit; image inspection recorded separately"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/euclid_plate_01.png",
+      "bytes": 222193,
+      "sha256": "405a6b513666663e4bc400b2873956e860ac41ea1107811478cbebafbe18cde9",
+      "review_scope": "Integrity, PNG byte-for-byte regeneration, direct visual inspection: labels, counts, captions, boundaries and arrows legible; no visible clipping/collisions found"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/euclid_plate_01.svg",
+      "bytes": 30103,
+      "sha256": "772ad812267a2388d6df2818b7ee0ba7b8fa950b8b6525981287c402e767cd68",
+      "review_scope": "Integrity, generator derivation, PNG byte-for-byte regeneration, SVG metadata audit; image inspection recorded separately"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/euclid_plate_02.png",
+      "bytes": 225192,
+      "sha256": "3d0de5bc6de9fb82e90c7ab13d5e8f3a57719f42b28d95baa8581abe682252ef",
+      "review_scope": "Integrity, PNG byte-for-byte regeneration, direct visual inspection: labels, counts, captions, boundaries and arrows legible; no visible clipping/collisions found"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/euclid_plate_02.svg",
+      "bytes": 37447,
+      "sha256": "d38054d153e05599fb1c58967f2a29a8303e06e4c666b5a420c4881d6b2972c4",
+      "review_scope": "Integrity, generator derivation, PNG byte-for-byte regeneration, SVG metadata audit; image inspection recorded separately"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/euclid_plate_03.png",
+      "bytes": 251572,
+      "sha256": "55a3fe3fefe7015706879bece10b37eff8b4574491210ad2ba7408f73bab9504",
+      "review_scope": "Integrity, PNG byte-for-byte regeneration, direct visual inspection: labels, counts, captions, boundaries and arrows legible; no visible clipping/collisions found"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/euclid_plate_03.svg",
+      "bytes": 44724,
+      "sha256": "50127c42f9b84b3d010854851c1ae39aee69f612ca9f9f838d23cfea6f061444",
+      "review_scope": "Integrity, generator derivation, PNG byte-for-byte regeneration, SVG metadata audit; image inspection recorded separately"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/euclid_plate_04.png",
+      "bytes": 262369,
+      "sha256": "32b1d1c524411f12f72b0a5641bf5a453b3338e2f88e4fc349a7854b09fe56d4",
+      "review_scope": "Integrity, PNG byte-for-byte regeneration, direct visual inspection: labels, counts, captions, boundaries and arrows legible; no visible clipping/collisions found"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/euclid_plate_04.svg",
+      "bytes": 48175,
+      "sha256": "e74b2bd0d2217d037bdf214aa3601edf449cb4a5db18fda726fa7e16ff496514",
+      "review_scope": "Integrity, generator derivation, PNG byte-for-byte regeneration, SVG metadata audit; image inspection recorded separately"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/euclid_plate_05.png",
+      "bytes": 318039,
+      "sha256": "b99b41cab390c627081644faafe2536e6c67d12d0d4adf042cca578580e70592",
+      "review_scope": "Integrity, PNG byte-for-byte regeneration, direct visual inspection: labels, counts, captions, boundaries and arrows legible; no visible clipping/collisions found"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/euclid_plate_05.svg",
+      "bytes": 70438,
+      "sha256": "b4aa9ddf9a9f511ba1c5a0e83066ed42a17ae8497dbdcc3836d6168dda85ffab",
+      "review_scope": "Integrity, generator derivation, PNG byte-for-byte regeneration, SVG metadata audit; image inspection recorded separately"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/euclid_plate_06.png",
+      "bytes": 180512,
+      "sha256": "6cdfc298d8b439da72df47ffd5809b82256d80739ce2bf6f7311d09174adb67f",
+      "review_scope": "Integrity, PNG byte-for-byte regeneration, direct visual inspection: labels, counts, captions, boundaries and arrows legible; no visible clipping/collisions found"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/euclid_plate_06.svg",
+      "bytes": 36010,
+      "sha256": "186e6b9564858b17110f66153a0e970147c6e197e1bf75e5e9d7e5f8d48e7304",
+      "review_scope": "Integrity, generator derivation, PNG byte-for-byte regeneration, SVG metadata audit; image inspection recorded separately"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/figure_checks.json",
+      "bytes": 18387,
+      "sha256": "9199e72849bf9877a11e66a157c7ed6c7a84d0d40267565d8f78eaa2edfd6880",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/phase_recovery_36_37.png",
+      "bytes": 301206,
+      "sha256": "88c79a9b5d9e13e5db62b1ae17cab9caefca8950b9186404a395c5cb521006e5",
+      "review_scope": "Integrity, PNG byte-for-byte regeneration, direct visual inspection: labels, counts, captions, boundaries and arrows legible; no visible clipping/collisions found"
+    },
+    {
+      "path": "foundations/theory_of_the_one/figures/phase_recovery_36_37.svg",
+      "bytes": 27422,
+      "sha256": "3f22b47e60d3b916c3604b93a6a87d97552ba3e5d306641db48a09df322430cc",
+      "review_scope": "Integrity, generator derivation, PNG byte-for-byte regeneration, SVG metadata audit; image inspection recorded separately"
+    },
+    {
+      "path": "foundations/theory_of_the_one/residue_core_verification.json",
+      "bytes": 2470,
+      "sha256": "bbd183f4c59014de8d0bb7e027d0757f335226d414914ba8135abe5af0273271",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "foundations/theory_of_the_one/source_versions.json",
+      "bytes": 3744,
+      "sha256": "726d398cb5489e88f6e80a97f5cbaccbdba1cc3f2a15404b757ab09c109b64fb",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "foundations/theory_of_the_one/theory_of_the_one.md",
+      "bytes": 70722,
+      "sha256": "df3d883931daf402e4a6ab3ea281642786d7ac40efc50c384cd1159541e6885b",
+      "review_scope": "Full heading/claim scan; methods, source/version, architectural claim, evidence, roadmap and citation sections read; deep proof review delegated to thesis reviewer"
+    },
+    {
+      "path": "foundations/theory_of_the_one/verify_residue_core.py",
+      "bytes": 14882,
+      "sha256": "74e7f299d2a4bc10004d0f20f5c986e2ec2b5258fc4ba20be93e028d570dd270",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    },
+    {
+      "path": "tools/run_reference_checks.py",
+      "bytes": 1684,
+      "sha256": "d4c33c96ae00a05568c99d89c4083af9e9a2d2c20215b463481730debd667654",
+      "review_scope": "Read or parsed in full; independently checked when executable/receipt"
+    }
+  ],
+  "historical_formal_log_matches_json": true,
+  "original_remote_path_set_match": true
+}

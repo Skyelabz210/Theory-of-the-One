@@ -50,6 +50,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--lean", default="lean", help="Pinned Lean executable or elan wrapper")
     args = parser.parse_args()
+    # A failed attempt must not retain a prior success as its current receipt.
+    for name in ("verification.json", "verification.log"):
+        (ROOT / name).unlink(missing_ok=True)
     executable = shutil.which(args.lean)
     if executable is None:
         raise RuntimeError("Lean executable not found: " + args.lean)

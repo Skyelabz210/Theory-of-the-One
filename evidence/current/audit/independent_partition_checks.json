@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "assertions": 341562,
+  "failures": 0,
+  "counts": {
+    "T1_image_size": 83,
+    "T1_compatibility": 5879,
+    "T3_pair_existence": 14161,
+    "T3_signed_class": 40536,
+    "T3_interval": 272897,
+    "T4_partition_iff": 3375,
+    "T8_partition_iff": 3456,
+    "examples": 13,
+    "T13_unique_coordinates": 160,
+    "T13_idempotent": 160,
+    "T13_refinement": 842
+  },
+  "example_checks": {
+    "S6": true,
+    "S8": true,
+    "composite_anchor": true,
+    "combined_period": true,
+    "Dresden_lcm": true,
+    "Dresden_shared": true,
+    "Dresden_shadow": true,
+    "nonprime_unit": true,
+    "phase_1001": true,
+    "phase_1000": true,
+    "phase_alias": true,
+    "shared_factor": true,
+    "notes_500": true
+  },
+  "source_sha256": "1c034d3a153a93ad5a8402294cdd72cba6824ed88bf004247ce134470b21e79a",
+  "scope": "Independent finite partition and boundary checks; not universal proof or production conformance."
+}

@@ -1,0 +1,119 @@
+{
+  "evidence/PUBLICATION_SHA256SUMS.txt": {
+    "entries": 60,
+    "matches": 59,
+    "mismatches": [
+      {
+        "path": "README.md",
+        "matches": false,
+        "expected": "fec1c09793c5c4a7b91494d3aebf19fa609b5a00eca9b644e95df9911065fdef",
+        "actual": "e924a161960afba7b7c0ea60350f26ae1398b5ed12d6ad2006917e7fff96b8c8"
+      }
+    ]
+  },
+  "foundations/theory_of_the_one/SHA256SUMS.txt": {
+    "entries": 23,
+    "matches": 23,
+    "mismatches": []
+  },
+  "evidence/historical/theory_packet_original_SHA256SUMS.txt": {
+    "entries": 23,
+    "matches": 21,
+    "mismatches": [
+      {
+        "path": "README.txt",
+        "matches": false,
+        "expected": "fa2a62d4a9fbba996926af3a98a3e91d9efb2cae944b1851208ba9012623102e",
+        "actual": "1ce2c099ad89219b797b65457ae8eb41de23149910e317deef62f3add9befb07"
+      },
+      {
+        "path": "theory_of_the_one.md",
+        "matches": false,
+        "expected": "c6bd344913dbe9bc26e0c69302854aa690c91c93ce13d4b419f17023a18ed7be",
+        "actual": "df3d883931daf402e4a6ab3ea281642786d7ac40efc50c384cd1159541e6885b"
+      }
+    ]
+  },
+  "formal_historical": {
+    "modules": 11,
+    "theorem_count": 130,
+    "mismatches": []
+  },
+  "json_reports_equal": true,
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "packet_file_count": 24,
+  "svg_figures": [
+    {
+      "file": "euclid_plate_03.svg",
+      "date": [
+        "2026-11-11T14:26:48.697262"
+      ],
+      "creator": [
+        "Matplotlib v3.10.8, https://matplotlib.org/"
+      ]
+    },
+    {
+      "file": "euclid_plate_01.svg",
+      "date": [
+        "2026-11-11T14:26:47.965764"
+      ],
+      "creator": [
+        "Matplotlib v3.10.8, https://matplotlib.org/"
+      ]
+    },
+    {
+      "file": "euclid_plate_04.svg",
+      "date": [
+        "2026-11-11T14:26:49.064478"
+      ],
+      "creator": [
+        "Matplotlib v3.10.8, https://matplotlib.org/"
+      ]
+    },
+    {
+      "file": "euclid_plate_02.svg",
+      "date": [
+        "2026-11-11T14:26:48.327254"
+      ],
+      "creator": [
+        "Matplotlib v3.10.8, https://matplotlib.org/"
+      ]
+    },
+    {
+      "file": "euclid_plate_05.svg",
+      "date": [
+        "2026-11-11T14:26:49.538731"
+      ],
+      "creator": [
+        "Matplotlib v3.10.8, https://matplotlib.org/"
+      ]
+    },
+    {
+      "file": "euclid_plate_06.svg",
+      "date": [
+        "2026-11-11T14:26:49.781951"
+      ],
+      "creator": [
+        "Matplotlib v3.10.8, https://matplotlib.org/"
+      ]
+    },
+    {
+      "file": "compatible_residue_grids.svg",
+      "date": [
+        "2026-11-11T14:26:46.915177"
+      ],
+      "creator": [
+        "Matplotlib v3.10.8, https://matplotlib.org/"
+      ]
+    },
+    {
+      "file": "phase_recovery_36_37.svg",
+      "date": [
+        "2026-11-11T14:26:47.456070"
+      ],
+      "creator": [
+        "Matplotlib v3.10.8, https://matplotlib.org/"
+      ]
+    }
+  ]
+}

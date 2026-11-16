@@ -45,7 +45,7 @@ This repository begins with the foundation and formal source package. Production
 - Standalone Lean source package pinned to `leanprover/lean4:v4.27.0-rc1`.
 - [Source reconciliation](docs/SOURCE_RECONCILIATION.md), publication hashes and separate historical/current evidence.
 
-See [verification status](evidence/STATUS.md) for what was executed for this seed and what remains supplied historical evidence. A successful finite checker, a formal theorem, an integrated implementation, a benchmark and a cryptographic security result each establish different things.
+The [16 November 2026 deep review](docs/reviews/2026-11-16-deep-analysis.md) checked the complete 61-file source snapshot. Fresh pinned Lean verification passed all **130 theorem declarations**; the package build and **1,809 executable comparison/divmod/GCD pairs plus four controls** passed. The integer reference checker passed **821,881 assertions**. See [verification status](evidence/STATUS.md) and the [manuscript-to-Lean coverage map](docs/reviews/2026-11-16-formal-coverage.md) for the exact scope. These results cover the stated arithmetic contracts; application integration and performance have their own evidence requirements.
 
 ## Reproduce
 
@@ -60,9 +60,11 @@ With the pinned Lean compiler installed, rebuild the proof package and audit eve
 ```sh
 cd formal/universal
 python3 check_proofs.py --lean lean
+lake build
+lake env lean ClosureSmoke.lean
 ```
 
-The checker rebuilds project imports in a fresh temporary directory. It requires no Mathlib dependency. Supplied historical compiler receipts are under `evidence/historical/formal/`.
+The checker rebuilds project imports in a fresh temporary directory. The separate smoke command executes the concrete operations; neither the proof checker nor the default Lake target runs it automatically. No Mathlib dependency is required. Fresh receipts are under `evidence/current/lean/`; supplied historical receipts remain under `evidence/historical/formal/`.
 
 ## Development contract
 

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "source_files_reviewed": 61,
+  "lean_files_unchanged": 12,
+  "theorem_blocks_unchanged": 14,
+  "quoted_appendices_unchanged": true,
+  "local_markdown_file_targets_checked": 68,
+  "missing_local_targets": [],
+  "json_and_python_syntax": "PASS",
+  "current_lean_receipt_hashes_match": true,
+  "both_runner_failure_controls": "PASS",
+  "draft_marker_present": true
+}

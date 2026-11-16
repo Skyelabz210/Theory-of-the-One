@@ -7,7 +7,7 @@ Retrieved 2026-11-15. The publication file hashes are indexed in `evidence/PUBLI
 - Author-supplied Theory of the One packet: the manuscript, figures and exact checker are under `foundations/theory_of_the_one/`. Its source-version record retains the original inspection scope.
 - Author-supplied CRAM proof bundle: selected universal formal source is under `formal/universal/`. Historical compiler receipt and log are under `evidence/historical/formal/`.
 - [cram-substrate README](https://github.com/Skyelabz210/cram-substrate/blob/main/README.md), retrieved content blob `902604a0ca12bfe817069a46bf09e93a78b715fc`.
-- Original archives and private source links are retained separately from this public core. The source reconciliation identifies historical design disagreements without treating them as the current machine contract.
+- Original archives and private source links are retained separately from this research core. The source reconciliation identifies historical design disagreements without treating them as the current machine contract.
 
 ## Established literature
 

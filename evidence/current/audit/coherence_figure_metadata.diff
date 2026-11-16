@@ -1,0 +1,57 @@
+--- committed
++++ regenerated
+@@ -849,53 +849,5 @@
+     21,
+     22
+   ],
+-  "total_unit_circles_across_euclid_plates": 269,
+-  "visual_review": {
+-    "reviewed_pngs": [
+-      "compatible_residue_grids.png",
+-      "euclid_plate_01.png",
+-      "euclid_plate_02.png",
+-      "euclid_plate_03.png",
+-      "euclid_plate_04.png",
+-      "euclid_plate_05.png",
+-      "euclid_plate_06.png",
+-      "phase_recovery_36_37.png"
+-    ],
+-    "status": "All eight PNGs inspected with view_image. Caption and arrow collisions corrected; all labels and unit counts legible.",
+-    "review_scope": "PNG visual inspection; SVG files are generated from the same Matplotlib figures."
+-  },
+-  "render_dimensions_pixels": {
+-    "compatible_residue_grids.png": [
+-      2299,
+-      2018
+-    ],
+-    "euclid_plate_01.png": [
+-      2666,
+-      2245
+-    ],
+-    "euclid_plate_02.png": [
+-      2666,
+-      2245
+-    ],
+-    "euclid_plate_03.png": [
+-      2666,
+-      2245
+-    ],
+-    "euclid_plate_04.png": [
+-      2666,
+-      2245
+-    ],
+-    "euclid_plate_05.png": [
+-      2666,
+-      2245
+-    ],
+-    "euclid_plate_06.png": [
+-      2666,
+-      1287
+-    ],
+-    "phase_recovery_36_37.png": [
+-      2694,
+-      1791
+-    ]
+-  }
++  "total_unit_circles_across_euclid_plates": 269
+ }

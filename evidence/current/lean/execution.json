@@ -1,0 +1,60 @@
+{
+  "source_repository": "Skyelabz210/Theory-of-the-One",
+  "source_commit": "f66b9a74eecf76ce5b4ecc978879b60d17f71df7",
+  "compiler_asset": "lean-4.27.0-rc1-linux.tar.zst",
+  "compiler_asset_sha256": "0de337b3420f5bc5260bbf396beb8431fe18cb447534b1831966550b253a8832",
+  "compiler_asset_bytes": 507495367,
+  "toolchain": "leanprover/lean4:v4.27.0-rc1",
+  "lean_version": "Lean (version 4.27.0-rc1, x86_64-unknown-linux-gnu, commit 2fcce7258eeb6e324366bc25f9058293b04b7547, Release)",
+  "host": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "python": "3.12.14"
+  },
+  "proof_audit": {
+    "command": "python3 check_proofs.py --lean /workspace/scratch/3b094af964d8/toolchains/lean-4.27.0-rc1-linux/bin/lean",
+    "exit_code": 0,
+    "fresh_temporary_build": true,
+    "source_directory": "formal/universal",
+    "receipt": "verification.json",
+    "log": "verification.log",
+    "executed_at_utc": "2026-11-16T04:55:01.112263+00:00",
+    "checker_sha256": "f4f976b890813fb4977bc463c535efb23fe2bc598a7756bcc4b2e4559cd3b851",
+    "scope": "Unchanged Lean declarations from source_commit; checker updated only to invalidate prior receipts before a new attempt."
+  },
+  "commands": [
+    {
+      "command": "lake build",
+      "executed_at_utc": "2026-11-16T04:48:09.184222+00:00",
+      "exit_code": 0,
+      "log": "lake-build.log"
+    },
+    {
+      "command": "lake env lean ClosureSmoke.lean",
+      "executed_at_utc": "2026-11-16T04:48:12.641033+00:00",
+      "exit_code": 0,
+      "log": "closure-smoke.log"
+    }
+  ],
+  "source_sha256": {
+    "ClosureSmoke.lean": "be184f35cb9c82256e9b55ead4fee6e5ce7e7c8df447f31c538fea74cab2a43e",
+    "CostedReadout.lean": "2946863aa7d1252b8687f0feb9073f073b4ba769368567cc9ea9cc3987a534d7",
+    "CoupledAnchors.lean": "4357100f2e4b0632d36c1e16cfcaa5da10fe2285a8029773aa1b2112a8b9e95d",
+    "ExactObservation.lean": "3e4f0dc07d9ecb189b4b3a7e490d07fad3a0f828e4ad773fa251876263a3f195",
+    "IntegerSpecialization.lean": "c7788921b59a7244e54d53cf1bda2013e3bacea98b9392b29c67b1fe91a3fa88",
+    "ReferenceChange.lean": "ecd6296ba0e850d03a6cd7093947a0d1803b37f3502c1c77256c8f242711b0e1",
+    "ResidueAlgorithms.lean": "852030cea0a3404654d2a77f677e35a147efc917be33d26ba85ceb6b6d5b7b67",
+    "ResiduePrimitives.lean": "61ad481a6dd7e7c9831259416a883a90c8b82162ab326dbc293945425ef9de95",
+    "RingReadout.lean": "033dc2f2903b7fcffcb7576fcbdfba70dff2cf247b9a9f0d8ce2dd5495d1e67b",
+    "StarLift.lean": "90947ad64ef314f2e4f07af16a1586f2685ba9e453e74da097b5ea9b44cdde9c",
+    "UniversalKElimination.lean": "0b1ea7311dc2ed7d1259668649e35e63d9ac71a5899f24345bdff4bc1bdbd458",
+    "UniversalLift.lean": "00da716f76d10806dc86f3d5a4206c380ea8f6b5a99c6d4f788c4053efba2924",
+    "check_proofs.py": "f4f976b890813fb4977bc463c535efb23fe2bc598a7756bcc4b2e4559cd3b851",
+    "lake-manifest.json": "cd0fa1eeeeab2f4e5fcb97850d37c871a495349737aa5699113f68bfd08f12e0",
+    "lakefile.toml": "85620606b10273014739fcbf1a7ad5a0f3453504dcce75efb4827cb63654bf6a",
+    "lean-toolchain": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315"
+  },
+  "source_hash_scope": "Execution inputs: Lean source, checker, pinned toolchain and Lake configuration; descriptive README excluded.",
+  "compiler_download_url": "https://github.com/leanprover/lean4/releases/download/v4.27.0-rc1/lean-4.27.0-rc1-linux.tar.zst",
+  "compiler_binary_sha256": "8fadc3ed92cc9decb94c96ee9c0876e91e03a3a5e69138f32114f02789e2766c"
+}

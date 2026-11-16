@@ -24,6 +24,18 @@ The research begins by reading the source statements as written. Quotations keep
 
 The chain makes the mathematical connection inspectable. It preserves Euclid's words while identifying the modern definitions, proved extensions and engineering choices needed to carry the computation through.
 
+## Dependencies made explicit
+
+| Starting passage or result | Added definition or mathematical premise | Derived result | Machine obligation |
+|---|---|---|---|
+| Book VII Definitions 1–2 | Integer addition and the diagonal image of one | Repeated addition generates the finite scalar-compatible orbit | Declare the frame and scalar-compatible state type |
+| Book VII measurement definitions and Propositions 1–2 | Modern Euclidean division with a positive divisor; explicit extension to signed integers | Unique quotient/remainder convention | Maintain source and divisor admission |
+| Common measures and the integer formulation | Bézout, prime-power decomposition and generalized CRT | Compatibility and exact LCM resolution | Obtain authentic views; count overlap once |
+| Affine decomposition `X = r + M*K` | Authentic anchor readings, inverse or reduced-factor certificates | Quotient-residue readout and qualified exact selection | Produce the evidence, preserve the range, derive K when requested |
+| Compatible finite quotients | Inverse limits and their topology | Integer embedding, density and additional profinite states | Supply an effective refinement producer before claiming executable growth |
+
+The last row is a modern mathematical extension. It is proved in the manuscript's stated setting; it is not quoted wording from Book VII or an implemented arbitrary-precision runtime.
+
 ## Reading path
 
 Start with the [manuscript's Book VII chapter and appendices](../foundations/theory_of_the_one/theory_of_the_one.md), continue to [the foundations](FOUNDATIONS.md), then [the machine contract](ARCHITECTURE.md). The [Lean package](../formal/universal/README.md) records formal scope; [evidence status](../evidence/STATUS.md) distinguishes fresh execution from supplied compiler receipts.

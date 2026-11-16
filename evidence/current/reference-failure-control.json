@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "control": "Checker fails before writing JSON after an old PASS was seeded",
+  "runner_sha256": "c92e8c796f11afdb5646f4a15c14872a14d3cbc67e9c6ef31f167f9970612b8d",
+  "process_exit_code": 1,
+  "recorded_exit_code": 1,
+  "stale_pass_report_present": false,
+  "failure_log_written": true
+}

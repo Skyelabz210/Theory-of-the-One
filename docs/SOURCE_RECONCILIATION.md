@@ -1,4 +1,4 @@
-# Source reconciliation for the public core
+# Source reconciliation for the research core
 
 Original research archives are retained separately. This document records how they are used in the new repository; it does not rewrite their historical assertions.
 

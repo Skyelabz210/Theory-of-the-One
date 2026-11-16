@@ -1,9 +1,11 @@
-__pycache__/
+**/.lake/
+**/__pycache__/
 *.pyc
-.lake/
 target/
 *.olean
 *.ilean
 .env
 .env.*
 !.env.example
+formal/universal/verification.json
+formal/universal/verification.log

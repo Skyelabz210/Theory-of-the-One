@@ -16,13 +16,13 @@ For pairwise coprime moduli the compatible state equals the full product. With o
 
 ## Exact observation
 
-Let `h : S -> O` be the available observation and `f : S -> T` the requested output. A function `g` satisfying `f = g o h` on the admissible states exists exactly when
+Let `h : S -> O` be the available observation and `f : S -> T` the requested output. A function `g : im(h) -> T`, defined on observations that actually occur, satisfying `f = g o h` on the admissible states exists exactly when
 
 ```text
 h(x) = h(y)  implies  f(x) = f(y).
 ```
 
-This specifies which questions an observation can answer. Constructing an efficient g, producing authentic observations and maintaining admissibility are additional implementation obligations. The imported Lean package contains abstract results and explicit ring/integer constructors, rather than assigning one uniform computational cost to every abstract instance.
+This specifies which questions an observation can answer, including when the admitted source domain is empty. It does not require a total answer on arbitrary unobserved elements of O. Constructing an efficient g, producing authentic observations and maintaining admissibility are additional implementation obligations. The Lean theorem `ExactObservation.recoverable_iff` uses precisely this observation-image domain. The package also contains explicit ring/integer constructors; there is no uniform computational cost assigned to every abstract instance.
 
 ## Adjacent-anchor example
 

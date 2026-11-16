@@ -39,3 +39,13 @@ Prove reversibility for the actual operator and admitted state space, including 
 Map a candidate implementation's ingress, state, producers, dispatch, query, consumer and egress. Verify arithmetic contracts and source binding; exercise rejection and alias controls; then benchmark the real path. Apply cryptographic or scientific validation to the corresponding application after its functional connection is established.
 
 This seed imports foundational source. It does not declare a production CRAM runtime or migrate the NINE65 engine.
+
+## Verified core and integration boundary — 16 November 2026
+
+The concrete Lean `ResiduePrimitives.State` stores exactly `main` and `anchor`. Its public `Frame` supplies the moduli and an inverse certificate. `kQuery` derives the quotient residue on demand; comparison uses that result and the main remainder. Bounded division and GCD keep their arithmetic operands and results as paired residue states. The fresh compiler and executable receipts are in `../evidence/current/lean/`.
+
+This core's correctness theorems admit natural inputs in `[0, M*A)` and, for division, a positive divisor in that same window. Divisors may share factors with either observer modulus. The frame itself requires an inverse of M modulo A; a nonunit anchor has separate query theorems and is not a concrete `Frame` instance without that certificate. Signed query identities do not change the concrete natural-number divmod API.
+
+The raw two-field `State` does not enforce frame identity, source/operation/epoch binding, normalization or admission on external inputs. An integration wrapper must establish those conditions before invoking the core. The theorem premises describe valid states; they are not runtime rejection checks.
+
+The included divmod algorithm is a proved repeated-subtraction reference with public fuel. The fixed subtraction/multiplication count in `CostedReadout` describes a quotient readout expression. An optimized division implementation, adjacent-query specialization, scheduling model and performance claim each require a concrete connection to that expression and the admitted-state contract.

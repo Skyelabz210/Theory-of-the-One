@@ -1,0 +1,15 @@
+{
+  "command": "python3 tools/run_reference_checks.py (isolated scratch copy, checker replaced by early failure)",
+  "exit_code": 1,
+  "execution_receipt": {
+    "command": "python3 tools/run_reference_checks.py",
+    "executed_at_utc": "2026-11-16T04:48:32.989425+00:00",
+    "python": "3.12.14",
+    "exit_code": 1,
+    "source_sha256": "75d27c3b12074cbe6b2db12732673903853ce08aaf80295d8af88d54efac02fd",
+    "scope": "Supplied mathematical reference checker; not production execution or a Lean build"
+  },
+  "leftover_report_status": "PASS",
+  "leftover_report_source_hash": "74e7f299d2a4bc10004d0f20f5c986e2ec2b5258fc4ba20be93e028d570dd270",
+  "stderr": "Traceback (most recent call last):\n  File \"/tmp/cram-reference-24jbvlpl/verify_residue_core.py\", line 1, in <module>\n    raise RuntimeError(\"coherence fault injection before report emission\")\nRuntimeError: coherence fault injection before report emission\n"
+}

@@ -16,6 +16,9 @@ OUT = ROOT / 'evidence/current'
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
+    # A failed run must not leave an earlier PASS beside its new failure receipt.
+    for name in ('reference-check.log', 'residue_core_verification.json', 'execution.json'):
+        (OUT / name).unlink(missing_ok=True)
     with tempfile.TemporaryDirectory(prefix='cram-reference-') as temp:
         script = Path(temp) / SOURCE.name
         shutil.copyfile(SOURCE, script)
@@ -30,6 +33,7 @@ def main():
             'python': platform.python_version(),
             'exit_code': result.returncode,
             'source_sha256': hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
+            'runner_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
             'scope': 'Supplied mathematical reference checker; not production execution or a Lean build'
         }
         (OUT / 'execution.json').write_text(json.dumps(receipt, indent=2) + '\n')

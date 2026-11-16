@@ -30,3 +30,6 @@ This is an AI-assisted research draft for the author to review. Established alge
 
 PUBLICATION EDITORIAL REVISION — 15 November 2026
 The manuscript opening and method follow the author’s clarified foundation: Euclid’s statements as written, their explicit consequences, and CRAM’s machine realization. Quoted appendices, theorem content, mathematical code and figures retain their original scope. Original packet hashes are retained under ../../evidence/historical/; SHA256SUMS.txt records this publication copy.
+
+VERIFICATION REVIEW — 16 November 2026
+The included universal Lean package was freshly checked: 130 theorem declarations, plus the standard package build and 1,809 executable comparison/divmod/GCD pairs with four controls. The Python reference checker again passed 821,881 assertions. The manuscript now points to the detailed formal-coverage map under ../../docs/reviews/. The fourteen written theorem sections have different coverage; their numbering is not a count of fully formalized results. Quoted appendices, theorem statements, proofs, figures, and mathematical source code are unchanged. The fresh evidence is under ../../evidence/current/.

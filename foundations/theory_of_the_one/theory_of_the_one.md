@@ -2,7 +2,7 @@
 title: "Theory of the One"
 subtitle: "Unity, Measurement, and Exact Computation in Residue Space"
 author: "Anthony Diaz (Acid)"
-date: "Foundational research draft · 11 November 2026; author framing revised 15 November 2026"
+date: "Foundational research draft · 11 November 2026; author framing revised 15 November 2026; verification reviewed 16 November 2026"
 lang: en-US
 ---
 
@@ -12,7 +12,7 @@ Theory of the One develops the consequences of Euclid’s account of unity, numb
 
 Fourteen theorem sections establish the unit orbit, compatibility of overlapping views, exact observation of winding, the information required for target projection, carry identities, signed comparison, quotient recovery with shared factors, typed heterogeneous operations, reversible computation, representation equivalence, and coherent refinement. The central implementation principle is magnitude on demand: a quotient or integer value may be observed when an operation needs it, without requiring a persistent scalar winding field. A compositional exactness theorem states the conditions under which this common arithmetic foundation supports multiple applications.
 
-The draft distinguishes established algebra, written proofs developed here, inspected formal source, executed finite checks, and open research claims. A reproducible integer-only checker executed 821,881 assertions with zero failures. These checks supplement the proofs; they do not constitute a new Lean build or a verification of every application. All 22 Book VII definitions appear in their selected order, with counted-unit illustrations, the supplied English rendering, and an edition-identified Greek appendix.
+The draft distinguishes established algebra, written proofs developed here, inspected formal source, compiled formal results, executed finite checks, and open research claims. On 16 November 2026 the pinned universal Lean package passed a fresh audit of 130 theorem declarations, and its concrete executable checks passed 1,809 comparison/divmod/GCD pairs plus four controls. The reproducible integer-only Python checker passed 821,881 assertions with zero failures. The [formal coverage map](../../docs/reviews/2026-11-16-formal-coverage.md) identifies which manuscript statements these results cover; the fourteen theorem sections are not fourteen fully formalized theorems. All 22 Book VII definitions appear in their selected order, with counted-unit illustrations, the supplied English rendering, and an edition-identified Greek appendix.
 
 The resulting contribution is a precise, source-grounded formulation of the research program and its proof obligations. Historical interpretation, implementation performance, cryptographic claims, and continuum physics require their own evidence beyond the arithmetic foundation.
 
@@ -20,21 +20,22 @@ The resulting contribution is a precise, source-grounded formulation of the rese
 
 This is Anthony Diaz’s working thesis, prepared with AI assistance from his supplied text and research sources. Its method starts with Euclid’s statements as written and develops their consequences through explicit definitions and proofs. Source quotations retain their wording and edition attribution; derived propositions state their premises; CRAM specifies the machine design that realizes the results.
 
-The author clarified this framing on 15 November 2026. This editorial revision preserves the theorem statements, proofs, English and Greek appendices, and reference checker. Repository inspections and claims of execution in the original manuscript retain the dates and scopes recorded in Appendix D and source_versions.json. The additional universal Lean package and publication evidence are indexed in the repository’s evidence/STATUS.md.
+The author clarified this framing on 15 November 2026. The 16 November verification review updates evidence descriptions and clarifies storage wording; it preserves the theorem statements, proofs, English and Greek appendices, and mathematical source code. The external repository inspections retain the dates and scopes recorded in Appendix D and source_versions.json. Fresh execution of the included universal Lean package is indexed in [evidence status](../../evidence/STATUS.md).
 
 The mathematical proofs use semantic integers to say what a state means. Writing an integer $x$ or a quotient $K$ in a proof does not prescribe storing or reconstructing that quantity during computation. An implementation may carry coordinated residue observations and derive only the observable required at an operation boundary.
 
-The draft uses five evidence descriptions consistently:
+The draft uses six evidence descriptions consistently:
 
 | Description | Meaning |
 |---|---|
 | Established algebra | A standard mathematical result, with attribution and an explicit argument where needed. |
 | Written proof | A mathematical derivation supplied in this draft; formalization status is recorded separately. |
 | Formal source inspected | A specific theorem declaration and its source were read at an identified commit. |
+| Compiled formal result | A stated declaration was checked with the pinned Lean compiler; its premises and axiom dependencies remain part of the claim. |
 | Executed reference check | The accompanying mathematical checker was run on a stated finite domain. |
 | Open research claim | A proposed interpretation or implementation property that needs further evidence. |
 
-The current CRAM claim policy reserves its capitalized verification label for an actually compiled Lean or Coq artifact. This draft follows the substance of that policy: it does not label its new written extensions as freshly machine-checked. The standalone bounded K-Elimination formal source was inspected, but its compiler and dependencies were not rerun in this study. [R2, R3]
+The current CRAM claim policy reserves its capitalized verification label for an actually compiled Lean or Coq artifact. The original 11 November external-source study inspected the standalone bounded K-Elimination source without rerunning it. The 16 November review freshly compiled this repository's distinct universal package: 130 declarations, 30 with no axiom dependencies and the remainder using only `propext`, `Classical.choice` and `Quot.sound`. The coverage map preserves the distinction between those checked statements and the remaining written proofs. [R2, R3]
 
 # 1. The research proposition
 
@@ -44,7 +45,7 @@ The repositories suggest a common question: how much exact arithmetic can be car
 
 The question is about the structure of computation and its contracts. It is meaningful even when the underlying congruences are classical. A mathematical identity specifies what information is sufficient; an architecture determines where that information lives, how it remains tied to the intended computation, and which observations an operation is permitted to expose.
 
-The present CRAM reference provides a concrete example. Its state records small-lane observations, a shell residue, an anchor residue, and a bound. Its winding property is computed from the phase relation between shell and anchor. There is no persistent scalar $K$ field in that current state definition. The bound is retained metadata, and the reference can explicitly expose the integer through its declared value-reading method. [R1]
+The external CRAM reference inspected on 11 November provides a concrete lineage example. Its state records small-lane observations, a shell residue, an anchor residue, and a bound. Its winding property is computed from the phase relation between shell and anchor. There is no persistent scalar $K$ field in that inspected state definition. Its exact-value bound needs separate conformance review against the current machine contract; absence of a K field alone does not settle that question. The reference also exposes the integer through a declared value-reading method. [R1]
 
 ## 1.2 Proposed central thesis
 
@@ -291,7 +292,7 @@ An observation $K\bmod H$ determines this target for every $K$ exactly when $h_q
 
 For the anchor in Theorem 3, $MH=\operatorname{lcm}(M,A)$. Thus its winding class alone supports every target modulus dividing that LCM. Other target residues can be derived after sufficient additional qualification selects an exact $K$.
 
-The distinction has operational value. A target often needs less information than full winding, and full winding needs less than a persistent positional value register. The formula itself forms only reduced target operands. It does not require constructing $r+MK$ as a complete scalar.
+The distinction has operational value. A target often needs only a class of winding rather than the exact integer K. Keeping qualifying residue evidence and deriving K on demand avoids a persistent scalar winding register. For fixed M, the pair (r,K) and x determine one another; this is a claim about carried state and requested observables, not information compression. The formula above forms only reduced target operands and does not require constructing $r+MK$ as a complete scalar.
 
 For example, the 36/37 frame supports a target modulo seventy-four directly from $K\bmod37$, because $74/\gcd(36,74)=37$. A target modulo ten needs $K\bmod5$; a class modulo thirty-seven alone does not determine it. The certified interval from the worked example supplies the additional qualification.
 
@@ -637,9 +638,9 @@ Compositions of such operations are exact wherever their successive admission co
 
 This theorem provides a precise statement of the shared foundation across projects. A common substrate can discharge recurring arithmetic obligations once, and applications can add their own typed semantic bridges. The theorem does not establish those bridges merely because the coefficient arithmetic is exact.
 
-## 9.1 What the current repositories contribute
+## 9.1 Repository lineage inspected on 11 November 2026
 
-The GitHub connection exposed 41 Skyelabz210 repositories. The focused review inspected current contracts or source in the nine repositories below. Other visible repositories were discovered but were not all audited. Exact commit identifiers and paths are recorded in Appendix D.
+The original GitHub connection exposed 41 Skyelabz210 repositories. That focused review inspected contracts or source in the nine repositories below at the commits recorded in Appendix D. Other visible repositories were discovered but were not all audited. The 16 November review checks the files included in Theory-of-the-One; it does not refresh these external repository assessments.
 
 | Project | Contribution to this thesis | Evidence boundary |
 |---|---|---|
@@ -653,11 +654,11 @@ The GitHub connection exposed 41 Skyelabz210 repositories. The focused review in
 | cram-dsp | Exact band-index recovery applied to image or signal data. | Physical or material calibration is a separate empirical layer. |
 | dccms | Owner-attributed archeo-mathematical program and an explicit evidence register. | Historical manuscript interpretation remains separately testable. |
 
-## 9.2 The compact executable model
+## 9.2 The external reference model at its inspected commit
 
-At the inspected commit, the CRAM reference stores its shell and anchor observations and derives winding when requested. Its constructor admits $0\leq x<MA$. Arithmetic updates the observations componentwise, while bound propagation guards the admitted domain. The current reference also stores a bound initially equal to the supplied value. This is significant audit metadata, even though it is not used as a persistent winding provider. [R1]
+At the inspected commit, the CRAM reference stores its shell and anchor observations and derives winding when requested. Its constructor admits $0\leq x<MA$. Arithmetic updates the observations componentwise, while bound propagation guards the admitted domain. That reference also stores a bound initially equal to the supplied value. Such a bound carries exact scalar magnitude at ingress and needs review against the current contract forbidding a concealed scalar payload. This is an observation about the dated source description, not a fresh external implementation audit. The included Lean core instead uses public frame capacity and a two-field residue state. [R1]
 
-The source formalization in the standalone Lean repository states natural-number soundness with $X<MA$ and an explicit modular-inverse witness. Its phase expression reduces the shell residue modulo the anchor before natural-number subtraction. That detail avoids a truncating-subtraction error when $M>A$. The theorem is direct evidence for the bounded coprime case. The signed, shared-factor, minimal-target, and valuation statements in this draft are additional written derivations. [R3]
+The source formalization in the standalone Lean repository states natural-number soundness with $X<MA$ and an explicit modular-inverse witness. Its phase expression reduces the shell residue modulo the anchor before natural-number subtraction. That detail avoids a truncating-subtraction error when $M>A$. The theorem is evidence for the bounded coprime case at its recorded commit. This repository's newly checked universal package separately covers signed query identities, conditional nonunit queries, coupled-anchor kernels and target criteria; the coverage map identifies the remaining gaps, including the full valuation-derived quotient route. [R3]
 
 ## 9.3 Discrete analysis and signal processing
 
@@ -693,26 +694,28 @@ Euclid and the Dresden research have distinct roles in this thesis. Euclid suppl
 | Claim | Present evidence |
 |---|---|
 | The diagonal One generates compatible finite scalar states. | Written proof of Theorem 1; classical algebra; finite reference checks. |
-| Anchor phases determine winding modulo the correct reduced anchor. | Theorem 3; bounded coprime formal source inspected. |
-| A qualified interval selects exact winding. | Written uniqueness proof and boundary checks. |
-| Some targets require only a residue of winding. | Theorem 4 and finite checks of both sufficiency and failure cases. |
+| Anchor phases determine winding modulo the correct reduced anchor. | Theorem 3; freshly checked unit/nonunit query and kernel declarations with explicit certificates. |
+| A qualified interval selects exact winding. | Freshly checked width-resolution interval results; shorter-window acceptance/rejection remains a written proof with boundary checks. |
+| Some targets require only a residue of winding. | Theorem 4; freshly checked target-period criterion and direct target formulas, plus finite failure witnesses. |
 | Shared-factor quotient residues can be recovered with sufficient witnesses. | Theorems 7–8, valuation derivation, and explicit alias controls. |
-| The current compact state derives winding instead of storing scalar K. | Actual current state definition and property inspected. |
-| Typed exact operations compose into exact applications. | Theorem 14, conditional on each operation’s admission and value equation. |
+| The included concrete Lean state derives winding instead of storing scalar K. | Two-field paired-residue state and compiled bounded arithmetic correctness; external runtime conformance remains separate. |
+| Typed exact operations compose into exact applications. | Theorem 14; freshly checked homogeneous finite-program core. Mixed types, partial admission and application bridges need their own instantiations. |
 | Full application correctness, historical attribution, or performance superiority. | Requires the corresponding additional proof or measurement. |
 
 ## 10.2 A concrete formalization program
 
 The immediate mathematical target is a reusable admitted-state specification. It should record the observation frame, source operation, residue agreement, range or interval qualification, and the output meaning. The proof interface should expose these premises explicitly.
 
-The following sequence turns the present written results into a durable proof library:
+The 16 November review completed the pinned universal package rebuild, axiom audit and separate executable smoke checks. Signed congruences, interval decoding, certified shared-factor readouts, combined-anchor kernels, target criteria and bounded natural arithmetic already have substantial compiled coverage. The [coverage ledger](../../docs/reviews/2026-11-16-formal-coverage.md) identifies exact declarations and remaining differences.
 
-1. Rebuild the pinned standalone bounded soundness theorem with recorded compiler and dependency versions.
-2. Formalize the signed Euclidean-division convention, then the shared-factor anchor theorem and interval selection rule.
-3. Formalize minimal target resolution and the quotient-information theorem, including the modulus-one and noninvertible cases.
-4. Connect each production operation to its actual carried fields, update rule, bound invariant, and declared observation policy.
-5. Prove transduction at the value level, then separately state any stronger metadata or round-trip guarantee.
-6. Instantiate compositional exactness for one bounded arithmetic chain in each selected application, with its interpretation bridge made explicit.
+The remaining work follows these dependencies:
+
+1. Add named end-to-end statements for missing parts of Theorems 2–4 and 7–8: raw-pair witness existence, shorter-window acceptance/refusal, quotient-target information and prime-power valuation precision. Reuse the existing kernel and readout proofs.
+2. Formalize the carry/borrow/product identities and full generalized-CRT orbit/compatibility result. Connect signed query decoding to a signed API only where that API is required.
+3. Define typed heterogeneous states, the value quotient and operation-specific reversible maps; preserve their declared semantics.
+4. Connect production operations to their actual carried fields, source/frame/epoch bindings, public-domain invariants and observation policy. A theorem premise must be established at ingress and preserved by updates.
+5. Extend the existing transfer and homogeneous composition results to typed/partial operations and their admission invariants. State metadata and record round-trip requirements separately from value preservation.
+6. Instantiate one bounded arithmetic chain in each selected application. Keep the profinite construction and each application's scientific or cryptographic interpretation as separately stated targets.
 
 These are theorem and implementation obligations, not a schedule. Their purpose is to make every broad claim reducible to a finite collection of statements that can be inspected, tested, or formally checked.
 
@@ -853,7 +856,7 @@ The script’s recorded SHA-256 is:
 
 The supplied proof packet contains the manuscript source, checker, full JSON receipt, source-version register, and figure-generation data. Figure coordinates may use floating point at the display boundary; the arithmetic checker uses integers throughout.
 
-The finite checks serve three purposes: they validate worked examples, exercise boundary conditions, and supply regression witnesses for the statements’ hypotheses. The universal arguments are the written proofs. Formal elaboration of the new extensions is a separate task.
+The finite checks serve three purposes: they validate worked examples, exercise boundary conditions, and supply regression witnesses for the statements’ hypotheses. Universal arguments are given by the written proofs and, for the statements identified in the formal coverage map, the freshly compiled Lean declarations. Finite enumeration does not extend that formal coverage.
 
 # Appendix D. Source versions and bibliography
 

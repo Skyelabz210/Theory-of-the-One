@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "control": "Unresolvable Lean identifier injected in isolated first module, with old PASS seeded",
+  "runner_sha256": "f4f976b890813fb4977bc463c535efb23fe2bc598a7756bcc4b2e4559cd3b851",
+  "process_exit_code": 1,
+  "stale_pass_receipt_present": false,
+  "new_failure_log_present": true
+}

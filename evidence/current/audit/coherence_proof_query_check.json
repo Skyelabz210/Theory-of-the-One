@@ -1,0 +1,68 @@
+[
+  {
+    "module": "ExactObservation",
+    "declared": 9,
+    "queried": 9,
+    "short_name_sets_match": true
+  },
+  {
+    "module": "UniversalLift",
+    "declared": 15,
+    "queried": 15,
+    "short_name_sets_match": true
+  },
+  {
+    "module": "RingReadout",
+    "declared": 16,
+    "queried": 16,
+    "short_name_sets_match": true
+  },
+  {
+    "module": "IntegerSpecialization",
+    "declared": 28,
+    "queried": 28,
+    "short_name_sets_match": true
+  },
+  {
+    "module": "CostedReadout",
+    "declared": 7,
+    "queried": 7,
+    "short_name_sets_match": true
+  },
+  {
+    "module": "ReferenceChange",
+    "declared": 3,
+    "queried": 3,
+    "short_name_sets_match": true
+  },
+  {
+    "module": "CoupledAnchors",
+    "declared": 19,
+    "queried": 19,
+    "short_name_sets_match": true
+  },
+  {
+    "module": "ResidueAlgorithms",
+    "declared": 6,
+    "queried": 6,
+    "short_name_sets_match": true
+  },
+  {
+    "module": "ResiduePrimitives",
+    "declared": 14,
+    "queried": 14,
+    "short_name_sets_match": true
+  },
+  {
+    "module": "StarLift",
+    "declared": 13,
+    "queried": 13,
+    "short_name_sets_match": true
+  },
+  {
+    "module": "UniversalKElimination",
+    "declared": 0,
+    "queried": 0,
+    "short_name_sets_match": true
+  }
+]
