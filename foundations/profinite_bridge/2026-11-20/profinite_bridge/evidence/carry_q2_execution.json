@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "started_at_utc": "2026-11-20T07:30:50.578407+00:00",
+  "completed_at_utc": "2026-11-20T07:30:51.498213+00:00",
+  "command": "python3 replay_carry_q2.py",
+  "python": "3.12.14",
+  "python_implementation": "CPython",
+  "dependencies": {
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "source_sha256": "498cf7bae0be75298a50af24bcf74aa3fa4ad77e2383e9e46e1f0354e756492a",
+  "replay_wrapper_sha256": "e10214540024aecc93c0ea2373263e7ee05194db5ddbf5ab696e897127e03e7c",
+  "selected_ast_sha256": "16d3d24abce958b5f2d9fc1cfb9d88c0381ab89d1c63ca4b05124c782b52d5ca",
+  "selection": {
+    "prefix_node_count": 5,
+    "warmup_source_lines": [
+      43,
+      62
+    ],
+    "q2_source_lines": [
+      64,
+      82
+    ],
+    "omitted_prefix_has_no_R_access": true,
+    "original_selected_statements_modified": false
+  },
+  "result_sha256": "cbca074dc01adccef733a83fe1429bf2bf6f2dccf8721ebc6fb5a66c2c5fb5cd",
+  "log_sha256": "a52f2be10dadc989dd6ca4bd8321cf9c3e1b9f61445ef45745cd966c6f620efb",
+  "archive_output_sha256": "264a71bf7a026984f021db3de5462d601d817435c97c1714a1b9f717414ff65b"
+}

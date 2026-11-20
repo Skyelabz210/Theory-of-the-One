@@ -1,0 +1,337 @@
+{
+  "status": "PASS",
+  "scope": "Exact finite integer/rational reference checks; not runtime or universal proof",
+  "assertions": 60093,
+  "source_sha256": "13871532f19a6557fc4607cf150ddb9c2d469d7a64b0ad3ddc38ce7951ca0931",
+  "partition_n6": {
+    "modulus": 11,
+    "partitions": [
+      {
+        "partition": [
+          6
+        ],
+        "rank": 5,
+        "crank": 6
+      },
+      {
+        "partition": [
+          5,
+          1
+        ],
+        "rank": 3,
+        "crank": 0
+      },
+      {
+        "partition": [
+          4,
+          2
+        ],
+        "rank": 2,
+        "crank": 4
+      },
+      {
+        "partition": [
+          4,
+          1,
+          1
+        ],
+        "rank": 1,
+        "crank": -1
+      },
+      {
+        "partition": [
+          3,
+          3
+        ],
+        "rank": 1,
+        "crank": 3
+      },
+      {
+        "partition": [
+          3,
+          2,
+          1
+        ],
+        "rank": 0,
+        "crank": 1
+      },
+      {
+        "partition": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "rank": -1,
+        "crank": -3
+      },
+      {
+        "partition": [
+          2,
+          2,
+          2
+        ],
+        "rank": -1,
+        "crank": 2
+      },
+      {
+        "partition": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "rank": -2,
+        "crank": -2
+      },
+      {
+        "partition": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "rank": -3,
+        "crank": -4
+      },
+      {
+        "partition": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "rank": -5,
+        "crank": -6
+      }
+    ],
+    "rank_counts": [
+      1,
+      2,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      2
+    ],
+    "crank_counts": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "s6_normalized_rank": {
+    "basis": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "M": 30030,
+    "canonical_states": 30030,
+    "Mi": [
+      15015,
+      10010,
+      6006,
+      4290,
+      2730,
+      2310
+    ],
+    "inverses": [
+      1,
+      2,
+      1,
+      6,
+      6,
+      3
+    ],
+    "alpha_max": 4,
+    "max_normalized_sum": [
+      139819,
+      30030
+    ],
+    "rank_counts": {
+      "0": 738,
+      "1": 8862,
+      "2": 15420,
+      "3": 4847,
+      "4": 163
+    },
+    "meaning": "rank of sum of normalized xi_i*Mi, not external source winding"
+  },
+  "outside_anchor": {
+    "M": 30030,
+    "A": 30031,
+    "prime_factors": [
+      59,
+      509
+    ],
+    "powers_M_mod_A_for_exponents_0_through_8": [
+      1,
+      30030,
+      1,
+      30030,
+      1,
+      30030,
+      1,
+      30030,
+      1
+    ],
+    "scope": "Finite witness; convergence/obstruction theorem is a separate written proof"
+  },
+  "signed_star_examples": [
+    {
+      "M": 6,
+      "c": 1,
+      "sign": 1,
+      "A": 7,
+      "X": 0,
+      "r": 0,
+      "s": 0,
+      "inverse": 6,
+      "derived_K": 0,
+      "recovered_X": 0,
+      "admitted_window": [
+        0,
+        42
+      ],
+      "window_convention": "left closed, right open"
+    },
+    {
+      "M": 6,
+      "c": 1,
+      "sign": 1,
+      "A": 7,
+      "X": 20,
+      "r": 2,
+      "s": 6,
+      "inverse": 6,
+      "derived_K": 3,
+      "recovered_X": 20,
+      "admitted_window": [
+        0,
+        42
+      ],
+      "window_convention": "left closed, right open"
+    },
+    {
+      "M": 6,
+      "c": 1,
+      "sign": -1,
+      "A": 5,
+      "X": 0,
+      "r": 0,
+      "s": 0,
+      "inverse": 1,
+      "derived_K": 0,
+      "recovered_X": 0,
+      "admitted_window": [
+        0,
+        30
+      ],
+      "window_convention": "left closed, right open"
+    },
+    {
+      "M": 6,
+      "c": 1,
+      "sign": -1,
+      "A": 5,
+      "X": 20,
+      "r": 2,
+      "s": 0,
+      "inverse": 1,
+      "derived_K": 3,
+      "recovered_X": 20,
+      "admitted_window": [
+        0,
+        30
+      ],
+      "window_convention": "left closed, right open"
+    }
+  ],
+  "alias_controls": [
+    {
+      "M": 6,
+      "A": 7,
+      "sources": [
+        0,
+        42
+      ],
+      "same_readings": [
+        0,
+        0
+      ],
+      "source_at_upper_endpoint_is_not_admitted": true
+    },
+    {
+      "M": 6,
+      "A": 5,
+      "sources": [
+        0,
+        30
+      ],
+      "same_readings": [
+        0,
+        0
+      ],
+      "source_at_upper_endpoint_is_not_admitted": true
+    }
+  ],
+  "multiplicative_orders": {
+    "23": {
+      "base": 4,
+      "order": 11,
+      "residue_at_order": 1,
+      "proper_divisor_power_residues": {
+        "1": 4
+      }
+    },
+    "29": {
+      "base": 4,
+      "order": 14,
+      "residue_at_order": 1,
+      "proper_divisor_power_residues": {
+        "1": 4,
+        "2": 16,
+        "7": 28
+      }
+    },
+    "667": {
+      "base": 4,
+      "order": 154,
+      "residue_at_order": 1,
+      "proper_divisor_power_residues": {
+        "1": 4,
+        "2": 16,
+        "7": 376,
+        "11": 208,
+        "14": 639,
+        "22": 576,
+        "77": 231
+      }
+    }
+  },
+  "limitations": [
+    "The n=6 enumeration does not prove the general crank theorem.",
+    "Finite rank enumeration does not replace the general bound proof.",
+    "Orbit orders do not establish a mock-theta or architectural boundary at 23.",
+    "Scalar sources are independent mathematical test oracles, not runtime payloads."
+  ]
+}

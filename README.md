@@ -41,6 +41,7 @@ This repository begins with the foundation and formal source package. Production
 
 ## Evidence included
 
+- [Arbitrary moduli and the profinite bridge — 20 November 2026](foundations/profinite_bridge/2026-11-20/README.md): both papers, editable sources, reproducible exact arithmetic, pinned source receipts, and the distinction between finite coefficient constructions and the proposed analytic correspondence.
 - Editable thesis and its original figures and exact finite checker.
 - Standalone Lean source package pinned to `leanprover/lean4:v4.27.0-rc1`.
 - [Source reconciliation](docs/SOURCE_RECONCILIATION.md), publication hashes and separate historical/current evidence.

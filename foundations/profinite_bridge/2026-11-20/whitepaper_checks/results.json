@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "arithmetic": "Python exact integers; no floating-point arithmetic",
+  "python_version": "3.12.14",
+  "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "total_central_identity_cases": 6246650,
+  "total_failures": 0,
+  "checks": [
+    {
+      "name": "arbitrary_anchor_quotient_queries",
+      "domain": {
+        "M": [
+          1,
+          40
+        ],
+        "A": [
+          1,
+          40
+        ],
+        "X": [
+          -200,
+          200
+        ]
+      },
+      "ranges_are_inclusive": true,
+      "cases": 641600,
+      "failures": 0,
+      "negative_X_cases": 320000,
+      "M_or_A_equals_one_cases": 31679,
+      "A_over_gcd_equals_one_cases": 63358
+    },
+    {
+      "name": "target_projection_from_exact_euclidean_quotient",
+      "domain": {
+        "M": [
+          1,
+          40
+        ],
+        "X": [
+          -200,
+          200
+        ],
+        "b": [
+          1,
+          60
+        ]
+      },
+      "ranges_are_inclusive": true,
+      "cases": 962400,
+      "failures": 0,
+      "negative_X_cases": 480000,
+      "b_equals_one_cases": 16040,
+      "evidence_scope": "Identity check using the oracle Euclidean quotient, not its production."
+    },
+    {
+      "name": "bounded_residue_query_to_arbitrary_target",
+      "domain": {
+        "M": [
+          1,
+          30
+        ],
+        "A": [
+          1,
+          30
+        ],
+        "b": [
+          1,
+          30
+        ],
+        "N": "A // gcd(M,A)",
+        "K": "-floor(N/2) <= K < -floor(N/2)+N",
+        "v_M": "0 <= v_M < M"
+      },
+      "numeric_ranges_are_inclusive": true,
+      "source_states": 154755,
+      "cases": 4642650,
+      "failures": 0,
+      "negative_X_cases": 2179500,
+      "b_equals_one_cases": 154755,
+      "A_over_gcd_equals_one_cases": 58470,
+      "evidence_scope": "Temporary quotient derived from residues plus the declared interval."
+    }
+  ],
+  "scope": "Finite arithmetic corroboration only; not universal proof or runtime conformance."
+}

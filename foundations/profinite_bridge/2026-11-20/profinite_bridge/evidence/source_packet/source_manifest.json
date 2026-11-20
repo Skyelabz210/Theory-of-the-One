@@ -1,0 +1,39 @@
+{
+  "retrieved_at_utc": "2026-11-20T07:30:49.918Z",
+  "source_retrieval": "GitHub connector fetch_file at pinned commit",
+  "files": [
+    {
+      "local_path": "source_packet/carry_questions.py",
+      "source_repository": "Skyelabz210/NINE65_v7",
+      "source_commit": "64c1c89b191093dc12cf81b87da5fb1a02c46dc1",
+      "source_path": "docs/proofs/cram/collection/CRAM Core Lock 2026-11-17/evidence/torus-review/Torus_Fiber_Checks_Reproduction_2026-11-17/torus_fiber_checks/carry_questions.py",
+      "source_url": "https://github.com/Skyelabz210/NINE65_v7/blob/64c1c89b191093dc12cf81b87da5fb1a02c46dc1/docs/proofs/cram/collection/CRAM%20Core%20Lock%202026-11-17/evidence/torus-review/Torus_Fiber_Checks_Reproduction_2026-11-17/torus_fiber_checks/carry_questions.py",
+      "git_blob_sha1": "58f12764a6e4aa1a47bb9593c2224f6685dfaafa",
+      "sha256": "498cf7bae0be75298a50af24bcf74aa3fa4ad77e2383e9e46e1f0354e756492a",
+      "bytes": 5805
+    },
+    {
+      "local_path": "source_packet/carry_questions_output.txt",
+      "source_repository": "Skyelabz210/NINE65_v7",
+      "source_commit": "64c1c89b191093dc12cf81b87da5fb1a02c46dc1",
+      "source_path": "docs/proofs/cram/collection/CRAM Core Lock 2026-11-17/evidence/torus-review/Torus_Fiber_Checks_Reproduction_2026-11-17/torus_fiber_checks/carry_questions_output.txt",
+      "source_url": "https://github.com/Skyelabz210/NINE65_v7/blob/64c1c89b191093dc12cf81b87da5fb1a02c46dc1/docs/proofs/cram/collection/CRAM%20Core%20Lock%202026-11-17/evidence/torus-review/Torus_Fiber_Checks_Reproduction_2026-11-17/torus_fiber_checks/carry_questions_output.txt",
+      "git_blob_sha1": "efef7176a135cbe71d3ca16d75760cf2a5da9a98",
+      "sha256": "264a71bf7a026984f021db3de5462d601d817435c97c1714a1b9f717414ff65b",
+      "bytes": 1906
+    },
+    {
+      "local_path": "source_packet/README.txt",
+      "source_repository": "Skyelabz210/NINE65_v7",
+      "source_commit": "64c1c89b191093dc12cf81b87da5fb1a02c46dc1",
+      "source_path": "docs/proofs/cram/collection/CRAM Core Lock 2026-11-17/evidence/torus-review/Torus_Fiber_Checks_Reproduction_2026-11-17/torus_fiber_checks/README.txt",
+      "source_url": "https://github.com/Skyelabz210/NINE65_v7/blob/64c1c89b191093dc12cf81b87da5fb1a02c46dc1/docs/proofs/cram/collection/CRAM%20Core%20Lock%202026-11-17/evidence/torus-review/Torus_Fiber_Checks_Reproduction_2026-11-17/torus_fiber_checks/README.txt",
+      "git_blob_sha1": "a7121a1afed687fa50b3132e32db0e10a010f360",
+      "sha256": "fa520e8d1d6106d6da3c765c096d53f5c0dded7e7353f843938bd606ab853ab4",
+      "bytes": 706
+    }
+  ],
+  "license_note": "Source copies retain upstream attribution; no new license granted.",
+  "scope": "Only the original Q2 source, its archived output, and its directory README are copied. No other local file is required by the script.",
+  "all_git_blob_hashes_match": true
+}

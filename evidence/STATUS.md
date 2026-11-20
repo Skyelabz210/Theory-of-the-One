@@ -1,6 +1,14 @@
 # Evidence status — research draft
 
-Updated 16 November 2026 for the private repository `Skyelabz210/Theory-of-the-One`. Reviewed source: `f66b9a74eecf76ce5b4ecc978879b60d17f71df7`, all 61 tracked files. Draft marker: `ceb9e0a93a67894d737148cecc04fcc382bfc8df`. The delivered edits and evidence follow that source review.
+## 20 November 2026 — research archive
+
+The [arbitrary-moduli and profinite-bridge package](../foundations/profinite_bridge/2026-11-20/README.md) preserves both completed papers, their editable sources, reproducible checks, and source-pinned receipts. Its manifest and evidence READMEs distinguish fresh finite execution from historical Lean receipts and from the analytic research program. This archive commit adds no new Lean declarations. The subsequent formalization must carry its own compiler and axiom-audit receipt.
+
+The repository is currently public. The visibility description in the following historical review records the state observed on its date.
+
+## 16 November 2026 — foundation review
+
+Reviewed on 16 November 2026 for the then-private repository `Skyelabz210/Theory-of-the-One`. Reviewed source: `f66b9a74eecf76ce5b4ecc978879b60d17f71df7`, all 61 tracked files. Draft marker: `ceb9e0a93a67894d737148cecc04fcc382bfc8df`. The delivered edits and evidence follow that source review.
 
 | Executed check | Result | Receipt |
 |---|---|---|

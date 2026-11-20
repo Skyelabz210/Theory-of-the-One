@@ -1,0 +1,481 @@
+{
+  "schema": "cram-research-snapshot-v1",
+  "date": "2026-11-20",
+  "repository": "Skyelabz210/Theory-of-the-One",
+  "repository_path": "foundations/profinite_bridge/2026-11-20",
+  "source_revisions": {
+    "Skyelabz210/NINE65_v7": "64c1c89b191093dc12cf81b87da5fb1a02c46dc1",
+    "Skyelabz210/Theory-of-the-One": "b4c41726b28f224fc042280a4be2327b08e8365a"
+  },
+  "document_status": {
+    "whitepaper/Arbitrary_Moduli_in_CRAM.pdf": {
+      "pages": 17,
+      "status": "Preserved delivered and visually reviewed artifact; ordinary proofs and explicitly scoped evidence."
+    },
+    "profinite_bridge/The_Profinite_Bridge_Revised.pdf": {
+      "pages": 15,
+      "status": "Preserved delivered and visually reviewed artifact; conditional mathematical constructions, analytic correspondence still open."
+    }
+  },
+  "formal_proof_status": {
+    "new_lean_compilation_in_this_snapshot": false,
+    "new_lean_proof_files_or_placeholder_stubs_included": false,
+    "historical_lean_status": "The first paper cites inspected matching historical receipts for 28 integer and 19 coupled-anchor declarations; those receipts are not new compiler runs.",
+    "upcoming_scope": "Exact coefficient, refinement, and evaluation layer connected to finite observation arithmetic.",
+    "analytic_scope": "No complete mock-theta, radial-asymptotic, harmonic-Maass, or analytic-shadow formal proof is claimed."
+  },
+  "fresh_finite_execution": {
+    "python": "3.12.14",
+    "central_sweep": {
+      "exit_code": 0,
+      "cases": 6246650,
+      "failures": 0,
+      "matches_recorded_mathematical_result": true
+    },
+    "historical_formula_witness": {
+      "exit_code": 0,
+      "scope": "Expected outcomes reproduced, including deliberately falsified old U3/U6 formulas and passing corrected forms."
+    },
+    "dependent_sister_probe": {
+      "exit_code": 0,
+      "raw_pairs": 11011,
+      "compatible_pairs": 1001,
+      "matches_recorded_result": true
+    },
+    "bridge_examples": {
+      "status": "PASS",
+      "exact_assertions": 60093,
+      "receipt": "profinite_bridge/evidence/finite_examples_execution.json"
+    },
+    "packet_q2": {
+      "status": "PASS",
+      "warmup_cases": 9000,
+      "q2_cases": 18000,
+      "q2_violations": 0,
+      "containment_successes": 18000,
+      "receipt": "profinite_bridge/evidence/carry_q2_execution.json",
+      "scope": "Targeted replay preserving original selected statements and prior RNG advancement; other archived experiment outputs are historical."
+    },
+    "scope": "Finite reference executions only; not universal theorem proofs, production conformance, or a security validation."
+  },
+  "packaging_validation": {
+    "python_sources_parse": true,
+    "preserved_source_bytes_match": 12,
+    "docx_and_reproduction_archives_valid": true,
+    "no_embedded_absolute_scratch_paths": true,
+    "central_replay_matches_recorded_mathematical_result": true,
+    "dependent_sister_replay_matches_recorded_result": true,
+    "first_paper_relative_figure_exists": true,
+    "bridge_execution_receipt_hashes_match": true,
+    "all_staged_python_sources_parse": true,
+    "no_storage_metadata_or_absolute_scratch_paths_in_staged_text": true,
+    "new_lean_files_included": 0
+  },
+  "excluded": [
+    "QA page renders",
+    "obsolete PDFs",
+    "temporary reference documents",
+    "renderer probes",
+    "document-storage metadata and identifiers",
+    "storage helper code",
+    "Python cache files"
+  ],
+  "manifest_scope": "All files below this directory except manifest.json itself. Paths are relative to this directory.",
+  "file_count_excluding_manifest": 39,
+  "bytes_excluding_manifest": 1326528,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 44,
+      "sha256": "acdcc3e8ba4c3df1d6e54113c86797544af9427381aa8965dc5b1f04264b48e5",
+      "origin": {
+        "kind": "new_packaging_documentation"
+      }
+    },
+    {
+      "path": "README.md",
+      "bytes": 10149,
+      "sha256": "f62cd213d3c90ca7b308b7e632e864a28151a7de918950a5db9b2f2012fefdaa",
+      "origin": {
+        "kind": "new_packaging_documentation"
+      }
+    },
+    {
+      "path": "github_arbitrary_verification/dependent_sister_probe.py",
+      "bytes": 6388,
+      "sha256": "d284d0e8cfbc4f41cad86297bcd74214ba4343e32b7dbf6e83d8f3695a86e526",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "github_arbitrary_verification/dependent_sister_probe.py",
+        "source_sha256": "d284d0e8cfbc4f41cad86297bcd74214ba4343e32b7dbf6e83d8f3695a86e526"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "github_arbitrary_verification/dependent_sister_probe.py.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "github_arbitrary_verification/dependent_sister_probe.py.stderr.log",
+        "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "github_arbitrary_verification/dependent_sister_probe.py.stdout.log",
+      "bytes": 1553,
+      "sha256": "a3cfa2366f20ec87d6149edac06330dbe924c48f8566ef75e9f30b966d015b95",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "github_arbitrary_verification/dependent_sister_probe.py.stdout.log",
+        "source_sha256": "a3cfa2366f20ec87d6149edac06330dbe924c48f8566ef75e9f30b966d015b95"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "github_arbitrary_verification/dependent_sister_probe_results.json",
+      "bytes": 1553,
+      "sha256": "a3cfa2366f20ec87d6149edac06330dbe924c48f8566ef75e9f30b966d015b95",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "github_arbitrary_verification/dependent_sister_probe_results.json",
+        "source_sha256": "a3cfa2366f20ec87d6149edac06330dbe924c48f8566ef75e9f30b966d015b95"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "github_arbitrary_verification/manifest.json",
+      "bytes": 673,
+      "sha256": "bc16240dfa8d94df3b40c5e4bc007178f67b4f921fb16f71269dd1000a535b2e",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "github_arbitrary_verification/manifest.json",
+        "source_sha256": "b97f86edd5f110cb2a72f26dda55b59082f2ae0c321385300e2e97a3ef7e568f"
+      },
+      "byte_preserved": false,
+      "transformation": "Normalize recorded stdout paths to directory-relative names; retain source commit, source digests, and exit codes."
+    },
+    {
+      "path": "github_arbitrary_verification/witness_arbitrary_moduli_claims.py",
+      "bytes": 7856,
+      "sha256": "f3658a4c564a5715ca309a69582dad2de0e9cd6fa9a0d6974739d24522127541",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "github_arbitrary_verification/witness_arbitrary_moduli_claims.py",
+        "source_sha256": "f3658a4c564a5715ca309a69582dad2de0e9cd6fa9a0d6974739d24522127541"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "github_arbitrary_verification/witness_arbitrary_moduli_claims.py.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "github_arbitrary_verification/witness_arbitrary_moduli_claims.py.stderr.log",
+        "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "github_arbitrary_verification/witness_arbitrary_moduli_claims.py.stdout.log",
+      "bytes": 1047,
+      "sha256": "953e340a568bd90149e4a9f32d92fc4280f7e6722c916a72051e382d4a9f0317",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "github_arbitrary_verification/witness_arbitrary_moduli_claims.py.stdout.log",
+        "source_sha256": "953e340a568bd90149e4a9f32d92fc4280f7e6722c916a72051e382d4a9f0317"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "profinite_bridge/The_Profinite_Bridge_Revised.docx",
+      "bytes": 50157,
+      "sha256": "6c7577566a795f25212b9c3582332a858ff49c537dc12c88eca4a59f588c1452",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "profinite_bridge/The_Profinite_Bridge_Revised.docx",
+        "source_sha256": "6c7577566a795f25212b9c3582332a858ff49c537dc12c88eca4a59f588c1452"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "profinite_bridge/The_Profinite_Bridge_Revised.md",
+      "bytes": 36253,
+      "sha256": "e83a6ce4d970fd818b8f35f0a6f849de80b2c079325d5999a23ae573248e6a1f",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "profinite_bridge/The_Profinite_Bridge_Revised.md",
+        "source_sha256": "e83a6ce4d970fd818b8f35f0a6f849de80b2c079325d5999a23ae573248e6a1f"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "profinite_bridge/The_Profinite_Bridge_Revised.pdf",
+      "bytes": 341797,
+      "sha256": "393901e4c0cfd0874341412ddc6a4a22d1c00be4991898bc51be9bf1c58295c1",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "profinite_bridge/The_Profinite_Bridge_Revised.pdf",
+        "source_sha256": "393901e4c0cfd0874341412ddc6a4a22d1c00be4991898bc51be9bf1c58295c1"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "profinite_bridge/build_bridge.py",
+      "bytes": 15786,
+      "sha256": "d51ec1f26d1addb87d5fccf924a9c174c4a8468af24f731264c477ba65fb5d7e",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "profinite_bridge/build_bridge.py",
+        "source_sha256": "d51ec1f26d1addb87d5fccf924a9c174c4a8468af24f731264c477ba65fb5d7e"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "profinite_bridge/evidence/README.md",
+      "bytes": 3715,
+      "sha256": "1691bb527579ec8c19910d6d0acf4f4e495ff9ed3b3ff8794ca41515e3a5d8b4",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/carry_q2_command.log",
+      "bytes": 318,
+      "sha256": "a52f2be10dadc989dd6ca4bd8321cf9c3e1b9f61445ef45745cd966c6f620efb",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/carry_q2_execution.json",
+      "bytes": 1103,
+      "sha256": "3f836b36121ffd1ef0e80ab456e68c004b712bb9c30b30101a3b02b53954a163",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/carry_q2_replay.log",
+      "bytes": 318,
+      "sha256": "a52f2be10dadc989dd6ca4bd8321cf9c3e1b9f61445ef45745cd966c6f620efb",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/carry_q2_results.json",
+      "bytes": 1314,
+      "sha256": "cbca074dc01adccef733a83fe1429bf2bf6f2dccf8721ebc6fb5a66c2c5fb5cd",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/finite_examples.log",
+      "bytes": 172,
+      "sha256": "8836b16a872c7111d81aaf34c95f54fd0914bc5365b038d1108b723c130f5473",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/finite_examples_execution.json",
+      "bytes": 650,
+      "sha256": "47cead6a6d4c31982cac07b6a71183a32446514e6b48242adea2f8124534473c",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/finite_examples_results.json",
+      "bytes": 5520,
+      "sha256": "d13a54fe6b3551ef9cba982eddbead1c54df7f8260ed6a2ef2dba294dd0b7247",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/replay_carry_q2.py",
+      "bytes": 6854,
+      "sha256": "e10214540024aecc93c0ea2373263e7ee05194db5ddbf5ab696e897127e03e7c",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/requirements.txt",
+      "bytes": 112,
+      "sha256": "8a035135d1ceeccf71dbc4580986ee3b0c6c67db033b598320f0a8a7c0024656",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/source_packet/README.txt",
+      "bytes": 706,
+      "sha256": "fa520e8d1d6106d6da3c765c096d53f5c0dded7e7353f843938bd606ab853ab4",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/source_packet/carry_questions.py",
+      "bytes": 5805,
+      "sha256": "498cf7bae0be75298a50af24bcf74aa3fa4ad77e2383e9e46e1f0354e756492a",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/source_packet/carry_questions_output.txt",
+      "bytes": 1906,
+      "sha256": "264a71bf7a026984f021db3de5462d601d817435c97c1714a1b9f717414ff65b",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/source_packet/source_manifest.json",
+      "bytes": 2851,
+      "sha256": "16314dde40373838167df4b625d7ee0be8b6030061864a1e6b81b0274fdc0dd1",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "profinite_bridge/evidence/verify_finite_examples.py",
+      "bytes": 7119,
+      "sha256": "13871532f19a6557fc4607cf150ddb9c2d469d7a64b0ad3ddc38ce7951ca0931",
+      "origin": {
+        "kind": "finite_evidence_package",
+        "provenance": "profinite_bridge/evidence/README.md"
+      }
+    },
+    {
+      "path": "requirements-docs.txt",
+      "bytes": 260,
+      "sha256": "b16ed5325589b50660269bbe9fe45e9983ba658802ae3edefb46585750f215c4",
+      "origin": {
+        "kind": "new_packaging_documentation"
+      }
+    },
+    {
+      "path": "whitepaper/Arbitrary_Moduli_in_CRAM.docx",
+      "bytes": 106998,
+      "sha256": "588c65c5933017f1ab1e82c2783ec013da0dff270b67d7e9308852a859ae070c",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "whitepaper/Arbitrary_Moduli_in_CRAM.docx",
+        "source_sha256": "588c65c5933017f1ab1e82c2783ec013da0dff270b67d7e9308852a859ae070c"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "whitepaper/Arbitrary_Moduli_in_CRAM.md",
+      "bytes": 44537,
+      "sha256": "1077bd143296c7e2982c54e7428c1addc147b873c396d99319f91ff5788a1f67",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "whitepaper/Arbitrary_Moduli_in_CRAM.md",
+        "source_sha256": "1077bd143296c7e2982c54e7428c1addc147b873c396d99319f91ff5788a1f67"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "whitepaper/Arbitrary_Moduli_in_CRAM.pdf",
+      "bytes": 485001,
+      "sha256": "532ec71d24e5f191a3a4ff57cfbbf5a97a07c6db1969b0c51edb2cc1a0f9a67b",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "whitepaper/Arbitrary_Moduli_in_CRAM.pdf",
+        "source_sha256": "532ec71d24e5f191a3a4ff57cfbbf5a97a07c6db1969b0c51edb2cc1a0f9a67b"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "whitepaper/Arbitrary_Moduli_in_CRAM_reproduction.zip",
+      "bytes": 81819,
+      "sha256": "f51f3694d6b8ce3049994462feef66f1e2fd2bfcfafa8f940ed6fb9fff3b3b8c",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "whitepaper/Arbitrary_Moduli_in_CRAM_reproduction.zip",
+        "source_sha256": "f51f3694d6b8ce3049994462feef66f1e2fd2bfcfafa8f940ed6fb9fff3b3b8c"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "whitepaper/build_whitepaper.py",
+      "bytes": 15842,
+      "sha256": "08254aa0a7a7a5e424a62b3ebd03964297343935a88462b39d08fcde0b79b89f",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "whitepaper/build_whitepaper.py",
+        "source_sha256": "08254aa0a7a7a5e424a62b3ebd03964297343935a88462b39d08fcde0b79b89f"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "whitepaper/compatible_residue_states.png",
+      "bytes": 63603,
+      "sha256": "67ec7d5f4a591009c7e62a24ddb94a7a1f23d1d02cf9c65fb85fd8735158702a",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "whitepaper/compatible_residue_states.png",
+        "source_sha256": "67ec7d5f4a591009c7e62a24ddb94a7a1f23d1d02cf9c65fb85fd8735158702a"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "whitepaper/package_reproduction.py",
+      "bytes": 5149,
+      "sha256": "7bc82b179fbeca13766b4464e32083323776b5140f0441a6a6de1b8d1cad20d8",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "whitepaper/package_reproduction.py",
+        "source_sha256": "fe62154efee7e966d0e7185704c83bace737b1ea8add225b202c277b0e7d6ae7"
+      },
+      "byte_preserved": false,
+      "transformation": "Documentation only: correct the generated archive README minimum from Python 3.8 to Python 3.9 for the complete script set."
+    },
+    {
+      "path": "whitepaper_checks/results.json",
+      "bytes": 2059,
+      "sha256": "2cd3f28b8d794d31735a71d84ffa2619bab500d62df994888625112832222576",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "whitepaper_checks/results.json",
+        "source_sha256": "2cd3f28b8d794d31735a71d84ffa2619bab500d62df994888625112832222576"
+      },
+      "byte_preserved": true
+    },
+    {
+      "path": "whitepaper_checks/verify_arbitrary_moduli.py",
+      "bytes": 9541,
+      "sha256": "7df5469cc325e02dd4c7f51715a4541dfca9602b56a1da17d6f17f25c7b520d8",
+      "origin": {
+        "kind": "session_research_artifact",
+        "source_relative_path": "whitepaper_checks/verify_arbitrary_moduli.py",
+        "source_sha256": "945730180bacc4d2836de6c420f68ef3341fb289a073558b220e55a55cd0d49a"
+      },
+      "byte_preserved": false,
+      "transformation": "Documentation only: replace the managed-runtime example command with portable python3 usage and state Python 3.9."
+    }
+  ]
+}

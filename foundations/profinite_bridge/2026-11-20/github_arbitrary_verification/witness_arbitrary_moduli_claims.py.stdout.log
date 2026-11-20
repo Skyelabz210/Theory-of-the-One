@@ -1,0 +1,16 @@
+WP_ARBITRARY_MODULI — claims checked by execution
+======================================================================
+  U2  star family q=c*t+1, t^-1 = q-c        : 48 cases hold  [HOLDS]
+  A3  universal projection, arbitrary A      : 50000/50000 hold  [HOLDS]
+  U3  adjacency read: paper says (gamma + K)  : 24/100 hold  [SIGN ERROR AS WRITTEN]
+  U3  corrected      (gamma - K)             : 100/100 hold  [HOLDS]
+  U6  anchor: paper says (P*A) %% P == 1      : 0/5 hold  [FALSE AS WRITTEN - always 0]
+  U6  corrected: P^-1 mod A == P             : 5/5 hold  [HOLDS]
+  U1  manufactured Q = t*D => Delta exact    : 12/12 hold  [HOLDS]
+======================================================================
+
+Summary: U1(exact-Delta consequence), U2 and A3 hold as stated.
+U3 and U6 are WRONG AS WRITTEN in the paper and hold only in their
+corrected forms. Implementing U3 as published would introduce a sign
+error; implementing U6 as published would assert a false identity.
+Section 5.2's Lean body contains `sorry` while section 11 claims 0.

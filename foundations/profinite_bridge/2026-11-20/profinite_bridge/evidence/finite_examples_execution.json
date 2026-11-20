@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "command": "python3 verify_finite_examples.py",
+  "exit_code": 0,
+  "started_at_utc": "2026-11-20T07:30:50.347190+00:00",
+  "completed_at_utc": "2026-11-20T07:30:50.451888+00:00",
+  "python": "3.12.14",
+  "script_sha256": "13871532f19a6557fc4607cf150ddb9c2d469d7a64b0ad3ddc38ce7951ca0931",
+  "result_sha256": "d13a54fe6b3551ef9cba982eddbead1c54df7f8260ed6a2ef2dba294dd0b7247",
+  "log_sha256": "8836b16a872c7111d81aaf34c95f54fd0914bc5365b038d1108b723c130f5473",
+  "arithmetic_syntax_audit": {
+    "float_literals": 0,
+    "true_division_nodes": 1
+  },
+  "scope": "Exact finite reference checks; no Lean or production build."
+}

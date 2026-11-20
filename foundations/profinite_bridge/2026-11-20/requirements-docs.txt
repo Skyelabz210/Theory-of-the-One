@@ -1,0 +1,6 @@
+# Recorded document-build environment: Python 3.12.14.
+# Arithmetic verification scripts use only the Python standard library.
+# Pandoc, LibreOffice, and the fonts listed in README.md are system dependencies.
+python-docx==1.2.0
+matplotlib==3.10.8
+numpy==2.3.5

@@ -1,0 +1,4 @@
+CRT overflow alpha == floor(sum xi_i/p_i) == iterated carries, and the fractional part is X_M/M: 9000 cases, violations=0
+
+=== Q2. Lane form: what does the anchor give?  K = alpha + c (mod A)
+K = alpha + c (mod A): 18000 cases, violations=0; candidate-set sizes seen [6, 7, 8]; true K inside candidate set 18000/18000

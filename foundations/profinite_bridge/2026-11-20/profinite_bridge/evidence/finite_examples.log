@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "assertions": 60093,
+  "canonical_states": 30030,
+  "partitions": 11,
+  "multiplicative_orders": {
+    "23": 11,
+    "29": 14,
+    "667": 154
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "source_repository": "Skyelabz210/NINE65_v7",
+  "source_commit": "64c1c89b191093dc12cf81b87da5fb1a02c46dc1",
+  "source_sha256": "498cf7bae0be75298a50af24bcf74aa3fa4ad77e2383e9e46e1f0354e756492a",
+  "q1_normalized_crt_warmup": {
+    "cases": 9000,
+    "violations": 0,
+    "seed": 20261117,
+    "rng_state_before_q2": 15162187741815076899,
+    "scope": "Original warmup executed unchanged; preserves Q2 input stream"
+  },
+  "q2": {
+    "cases": 18000,
+    "identity_violations": 0,
+    "candidate_set_sizes": [
+      6,
+      7,
+      8
+    ],
+    "true_K_in_candidates": 18000,
+    "source_range": "0 <= X < M*A",
+    "rank_contract": "normalized xi_i",
+    "identity": "K = alpha + c modulo A",
+    "candidate_definition": "{(a+c) mod A : 0 <= a < k}",
+    "matches_archived_aggregate": true
+  },
+  "excluded_sections": [
+    "Q1 Hermite/tropical sweep",
+    "Q1 Theorem-5 carry enumeration",
+    "Q3 fixed-point truncation experiment"
+  ],
+  "limitations": [
+    "Finite deterministic experiment, not a universal proof or a Lean build.",
+    "Candidate cardinalities follow the selected k and anchors larger than k.",
+    "Does not recover an unrestricted integer K from a fixed finite observation.",
+    "The two other sampled bases are test fixtures, not changes to selected S6."
+  ]
+}
