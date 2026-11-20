@@ -1,10 +1,11 @@
 # Exact mock theta coefficient bridge: execution receipts
 
-The 20 November 2026 run used `leanprover/lean4:v4.27.0-rc1` and its bundled
-standard library. It passed 202 theorem declarations, including 72 new ones,
-with no compiler warnings, admitted proofs, or custom assumed declarations.
-Forty declarations have no axiom dependencies. The rest use only `propext`,
-`Classical.choice`, and `Quot.sound`.
+The 20 November 2026 proof audit compiled **217 theorem declarations** with
+`leanprover/lean4:v4.27.0-rc1` and its bundled standard library. The two
+new modules account for 4 declarations in `CoefficientObservations` and 11 in
+`MockThetaPhi`. Of the 217 declarations, 41 have empty axiom lists. The
+remaining lists contain only `propext`, `Classical.choice`, and `Quot.sound`.
+All four verification commands exited successfully without compiler warnings.
 
 | File | Meaning |
 |---|---|
@@ -14,21 +15,21 @@ Forty declarations have no axiom dependencies. The rest use only `propext`,
 | [proof-audit.log](proof-audit.log) | Summary output from the proof checker |
 | [lake-build.log](lake-build.log) | Package build using the registered module graph |
 | [closure-smoke.log](closure-smoke.log) | Existing 1,809 concrete comparison/divmod/GCD pairs and four controls |
-| [mock-theta-smoke.log](mock-theta-smoke.log) | 6,251 exact assertions, including 41 independently calculated coefficients |
+| [mock-theta-smoke.log](mock-theta-smoke.log) | 12,803 exact assertions across both coefficient series, their evaluations, and the joint Watson check |
 
-The named series is Ramanujan's third-order
-`f(q) = sum q^(n*n)/product(1+q^j)^2`. The smoke oracle independently convolves
-the explicit factor coefficients `(-1)^k*(k+1)` and applies the square shifts;
-it does not use the formal division recurrence being checked. Empty
-truncations, modulus one, signs, overlapping composite refinements, and the
-root-period premise are exercised. Integer roots `1` and `-1` test finite
-identities, with no complex convergence claim.
+The coefficient oracles calculate $f$ and $\phi$ over the integers through
+degree 40, independently of Lean's formal division recurrence. The $f$ oracle
+uses the coefficients $(-1)^k(k+1)$ at degree $jk$ of $(1+q^j)^{-2}$.
+The $\phi$ oracle uses $(-1)^k$ at degree $2jk$ of $(1+q^{2j})^{-1}$. A joint check compares
+the two named coefficient functions with Watson's identity in the integer
+polynomial ring modulo $q^{41}$. The log reports coefficient tests, packet
+and evaluation tests, and the joint identity separately.
 
-The source base revision is the preceding research archive. The working-source
-hash manifest identifies the actual subsequently added and modified proof,
-configuration, and runner files. The runner checks that those bytes do not
-change during execution. Documentation edits after this run do not alter its
-formal source snapshot.
+The first implementation of $f$ at `853ed93` passed 202 theorem declarations
+and 6,251 integer assertions in the mock theta smoke program. Its snapshot
+records the source and compiler for that run. The current execution receipt
+records the base commit and hashes of the files used in this run.
+[First $f$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/853ed937d0fa3545683d668e72f6439b599529b5/evidence/current/profinite-mock-theta) · [Current execution](execution.json)
 
 From the repository root, with the pinned Lean/Lake installation available:
 

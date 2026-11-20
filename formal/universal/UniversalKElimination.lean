@@ -11,3 +11,4 @@ import StarLift
 import ResidueSeries
 import ProfiniteObservations
 import MockTheta
+import MockThetaPhi

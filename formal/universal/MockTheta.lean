@@ -1,5 +1,4 @@
-import ResidueSeries
-import ProfiniteObservations
+import CoefficientObservations
 
 /-!
 Exact formal coefficients of Ramanujan's third-order mock theta function
@@ -17,6 +16,7 @@ namespace KElimination.MockTheta
 open Lean.Grind
 open KElimination.ResidueSeries
 open KElimination.ProfiniteObservations
+open KElimination.CoefficientObservations
 
 universe u
 
@@ -191,7 +191,7 @@ theorem mockTheta_finite_root_evaluation_of_dvd (t z : R) (N b M : Nat)
 points. It factors through the named finite coordinate. -/
 def mockCylinder {F : PeriodFamily} (m : F.Period) (d : Nat) :
     ResiduePoint F → R :=
-  ofResidueFunction m (fun r => mockPacket m.val r d)
+  coefficientCylinder mockCoeff m d
 
 theorem mockCylinder_on_diagonal {F : PeriodFamily} (m : F.Period)
     (d source : Nat) :
@@ -203,15 +203,13 @@ themselves push forward by summing all finer residues in the cylinder. -/
 theorem mockCylinder_refinement {F : PeriodFamily} (m n : F.Period)
     (hdiv : m.val ∣ n.val) (d : Nat) (x : ResiduePoint F) :
     sumBelow n.val (fun s => if s % m.val = x.residue n % m.val then
-      (mockPacket n.val s d : R) else 0) = mockCylinder m d x := by
-  rw [x.coherent m n hdiv]
-  exact mockPacket_refinement m.val n.val (x.residue m) d
-    (F.positive n.val n.property) hdiv
+      (mockPacket n.val s d : R) else 0) = mockCylinder m d x :=
+  coefficientCylinder_refinement mockCoeff m n hdiv d x
 
 theorem mockCylinder_observable {F : PeriodFamily} (m : F.Period) (d : Nat) :
     ExactObservation.FiberConstant (fun x : ResiduePoint F => x.residue m)
       (mockCylinder m d : ResiduePoint F → R) :=
-  cylinder_fiber_constant m (fun r => mockPacket m.val r d)
+  coefficientCylinder_observable mockCoeff m d
 
 /-- A finite weighted cylinder function on the same compatible point space. -/
 def mockWeightedCylinder {F : PeriodFamily} (t : R) (N : Nat) (m : F.Period) :
@@ -234,8 +232,7 @@ theorem mockTheta_from_reduced_winding (t z : R) (N M H b : Nat)
     (hresolve : reducedTargetPeriod M b ∣ H) (hz : z ^ b = 1) :
     sumBelow (M*H) (fun r => mockWeightedPacket t N (M*H) r * z ^ r) =
       mockPolynomial N (t*z) :=
-  mockTheta_finite_root_evaluation_of_dvd t z N b (M*H)
-    (Nat.mul_pos hM hH) (target_divides_source_period M b H hb hresolve) hz
+  finite_root_evaluation_from_reduced_winding mockCoeff t z N M H b hM hH hb hresolve hz
 
 /-- End-to-end composition with the existing exact-observation contract for
 coupled anchors. Dependency/shared factors enter through the proved LCM/GCD
@@ -248,13 +245,8 @@ theorem mockTheta_from_coupled_anchors (t z : R) (N M b : Nat)
       (affineTarget M b r)) (hz : z ^ b = 1) :
     sumBelow (M * CoupledAnchors.resolution M anchors) (fun s =>
       mockWeightedPacket t N (M * CoupledAnchors.resolution M anchors) s * z ^ s) =
-      mockPolynomial N (t*z) := by
-  apply mockTheta_from_reduced_winding t z N M
-    (CoupledAnchors.resolution M anchors) b hM
-  · exact CoupledAnchors.resolution_pos M anchors hpos
-  · exact hb
-  · exact (combined_target_fiber_constant_iff M b anchors r hb hpos).mp hquery
-  · exact hz
+      mockPolynomial N (t*z) :=
+  finite_root_evaluation_from_coupled_anchors mockCoeff t z N M b anchors r hM hb hpos hquery hz
 
 end KElimination.MockTheta
 

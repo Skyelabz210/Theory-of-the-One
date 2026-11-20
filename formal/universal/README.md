@@ -2,9 +2,13 @@
 
 Standalone CRAM observation proofs and the exact mock theta coefficient bridge. Pin: `leanprover/lean4:v4.27.0-rc1`. No Mathlib dependency.
 
-On 20 November 2026 a fresh temporary build and transitive axiom audit passed **202 theorem declarations**: the original 130 declarations plus 72 in the new `ResidueSeries`, `ProfiniteObservations`, and `MockTheta` modules. The ten original substantive proof modules remain unchanged. The umbrella module, Lake roots, and audit module list now include the three new modules. The [formalization review](../../docs/reviews/2026-11-20-profinite-mock-theta-formalization.md) maps the definitions and theorems to their mathematical claims.
-
-The [execution receipt](../../evidence/current/profinite-mock-theta/execution.json) records actual commands, compiler and source hashes, and smoke results. The [proof receipt](../../evidence/current/profinite-mock-theta/verification.json) records every theorem and its axioms. The prior 16 November 130-declaration audit remains in [its dated execution record](../../evidence/current/lean/execution.json).
+The proof package covers coefficient construction, residue packets, cylinder
+observation, and finite transforms for Ramanujan's third-order $f$ and $\phi$.
+The execution receipt identifies the exact source and compiler, and the audit
+lists the transitive axioms of every theorem.
+[Formalization review](../../docs/reviews/2026-11-20-profinite-mock-theta-formalization.md)
+· [Execution receipt](../../evidence/current/profinite-mock-theta/execution.json)
+· [Proof audit](../../evidence/current/profinite-mock-theta/verification.json)
 
 From the repository root, run the complete verification:
 
@@ -21,9 +25,12 @@ lake env lean ClosureSmoke.lean
 lake env lean MockThetaSmoke.lean
 ```
 
-The audit compiles each project import in a fresh temporary directory and checks transitive axioms. The standard foundational axioms admitted by this audit are `propext`, `Classical.choice` and `Quot.sound`; the fresh receipt records 40 declarations with no axiom dependencies. The entire package is not axiom-free. The audit rejects missing or duplicate axiom queries, warnings, admitted proofs, and custom assumed declarations.
-
-The separate Lake build passed. `ClosureSmoke.lean` executed 1,809 comparison/divmod/GCD pairs plus four boundary/refusal controls. `MockThetaSmoke.lean` passed 6,251 exact assertions, including 41 coefficients independently calculated by finite polynomial convolution, packet refinement, and finite root evaluation. The default build target and `check_proofs.py` do not automatically run either smoke module; the reproduction runner executes all four commands.
+The audit compiles project imports in a fresh temporary directory and checks
+each theorem's dependencies against `propext`, `Classical.choice`, and
+`Quot.sound`. The runner also builds the package and executes the two smoke
+modules. `ClosureSmoke` covers 1,809 comparison/divmod/GCD pairs and four
+controls. `MockThetaSmoke` checks both named coefficient sequences and a joint
+Watson identity coefficientwise through degree 40.
 
 | Module | Freshly checked theorem count |
 |---|---:|
@@ -39,19 +46,32 @@ The separate Lake build passed. `ClosureSmoke.lean` executed 1,809 comparison/di
 | StarLift | 13 |
 | ResidueSeries | 29 |
 | ProfiniteObservations | 21 |
+| CoefficientObservations | 4 |
 | MockTheta | 22 |
-| **Total** | **202** |
+| MockThetaPhi | 11 |
+| **Total** | **217** |
 
 The original compiler receipt and log are retained in `../../evidence/historical/formal/`. Read the root architecture contract before interpreting proof variables as runtime state.
 
 ## The mock theta connection
 
-`MockTheta` constructs the coefficients of Ramanujan's third-order
-$f(q)=\sum_{n\ge0}q^{n^2}/(-q;q)_n^2$. Triangular formal division has a proved inverse law and uniqueness; coefficient support proves that the summand cutoff stabilizes at each degree. These definitions instantiate `ResidueSeries` coefficient packets, finite weighted pushforwards, and root evaluation.
+`MockTheta` defines the coefficients of $f$, whose denominator is
+$\prod_{j=1}^n(1+q^j)^2$. `MockThetaPhi` uses the same binomial recurrence
+once at each stride $2j$ to invert $\prod_{j=1}^n(1+q^{2j})$. The $q^{n^2}$
+shift bounds the contributing summands at each coefficient degree.
 
-`ProfiniteObservations` supplies algebraic inverse-system tuple data, diagonal points, cylinder functions, and exact target recoverability. `mockCylinder` and `mockWeightedCylinder` put the named coefficients into that tuple construction. The final `mockTheta_from_coupled_anchors` theorem composes the existing anchor observation criterion with the finite transform through the exact LCM/GCD period. Arbitrary admission families enforce precisely their declared divisibility transitions; full compatibility between incomparable moduli requires connecting coordinates.
+`CoefficientObservations` combines the generic packets in `ResidueSeries`
+with the compatible points and target admission in `ProfiniteObservations`.
+The named theorems `mockTheta_from_coupled_anchors` and
+`phi_from_coupled_anchors` specialize the finite root evaluation to each
+series. The coupled anchors supply the admissible period through their
+LCM/GCD resolution. Evaluation also requires the complete distribution of
+coefficient packets at that period.
 
-The selected primary is fixed at 30030. Semantic quotient variables in proofs do not become stored state. The full coefficient distribution needed by a finite transform is separate from an observed residue of one runtime source. Topology, continuity, Pontryagin duality, infinite analytic limits, harmonic-Maass shadows, and the other sixteen original named functions are beyond this initial formal slice.
+The selected primary is 30030. Topology, infinite analytic limits, and
+harmonic-Maass shadows remain open in this package. The original $f$ audit
+and the earlier 130-declaration audit retain their original execution records.
+[First $f$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/853ed937d0fa3545683d668e72f6439b599529b5/evidence/current/profinite-mock-theta) · [16 November audit](../../evidence/current/lean/execution.json)
 
 ## What the checked package establishes
 

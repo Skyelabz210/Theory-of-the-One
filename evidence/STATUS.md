@@ -1,19 +1,21 @@
 # Evidence status — research draft
 
-## 20 November 2026 — exact mock theta coefficient bridge
+## 20 November 2026 — third-order $f$ and $\phi$
 
-The new [formalization review](../docs/reviews/2026-11-20-profinite-mock-theta-formalization.md) connects the named third-order series to coefficient packets, compatible residue tuples, finite character evaluation, and the existing coupled-anchor query criterion. The research archive was committed first as [`8941f734f7c4cfcfae006bce35f8f9a2665a9c52`](https://github.com/Skyelabz210/Theory-of-the-One/commit/8941f734f7c4cfcfae006bce35f8f9a2665a9c52). The subsequent source bytes and actual execution are identified by the [current receipt](current/profinite-mock-theta/execution.json).
+Both named coefficient constructions reach the finite transform through the same
+coupled-anchor criterion. The implementation, mathematical sources, and bounds
+of each proof are recorded in the [formalization review](../docs/reviews/2026-11-20-profinite-mock-theta-formalization.md).
 
 | Executed check | Result | Receipt |
 |---|---|---|
-| Fresh temporary proof build and transitive axiom audit | 202 declarations passed, including 72 new; no compiler warnings or reused project oleans | [Proof receipt](current/profinite-mock-theta/verification.json), [full log](current/profinite-mock-theta/verification.log) |
+| Fresh temporary proof build and transitive axiom audit | 217 declarations passed, including 4 in `CoefficientObservations` and 11 in `MockThetaPhi` | [Proof receipt](current/profinite-mock-theta/verification.json) |
 | Pinned Lake package build | Passed | [Build log](current/profinite-mock-theta/lake-build.log) |
-| Existing concrete comparison/divmod/GCD execution | 1,809 pairs plus four controls passed | [Closure smoke](current/profinite-mock-theta/closure-smoke.log) |
-| Independent mock coefficient and packet execution | 6,251 exact assertions passed, including independently calculated degrees 0–40 | [Mock theta smoke](current/profinite-mock-theta/mock-theta-smoke.log) |
+| Concrete comparison/divmod/GCD execution | 1,809 pairs and four controls | [Closure smoke](current/profinite-mock-theta/closure-smoke.log) |
+| Mock theta execution | 12,803 exact assertions passed, including the first 41 coefficients of each series and 41 comparisons with Watson's identity | [Smoke log](current/profinite-mock-theta/mock-theta-smoke.log) |
 
-All original substantive Lean modules retain their source bytes. The three new modules add 29 (`ResidueSeries`), 21 (`ProfiniteObservations`), and 22 (`MockTheta`) theorem declarations. Forty of the complete 202 declarations have no axiom dependencies; the others use only `propext`, `Classical.choice`, and `Quot.sound`. The package includes no admitted proof or custom assumed declaration.
-
-This is a formal coefficient and finite evaluation result for the displayed third-order function. It does not certify all seventeen mock theta functions, topological Pontryagin duality, an infinite analytic transform, radial asymptotics, a shadow correspondence, or a runtime packet constructor. The fixed primary and on-demand winding contract remain unchanged. Reproduce with `python3 tools/verify_profinite_mock_theta.py --lean lean` using the pinned installation.
+The earlier $f$ implementation at `853ed93` passed 202 theorem declarations and
+6,251 mock theta assertions. Its logs and hashes remain available at that revision.
+[Frozen first implementation receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/853ed937d0fa3545683d668e72f6439b599529b5/evidence/current/profinite-mock-theta)
 
 ## 20 November 2026 — research archive
 

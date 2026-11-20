@@ -5,7 +5,7 @@
   "fresh_temporary_build": true,
   "project_olean_reused": false,
   "imports": "Pinned Lean bundled Std; no Mathlib dependency",
-  "theorem_declarations": 202,
+  "theorem_declarations": 217,
   "module_theorem_counts": {
     "ExactObservation": 9,
     "UniversalLift": 15,
@@ -19,14 +19,16 @@
     "StarLift": 13,
     "ResidueSeries": 29,
     "ProfiniteObservations": 21,
+    "CoefficientObservations": 4,
     "MockTheta": 22,
+    "MockThetaPhi": 11,
     "UniversalKElimination": 0
   },
   "reused_observation_theorems": 9,
   "prior_universal_core_declarations": 75,
   "closure_and_starlift_declarations": 52,
-  "profinite_mock_theta_declarations": 72,
-  "axiom_free_declarations": 40,
+  "profinite_mock_theta_declarations": 87,
+  "axiom_free_declarations": 41,
   "allowed_foundational_axioms": [
     "Classical.choice",
     "Quot.sound",
@@ -1280,8 +1282,42 @@
       ]
     },
     {
+      "file": "CoefficientObservations.lean",
+      "sha256": "8930853125f308e1a7e0f1c6927bea995a4f1f35d04aa68a6ccd2421c54c42a0",
+      "theorem_count": 4,
+      "theorems": [
+        {
+          "name": "KElimination.CoefficientObservations.coefficientCylinder_observable",
+          "axioms": []
+        },
+        {
+          "name": "KElimination.CoefficientObservations.coefficientCylinder_refinement",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.CoefficientObservations.finite_root_evaluation_from_reduced_winding",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.CoefficientObservations.finite_root_evaluation_from_coupled_anchors",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
       "file": "MockTheta.lean",
-      "sha256": "e8f0db139478dbcecbf47dad5ef53389b1e0c78c6ed4e66a926a0b6b8a516192",
+      "sha256": "ab6e8af1e88b454696d2735bc367c900d70572c1a6ea1d7ca7d64a552a9d82df",
       "theorem_count": 22,
       "theorems": [
         {
@@ -1451,8 +1487,97 @@
       ]
     },
     {
+      "file": "MockThetaPhi.lean",
+      "sha256": "54b4c707050f8f2ed9d029d9215e66e18b2a5ac6a3ed55e53c96c7d6171c4794",
+      "theorem_count": 11,
+      "theorems": [
+        {
+          "name": "KElimination.MockThetaPhi.phiDenominatorAction_inverse",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaPhi.phiDenominatorAction_injective",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaPhi.inverseEvenPochhammer_unique",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaPhi.phiSummand_support",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaPhi.phiCoeff_stable",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaPhi.phiPacket_refinement",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaPhi.phiCylinder_observable",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaPhi.phiCylinder_refinement",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaPhi.phiWeightedPacket_refinement",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaPhi.phi_finite_root_evaluation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaPhi.phi_from_coupled_anchors",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
       "file": "UniversalKElimination.lean",
-      "sha256": "9158702327b18297bf66e8af2552b26eadfd8f80ecc0b70572e19de65f626964",
+      "sha256": "161297587d3b4bf863808aa485594d66c1c6438e9ffc5b374ab755e8918b82c9",
       "theorem_count": 0,
       "theorems": []
     }

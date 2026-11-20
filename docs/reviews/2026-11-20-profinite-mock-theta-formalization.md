@@ -1,26 +1,23 @@
-# Exact residue packets for Ramanujan's third-order mock theta function
+# Exact residue packets for Ramanujan's third-order mock theta functions $f$ and $\phi$
 
 ## Result and scope
 
-This formalization connects a named Ramanujan series to compatible coefficient
-packets and exact finite root evaluation. It constructs the coefficients of
+Lean constructs the coefficients of Ramanujan's third-order functions $f$ and $\phi$.
 
 $$
-f(q)=\sum_{n\geq0}\frac{q^{n^2}}{\prod_{j=1}^{n}(1+q^j)^2}
-     =\sum_{d\geq0}a_dq^d
+f(q)=\sum_{n\ge0}\frac{q^{n^2}}{\prod_{j=1}^{n}(1+q^j)^2},
+\qquad
+\phi(q)=\sum_{n\ge0}\frac{q^{n^2}}{\prod_{j=1}^{n}(1+q^{2j})}.
 $$
 
-by a terminating formal division recurrence, proves that the required reciprocal
-is unique, and proves that each coefficient depends on only finitely many
-summands. Those coefficients instantiate generic packet reconstruction,
-refinement, and finite evaluation theorems. A separate algebraic observation
-layer supplies compatible residue families, cylinder functions, and the exact
-arithmetic target requirement already supported by the coupled-anchor theory.
-The final `mockTheta_from_coupled_anchors` declaration composes that existing
-observation contract with the actual named coefficient transform.
-The declarations are in [MockTheta.lean](../../formal/universal/MockTheta.lean),
-[ResidueSeries.lean](../../formal/universal/ResidueSeries.lean), and
-[ProfiniteObservations.lean](../../formal/universal/ProfiniteObservations.lean).
+In each case a terminating formal division recurrence gives the unique
+denominator reciprocal. The numerator shift makes each coefficient a finite
+sum. Both coefficient functions instantiate packet refinement, cylinder
+observation, and finite evaluation at the period supplied by the coupled-anchor
+theorem. Ramanujan wrote the first terms of $\phi$ on page 3 of his last letter.
+Watson gives the product formula and the relation to $f$ used in §5.
+[Ramanujan's letter, p. 3](https://www.imsc.res.in/~rao/ramanujan/newnow/lastletter.pdf#page=3)
+· [Watson, pp. 62–63](https://www.mi.uni-koeln.de/NumberTheory/teaching/Seminare/MockTheta/pages/vortragS06.pdf#page=30)
 
 The starting research archive was published in commit
 [`8941f734f7c4cfcfae006bce35f8f9a2665a9c52`](https://github.com/Skyelabz210/Theory-of-the-One/commit/8941f734f7c4cfcfae006bce35f8f9a2665a9c52).
@@ -31,23 +28,19 @@ formal receipts, finite experiments, and open analytic questions. This review
 describes the new finite and coefficientwise Lean layer; it does not turn every
 statement in those papers into a compiler-checked theorem.
 
-### Historical family order is not root order
+### Historical family labels and root orders
 
 Ramanujan's original seventeen examples are grouped as four third-order, ten
 fifth-order, and three seventh-order examples in the
 [January 12, 1920 letter](https://www.imsc.res.in/~rao/ramanujan/newnow/lastletter.pdf).
-These are historical family labels. They do not assert that roots used in
-evaluation have multiplicative orders only three, five, or seven. The
-[Folsom–Ono–Rhoades paper](https://afolsom.people.amherst.edu/FolsomOnoRhoades-ForumPi.pdf)
-defines the displayed third-order function and gives its radial result at
-primitive roots of every even order; this analytic theorem remains an external
-literature result here.
+These labels describe the series. The certificate $z^b=1$ in the finite
+evaluation theorem determines the allowed roots. Folsom, Ono, and Rhoades
+prove a separate analytic result for $f$ at primitive roots of every even
+order. [Folsom–Ono–Rhoades](https://afolsom.people.amherst.edu/FolsomOnoRhoades-ForumPi.pdf)
 
-The new named-series construction covers **this one function, $f$**. It does
-not define or formalize all seventeen functions. The generic coefficient packet
-theorems are reusable for additional functions once their actual coefficient
-constructions and defining identities are supplied. The count seventeen and the
-family labels are source metadata, not a Lean classification theorem.
+The current Lean package covers **two of the seventeen named examples**, $f$ and $\phi$.
+The other two third-order, ten fifth-order, and three seventh-order functions
+each need a coefficient construction.
 
 ## Source-to-proof map
 
@@ -55,10 +48,12 @@ family labels are source metadata, not a Lean classification theorem.
 |---|---|---|
 | [ResidueSeries.lean](../../formal/universal/ResidueSeries.lean) | `packet`, `weightedPacket`, reconstruction, refinement, periodic evaluation, and finite root evaluation | Generic coefficientwise and finite algebra over bundled semiring/ring structures |
 | [MockTheta.lean](../../formal/universal/MockTheta.lean) | `divideBinomial`, `inverseSquaredPochhammer`, `mockCoeff`, named cylinders, and `mockTheta_from_coupled_anchors` | A specific formal coefficient construction for the displayed $f$, connected to packets, compatible observations, and the finite transform |
+| [MockThetaPhi.lean](../../formal/universal/MockThetaPhi.lean) | `inverseEvenPochhammer`, `phiCoeff`, `phiCylinder`, and `phi_from_coupled_anchors` | Unique reciprocal of the even-stride product, coefficient support, and the finite transform for $\phi$ |
+| [CoefficientObservations.lean](../../formal/universal/CoefficientObservations.lean) | `coefficientCylinder` and `finite_root_evaluation_from_coupled_anchors` | Cylinder observations and the coupled-anchor transform for a supplied coefficient function |
 | [ProfiniteObservations.lean](../../formal/universal/ProfiniteObservations.lean) | `PeriodFamily`, `ResiduePoint`, cylinder refinement, `reducedTargetPeriod`, and target recoverability | Algebraic compatible-coordinate data and exact finite observation requirements |
 | [CoupledAnchors.lean](../../formal/universal/CoupledAnchors.lean) | `resolution`, `source_period`, `target_period_iff`, and `combined_target_iff` | Existing LCM/GCD kernel and target-admission theorems for positive, possibly overlapping anchors |
 | [ExactObservation.lean](../../formal/universal/ExactObservation.lean) | `FiberConstant`, `Observed`, and `recoverable_iff` | A query factors through observed data exactly when it is constant on observation fibers |
-| [MockThetaSmoke.lean](../../formal/universal/MockThetaSmoke.lean) | Independent coefficient-array oracle and exercised packet/evaluation APIs | Executed finite integer regression evidence, recorded separately from universal proofs |
+| [MockThetaSmoke.lean](../../formal/universal/MockThetaSmoke.lean) | Independent integer coefficient calculations, packet and evaluation checks, and the joint Watson check | Finite regression evidence over the integers and the field of five elements |
 
 ## 1. Constructing the named coefficients
 
@@ -140,6 +135,19 @@ Here $N$ counts retained **coefficient degrees**. It is not the number of
 hypergeometric summands used in an analytic truncation. The distinction matters
 when comparing a finite computation with the original written series.
 
+### The even-stride denominator of $\phi$
+
+For $\phi$, `inverseEvenPochhammer n` starts at one and divides once by
+$1+q^{2j}$ for each $1\le j\le n$. Applying `phiDenominatorAction n` to the
+result gives one, and this action is injective. The reciprocal is therefore
+uniquely determined over the same commutative ring as $f$.
+
+Write $b_d=[q^d]\phi(q)$. The summand at index $n$ vanishes at degree $d<n^2$,
+and `phiCoeff_stable` proves that summing over $0\le n<K$ gives $b_d$
+whenever $d<K^2$. At $d=k^2$ the $k$th summand contributes the constant
+term of its reciprocal, which is one. The transform uses the coefficient truncation $\phi_N(q)=\sum_{d<N}b_dq^d$.
+[Coefficient construction](../../formal/universal/MockThetaPhi.lean)
+
 ## 2. Coefficient packets and finite pushforward
 
 For any coefficient function $a$, `packet a M r d` retains both the degree
@@ -184,7 +192,8 @@ $$
 Most of this generic packet layer requires only a semiring. The commutative-ring
 assumptions used for the named series and the root identity are explicit in
 their sections. `mockPacket`, `mockWeightedPacket`, and their refinement
-theorems instantiate the generic constructions with the actual `mockCoeff`.
+theorems instantiate the generic constructions with `mockCoeff`. The corresponding
+$\phi$ instances use `phiCoeff`, `phiPacket`, and `phiWeightedPacket`.
 
 ## 3. Compatible residue families and cylinder functions
 
@@ -248,6 +257,12 @@ pushforward. In these latter theorems the coarse cylinder value is a **sum of
 the appropriate finer packet masses**. It is not identified with a single
 finer residue packet. Cylinder functions pull back along a residue reduction;
 coefficient masses push forward by summing over that reduction's fibers.
+
+`coefficientCylinder` evaluates the degree packet of any supplied coefficient
+function at the selected coordinate. Both `mockCylinder` and `phiCylinder`
+use it. Its refinement law sums the finer packets over the selected residue
+class, and its observation law gives equal values for points that agree at
+the selected coordinate. [CoefficientObservations.lean](../../formal/universal/CoefficientObservations.lean)
 
 The designated primary is fixed explicitly by `selectedPrimary = 30030` and
 `selected_primary_factorization`, with `selectedPrimaryPowers` supplying its
@@ -319,17 +334,14 @@ $$
 \sum_{0\leq r<P}C_{N,P,r}(t)z^r=f_N(tz).
 $$
 
-This composition is itself present in Lean as
-`mockTheta_from_reduced_winding`, with positive $M,H,b$, the reduced
-divisibility premise, and the root certificate stated explicitly.
-`mockTheta_from_coupled_anchors` then takes the existing
+At $P=M\,\operatorname{resolution}(M,\text{anchors})$, the generic theorem
+`finite_root_evaluation_from_coupled_anchors` takes the
 `ExactObservation.FiberConstant (anchorObservation ...) (affineTarget ...)`
-contract for a positive anchor list. It obtains the reduced divisibility from
-`combined_target_fiber_constant_iff`, proves positivity of the coupled
-resolution, and invokes the named finite transform at
-$P=M\,\operatorname{resolution}(M,\text{anchors})$. Thus the connection to
-the existing observation criterion is a declaration with a proof, rather than
-only a suggested composition of APIs.
+premise for positive anchors and the root certificate $z^b=1$. The premise
+supplies $h_b\mid H$ through `combined_target_fiber_constant_iff`.
+The named specializations `mockTheta_from_coupled_anchors` and
+`phi_from_coupled_anchors` yield $f_N(tz)$ and $\phi_N(tz)$ from their
+respective packet distributions.
 
 The packet coefficients must actually be supplied with their stated source and
 weight semantics. A divisibility proof alone does not construct those packets.
@@ -352,65 +364,53 @@ the displayed finite evaluation, not a necessary condition for every particular
 $f_N,t,z$.** A polynomial may be constant or zero, terms may cancel, $N=0$
 may give an empty sum, or the supplied root may have smaller order.
 
-In particular, $z^b=1$ never implies that $z$ has exact order $b$, and
-neither finite root theorem requires primitivity. This layer does not turn the
-universal residue requirement into a claim about the exact order of an
-arbitrary ring element or about a mock theta function's analytic singularities.
+For positive $b$, the certificate $z^b=1$ implies that the multiplicative
+order of $z$ divides $b$. Primitivity is an additional condition in general.
+Both named finite root evaluations accept any certified root.
 
 ## 5. Verification and independent finite evidence
 
-The fresh proof audit is recorded in
-[`verification.json`](../../evidence/current/profinite-mock-theta/verification.json),
-which lists proof-source hashes, theorem declarations, and transitive axiom
-dependencies. The companion
-[`execution.json`](../../evidence/current/profinite-mock-theta/execution.json)
-records commands, compiler/Lake identity, source hashes including the runner and
-configuration, log hashes, and the final smoke assertion count. Counts from an
-earlier research archive are not evidence that these new files were compiled.
+The proof audit compiles every registered project module in a fresh temporary
+directory using Lean 4.27.0-rc1 and the bundled standard library. The execution
+receipt identifies the compiler, source bytes, commands, and output logs. The
+proof audit passed 217 declarations, with empty axiom lists for 41. The
+remaining declarations use only `propext`, `Classical.choice`, and `Quot.sound`. [Execution receipt](../../evidence/current/profinite-mock-theta/execution.json)
+· [Proof receipt](../../evidence/current/profinite-mock-theta/verification.json)
 
-The 20 November 2026 run passed with Lean **4.27.0-rc1**, using its bundled
-standard library and no Mathlib dependency. The proof audit compiled in a fresh
-temporary build and did not reuse project `.olean` files. It checked **202
-theorem declarations**, of which **72** are in this new slice:
+The mock theta smoke run passed **12,803 exact assertions**. The independent
+coefficient checks cover $d=0,\ldots,40$ for each series.
+The $f$ oracle expands each $(1+q^j)^{-2}$ with coefficient $(-1)^k(k+1)$ at
+degree $jk$. The $\phi$ oracle expands each $(1+q^{2j})^{-1}$ with
+coefficient $(-1)^k$ at degree $2jk$. The initial coefficients of $\phi$ are
+$1,1,0,-1,1,1,-1,-1,0,2,0,-2$. The cases $d=8$ and $d=9$ straddle the
+first contribution of $n=3$, and have values $0$ and $2$. Both series are
+also exercised through their finite packet and root evaluation interfaces.
+For $\phi$ the smoke program checks the selected coordinate on signed integer
+points and evaluates at the primitive fourth root $z=2$ in $\mathbb{F}_5$.
+Using $t=4$ gives $tz=3$ in that field. With
+$M=3$ and anchors 4 and 6, the resolution is 4 and the retained period is 12.
+[Smoke source](../../formal/universal/MockThetaSmoke.lean)
+· [Execution log](../../evidence/current/profinite-mock-theta/mock-theta-smoke.log)
 
-| New module | Audited theorem declarations |
-|---|---:|
-| `ResidueSeries` | 29 |
-| `ProfiniteObservations` | 21 |
-| `MockTheta` | 22 |
+Watson relates the two series by
 
-The audit found no admitted proofs or custom axioms. Its transitive axiom lists
-contain only `Classical.choice`, `Quot.sound`, and `propext`; **40 of the 202
-declarations** have empty axiom lists. The proof audit, Lake build, original
-closure smoke program, and new mock-theta smoke program all returned exit zero
-without compiler warnings or errors. The recorded source hashes match the
-reviewed files.
+$$
+\bigl(2\phi(-q)-f(q)\bigr)\prod_{j\ge1}(1+q^j)
+=1+2\sum_{k\ge1}(-1)^k q^{k^2}.
+$$
 
-[MockThetaSmoke.lean](../../formal/universal/MockThetaSmoke.lean) implements an
-independent finite coefficient oracle. It uses the explicit factor coefficients
-$(-1)^k(k+1)$ at degree $jk$ for $(1+q^j)^{-2}$, performs finite array
-convolution, and applies the $n^2$ shifts. This oracle does not call the
-formal division recurrence or the named coefficient constructor it checks.
+At degrees $0$ through $40$, only the factors $1+q^j$ with $j\le40$ can
+contribute. The smoke program forms the product from the named Lean
+coefficients and compares each result to the right side. Degree $0$ has
+coefficient $1$, a positive square $k^2$ has coefficient $2(-1)^k$, and all
+other degrees have coefficient $0$. This run establishes agreement modulo
+$q^{41}$. Watson gives the infinite identity in the cited paper.
+[Watson, pp. 62–63](https://www.mi.uni-koeln.de/NumberTheory/teaching/Seminare/MockTheta/pages/vortragS06.pdf#page=30)
 
-The smoke program exercises coefficient values, degree-preserving packets,
-overlapping composite refinement, finite weighted packets, zero truncation,
-modulus one, signed coefficients, and a root-premise negative control. Its root
-cases instantiate the ring with `Int` and use the integer roots $+1$ and
-$-1$ when their period premise holds. Weights outside the complex unit disc
-are deliberate because these are finite polynomial identities. Those checks
-make no inference about complex radial limits, analytic convergence, or mock
-modularity. The universal Lean declarations and the finite smoke executions
-are complementary evidence with separately recorded scope.
-
-The [new smoke log](../../evidence/current/profinite-mock-theta/mock-theta-smoke.log)
-reports **6,251 exact assertions**: 41 independent coefficients, 1,717
-coefficient packets, 1,258 coefficient refinements, 1,625 oracle weighted
-packets, 888 weighted refinements, 360 root cases with two oracle assertions
-each, and two sign/premise controls. The
-[original closure smoke log](../../evidence/current/profinite-mock-theta/closure-smoke.log)
-also passed its 1,809 comparison/divmod/GCD pairs and four refusal/negative
-controls. These are executed assertion counts, not additional universal theorem
-counts.
+The original $f$ implementation passed 202 theorem declarations, including 72
+in the initial coefficient and observation modules, and 6,251 mock theta
+assertions. It has a separate immutable execution record.
+[Original $f$ receipts at `853ed93`](https://github.com/Skyelabz210/Theory-of-the-One/tree/853ed937d0fa3545683d668e72f6439b599529b5/evidence/current/profinite-mock-theta)
 
 From the repository root, reproduce the recorded audit/build/smoke sequence with
 Python 3.11 or newer and the pinned Lean/Lake installation available together:
@@ -445,7 +445,7 @@ This slice does not claim any of the following:
 | Infinite analytic Fourier/measure identity | Convergence, summability, complex evaluation, and the justified limiting operation |
 | Radial mock theta asymptotics | Root-dependent subtraction and analytic control at the unit circle |
 | Analytic shadow correspondence | Explicit analytic and observation-side operators with an intertwining theorem |
-| Formalization of all seventeen original examples | Separate named coefficient definitions and theorems connecting each to the reusable packet layer |
+| Formalization of all seventeen original examples | Coefficient definitions for the remaining fifteen functions and their specializations of the packet theorems |
 | Production CRAM implementation | Authentic observation constructors, permitted runtime operations, admission and rejection behavior, and conformance proofs |
 
 The external analytic statements discussed in the paper remain attributed to
@@ -456,9 +456,3 @@ their original sources: [Folsom–Ono–Rhoades](https://afolsom.people.amherst.
 Local radial subtraction, a harmonic-Maass analytic shadow, and CRAM's
 designated shadow-eleven role remain distinct constructions until an explicit
 additional theorem connects them.
-
-The contribution of this slice is concrete: the displayed named series now has
-an exact coefficient construction with proved reciprocal uniqueness and local
-finiteness, reusable packet/refinement laws, and a finite evaluation interface
-that can consume the same admitted-period divisibility established by the
-observation arithmetic.
