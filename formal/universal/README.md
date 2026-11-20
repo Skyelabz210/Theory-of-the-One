@@ -3,7 +3,7 @@
 Standalone CRAM observation proofs and the exact mock theta coefficient bridge. Pin: `leanprover/lean4:v4.27.0-rc1`. No Mathlib dependency.
 
 The proof package covers coefficient construction, residue packets, cylinder
-observation, and finite transforms for Ramanujan's third-order $f$ and $\phi$.
+observation, and finite transforms for Ramanujan's original third-order $f$, $\phi$, $\psi$, and $\chi$.
 The execution receipt identifies the exact source and compiler, and the audit
 lists the transitive axioms of every theorem.
 [Formalization review](../../docs/reviews/2026-11-20-profinite-mock-theta-formalization.md)
@@ -29,8 +29,8 @@ The audit compiles project imports in a fresh temporary directory and checks
 each theorem's dependencies against `propext`, `Classical.choice`, and
 `Quot.sound`. The runner also builds the package and executes the two smoke
 modules. `ClosureSmoke` covers 1,809 comparison/divmod/GCD pairs and four
-controls. `MockThetaSmoke` checks both named coefficient sequences and a joint
-Watson identity coefficientwise through degree 40.
+controls. `MockThetaSmoke` checks all four named coefficient sequences and three
+relations from Watson through degree 40.
 
 | Module | Freshly checked theorem count |
 |---|---:|
@@ -47,31 +47,38 @@ Watson identity coefficientwise through degree 40.
 | ResidueSeries | 29 |
 | ProfiniteObservations | 21 |
 | CoefficientObservations | 4 |
-| MockTheta | 22 |
+| MockTheta | 24 |
 | MockThetaPhi | 11 |
-| **Total** | **217** |
+| MockThetaPsi | 14 |
+| MockThetaChi | 14 |
+| **Total** | **247** |
 
 The original compiler receipt and log are retained in `../../evidence/historical/formal/`. Read the root architecture contract before interpreting proof variables as runtime state.
 
 ## The mock theta connection
 
-`MockTheta` defines the coefficients of $f$, whose denominator is
-$\prod_{j=1}^n(1+q^j)^2$. `MockThetaPhi` uses the same binomial recurrence
-once at each stride $2j$ to invert $\prod_{j=1}^n(1+q^{2j})$. The $q^{n^2}$
-shift bounds the contributing summands at each coefficient degree.
+`MockTheta` constructs $f$ from the squared factors $\prod_{j=1}^n(1+q^j)^2$.
+`MockThetaPhi` uses binomial division at each even stride $2j$ with sign
+$+1$. `MockThetaPsi` starts at $n=1$ and divides by $1-q^{2j-1}$.
+`MockThetaChi` proves the coefficient action of
+$(1-x+x^2)(1+x)=1+x^3$ and uses it to divide by each trinomial at $x=q^j$.
+For all four series, `squareSum_stable` and the named support theorems
+show that indices $n<K$ suffice at degree $d<K^2$.
 
-`CoefficientObservations` combines the generic packets in `ResidueSeries`
-with the compatible points and target admission in `ProfiniteObservations`.
-The named theorems `mockTheta_from_coupled_anchors` and
-`phi_from_coupled_anchors` specialize the finite root evaluation to each
-series. The coupled anchors supply the admissible period through their
-LCM/GCD resolution. Evaluation also requires the complete distribution of
-coefficient packets at that period.
+`CoefficientObservations` combines `ResidueSeries` packets with the
+compatible points and target admission in `ProfiniteObservations`.
+Each series has a named finite root evaluation. The anchor specializations
+are `mockTheta_from_coupled_anchors`, `phi_from_coupled_anchors`,
+`psi_from_coupled_anchors`, and `chi_from_coupled_anchors`. The anchors
+supply the period through their LCM/GCD resolution. Evaluation uses the
+complete distribution of coefficient packets at that period.
 
 The selected primary is 30030. Topology, infinite analytic limits, and
-harmonic-Maass shadows remain open in this package. The original $f$ audit
-and the earlier 130-declaration audit retain their original execution records.
-[First $f$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/853ed937d0fa3545683d668e72f6439b599529b5/evidence/current/profinite-mock-theta) · [16 November audit](../../evidence/current/lean/execution.json)
+harmonic-Maass shadows remain open here. The ten fifth-order and three
+seventh-order functions require their own coefficient constructions. Earlier
+source and execution records are available for each proof package.
+[First $f$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/853ed937d0fa3545683d668e72f6439b599529b5/evidence/current/profinite-mock-theta) · [$f$, $\phi$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/769b724802ba1fd2e042718ac2dbc95b79d6fed1/evidence/current/profinite-mock-theta)
+· [16 November audit](../../evidence/current/lean/execution.json)
 
 ## What the checked package establishes
 

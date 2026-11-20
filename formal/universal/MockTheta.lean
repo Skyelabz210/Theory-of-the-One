@@ -22,6 +22,20 @@ universe u
 
 abbrev Series (R : Type u) := Nat → R
 
+/-- For a series of summands starting at square degrees, the first omitted
+index N gives a common cutoff: every coefficient below N² has stabilized. -/
+theorem squareSum_stable {R : Type u} [Semiring R] (s : Nat → Nat → R)
+    (hs : ∀ n d, d < n * n → s n d = 0) (d N : Nat) (hN : d < N * N) :
+    sumBelow N (fun n => s n d) = sumBelow (d + 1) (fun n => s n d) := by
+  rcases Nat.le_total N (d + 1) with h | h
+  · symm
+    apply sumBelow_eq_of_tail_zero _ _ _ h
+    intro n hn _
+    exact hs n d (Nat.lt_of_lt_of_le hN (Nat.mul_le_mul hn hn))
+  · apply sumBelow_eq_of_tail_zero _ _ _ h
+    intro n hn _
+    exact hs n d (Nat.lt_of_lt_of_le (by omega : d < n) (Nat.le_mul_self n))
+
 variable {R : Type u} [CommRing R]
 
 /-- Multiplication by the formal monomial q^j. -/
@@ -140,12 +154,14 @@ summand vanishes at this degree, as proved by `mockCoeff_stable`. -/
 def mockCoeff (d : Nat) : R :=
   sumBelow (d+1) (fun n => mockSummand n d)
 
+theorem mockCoeff_stable_of_lt_square (d N : Nat) (hN : d < N * N) :
+    sumBelow N (fun n => (mockSummand n d : R)) = mockCoeff d :=
+  squareSum_stable mockSummand mockSummand_support d N hN
+
 /-- The infinite hypergeometric definition is locally finite coefficientwise. -/
 theorem mockCoeff_stable (d N : Nat) (hN : d < N) :
-    sumBelow N (fun n => (mockSummand n d : R)) = mockCoeff d := by
-  apply sumBelow_eq_of_tail_zero (d+1) N _ (by omega)
-  intro n hn _
-  exact mockSummand_zero_of_index_gt n d (by omega)
+    sumBelow N (fun n => (mockSummand n d : R)) = mockCoeff d :=
+  mockCoeff_stable_of_lt_square d N (Nat.lt_of_lt_of_le hN (Nat.le_mul_self N))
 
 /-- The coefficient-normalized truncation; N is the number of retained degrees,
 not the number of hypergeometric summands. -/
@@ -250,6 +266,7 @@ theorem mockTheta_from_coupled_anchors (t z : R) (N M b : Nat)
 
 end KElimination.MockTheta
 
+#print axioms KElimination.MockTheta.squareSum_stable
 #print axioms KElimination.MockTheta.divideBinomial_at_or_above
 #print axioms KElimination.MockTheta.divideBinomial_below
 #print axioms KElimination.MockTheta.mulBinomial_divideBinomial
@@ -260,6 +277,7 @@ end KElimination.MockTheta
 #print axioms KElimination.MockTheta.inverseSquaredPochhammer_unique
 #print axioms KElimination.MockTheta.mockSummand_support
 #print axioms KElimination.MockTheta.mockSummand_zero_of_index_gt
+#print axioms KElimination.MockTheta.mockCoeff_stable_of_lt_square
 #print axioms KElimination.MockTheta.mockCoeff_stable
 #print axioms KElimination.MockTheta.mockPacket_reconstruction
 #print axioms KElimination.MockTheta.mockPacket_refinement

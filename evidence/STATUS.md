@@ -1,21 +1,22 @@
 # Evidence status — research draft
 
-## 20 November 2026 — third-order $f$ and $\phi$
+## 20 November 2026 — original third-order group
 
-Both named coefficient constructions reach the finite transform through the same
+All four named coefficient constructions reach the finite transform through the same
 coupled-anchor criterion. The implementation, mathematical sources, and bounds
 of each proof are recorded in the [formalization review](../docs/reviews/2026-11-20-profinite-mock-theta-formalization.md).
 
 | Executed check | Result | Receipt |
 |---|---|---|
-| Fresh temporary proof build and transitive axiom audit | 217 declarations passed, including 4 in `CoefficientObservations` and 11 in `MockThetaPhi` | [Proof receipt](current/profinite-mock-theta/verification.json) |
+| Fresh temporary proof build and transitive axiom audit | 247 declarations passed, including 14 each in `MockThetaPsi` and `MockThetaChi` | [Proof receipt](current/profinite-mock-theta/verification.json) |
 | Pinned Lake package build | Passed | [Build log](current/profinite-mock-theta/lake-build.log) |
 | Concrete comparison/divmod/GCD execution | 1,809 pairs and four controls | [Closure smoke](current/profinite-mock-theta/closure-smoke.log) |
-| Mock theta execution | 12,803 exact assertions passed, including the first 41 coefficients of each series and 41 comparisons with Watson's identity | [Smoke log](current/profinite-mock-theta/mock-theta-smoke.log) |
+| Mock theta execution | 26,779 exact assertions passed, including 41 independent coefficients per series and 123 comparisons with Watson's relations | [Smoke log](current/profinite-mock-theta/mock-theta-smoke.log) |
 
 The earlier $f$ implementation at `853ed93` passed 202 theorem declarations and
-6,251 mock theta assertions. Its logs and hashes remain available at that revision.
-[Frozen first implementation receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/853ed937d0fa3545683d668e72f6439b599529b5/evidence/current/profinite-mock-theta)
+6,251 mock theta assertions. The $f$, $\phi$ implementation at `769b724` passed 217
+declarations and 12,803 assertions. Each revision records its source hashes
+and logs. [$f$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/853ed937d0fa3545683d668e72f6439b599529b5/evidence/current/profinite-mock-theta) · [$f$, $\phi$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/769b724802ba1fd2e042718ac2dbc95b79d6fed1/evidence/current/profinite-mock-theta)
 
 ## 20 November 2026 — research archive
 

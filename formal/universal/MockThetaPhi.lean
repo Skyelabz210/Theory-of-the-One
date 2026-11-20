@@ -66,16 +66,8 @@ def phiCoeff (d : Nat) : R :=
 /-- Summing the first N summands suffices as soon as the first omitted
 numerator degree N² exceeds d. -/
 theorem phiCoeff_stable (d N : Nat) (hN : d < N * N) :
-    sumBelow N (fun n => (phiSummand n d : R)) = phiCoeff d := by
-  unfold phiCoeff
-  rcases Nat.le_total N (d + 1) with h | h
-  · symm
-    apply sumBelow_eq_of_tail_zero _ _ _ h
-    intro n hn _
-    exact phiSummand_support n d (Nat.lt_of_lt_of_le hN (Nat.mul_le_mul hn hn))
-  · apply sumBelow_eq_of_tail_zero _ _ _ h
-    intro n hn _
-    exact phiSummand_support n d (Nat.lt_of_lt_of_le (by omega : d < n) (Nat.le_mul_self n))
+    sumBelow N (fun n => (phiSummand n d : R)) = phiCoeff d :=
+  squareSum_stable phiSummand phiSummand_support d N hN
 
 /-- Polynomial formed from the first N coefficient degrees. -/
 def phiPolynomial (N : Nat) (q : R) : R :=

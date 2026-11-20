@@ -12,3 +12,5 @@ import ResidueSeries
 import ProfiniteObservations
 import MockTheta
 import MockThetaPhi
+import MockThetaPsi
+import MockThetaChi

@@ -30,17 +30,18 @@ The broader organizing criterion is exact observability: a requested result is r
 
 ## Mock theta functions in the residue construction
 
-The two series formalized here belong to Ramanujan's original third-order family.
+Lean constructs the coefficients of all four functions in Ramanujan's original third-order group. Each summand has numerator $q^{n^2}$.
 
-$$
-f(q)=\sum_{n\ge0}\frac{q^{n^2}}{\prod_{j=1}^{n}(1+q^j)^2},
-\qquad
-\phi(q)=\sum_{n\ge0}\frac{q^{n^2}}{\prod_{j=1}^{n}(1+q^{2j})}.
-$$
+| Function | First index $n$ | Denominator of the $n$th summand |
+|---|---:|---|
+| $f(q)$ | 0 | $\prod_{j=1}^n(1+q^j)^2$ |
+| $\phi(q)$ | 0 | $\prod_{j=1}^n(1+q^{2j})$ |
+| $\psi(q)$ | 1 | $\prod_{j=1}^n(1-q^{2j-1})$ |
+| $\chi(q)$ | 0 | $\prod_{j=1}^n(1-q^j+q^{2j})$ |
 
-Each denominator has a unique formal reciprocal, and only summands with $n^2\le d$ can contribute at degree $d$. For either series $g$, its degree truncation $g_N(t\zeta)$ is recovered by weighting the complete set of residue packets at an admitted period $L$ with $\zeta^L=1$. The coupled-anchor theorem supplies such a period for a certified target root. [Formalization and source map](docs/reviews/2026-11-20-profinite-mock-theta-formalization.md)
+Each denominator has a unique formal reciprocal. Only summands with $n^2\le d$ can contribute to coefficient degree $d$. For each series $g$, the finite root theorem recovers $g_N(t\zeta)$ from the complete weighted residue packets at period $L$ when $\zeta^L=1$. The coupled-anchor theorem supplies such a period for a certified target root. [Formalization and source map](docs/reviews/2026-11-20-profinite-mock-theta-formalization.md)
 
-The audit passed **217 theorem declarations**. The mock theta smoke run passed **12,803 exact assertions**, including independent integer coefficients for both series and a joint check of Watson's identity through degree 40. The infinite analytic transform and radial asymptotics remain open here. [Execution receipts](evidence/current/profinite-mock-theta/README.md)
+The audit compiled **247 theorem declarations**. The smoke run passed **26,779 exact assertions**, including independent integer coefficients for all four series and checks of three Watson relations through degree 40. The remaining original examples are ten fifth-order and three seventh-order series. The infinite analytic transform and radial asymptotics remain open here. [Execution receipts](evidence/current/profinite-mock-theta/README.md)
 
 ## Read the project in four layers
 

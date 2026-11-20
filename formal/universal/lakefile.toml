@@ -4,4 +4,4 @@ defaultTargets = ["UniversalKElimination"]
 
 [[lean_lib]]
 name = "UniversalKElimination"
-roots = ["ExactObservation", "UniversalLift", "RingReadout", "IntegerSpecialization", "CostedReadout", "ReferenceChange", "CoupledAnchors", "ResidueAlgorithms", "ResiduePrimitives", "StarLift", "ResidueSeries", "ProfiniteObservations", "CoefficientObservations", "MockTheta", "MockThetaPhi", "UniversalKElimination"]
+roots = ["ExactObservation", "UniversalLift", "RingReadout", "IntegerSpecialization", "CostedReadout", "ReferenceChange", "CoupledAnchors", "ResidueAlgorithms", "ResiduePrimitives", "StarLift", "ResidueSeries", "ProfiniteObservations", "CoefficientObservations", "MockTheta", "MockThetaPhi", "MockThetaPsi", "MockThetaChi", "UniversalKElimination"]

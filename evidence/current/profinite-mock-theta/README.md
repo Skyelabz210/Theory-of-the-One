@@ -1,11 +1,12 @@
 # Exact mock theta coefficient bridge: execution receipts
 
-The 20 November 2026 proof audit compiled **217 theorem declarations** with
-`leanprover/lean4:v4.27.0-rc1` and its bundled standard library. The two
-new modules account for 4 declarations in `CoefficientObservations` and 11 in
-`MockThetaPhi`. Of the 217 declarations, 41 have empty axiom lists. The
-remaining lists contain only `propext`, `Classical.choice`, and `Quot.sound`.
-All four verification commands exited successfully without compiler warnings.
+The 20 November 2026 proof audit compiled **247 theorem declarations** with
+`leanprover/lean4:v4.27.0-rc1` and its bundled standard library. The
+extension adds 14 declarations in `MockThetaPsi`, 14 in `MockThetaChi`, and
+two square-cutoff theorems in `MockTheta`. Of the 247 declarations, 41 have
+empty axiom lists. The others use only `propext`, `Classical.choice`, and
+`Quot.sound`. All four verification commands exited successfully without
+compiler warnings.
 
 | File | Meaning |
 |---|---|
@@ -15,21 +16,22 @@ All four verification commands exited successfully without compiler warnings.
 | [proof-audit.log](proof-audit.log) | Summary output from the proof checker |
 | [lake-build.log](lake-build.log) | Package build using the registered module graph |
 | [closure-smoke.log](closure-smoke.log) | Existing 1,809 concrete comparison/divmod/GCD pairs and four controls |
-| [mock-theta-smoke.log](mock-theta-smoke.log) | 12,803 exact assertions across both coefficient series, their evaluations, and the joint Watson check |
+| [mock-theta-smoke.log](mock-theta-smoke.log) | 26,779 exact assertions across the four coefficient series and three Watson relations |
 
-The coefficient oracles calculate $f$ and $\phi$ over the integers through
-degree 40, independently of Lean's formal division recurrence. The $f$ oracle
-uses the coefficients $(-1)^k(k+1)$ at degree $jk$ of $(1+q^j)^{-2}$.
-The $\phi$ oracle uses $(-1)^k$ at degree $2jk$ of $(1+q^{2j})^{-1}$. A joint check compares
-the two named coefficient functions with Watson's identity in the integer
-polynomial ring modulo $q^{41}$. The log reports coefficient tests, packet
-and evaluation tests, and the joint identity separately.
+Four independent finite factor calculations give the integer coefficients of
+$f$, $\phi$, $\psi$, and $\chi$ through degree 40. For $\psi$, geometric
+coefficients at multiples of $2j-1$ equal one. For $\chi$, the integer oracle
+uses $b_0=b_1=1$, $b_{k+2}=b_{k+1}-b_k$ at exponent multiples of $j$.
+Each series is checked against its packets, signed-source cylinders, and
+finite root evaluations. The log records 6,251 coefficient, packet, and integer-root checks, 408
+cylinder checks, and five finite-field root checks per series. Three further
+identities contribute 123 degreewise comparisons with Watson in $\mathbb{Z}[q]/(q^{41})$.
 
-The first implementation of $f$ at `853ed93` passed 202 theorem declarations
-and 6,251 integer assertions in the mock theta smoke program. Its snapshot
-records the source and compiler for that run. The current execution receipt
-records the base commit and hashes of the files used in this run.
-[First $f$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/853ed937d0fa3545683d668e72f6439b599529b5/evidence/current/profinite-mock-theta) · [Current execution](execution.json)
+Earlier receipts contain 202 declarations and 6,251 mock theta assertions for
+$f$ at `853ed93`, then 217 declarations and 12,803 assertions for $f$ and
+$\phi$ at `769b724`. The current receipt records the base commit and hashes of
+the files used in this run.
+[$f$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/853ed937d0fa3545683d668e72f6439b599529b5/evidence/current/profinite-mock-theta) · [$f$, $\phi$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/769b724802ba1fd2e042718ac2dbc95b79d6fed1/evidence/current/profinite-mock-theta) · [Current execution](execution.json)
 
 From the repository root, with the pinned Lean/Lake installation available:
 

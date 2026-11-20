@@ -253,6 +253,7 @@ $ lean -o CoefficientObservations.olean CoefficientObservations.lean
  Quot.sound]
 
 $ lean -o MockTheta.olean MockTheta.lean
+'KElimination.MockTheta.squareSum_stable' depends on axioms: [propext, Quot.sound]
 'KElimination.MockTheta.divideBinomial_at_or_above' depends on axioms: [propext, Quot.sound]
 'KElimination.MockTheta.divideBinomial_below' depends on axioms: [propext, Quot.sound]
 'KElimination.MockTheta.mulBinomial_divideBinomial' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -263,6 +264,7 @@ $ lean -o MockTheta.olean MockTheta.lean
 'KElimination.MockTheta.inverseSquaredPochhammer_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
 'KElimination.MockTheta.mockSummand_support' depends on axioms: [propext, Quot.sound]
 'KElimination.MockTheta.mockSummand_zero_of_index_gt' depends on axioms: [propext, Quot.sound]
+'KElimination.MockTheta.mockCoeff_stable_of_lt_square' depends on axioms: [propext, Quot.sound]
 'KElimination.MockTheta.mockCoeff_stable' depends on axioms: [propext, Quot.sound]
 'KElimination.MockTheta.mockPacket_reconstruction' depends on axioms: [propext, Quot.sound]
 'KElimination.MockTheta.mockPacket_refinement' depends on axioms: [propext, Quot.sound]
@@ -290,5 +292,37 @@ $ lean -o MockThetaPhi.olean MockThetaPhi.lean
 'KElimination.MockThetaPhi.phiWeightedPacket_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
 'KElimination.MockThetaPhi.phi_finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
 'KElimination.MockThetaPhi.phi_from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+$ lean -o MockThetaPsi.olean MockThetaPsi.lean
+'KElimination.MockThetaPsi.psiDenominatorAction_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaPsi.psiDenominatorAction_injective' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaPsi.inverseOddPochhammer_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaPsi.inverseOddPochhammer_constant' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaPsi.psiSummand_support' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaPsi.psiSummand_at_square' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaPsi.psiCoeff_zero' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaPsi.psiCoeff_stable' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaPsi.psiPacket_refinement' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaPsi.psiCylinder_observable' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaPsi.psiCylinder_refinement' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaPsi.psiWeightedPacket_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaPsi.psi_finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaPsi.psi_from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+$ lean -o MockThetaChi.olean MockThetaChi.lean
+'KElimination.MockThetaChi.trinomial_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaChi.mulTrinomial_divideTrinomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaChi.mulTrinomial_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaChi.chiDenominatorAction_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaChi.chiDenominatorAction_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaChi.inverseChiDenominator_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaChi.chiSummand_support' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaChi.chiCoeff_stable' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaChi.chiPacket_refinement' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaChi.chiCylinder_observable' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaChi.chiCylinder_refinement' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaChi.chiWeightedPacket_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaChi.chi_finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaChi.chi_from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
 
 $ lean -o UniversalKElimination.olean UniversalKElimination.lean
