@@ -1,5 +1,13 @@
 # Evidence status — research draft
 
+## 20 November 2026 — the order-34 to order-10 quantum transformation
+
+At $x=-1/34$, the weight-$1/2$ defect for the matrix $\left(\begin{smallmatrix}1&0\\24&1\end{smallmatrix}\right)$ is about $-2.51133957-2.93870810i$. The order-34 endpoint requires quotient resolution divisible by 17. The order-10 endpoint uses the primary alone. Independent finite sums and numerical quadrature of the FKTY theta period agree within $1.07\times10^{-46}$.
+Lean proves the finite endpoint formulas and identifies the period integrand with half the differential shadow. The transport theorem takes FKTY’s analytic law as a hypothesis. The 16-module audit covers 149 authored theorems, including 66 in the four new modules, and 360 kernel declarations.
+[Specialization and observation formulas](../docs/reviews/2026-11-20-order-34-to-10.md)
+· [Analytic kernel audit](../adapters/MockThetaAnalytic/verification.json)
+· [Numerical receipt](current/quantum-radial/transport34.json)
+
 ## 20 November 2026 — infinite differentiation of the third-order completion
 
 Lean proves $\xi_{1/2}M_f=4\Theta$ on the upper half-plane directly from the
@@ -9,8 +17,8 @@ projected shadows modulo 11. The expanded analytic package contains 83
 explicitly declared theorems across 12 modules, 58 public and 25 private.
 The kernel audited 195 constants, including 164 theorem entries when generated
 helpers are counted.
-[Infinite completion and source map](../docs/reviews/2026-11-20-third-order-analytic-shadow.md#differentiating-the-completed-function)
-· [Analytic kernel audit](../adapters/MockThetaAnalytic/verification.json)
+[Infinite completion and source map](https://github.com/Skyelabz210/Theory-of-the-One/blob/39d990a079c80407b377a574c78b96f72c842408/docs/reviews/2026-11-20-third-order-analytic-shadow.md#differentiating-the-completed-function)
+· [Analytic kernel audit](https://github.com/Skyelabz210/Theory-of-the-One/blob/39d990a079c80407b377a574c78b96f72c842408/adapters/MockThetaAnalytic/verification.json)
 
 ## 20 November 2026 — complex-analytic shadow and radial operators in Lean
 

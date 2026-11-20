@@ -1,6 +1,10 @@
 import QuantumStrange
 import QuantumRadialLimit
 import MockCompletion
+import BoundaryObservation34
+import BoundaryValues34
+import FKTYTheta
+import QuantumTransport34
 import Lean.Util.CollectAxioms
 import Lean.Elab.Command
 
@@ -30,12 +34,68 @@ example (r : ZMod 11) :
 
 end
 
+section
+open MockThetaAnalytic MockThetaAnalytic.BoundaryObservation34
+open KElimination.QuantumRadial KElimination.ResidueSeries
+open scoped MatrixGroups Topology
+
+example (X : ℤ) :
+    ((X % 30030) % 34 + 8 * ((X / 30030) % 17)) % 34 = X % 34 :=
+  target34_signed_euclidean X
+
+example (N : ℕ) (ζ : ℂ) (hζ : IsPrimitiveRoot ζ 34) (hN : 17 ≤ N) :
+    (-4) * sumBelow 510510 (fun r => uPacket ζ N 510510 r * ζ^r) = boundaryValue 17 ζ :=
+  endpoint34_from_packets N ζ hζ hN
+
+example (u : ℂ) (hu : 0 < u.im) :
+    fktyTheta u = xiHalf mockCompletion (u / 24) / 2 :=
+  fktyTheta_eq_xiHalf u hu
+
+example (hFKTY : FKTYWeightHalfLaw) (g : SL(2, ℤ)) (hg : g ∈ CongruenceSubgroup.Gamma 24)
+    (hd : 0 < g 1 1) (hc : g 1 0 ≠ 0) (x : ℚ) (he : Even x.den)
+    (hx : 0 < cuspDenom g x) :
+    fktyPhi x - ((cuspDenom g x : ℂ) ^ (-1/2 : ℂ)) * (fktyMultiplier g)⁻¹ *
+      fktyPhi (cuspAction g x) =
+        fktyVerticalPeriod fktyTheta (-(g 1 1 : ℚ) / (g 1 0 : ℚ)) x :=
+  hFKTY g hg hd hc x he hx
+
+/- Check the endpoint periods, phases, branch factor, and analytic premise together. -/
+example (hFKTY : FKTYWeightHalfLaw) :
+    (fktyScale * integerNome (-1/816)) *
+      ((-4) * sumBelow 510510 (fun r =>
+        uPacket (integerNome (1/34)) 17 510510 r * integerNome (1/34)^r)) -
+      (Real.sqrt (17/5) : ℂ) * ((fktyScale * integerNome (-1/240)) *
+        ((-4) * sumBelow 30030 (fun r =>
+          uPacket (integerNome (1/10)) 5 30030 r * integerNome (1/10)^r))) =
+      fktyVerticalPeriod (fun u => xiHalf mockCompletion (u/24) / 2) (-1/24) (-1/34) :=
+  boundary34_transport10_from_packets hFKTY
+
+/- The radial transfer admits every sequence of cutoffs above its accuracy thresholds. -/
+example (law : FKTYWeightHalfLaw) (r : ℕ → ℝ) (hr : ∀ j, 0 < r j ∧ r j < 1)
+    (hl : Filter.Tendsto r Filter.atTop (𝓝[<] (1 : ℝ)))
+    (ht : ∀ t : ℝ, 0 < t → t < 1 → HasSum
+      (fun d => complexFCoeff d * ((t : ℂ) * integerNome (1/34))^d)
+      (radialF ((t : ℂ) * integerNome (1/34))))
+    (hb : Filter.Tendsto (fun t : ℝ => radialF ((t : ℂ) * integerNome (1/34)) +
+      radialB ((t : ℂ) * integerNome (1/34))) (𝓝[<] (1 : ℝ))
+        (𝓝 (boundaryValue 17 (integerNome (1/34))))) :
+    ∃ K : ℕ → ℕ, (∀ j, j ≤ K j) ∧ ∀ N : ℕ → ℕ, (∀ j, K j ≤ N j) →
+      Filter.Tendsto (fun j => fPacketAtRadius (N j) 510510 (r j) (integerNome (1/34)) +
+        radialB ((r j : ℂ) * integerNome (1/34))) Filter.atTop
+        (𝓝 ((fktyVerticalPeriod fktyTheta (-1/24) (-1/34) + (Real.sqrt (17/5) : ℂ) *
+          ((fktyScale * integerNome (-1/240)) * boundaryValue 5 (integerNome (1/10)))) /
+            (fktyScale * integerNome (-1/816)))) :=
+  fPackets34_tendsto_order10_period law r hr hl ht hb
+
+end
+
 run_cmd do
   let env ← getEnv
   let allowed := #[``propext, ``Classical.choice, ``Quot.sound]
   let modules := #[`ShadowConvergence, `ShadowOperator, `ShadowProjection, `ShadowMode,
       `QuantumRadialLimit, `QuantumStrange, `ShadowGaussian, `ShadowBounds, `ShadowInfinite,
-      `MockHolomorphic, `ShadowSectors, `MockCompletion]
+      `MockHolomorphic, `ShadowSectors, `MockCompletion, `BoundaryObservation34,
+      `BoundaryValues34, `FKTYTheta, `QuantumTransport34]
   let mut audited := #[]
   for mod in modules do
     let some idx := env.getModuleIdx? mod | throwError "missing module {mod}"
@@ -84,6 +144,32 @@ run_cmd do
       ``MockThetaAnalytic.shadowDegreeBin_identically_zero_iff, ``MockThetaAnalytic.mockCompletion,
       ``MockThetaAnalytic.differentiableAt_mockCompletion, ``MockThetaAnalytic.xiHalf_mockCompletion,
       ``MockThetaAnalytic.xiHalf_project11_mockCompletion,
-      ``MockThetaAnalytic.xiHalf_project11_mockCompletion_eq_zero_iff]
+      ``MockThetaAnalytic.xiHalf_project11_mockCompletion_eq_zero_iff,
+      ``MockThetaAnalytic.BoundaryObservation34.target10_primary,
+      ``MockThetaAnalytic.BoundaryObservation34.target34_recoverable_iff,
+      ``MockThetaAnalytic.BoundaryObservation34.target34_projection,
+      ``MockThetaAnalytic.BoundaryObservation34.target34_signed_euclidean,
+      ``MockThetaAnalytic.BoundaryObservation34.target34_from_anchor17,
+      ``MockThetaAnalytic.BoundaryObservation34.primary_only_witness,
+      ``MockThetaAnalytic.BoundaryObservation34.target34_coupled_iff,
+      ``MockThetaAnalytic.BoundaryObservation34.target34_minimal_primary_multiple,
+      ``MockThetaAnalytic.BoundaryObservation34.order34_outside_primary_powers,
+      ``MockThetaAnalytic.BoundaryObservation34.endpoint10_from_packets,
+      ``MockThetaAnalytic.BoundaryObservation34.endpoint34_from_packets,
+      ``MockThetaAnalytic.fktyTheta_eq_shadowSeries, ``MockThetaAnalytic.fktyTheta_eq_xiHalf,
+      ``MockThetaAnalytic.fktyThetaTerm_summable, ``MockThetaAnalytic.fktyThetaTerm_eq_exp,
+      ``MockThetaAnalytic.fktyChi12_period, ``MockThetaAnalytic.fktyPhi_neg_one_div_34,
+      ``MockThetaAnalytic.fktyPhi_neg_one_div_10, ``MockThetaAnalytic.boundaryValue_cyclotomic34,
+      ``MockThetaAnalytic.boundaryValue_cyclotomic10,
+      ``MockThetaAnalytic.hasSum_fNegPartial, ``MockThetaAnalytic.fktyPhi_eq_tsum,
+      ``MockThetaAnalytic.fktyPhi_add_one,
+      ``MockThetaAnalytic.fNegPartial_reflection17, ``MockThetaAnalytic.fNegPartial_reflection5,
+      ``MockThetaAnalytic.transportMatrix34_mem, ``MockThetaAnalytic.transportMatrix34_cusps,
+      ``MockThetaAnalytic.transportMatrix34_multiplier, ``MockThetaAnalytic.transportMatrix34_weight,
+      ``MockThetaAnalytic.FKTYWeightHalfLaw, ``MockThetaAnalytic.boundary34_transport10,
+      ``MockThetaAnalytic.fktyPeriod34_eq_completionPeriod,
+      ``MockThetaAnalytic.boundary34_transport10_from_packets,
+      ``MockThetaAnalytic.boundary34_from_period_and_ten,
+      ``MockThetaAnalytic.fPackets34_tendsto_order10_period]
   unless required.all audited.contains do throwError "required public result missing from the audit"
   logInfo m!"PASS analytic audit: {audited.size} declarations in {modules.size} modules"

@@ -69,6 +69,8 @@ At the cusp $-1$ the singular terms of $f(q)+b(q)$ cancel and leave 4. At $i$, t
 
 At $w=1$, the same two-variable series gives the weight-$3/2$ quantum modular form proved by Bryson, Ono, Pitman, and Rhoades. Lean evaluates its terminating cusp sums and proves its translation law. At $x=1/11$, the finite inversion defect agrees with an independent eta period integral to better than $2\times10^{-61}$. [Known quantum form and source conventions](docs/reviews/2026-11-20-quantum-radial.md#a-quantum-modular-form-from-the-same-two-variable-series) · [Exact cusp construction](adapters/MockThetaAnalytic/QuantumStrange.lean)
 
+The compensated values of $f$ at orders 34 and 10 enter FKTY's weight-$1/2$ transformation at the reflected cusps $-1/34$ and $-1/10$. Its period integrates one half of the differential shadow of $f$ at the scaled argument $u/24$. The primary period $30030$ supports order 10 directly. At order 34, a bound modulus-17 anchor supplies the quotient class and the endpoint packets use period $510510$. [Cusp transformation, residue derivation, and independent period check](docs/reviews/2026-11-20-order-34-to-10.md) · [Finite values](adapters/MockThetaAnalytic/BoundaryValues34.lean) · [Conditional transport theorem](adapters/MockThetaAnalytic/QuantumTransport34.lean) · [Numerical receipt](evidence/current/quantum-radial/transport34.json)
+
 The standard-library audit compiled **367 theorem declarations**. The six mock theta and radial suites plus the crank suite passed **44,196 exact assertions**, including 1,579 finite checks for the radial formulas. [Proof audit and execution](evidence/current/profinite-mock-theta/README.md)
 
 ## Read the project in four layers

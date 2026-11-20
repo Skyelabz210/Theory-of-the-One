@@ -14,6 +14,8 @@ A separate radial theorem handles the original $f$ coefficients at a primitive e
 
 The $w=1$ specialization of the finite $U$-polynomial gives a second cusp function. At every rational $x=a/K$ with positive $K$, its partial sum stabilizes when the cutoff reaches $K$, so the infinite Pochhammer series has exactly that finite sum. Translation by $1$ multiplies its normalized value by $e(-1/24)$, where $e(z)=\exp(2\pi iz)$. At $x=1/2$ the exact value is $3e(-1/48)$. At $x=1/11$ the proof reduces the normalized value to an explicit polynomial in $e(1/11)$. [Finite strange series and cusp values](QuantumStrange.lean)
 
+At the $-1$ twist, the reflected quantum cusps $-1/34$ and $-1/10$ give the normalized compensated boundaries of $f$ at the positive-angle roots. Lean proves the cyclotomic values, the translation phase, the order-34 quotient query and the identity between FKTY's bilateral theta and one half of $\xi_{1/2}M_f$ at $u/24$. Given FKTY's weight-$1/2$ law, the two complete endpoint packet arrays evaluate its period. Given the interior Taylor identity and FOR's limit as well, sufficiently long $f$ packets on a radial approach give the solved order-34 value. [Observation and packet periods](BoundaryObservation34.lean) · [Finite cusp values](BoundaryValues34.lean) · [Bilateral theta](FKTYTheta.lean) · [Transport and radial limit](QuantumTransport34.lean) · [Derivation and independent period calculation](../../docs/reviews/2026-11-20-order-34-to-10.md)
+
 ## Reproduction
 
 With Git, Python 3.11 or newer and the pinned Lean/Lake installation on `PATH`, run from the repository root

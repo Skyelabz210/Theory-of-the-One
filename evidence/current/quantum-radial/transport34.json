@@ -1,0 +1,123 @@
+{
+  "source": "Folsom, Ki, Truong Vu and Yang, J. Number Theory 170 (2017), 315–346",
+  "doi": "https://doi.org/10.1016/j.jnt.2016.06.005",
+  "publication_pdf_sha256": "757d617b031aa6b87610137bf6288909dc20acede472029215de533393163a75",
+  "source_equations": [
+    "(1.1)–(1.3)",
+    "Theorem 1.8 (1.13)",
+    "(3.12)–(3.13)"
+  ],
+  "mpmath": "1.3.0",
+  "script_sha256": "9fe9b70f7b8be42d4787738abbaf03ce3d1a118ca4a3c3a04eb0a6321bc77225",
+  "command": "python3 tools/check_quantum_transport34.py --receipt evidence/current/quantum-radial/transport34.json",
+  "component": {
+    "a": 1,
+    "b": 2,
+    "c": 0,
+    "ell_b": 12,
+    "weight": "1/2"
+  },
+  "matrix": [
+    [
+      1,
+      0
+    ],
+    [
+      24,
+      1
+    ]
+  ],
+  "cx_plus_d": "5/17",
+  "psi_12": 1,
+  "slash_factor": "1.84390889145857746200045485635255863144936",
+  "normalization": "phi(x)=-4 sqrt(12i) e(x/24) F(-1;e(x))=sqrt(12i) e(x/24)[-4U(-1;e(-x))]",
+  "square_roots": "principal; sqrt(cx+d)>0 and u-x approaches the negative real axis from above",
+  "endpoints": [
+    {
+      "x": "-1/34",
+      "physical_f_cusp": "1/34",
+      "first_vanishing_factor": 17,
+      "F_minus_one": {
+        "real": "0.443118569229700576003038041511723754018289",
+        "imag": "-2.81707141976496383750046337233286555265043"
+      },
+      "U_minus_one_inverse_nome": {
+        "real": "0.443118569229700576003038041511723754018289",
+        "imag": "-2.81707141976496383750046337233286555265043"
+      },
+      "compensated_f_boundary_minus_4U": {
+        "real": "-1.77247427691880230401215216604689501607316",
+        "imag": "11.2682856790598553500018534893314622106017"
+      },
+      "normalized_phi": {
+        "real": "-31.7631618183540548539154540881598113494956",
+        "imag": "23.5051627900762731437180593952216178172472"
+      },
+      "F_U_normalized_difference_le": "1e-75"
+    },
+    {
+      "x": "-1/10",
+      "physical_f_cusp": "1/10",
+      "first_vanishing_factor": 5,
+      "F_minus_one": {
+        "real": "0.118033988749894848204586834365638117720309",
+        "imag": "-1.53884176858762670128514528801845491200335"
+      },
+      "U_minus_one_inverse_nome": {
+        "real": "0.118033988749894848204586834365638117720309",
+        "imag": "-1.53884176858762670128514528801845491200335"
+      },
+      "compensated_f_boundary_minus_4U": {
+        "real": "-0.472135954999579392818347337462552470881237",
+        "imag": "6.1553670743505068051405811520738196480134"
+      },
+      "normalized_phi": {
+        "real": "-15.8640279791394307716366671570086261463814",
+        "imag": "14.34120254501349330199925748243202779283"
+      },
+      "F_U_normalized_difference_le": "1e-78"
+    }
+  ],
+  "contour": "u=-1/24+it, 0<t<infinity; integrate theta_1,2,0(u) du/sqrt(u-x)",
+  "theta": "sum over n in Z of n sign6(n) e(n^2 u/24); sign6=+1 at 1, -1 at 5 modulo 6, 0 elsewhere",
+  "period_method": "direct Gaussian series above t=1/24, period-288 finite Fourier transform and Poisson sum below; geometric panels with Gauss–Legendre quadrature",
+  "maximum_mode": 110,
+  "splice_height": "1/24",
+  "retained_original_heights": [
+    "1/230400",
+    "400"
+  ],
+  "runs": [
+    {
+      "decimal_digits": 55,
+      "quadrature_order": 24
+    },
+    {
+      "decimal_digits": 55,
+      "quadrature_order": 36
+    },
+    {
+      "decimal_digits": 80,
+      "quadrature_order": 36
+    }
+  ],
+  "principal_branch_period": {
+    "real": "-2.51133957327121023763764793445858878496533",
+    "imag": "-2.93870809688248713593407125329882295540675"
+  },
+  "finite_cusp_defect": {
+    "real": "-2.51133957327121023763764793445858878496533",
+    "imag": "-2.93870809688248713593407125329882295540675"
+  },
+  "absolute_defect_minus_period": "1.0649710701244654219850530775696185696401e-46",
+  "acceptance_threshold": "1e-30",
+  "two_theta_expansions_overlap_max_difference": "8.12741552414291120429481341584304873467741e-53",
+  "quadrature_order_change": "2.0225936840187984069033085226142904054605e-36",
+  "precision_change": "1.05988269387389684270727386704636359554157e-55",
+  "series_and_height_truncation_bound": "2.68576857952345775329081435527773975338487e-44",
+  "controls_absolute_residual": {
+    "psi_minus_one": "78.8656430175794266462719806702951018177046",
+    "opposite_integral_sqrt": "7.73119181781456350707729287344325085777536"
+  },
+  "scope": "Numerical agreement for one group element and one cusp pair. The Gaussian tail estimates exclude roundoff; quadrature is checked by order and precision replication."
+}

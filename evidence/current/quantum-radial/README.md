@@ -31,6 +31,18 @@ decimal digits. At $x=1/11$ using the opposite translation multiplier gives
 error above 18. These are evaluations of a published weight-$3/2$ law on
 rational cusps. [BOPR, Theorems 1.1 and 1.3](https://doi.org/10.1073/pnas.1211964109)
 
+At the positive-angle roots of orders 34 and 10, FOR's compensated values
+enter the weight-$1/2$ transformation of Folsom, Ki, Truong Vu and Yang.
+The finite defect at the reflected cusps $-1/34$ and $-1/10$ differs from
+the independently integrated theta period by about $1.065\times10^{-46}$.
+The receipt records truncations, two quadrature orders, two working
+precisions and branch and multiplier controls.
+[Order-34 to order-10 derivation](../../../docs/reviews/2026-11-20-order-34-to-10.md)
+· [Lean transport theorem](../../../adapters/MockThetaAnalytic/QuantumTransport34.lean)
+· [Analytic kernel audit](../../../adapters/MockThetaAnalytic/verification.json)
+· [Period computation](../../../tools/check_quantum_transport34.py)
+· [Numerical receipt](transport34.json)
+
 From the repository root, reproduce the finite proofs and exact checks with
 the pinned Lean toolchain. Reproduce the numerical run with Python and
 `mpmath==1.3.0`.
@@ -38,6 +50,7 @@ the pinned Lean toolchain. Reproduce the numerical run with Python and
 ```sh
 python3 tools/verify_profinite_mock_theta.py --lean lean
 python3 tools/check_quantum_radial.py --dps 340 --receipt evidence/current/quantum-radial/numerical.json
+python3 tools/check_quantum_transport34.py --receipt evidence/current/quantum-radial/transport34.json
 ```
 
 The Mathlib adapter also proves the diagonal cutoff theorem for the finite

@@ -17,4 +17,5 @@ roots = [
   "ShadowConvergence", "ShadowOperator", "ShadowProjection", "ShadowMode",
   "QuantumRadialLimit", "QuantumStrange", "ShadowGaussian", "ShadowBounds",
   "ShadowInfinite", "MockHolomorphic", "ShadowSectors", "MockCompletion",
+  "BoundaryObservation34", "BoundaryValues34", "FKTYTheta", "QuantumTransport34",
 ]

@@ -194,10 +194,9 @@ differentiation errors were assessed numerically.
 
 ## Complex analysis in Lean
 
-The analytic adapter compiles 83 explicitly declared theorems across 12
-modules, 58 public and 25 private. The kernel audited 195 constants,
-including 164 theorem entries with generated helpers, and recorded their
-transitive axiom dependencies. The adapter imports the exact `shadowWeight` from
+At the infinite-completion checkpoint the analytic adapter compiled 83 explicitly declared theorems across 12 modules, 58 public and 25 private. The kernel audited 195 constants, including 164 theorem entries with generated helpers, and recorded their transitive axiom dependencies. [Checkpoint audit](https://github.com/Skyelabz210/Theory-of-the-One/blob/39d990a079c80407b377a574c78b96f72c842408/adapters/MockThetaAnalytic/verification.json)
+
+The adapter imports the exact `shadowWeight` from
 the standard-library package. At every $|u|<1$ it proves absolute summability of
 $\sum_{m\ge0}\operatorname{shadowWeight}(m)u^{m^2}$, using $m|u|^m$ as a
 summable majorant. It proves that the eleven degree bins sum to the entire
