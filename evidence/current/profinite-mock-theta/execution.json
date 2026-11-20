@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "started_at_utc": "2026-11-20T07:41:08.056802+00:00",
+  "source_base_commit": "8941f734f7c4cfcfae006bce35f8f9a2665a9c52",
+  "scope": "Formal coefficients, compatible residue tuples, finite transforms, and arithmetic observation criteria",
+  "commands": [
+    {
+      "portable_reproduction_command": [
+        "python3",
+        "check_proofs.py",
+        "--lean",
+        "lean"
+      ],
+      "working_directory": "formal/universal",
+      "log": "proof-audit.log",
+      "exit_code": 0,
+      "compiler_warning_or_error": false,
+      "seconds": 13.656,
+      "sha256": "16a645b4579e19e581a9cd1b6a50119343da96925468d088332873a8b173f851"
+    },
+    {
+      "portable_reproduction_command": [
+        "lake",
+        "build"
+      ],
+      "working_directory": "formal/universal",
+      "log": "lake-build.log",
+      "exit_code": 0,
+      "compiler_warning_or_error": false,
+      "seconds": 3.497,
+      "sha256": "db88f62e6651e95195490bbf350d7f457c653b0658240aefe8256980beef21f6"
+    },
+    {
+      "portable_reproduction_command": [
+        "lake",
+        "env",
+        "lean",
+        "ClosureSmoke.lean"
+      ],
+      "working_directory": "formal/universal",
+      "log": "closure-smoke.log",
+      "exit_code": 0,
+      "compiler_warning_or_error": false,
+      "seconds": 0.653,
+      "sha256": "7c20cf621a8a3b6c6153246ac4a405d49366ddfa165b4b2e5920f71ee8e2473a"
+    },
+    {
+      "portable_reproduction_command": [
+        "lake",
+        "env",
+        "lean",
+        "MockThetaSmoke.lean"
+      ],
+      "working_directory": "formal/universal",
+      "log": "mock-theta-smoke.log",
+      "exit_code": 0,
+      "compiler_warning_or_error": false,
+      "seconds": 3.381,
+      "sha256": "f1caad0d19755d1e10d2e7b47f60827324c8121cc01bc27de69546ef957e2bd6"
+    }
+  ],
+  "toolchain": "leanprover/lean4:v4.27.0-rc1",
+  "lean_version": "Lean (version 4.27.0-rc1, x86_64-unknown-linux-gnu, commit 2fcce7258eeb6e324366bc25f9058293b04b7547, Release)",
+  "lean_executable_sha256": "8fadc3ed92cc9decb94c96ee9c0876e91e03a3a5e69138f32114f02789e2766c",
+  "lake_executable_sha256": "6ee60352946250468cf340ec68fcbe6c11c0db7b25d9fb4ae38ecab8e6178b48",
+  "python_version": "3.12.14",
+  "source_sha256": {
+    "formal/universal/ClosureSmoke.lean": "be184f35cb9c82256e9b55ead4fee6e5ce7e7c8df447f31c538fea74cab2a43e",
+    "formal/universal/CostedReadout.lean": "2946863aa7d1252b8687f0feb9073f073b4ba769368567cc9ea9cc3987a534d7",
+    "formal/universal/CoupledAnchors.lean": "4357100f2e4b0632d36c1e16cfcaa5da10fe2285a8029773aa1b2112a8b9e95d",
+    "formal/universal/ExactObservation.lean": "3e4f0dc07d9ecb189b4b3a7e490d07fad3a0f828e4ad773fa251876263a3f195",
+    "formal/universal/IntegerSpecialization.lean": "c7788921b59a7244e54d53cf1bda2013e3bacea98b9392b29c67b1fe91a3fa88",
+    "formal/universal/MockTheta.lean": "e8f0db139478dbcecbf47dad5ef53389b1e0c78c6ed4e66a926a0b6b8a516192",
+    "formal/universal/MockThetaSmoke.lean": "97502087074f9922723e32325b61f9b2e3107787452e4fa4fc43f904d1f7afa4",
+    "formal/universal/ProfiniteObservations.lean": "fab92ff0ca0593e80487aef025de007b02a59b8126d392ddc9985777656ad5ac",
+    "formal/universal/ReferenceChange.lean": "ecd6296ba0e850d03a6cd7093947a0d1803b37f3502c1c77256c8f242711b0e1",
+    "formal/universal/ResidueAlgorithms.lean": "852030cea0a3404654d2a77f677e35a147efc917be33d26ba85ceb6b6d5b7b67",
+    "formal/universal/ResiduePrimitives.lean": "61ad481a6dd7e7c9831259416a883a90c8b82162ab326dbc293945425ef9de95",
+    "formal/universal/ResidueSeries.lean": "7e55991d98f94845494a209f66ac05085d9d4f786598fac6e82dbfc7e67e68c4",
+    "formal/universal/RingReadout.lean": "033dc2f2903b7fcffcb7576fcbdfba70dff2cf247b9a9f0d8ce2dd5495d1e67b",
+    "formal/universal/StarLift.lean": "90947ad64ef314f2e4f07af16a1586f2685ba9e453e74da097b5ea9b44cdde9c",
+    "formal/universal/UniversalKElimination.lean": "9158702327b18297bf66e8af2552b26eadfd8f80ecc0b70572e19de65f626964",
+    "formal/universal/UniversalLift.lean": "00da716f76d10806dc86f3d5a4206c380ea8f6b5a99c6d4f788c4053efba2924",
+    "formal/universal/check_proofs.py": "379734a6c1037acc41ad18e8c4501042f433dc8ffc4bf99427ca19a0e8dbf821",
+    "formal/universal/lakefile.toml": "c1b574967df109bb63528ebaeeca70be3e2132bd7e6e5695a0303baf6ed1b037",
+    "formal/universal/lake-manifest.json": "cd0fa1eeeeab2f4e5fcb97850d37c871a495349737aa5699113f68bfd08f12e0",
+    "formal/universal/lean-toolchain": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
+    "tools/verify_profinite_mock_theta.py": "8bc344de77073649eb6efa190780e1e631544db01c777235135b932bfab65a93"
+  },
+  "theorem_declarations": 202,
+  "profinite_mock_theta_declarations": 72,
+  "axiom_free_declarations": 40,
+  "mock_theta_smoke_assertions": 6251,
+  "finished_at_utc": "2026-11-20T07:41:29.345618+00:00"
+}

@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.27.0-rc1",
+  "lean_version": "Lean (version 4.27.0-rc1, x86_64-unknown-linux-gnu, commit 2fcce7258eeb6e324366bc25f9058293b04b7547, Release)",
+  "fresh_temporary_build": true,
+  "project_olean_reused": false,
+  "imports": "Pinned Lean bundled Std; no Mathlib dependency",
+  "theorem_declarations": 202,
+  "module_theorem_counts": {
+    "ExactObservation": 9,
+    "UniversalLift": 15,
+    "RingReadout": 16,
+    "IntegerSpecialization": 28,
+    "CostedReadout": 7,
+    "ReferenceChange": 3,
+    "CoupledAnchors": 19,
+    "ResidueAlgorithms": 6,
+    "ResiduePrimitives": 14,
+    "StarLift": 13,
+    "ResidueSeries": 29,
+    "ProfiniteObservations": 21,
+    "MockTheta": 22,
+    "UniversalKElimination": 0
+  },
+  "reused_observation_theorems": 9,
+  "prior_universal_core_declarations": 75,
+  "closure_and_starlift_declarations": 52,
+  "profinite_mock_theta_declarations": 72,
+  "axiom_free_declarations": 40,
+  "allowed_foundational_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

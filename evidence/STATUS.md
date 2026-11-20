@@ -1,5 +1,20 @@
 # Evidence status — research draft
 
+## 20 November 2026 — exact mock theta coefficient bridge
+
+The new [formalization review](../docs/reviews/2026-11-20-profinite-mock-theta-formalization.md) connects the named third-order series to coefficient packets, compatible residue tuples, finite character evaluation, and the existing coupled-anchor query criterion. The research archive was committed first as [`8941f734f7c4cfcfae006bce35f8f9a2665a9c52`](https://github.com/Skyelabz210/Theory-of-the-One/commit/8941f734f7c4cfcfae006bce35f8f9a2665a9c52). The subsequent source bytes and actual execution are identified by the [current receipt](current/profinite-mock-theta/execution.json).
+
+| Executed check | Result | Receipt |
+|---|---|---|
+| Fresh temporary proof build and transitive axiom audit | 202 declarations passed, including 72 new; no compiler warnings or reused project oleans | [Proof receipt](current/profinite-mock-theta/verification.json), [full log](current/profinite-mock-theta/verification.log) |
+| Pinned Lake package build | Passed | [Build log](current/profinite-mock-theta/lake-build.log) |
+| Existing concrete comparison/divmod/GCD execution | 1,809 pairs plus four controls passed | [Closure smoke](current/profinite-mock-theta/closure-smoke.log) |
+| Independent mock coefficient and packet execution | 6,251 exact assertions passed, including independently calculated degrees 0–40 | [Mock theta smoke](current/profinite-mock-theta/mock-theta-smoke.log) |
+
+All original substantive Lean modules retain their source bytes. The three new modules add 29 (`ResidueSeries`), 21 (`ProfiniteObservations`), and 22 (`MockTheta`) theorem declarations. Forty of the complete 202 declarations have no axiom dependencies; the others use only `propext`, `Classical.choice`, and `Quot.sound`. The package includes no admitted proof or custom assumed declaration.
+
+This is a formal coefficient and finite evaluation result for the displayed third-order function. It does not certify all seventeen mock theta functions, topological Pontryagin duality, an infinite analytic transform, radial asymptotics, a shadow correspondence, or a runtime packet constructor. The fixed primary and on-demand winding contract remain unchanged. Reproduce with `python3 tools/verify_profinite_mock_theta.py --lean lean` using the pinned installation.
+
 ## 20 November 2026 — research archive
 
 The [arbitrary-moduli and profinite-bridge package](../foundations/profinite_bridge/2026-11-20/README.md) preserves both completed papers, their editable sources, reproducible checks, and source-pinned receipts. Its manifest and evidence READMEs distinguish fresh finite execution from historical Lean receipts and from the analytic research program. This archive commit adds no new Lean declarations. The subsequent formalization must carry its own compiler and axiom-audit receipt.

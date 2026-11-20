@@ -28,6 +28,20 @@ These congruences apply to arbitrary signed integers. An admitted quotient windo
 
 The broader organizing criterion is exact observability: a requested result is recoverable from an observation precisely when it is constant on that observation's fibers. The supplied formal package develops constructive instances, coupled anchors, target transport, bounded divmod/GCD, and operation counts.
 
+## Mock theta functions in the residue construction
+
+The [20 November formalization](docs/reviews/2026-11-20-profinite-mock-theta-formalization.md) constructs the actual coefficients of Ramanujan's third-order function
+
+$$
+f(q)=\sum_{n\ge0}\frac{q^{n^2}}{\prod_{j=1}^{n}(1+q^j)^2}.
+$$
+
+Lean proves formal reciprocal uniqueness, coefficientwise local finiteness, compatible coefficient packets under modulus refinement, and cylinder functions on compatible residue tuples. Its finite character identity recovers the coefficient truncation $f_N(t\zeta)$ from those packets. The final theorem composes that identity with the existing coupled-anchor target criterion through $h_b=b/\gcd(M,b)\mid H\Rightarrow b\mid MH$.
+
+The fresh proof audit passed **202 theorem declarations**, including **72 new declarations** in `ResidueSeries`, `ProfiniteObservations`, and `MockTheta`. The independent mock theta smoke calculation passed **6,251 exact assertions**. [Execution receipts](evidence/current/profinite-mock-theta/README.md) record the source hashes, compiler, commands, axiom dependencies, and outputs.
+
+This initial named-function slice covers $f$; the generic packet laws can be reused for the other examples after supplying their coefficient constructions. Topological Pontryagin duality, analytic convergence, radial asymptotics, and an analytic-shadow correspondence remain separate proof obligations. The transform consumes a finite coefficient distribution; one observed source residue does not itself supply that distribution.
+
 ## Read the project in four layers
 
 | Layer | Purpose | Start here |
@@ -56,16 +70,23 @@ Run the reference mathematics with Python 3.11 or newer:
 python3 tools/run_reference_checks.py
 ```
 
-With the pinned Lean compiler installed, rebuild the proof package and audit every theorem's transitive axioms:
+With the pinned Lean/Lake installation available, reproduce the fresh proof audit, package build, and both executable smoke checks from the repository root:
+
+```sh
+python3 tools/verify_profinite_mock_theta.py --lean lean
+```
+
+The equivalent individual commands are:
 
 ```sh
 cd formal/universal
 python3 check_proofs.py --lean lean
 lake build
 lake env lean ClosureSmoke.lean
+lake env lean MockThetaSmoke.lean
 ```
 
-The checker rebuilds project imports in a fresh temporary directory. The separate smoke command executes the concrete operations; neither the proof checker nor the default Lake target runs it automatically. No Mathlib dependency is required. Fresh receipts are under `evidence/current/lean/`; supplied historical receipts remain under `evidence/historical/formal/`.
+The checker rebuilds project imports in a fresh temporary directory. The smoke commands execute the concrete operations and independent coefficient oracle; neither the proof checker nor the default Lake target runs them automatically. No Mathlib dependency is required. The latest receipts are under `evidence/current/profinite-mock-theta/`; the 16 November run remains under `evidence/current/lean/`, and supplied historical receipts remain under `evidence/historical/formal/`.
 
 ## Development contract
 

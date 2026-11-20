@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parent
 MODULES = ["ExactObservation", "UniversalLift", "RingReadout",
            "IntegerSpecialization", "CostedReadout", "ReferenceChange",
            "CoupledAnchors", "ResidueAlgorithms", "ResiduePrimitives", "StarLift",
+           "ResidueSeries", "ProfiniteObservations", "MockTheta",
            "UniversalKElimination"]
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 
@@ -104,14 +105,20 @@ def main():
                 all_theorems.append(row)
             files.append({"file": source.name, "sha256": hashlib.sha256(data).hexdigest(),
                           "theorem_count": len(found), "theorems": module_theorems})
+    counts = {f["file"].removesuffix(".lean"): f["theorem_count"] for f in files}
+    bridge_modules = ["ResidueSeries", "ProfiniteObservations", "MockTheta"]
+    closure_modules = ["CoupledAnchors", "ResidueAlgorithms", "ResiduePrimitives", "StarLift"]
     report = {"status": "PASS", "toolchain": toolchain, "lean_version": version,
               "fresh_temporary_build": True, "project_olean_reused": False,
               "imports": "Pinned Lean bundled Std; no Mathlib dependency",
               "theorem_declarations": len(all_theorems),
-              "reused_observation_theorems": 9,
-              "new_theorem_declarations": len(all_theorems) - 9,
-              "prior_universal_core_declarations": 75,
-              "new_closure_and_starlift_declarations": len(all_theorems) - 75,
+              "module_theorem_counts": counts,
+              "reused_observation_theorems": counts["ExactObservation"],
+              "prior_universal_core_declarations": sum(counts[m] for m in
+                  ["ExactObservation", "UniversalLift", "RingReadout",
+                   "IntegerSpecialization", "CostedReadout"]),
+              "closure_and_starlift_declarations": sum(counts[m] for m in closure_modules),
+              "profinite_mock_theta_declarations": sum(counts[m] for m in bridge_modules),
               "axiom_free_declarations": sum(not t["axioms"] for t in all_theorems),
               "allowed_foundational_axioms": sorted(ALLOWED_AXIOMS),
               "files": files}
