@@ -268,7 +268,7 @@ slash action and a proof of regularity for its defect.
 |---|---|
 | All 17 mock theta coefficient families | Lean coefficient, packet, refinement and finite root theorems |
 | Mod-11 crank of a partition | Lean proves S6 projection, S8 recovery under an authentic affine transition, and the independent seventh-order size-weighted finite crank pairing |
-| Third-order $f$ and its normalized shadow | Exact Lean coefficients and support. Mathlib proves finite completion derivatives, their pointwise limit $4\Theta$, and the sign reversal of the degree projection. The infinite modular completion is supplied by Zwegers |
+| Third-order $f$ and its normalized shadow | Mathlib proves the full Fourier-completion derivative $4\Theta$, the sign reversal of its degree projection, and the exact vanishing sectors. Zwegers supplies the modular transformation law |
 | FOR's even-order boundary sum | Lean finite product and tail termination. FOR Theorem 1.1 identifies the compensated radial limit |
 | Approaching the boundary by coefficient packets | Mathlib proves the cutoff transfer for the actual packet evaluations with the Taylor identity and FOR’s radial limit as hypotheses |
 | Rank/crank limit at the eleventh root | FOR Theorem 1.2 with the statistic character and cusp specified separately |

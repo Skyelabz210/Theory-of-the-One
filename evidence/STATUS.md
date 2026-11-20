@@ -1,5 +1,17 @@
 # Evidence status — research draft
 
+## 20 November 2026 — infinite differentiation of the third-order completion
+
+Lean proves $\xi_{1/2}M_f=4\Theta$ on the upper half-plane directly from the
+named hypergeometric $f$ and its infinite Fourier correction. It proves the
+termwise real derivative and classifies the five identically vanishing
+projected shadows modulo 11. The expanded analytic package contains 83
+explicitly declared theorems across 12 modules, 58 public and 25 private.
+The kernel audited 195 constants, including 164 theorem entries when generated
+helpers are counted.
+[Infinite completion and source map](../docs/reviews/2026-11-20-third-order-analytic-shadow.md#differentiating-the-completed-function)
+· [Analytic kernel audit](../adapters/MockThetaAnalytic/verification.json)
+
 ## 20 November 2026 — complex-analytic shadow and radial operators in Lean
 
 The separate Mathlib adapter compiled 45 explicitly declared theorems across
@@ -16,8 +28,8 @@ evaluations. For the BOPR specialization at $w=1$, the adapter proves the
 terminating cusp values, normalized translation law, and exact prime-11
 polynomial. BOPR supplies the inversion law, independently tested against
 the eta period at three cusps.
-[Result and exact hypotheses](../docs/reviews/2026-11-20-third-order-analytic-shadow.md#complex-analysis-in-lean)
-· [Analytic kernel audit](../adapters/MockThetaAnalytic/verification.json)
+[Result and exact hypotheses](https://github.com/Skyelabz210/Theory-of-the-One/blob/4b90453cb7fe510f9afb790a2d57ca2b8b52e6e2/docs/reviews/2026-11-20-third-order-analytic-shadow.md#complex-analysis-in-lean)
+· [Analytic kernel audit](https://github.com/Skyelabz210/Theory-of-the-One/blob/4b90453cb7fe510f9afb790a2d57ca2b8b52e6e2/adapters/MockThetaAnalytic/verification.json)
 
 ## 20 November 2026 — rank/crank quantum radial values
 

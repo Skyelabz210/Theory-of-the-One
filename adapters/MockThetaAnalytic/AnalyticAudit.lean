@@ -1,8 +1,6 @@
 import QuantumStrange
 import QuantumRadialLimit
-import ShadowMode
-import ShadowProjection
-import ShadowConvergence
+import MockCompletion
 import Lean.Util.CollectAxioms
 import Lean.Elab.Command
 
@@ -11,10 +9,33 @@ Report each verified theorem and reject unproved assumptions anywhere in the loc
 
 open Lean Elab Command
 
+/- The completion identity is available at each positive height. Check its application
+and the exact sector classification through their public interfaces. -/
+section
+open MockThetaAnalytic KElimination.ShadowConvergence
+
+example (z : ℂ) (hz : 0 < z.im) :
+    xiHalf mockCompletion z = 4 * shadowSeries (integerNome z) :=
+  xiHalf_mockCompletion z hz
+
+example (r : ZMod 11) (z : ℂ) (hz : 0 < z.im) :
+    xiHalf (project11 r mockCompletion) z =
+      4 * shadowDegreeBin ⟨(-r).val, (-r).val_lt⟩ (integerNome z) :=
+  xiHalf_project11_mockCompletion r z hz
+
+example (r : ZMod 11) :
+    (∀ z : ℂ, 0 < z.im → xiHalf (project11 r mockCompletion) z = 0) ↔
+      r.val ∈ ([1, 3, 4, 5, 9] : List ℕ) :=
+  xiHalf_project11_mockCompletion_eq_zero_iff r
+
+end
+
 run_cmd do
   let env ← getEnv
   let allowed := #[``propext, ``Classical.choice, ``Quot.sound]
-  let modules := #[`ShadowConvergence, `ShadowOperator, `ShadowProjection, `ShadowMode, `QuantumRadialLimit, `QuantumStrange]
+  let modules := #[`ShadowConvergence, `ShadowOperator, `ShadowProjection, `ShadowMode,
+      `QuantumRadialLimit, `QuantumStrange, `ShadowGaussian, `ShadowBounds, `ShadowInfinite,
+      `MockHolomorphic, `ShadowSectors, `MockCompletion]
   let mut audited := #[]
   for mod in modules do
     let some idx := env.getModuleIdx? mod | throwError "missing module {mod}"
@@ -48,6 +69,21 @@ run_cmd do
       ``MockThetaAnalytic.strangeCusp_eq_partial, ``MockThetaAnalytic.strangeCusp_add_one,
       ``MockThetaAnalytic.hasSum_uOne, ``MockThetaAnalytic.strangeCusp_eq_tsum,
       ``MockThetaAnalytic.strangeCusp_half, ``MockThetaAnalytic.strangeValue_eleven,
-      ``MockThetaAnalytic.strangeCusp_eleventh]
+      ``MockThetaAnalytic.strangeCusp_eleventh,
+      ``MockThetaAnalytic.erfc_eq_tail_integral, ``MockThetaAnalytic.erfc_nonneg,
+      ``MockThetaAnalytic.abs_erfc_le, ``MockThetaAnalytic.hasDerivAt_modeAmplitude,
+      ``MockThetaAnalytic.modeMajorant, ``MockThetaAnalytic.modeMajorant_summable,
+      ``MockThetaAnalytic.norm_signedMode_le, ``MockThetaAnalytic.norm_fderiv_signedMode_le,
+      ``MockThetaAnalytic.differentiableAt_signedMode,
+      ``MockThetaAnalytic.summable_nonholomorphicModes,
+      ``MockThetaAnalytic.hasFDerivAt_nonholomorphicPart,
+      ``MockThetaAnalytic.differentiableAt_nonholomorphicPart,
+      ``MockThetaAnalytic.xiHalf_nonholomorphicPart, ``MockThetaAnalytic.normalizedF,
+      ``MockThetaAnalytic.summable_radialFTerm, ``MockThetaAnalytic.hasSum_radialF,
+      ``MockThetaAnalytic.differentiableAt_radialF, ``MockThetaAnalytic.differentiableAt_normalizedF,
+      ``MockThetaAnalytic.shadowDegreeBin_identically_zero_iff, ``MockThetaAnalytic.mockCompletion,
+      ``MockThetaAnalytic.differentiableAt_mockCompletion, ``MockThetaAnalytic.xiHalf_mockCompletion,
+      ``MockThetaAnalytic.xiHalf_project11_mockCompletion,
+      ``MockThetaAnalytic.xiHalf_project11_mockCompletion_eq_zero_iff]
   unless required.all audited.contains do throwError "required public result missing from the audit"
   logInfo m!"PASS analytic audit: {audited.size} declarations in {modules.size} modules"

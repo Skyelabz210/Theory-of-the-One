@@ -13,4 +13,8 @@ rev = "3bdc7047b97538f795b725dc0713c28c0f53ed10"
 
 [[lean_lib]]
 name = "MockThetaAnalytic"
-roots = ["ShadowConvergence", "ShadowOperator", "ShadowProjection", "ShadowMode", "QuantumRadialLimit", "QuantumStrange"]
+roots = [
+  "ShadowConvergence", "ShadowOperator", "ShadowProjection", "ShadowMode",
+  "QuantumRadialLimit", "QuantumStrange", "ShadowGaussian", "ShadowBounds",
+  "ShadowInfinite", "MockHolomorphic", "ShadowSectors", "MockCompletion",
+]

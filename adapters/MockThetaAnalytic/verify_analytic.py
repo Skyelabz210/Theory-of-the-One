@@ -34,6 +34,12 @@ def sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def package_sources():
+    files = [*ROOT.glob("*.lean"), ROOT / "lake-manifest.json", ROOT / "lakefile.toml",
+             ROOT / "lean-toolchain", Path(__file__).resolve()]
+    return {p.name: sha256(p) for p in sorted(files)}
+
+
 def core_sources(modules):
     """Record the core checkout's actual transitive source inputs to the local analytic modules."""
     pending = [ROOT / f"{name}.lean" for name in modules]
@@ -54,8 +60,10 @@ def main():
     receipt = OUT / "receipt.json"
     for prior in (receipt, OUT / "build.log", OUT / "audit.log"):
         prior.unlink(missing_ok=True)
+    source_hashes = package_sources()
     config = tomllib.loads((ROOT / "lakefile.toml").read_text())
     modules = config["lean_lib"][0]["roots"]
+    core_hashes = core_sources(modules)
     manifest = ROOT / "lake-manifest.json"
     lock_hash = sha256(manifest)
     locked = {p["name"]: p for p in json.loads(manifest.read_bytes())["packages"]}
@@ -95,10 +103,11 @@ def main():
         raise SystemExit("Missing or incomplete analytic axiom audit")
     if sha256(manifest) != lock_hash:
         raise SystemExit("Lake changed the dependency manifest")
-    sources = [*ROOT.glob("*.lean"), manifest, ROOT / "lakefile.toml", ROOT / "lean-toolchain", Path(__file__).resolve()]
+    if package_sources() != source_hashes or core_sources(modules) != core_hashes:
+        raise SystemExit("Analytic or local core inputs changed during verification")
     result = {"status": "PASS", "command": "python3 verify_analytic.py", "lean": lean, "lake": lake,
-              "source_sha256": {p.name: sha256(p) for p in sorted(sources)},
-              "core_source_sha256": core_sources(modules), "locked_git_revisions": dict(sorted(pins.items())),
+              "source_sha256": source_hashes, "core_source_sha256": core_hashes,
+              "locked_git_revisions": dict(sorted(pins.items())),
               "module_kernel_counts": {m: {"theorems": t, "declarations": d} for m, (t, d) in counts.items()},
               "theorem_axioms": {m: dict(sorted(t.items())) for m, t in decls.items()}}
     receipt.write_text(json.dumps(result, indent=2) + "\n")

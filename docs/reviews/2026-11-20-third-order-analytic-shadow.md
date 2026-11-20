@@ -194,9 +194,10 @@ differentiation errors were assessed numerically.
 
 ## Complex analysis in Lean
 
-The analytic adapter compiles 45 explicitly declared theorems across six
-modules. Its kernel audit checks 124 constants, including 103 theorem entries
-with generated helpers. The adapter imports the exact `shadowWeight` from
+The analytic adapter compiles 83 explicitly declared theorems across 12
+modules, 58 public and 25 private. The kernel audited 195 constants,
+including 164 theorem entries with generated helpers, and recorded their
+transitive axiom dependencies. The adapter imports the exact `shadowWeight` from
 the standard-library package. At every $|u|<1$ it proves absolute summability of
 $\sum_{m\ge0}\operatorname{shadowWeight}(m)u^{m^2}$, using $m|u|^m$ as a
 summable majorant. It proves that the eleven degree bins sum to the entire
@@ -208,9 +209,10 @@ the convergent theta series in the upper half-plane.
 
 Lean defines $\xi_{1/2}$ from the real Fréchet derivative. It proves that
 $\xi_{1/2}P_r=P_{-r}\xi_{1/2}$ when the function is real differentiable
-at all eleven translates. In `xiHalf_project11_of_shadow`, identifying the
-input with the completed $f$ uses the published formula for its $\xi_{1/2}$
-image at those points as an explicit hypothesis.
+at all eleven translates. The generic theorem `xiHalf_project11_of_shadow`
+takes the shadow identity at those points as input. For the named Fourier
+completion, `xiHalf_project11_mockCompletion` discharges that input at all
+eleven translates using the differentiated infinite series.
 [Operator and index reversal](../../adapters/MockThetaAnalytic/ShadowOperator.lean)
 · [Hypotheses of the completed projection](../../adapters/MockThetaAnalytic/ShadowProjection.lean)
 
@@ -222,8 +224,48 @@ differentiates that finite completion and obtains four times the signed unary
 sum through $m=M$. At each $y>0$,
 `tendsto_xiHalf_finiteCompletion` proves those derivatives converge to
 $4\Theta(z)$ as $M\to\infty$ for any choice $D=D(M)$. The theorem takes
-the limit after differentiation. The written Gaussian majorants above
-justify differentiating the infinite correction itself.
+the limit after differentiation. At the earlier checkpoint this was the
+strongest differential result verified for the named $f$.
 [Fourier modes, finite completion, and limiting theorem](../../adapters/MockThetaAnalytic/ShadowMode.lean)
-· [Kernel audit](../../adapters/MockThetaAnalytic/verification.json)
+· [Finite-completion audit at `4b90453`](https://github.com/Skyelabz210/Theory-of-the-One/blob/4b90453cb7fe510f9afb790a2d57ca2b8b52e6e2/adapters/MockThetaAnalytic/verification.json)
 · [Reproduction](../../adapters/MockThetaAnalytic/README.md)
+
+### Differentiating the completed function
+
+The new `mockCompletion` is the sum of the defining hypergeometric
+$Q^{-1}f(Q^{24})$ and the infinite signed error-function series above, where
+$Q=e(z)$. Lean proves the holomorphic part complex differentiable on the
+upper half-plane. For $|q|\le r<1$, it bounds the $n$th defining summand of
+$f$ by $(r^n/(1-r)^2)^n$, which is eventually bounded by $2^{-n}$.
+Thus the $\xi_{1/2}$-derivative of the holomorphic part vanishes.
+[Holomorphicity of the defining series](../../adapters/MockThetaAnalytic/MockHolomorphic.lean)
+
+On every region $y\ge a>0$, the correction terms and their first real
+derivatives admit a common summable majorant. Lean derives the Gaussian
+tail bound for $\operatorname{erfc}$ and uses a quadratic polynomial in $m$
+times $e^{-2\pi a m}$ as majorant. At height $y>0$, it can therefore
+differentiate the whole correction term by term on a neighborhood with
+height above $y/2$. The theorem `hasFDerivAt_nonholomorphicPart` identifies
+the real Fréchet derivative of the sum with the sum of the mode derivatives.
+[Gaussian tail](../../adapters/MockThetaAnalytic/ShadowGaussian.lean)
+· [Uniform mode bounds](../../adapters/MockThetaAnalytic/ShadowBounds.lean)
+· [Infinite derivative](../../adapters/MockThetaAnalytic/ShadowInfinite.lean)
+
+Consequently `xiHalf_mockCompletion` proves $\xi_{1/2}M_f=4\Theta$
+at every $y>0$ for the explicitly defined Fourier completion.
+`xiHalf_project11_mockCompletion_eq_zero_iff` proves its projected
+shadow vanishes identically exactly for $r=1,3,4,5,9$. Each of the other
+six projections has a nonzero value somewhere in the upper half-plane.
+The proof isolates the first nonzero term in its bin and lets $Q$ tend to
+zero on the positive real axis.
+[Completion and projected shadows](../../adapters/MockThetaAnalytic/MockCompletion.lean)
+· [Nonvanishing proof](../../adapters/MockThetaAnalytic/ShadowSectors.lean)
+
+The equality with the Eichler-integral convention is derived above from
+the published formula. Zwegers supplies the completed vector's modular
+transformation law and Casimir eigenvalue. A differential identity alone
+allows a holomorphic summand such as $z$, which changes the translation
+law while preserving $\xi_{1/2}$. The compensated boundary limit at a
+root of unity is a separate input from Folsom–Ono–Rhoades.
+[Radial theorem and its hypotheses](2026-11-20-quantum-radial.md)
+· [Current analytic proof audit](../../adapters/MockThetaAnalytic/verification.json)

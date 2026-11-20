@@ -61,7 +61,7 @@ For $q=e^{2\pi i z}$, the holomorphic part of the normalized completion $M_f$ is
 
 The Laurent normalization and unary theta coefficients passed **9,504 exact checks**. [Exact execution](evidence/current/profinite-mock-theta/third-order-shadow-smoke.log) · [Numerical evidence](evidence/current/analytic-shadow/README.md)
 
-The separate Mathlib adapter compiles **45 explicitly declared theorems across six modules**. It proves the mod-11 projection law for the differential operator and evaluates it on finite completions built from the actual coefficients of $f$. Their derivatives converge to $4\Theta(z)$ throughout the upper half-plane. [Finite completion and its limiting derivative values](adapters/MockThetaAnalytic/ShadowMode.lean) · [Fourier projections](adapters/MockThetaAnalytic/ShadowProjection.lean) · [Analytic audit](adapters/MockThetaAnalytic/verification.json)
+Lean now differentiates the **full infinite Fourier completion**. It proves holomorphicity of the defining series for $f$ inside the disk, bounds the nonholomorphic modes and their derivatives uniformly above any fixed positive height, and obtains $\xi_{1/2}M_f=4\Theta$ at every point of the upper half-plane. The projected shadow vanishes identically exactly in classes $1,3,4,5,9$ modulo 11. Zwegers supplies the modular transformation law. [Named completion theorem](adapters/MockThetaAnalytic/MockCompletion.lean) · [Infinite differentiation](adapters/MockThetaAnalytic/ShadowInfinite.lean) · [Analytic audit](adapters/MockThetaAnalytic/verification.json)
 
 ## Quantum radial limits of the rank and crank
 

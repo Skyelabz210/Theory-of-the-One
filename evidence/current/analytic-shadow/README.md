@@ -23,7 +23,9 @@ dilation, and projection index. The analytic tail formulas are evaluated
 numerically. Errors from quadrature, differencing, and roundoff are not
 interval-certified. [Numerical checker](../../../tools/check_analytic_shadow.py)
 
-The separate Mathlib package checks the absolute convergence, differential
-operator, finite completions, and degree projections used in the review.
+The separate Mathlib package differentiates the full Fourier completion using
+summable bounds for the real derivatives of its modes. It proves the signed
+factor 4 and the exact vanishing classes of its projected shadow on the
+upper half-plane.
 [Formal analytic results and reproduction](../../../adapters/MockThetaAnalytic/README.md)
 · [Kernel audit](../../../adapters/MockThetaAnalytic/verification.json)

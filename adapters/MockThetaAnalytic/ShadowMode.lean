@@ -61,6 +61,14 @@ private theorem amplitude_derivative (ε m y : ℝ) (hm : 0 < m) (hy : 0 < y) :
   field_simp [hπ'.ne', hys'.ne']
   ring
 
+/-- The real height derivative of the correction amplitude at a positive label. -/
+theorem hasDerivAt_modeAmplitude (ε m y : ℝ) (hm : 0 < m) (hy : 0 < y) :
+    HasDerivAt (modeAmplitude ε m)
+      (4 * ε * m * Real.exp (-(4 * Real.pi * m ^ 2 * y)) / Real.sqrt y) y := by
+  convert amplitude_derivative ε m y hm hy using 1
+  unfold frequency
+  ring_nf
+
 /-- A real amplitude depending on the height times a holomorphic function.
 The complex derivative of the holomorphic factor cancels in ∂/∂z̄. -/
 private theorem xiHalf_amplitude_mul {A : ℝ → ℝ} {g : ℂ → ℂ} {z : ℂ} {a : ℝ} {b : ℂ}
