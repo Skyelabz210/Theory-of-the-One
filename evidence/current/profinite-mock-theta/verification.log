@@ -349,4 +349,21 @@ $ lean -o MockThetaFifthZero.olean MockThetaFifthZero.lean
 'KElimination.MockThetaFifthZero.finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
 'KElimination.MockThetaFifthZero.from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
 
+$ lean -o MockThetaFifthOne.olean MockThetaFifthOne.lean
+'KElimination.MockThetaFifthOne.exponent_mono' depends on axioms: [propext]
+'KElimination.MockThetaFifthOne.le_exponent' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaFifthOne.f_denominator_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaFifthOne.chi_denominator_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaFifthOne.bigF_denominator_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaFifthOne.summand_support' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaFifthOne.chi_summand_at_index_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaFifthOne.bigF_summand_at_index_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaFifthOne.coeff_stable' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaFifthOne.degreePacket_refinement' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaFifthOne.cylinder_observable' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaFifthOne.cylinder_refinement' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaFifthOne.weightedPacket_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaFifthOne.finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaFifthOne.from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+
 $ lean -o UniversalKElimination.olean UniversalKElimination.lean

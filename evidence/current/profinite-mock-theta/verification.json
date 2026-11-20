@@ -5,7 +5,7 @@
   "fresh_temporary_build": true,
   "project_olean_reused": false,
   "imports": "Pinned Lean bundled Std; no Mathlib dependency",
-  "theorem_declarations": 267,
+  "theorem_declarations": 282,
   "module_theorem_counts": {
     "ExactObservation": 9,
     "UniversalLift": 15,
@@ -26,12 +26,13 @@
     "MockThetaChi": 14,
     "FifthOrderSeries": 7,
     "MockThetaFifthZero": 13,
+    "MockThetaFifthOne": 15,
     "UniversalKElimination": 0
   },
   "reused_observation_theorems": 9,
   "prior_universal_core_declarations": 75,
   "closure_and_starlift_declarations": 52,
-  "profinite_mock_theta_declarations": 137,
+  "profinite_mock_theta_declarations": 152,
   "axiom_free_declarations": 41,
   "allowed_foundational_axioms": [
     "Classical.choice",
@@ -1979,8 +1980,127 @@
       ]
     },
     {
+      "file": "MockThetaFifthOne.lean",
+      "sha256": "b44d0f4e4617fb7180280d7b086787a77256ee773b5aee90bcbc74b563fd9f2c",
+      "theorem_count": 15,
+      "theorems": [
+        {
+          "name": "KElimination.MockThetaFifthOne.exponent_mono",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.le_exponent",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.f_denominator_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.chi_denominator_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.bigF_denominator_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.summand_support",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.chi_summand_at_index_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.bigF_summand_at_index_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.coeff_stable",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.degreePacket_refinement",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.cylinder_observable",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.cylinder_refinement",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.weightedPacket_refinement",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.finite_root_evaluation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthOne.from_coupled_anchors",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
       "file": "UniversalKElimination.lean",
-      "sha256": "b3b8a855f0ea1c7c3d69ea1d90f42b5a083f0ba0d59842ae93c7cb7195cfbc12",
+      "sha256": "43e063e03137aaaf405eac5bba8c45d5b3f96f6009304c7328eff5b986819e9e",
       "theorem_count": 0,
       "theorems": []
     }

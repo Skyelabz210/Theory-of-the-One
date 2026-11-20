@@ -1,9 +1,9 @@
 # Exact mock theta coefficient bridge: execution receipts
 
-The 20 November 2026 audit compiled **267 theorem declarations** with
+The 20 November 2026 audit compiled **282 theorem declarations** with
 `leanprover/lean4:v4.27.0-rc1` and its bundled standard library. Of those
 declarations, 41 have empty axiom lists. The remaining lists contain only
-`propext`, `Classical.choice`, and `Quot.sound`. All 5 commands passed
+`propext`, `Classical.choice`, and `Quot.sound`. All six commands passed
 without compiler warnings.
 
 | File | Meaning |
@@ -16,6 +16,7 @@ without compiler warnings.
 | [closure-smoke.log](closure-smoke.log) | Existing 1,809 concrete comparison/divmod/GCD pairs and four controls |
 | [mock-theta-smoke.log](mock-theta-smoke.log) | 26,779 exact assertions for the four third-order series and three Watson relations |
 | [fifth-zero-smoke.log](fifth-zero-smoke.log) | 2,133 exact assertions for the five zero-subscript fifth-order series |
+| [fifth-one-smoke.log](fifth-one-smoke.log) | 2,135 exact assertions for the five one-subscript fifth-order series |
 
 Four independent finite factor calculations give the integer coefficients of
 $f$, $\phi$, $\psi$, and $\chi$ through degree 40. For $\psi$, geometric
@@ -26,7 +27,14 @@ finite root evaluations. The log records 6,251 coefficient, packet, and integer-
 cylinder checks, and five finite-field root checks per series. Three further
 identities contribute 123 degreewise comparisons with Watson in $\mathbb{Z}[q]/(q^{41})$.
 
-The complete mock theta total is 28,912. In `execution.json`,
+The fifth-order suites compare 41 independent integer coefficients per
+function. They also exercise packet refinement, signed cylinders, finite
+roots, and period admission. The one-subscript suite extends the shifted
+identity through degree 41 and independently checks the extra coefficient
+of $\phi_1$ at that degree. The two fifth-order suites account for
+4,268 assertions.
+
+The complete mock theta total is 31,047. In `execution.json`,
 `mock_theta_assertions_by_suite` records each suite and
 `total_mock_theta_smoke_assertions` records their sum. The original
 `mock_theta_smoke_assertions` field counts the third-order suite.
@@ -35,6 +43,9 @@ Earlier receipts contain 202 declarations and 6,251 mock theta assertions for
 $f$ at `853ed93`, then 217 declarations and 12,803 assertions for $f$ and
 $\phi$ at `769b724`. The four-function third-order checkpoint reached 247
 theorems and 26,779 assertions. [Third-order receipts at `c59b985`](https://github.com/Skyelabz210/Theory-of-the-One/blob/c59b9850f20b9071b7c2ba28b2013cbe55d4d6a4/evidence/current/profinite-mock-theta/execution.json)
+
+The zero-subscript fifth-order checkpoint compiled 267 declarations and
+passed 28,912 mock theta assertions. [Receipts at `a028a79`](https://github.com/Skyelabz210/Theory-of-the-One/blob/a028a794b0eccdac35281b09dae825455d0ea73e/evidence/current/profinite-mock-theta/execution.json)
 
 The current receipt records the base commit and hashes of
 the files used in this run.
