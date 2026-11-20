@@ -36,9 +36,10 @@ enter the weight-$1/2$ transformation of Folsom, Ki, Truong Vu and Yang.
 The finite defect at the reflected cusps $-1/34$ and $-1/10$ differs from
 the independently integrated theta period by about $1.065\times10^{-46}$.
 The receipt records truncations, two quadrature orders, two working
-precisions and branch and multiplier controls.
+precisions and branch and multiplier controls. Lean also derives this exact
+identity from the two cusp limits and the theta transformation.
 [Order-34 to order-10 derivation](../../../docs/reviews/2026-11-20-order-34-to-10.md)
-· [Lean transport theorem](../../../adapters/MockThetaAnalytic/QuantumTransport34.lean)
+· [Exact period identity](../../../adapters/MockThetaAnalytic/EichlerBridge.lean)
 · [Analytic kernel audit](../../../adapters/MockThetaAnalytic/verification.json)
 · [Period computation](../../../tools/check_quantum_transport34.py)
 · [Numerical receipt](transport34.json)

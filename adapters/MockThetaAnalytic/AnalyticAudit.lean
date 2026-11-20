@@ -14,6 +14,18 @@ import FifthSeventhHolomorphic
 import FKTYCuspMoments
 import ThirdOrderRows
 import ThirdOrderTaylor
+import PeriodicSmoothing
+import EichlerProfile
+import EichlerCuspLimit
+import EichlerBoundaryValues
+import FKTYThetaTransform
+import EichlerPrimitive
+import EichlerHorizontal
+import EichlerTransportPath
+import EichlerEndpointFTC
+import EichlerPathLimits
+import EichlerBridge
+import Order34QuantumPackets
 import Lean.Util.CollectAxioms
 import Lean.Elab.Command
 
@@ -170,6 +182,65 @@ example (q : ℂ) (hq : ‖q‖ < 1) :
 
 end
 
+section
+open MockThetaAnalytic Filter Set
+open scoped Topology
+
+/- The weight and multiplier apply to the actual bilateral series on the upper half-plane. -/
+example (u : ℂ) (hu : 0 < u.im) :
+    fktyTheta (u / (24*u + 1)) = (24*u + 1) ^ (3/2 : ℂ) * fktyTheta u :=
+  fktyTheta_lower_unipotent u hu
+
+/- The smoothing theorem controls arbitrary zero-mean periodic weights before specialization. -/
+example (L : ℕ) (hL : 0 < L) (a : ℕ → ℂ)
+    (hper : ∀ n, a (n+L) = a n) (hz : ∑ n ∈ Finset.range L, a n = 0)
+    (W : ℝ → ℝ) (h0 : W 0 = 1) (hc : ContinuousAt W 0)
+    (ha : AntitoneOn W (Ici 0)) (hv : ConvexOn ℝ (Ici 0) W)
+    (hs : ∀ h : ℝ, 0 < h → Summable (fun n : ℕ => W (n*h))) :
+    Tendsto (fun h : ℝ => ∑' n : ℕ, a n * (W (n*h) : ℂ)) (𝓝[>] 0)
+      (𝓝 (-(∑ n ∈ Finset.range L, (n : ℂ) * a n) / L)) :=
+  tendsto_periodic_convex_smoothing L hL a hper hz W h0 hc ha hv hs
+
+example (z : ℂ) (hz : 0 < z.im) : ‖fktyTheta z‖ ≤ (24/Real.pi) / z.im :=
+  norm_fktyTheta_le_height z hz
+
+/- Each endpoint works for both the reflected approach and the real-axis cutoff. -/
+example :
+    (Tendsto (fun b : ℝ => fktyEichlerTrunc (-1/34) b b) (𝓝[>] 0) (𝓝 (fktyPhi (-1/34))) ∧
+     Tendsto (fun b : ℝ => fktyEichlerTrunc (-1/34) b 0) (𝓝[>] 0) (𝓝 (fktyPhi (-1/34)))) ∧
+    (Tendsto (fun b : ℝ => fktyEichlerTrunc (-1/10) b b) (𝓝[>] 0) (𝓝 (fktyPhi (-1/10))) ∧
+     Tendsto (fun b : ℝ => fktyEichlerTrunc (-1/10) b 0) (𝓝[>] 0) (𝓝 (fktyPhi (-1/10)))) :=
+  ⟨fktyEichler_boundaryLimits34, fktyEichler_boundaryLimits10⟩
+
+/- The cusp-specific period identity discharges the published transformation-law premise. -/
+example :
+    fktyPhi (-1/34) - (Real.sqrt (17/5) : ℂ) * fktyPhi (-1/10) =
+      fktyVerticalPeriod fktyTheta (-1/24) (-1/34) :=
+  fkty_defect34_eq_period
+
+open KElimination.QuantumRadial Order34Source
+
+example (X : ℤ) (N34 N10 : ℕ) (h34 : 17 ≤ N34) (h10 : 5 ≤ N10) :
+    normalizedPacketDefect N34 N10 (observe X) =
+      fktyVerticalPeriod (fun u => xiHalf mockCompletion (u/24) / 2) (-1/24) (-1/34) :=
+  normalizedPacketDefect_eq_period_unconditional X N34 N10 h34 h10
+
+/- FOR supplies the radial limit of f; the period transformation is proved here. -/
+example (r : ℕ → ℝ) (hr : ∀ j, 0 < r j ∧ r j < 1)
+    (hl : Filter.Tendsto r Filter.atTop (𝓝[<] (1 : ℝ)))
+    (hb : Filter.Tendsto (fun t : ℝ => radialF ((t : ℂ) * integerNome (1/34)) +
+      radialB ((t : ℂ) * integerNome (1/34))) (𝓝[<] (1 : ℝ))
+        (𝓝 (boundaryValue 17 (integerNome (1/34))))) :
+    ∃ K : ℕ → ℕ, (∀ j, j ≤ K j) ∧ ∀ N : ℕ → ℕ, (∀ j, K j ≤ N j) →
+      Filter.Tendsto (fun j => fPacketAtRadius (N j) 510510 (r j) (integerNome (1/34)) +
+        radialB ((r j : ℂ) * integerNome (1/34))) Filter.atTop
+        (𝓝 ((fktyVerticalPeriod fktyTheta (-1/24) (-1/34) + (Real.sqrt (17/5) : ℂ) *
+          ((fktyScale * integerNome (-1/240)) * boundaryValue 5 (integerNome (1/10)))) /
+            (fktyScale * integerNome (-1/816)))) :=
+  fPackets34_tendsto_order10_period_of_FOR r hr hl hb
+
+end
+
 run_cmd do
   let env ← getEnv
   let allowed := #[``propext, ``Classical.choice, ``Quot.sound]
@@ -179,7 +250,10 @@ run_cmd do
       `BoundaryValues34, `FKTYTheta, `QuantumTransport34, `Order34Source,
       `GaussianPairIntegrable, `FKTYCuspModes, `FKTYPeriodRegularity,
       `CoefficientEvaluation, `FifthSeventhHolomorphic, `FKTYCuspMoments,
-      `ThirdOrderRows, `ThirdOrderTaylor]
+      `ThirdOrderRows, `ThirdOrderTaylor,
+      `PeriodicSmoothing, `EichlerProfile, `EichlerCuspLimit, `EichlerBoundaryValues,
+      `FKTYThetaTransform, `EichlerPrimitive, `EichlerHorizontal, `EichlerTransportPath,
+      `EichlerEndpointFTC, `EichlerPathLimits, `EichlerBridge, `Order34QuantumPackets]
   let mut audited := #[]
   for mod in modules do
     let some idx := env.getModuleIdx? mod | throwError "missing module {mod}"
@@ -292,6 +366,48 @@ run_cmd do
       ``MockThetaAnalytic.mockSquareBound, ``MockThetaAnalytic.summable_mockSquareBound,
       ``MockThetaAnalytic.hasSum_radialF_coefficients,
       ``MockThetaAnalytic.for_limit_from_f_packets_of_radial_law,
-      ``MockThetaAnalytic.fPackets34_tendsto_order10_period_of_radial_laws]
+      ``MockThetaAnalytic.fPackets34_tendsto_order10_period_of_radial_laws,
+      ``MockThetaAnalytic.tendsto_periodic_convex_smoothing, ``MockThetaAnalytic.eichlerProfile,
+      ``MockThetaAnalytic.eichlerProfile_zero, ``MockThetaAnalytic.eichlerProfile_nonneg,
+      ``MockThetaAnalytic.deriv2_eichlerProfile, ``MockThetaAnalytic.continuous_eichlerProfile,
+      ``MockThetaAnalytic.convexOn_eichlerProfile, ``MockThetaAnalytic.antitoneOn_eichlerProfile,
+      ``MockThetaAnalytic.tendsto_eichlerProfile_atTop,
+      ``MockThetaAnalytic.summable_eichlerProfile_mesh, ``MockThetaAnalytic.erfc_zero,
+      ``MockThetaAnalytic.continuous_erfc, ``MockThetaAnalytic.antitoneOn_erfc,
+      ``MockThetaAnalytic.convexOn_erfc, ``MockThetaAnalytic.tendsto_erfc_atTop,
+      ``MockThetaAnalytic.summable_erfc_mesh, ``MockThetaAnalytic.fktyEichlerIntegrand,
+      ``MockThetaAnalytic.fktyEichlerTrunc, ``MockThetaAnalytic.fktyTheta_ray,
+      ``MockThetaAnalytic.integrableOn_fktyEichlerTrunc,
+      ``MockThetaAnalytic.fktyEichlerTrunc_eq_series,
+      ``MockThetaAnalytic.fktyEichlerTrunc_eq_lower_series,
+      ``MockThetaAnalytic.fktyEichlerTrunc_eq_boundary_series,
+      ``MockThetaAnalytic.fktyEichler_boundaryLimits_of_period,
+      ``MockThetaAnalytic.fktyEichler_boundaryLimits34,
+      ``MockThetaAnalytic.fktyEichler_boundaryLimits10,
+      ``MockThetaAnalytic.fktyTheta_eq_shiftedJacobi, ``MockThetaAnalytic.fktyTheta_lower_unipotent,
+      ``MockThetaAnalytic.isExactOn_upperHalf, ``MockThetaAnalytic.differentiableAt_fktyTheta,
+      ``MockThetaAnalytic.eichlerForm, ``MockThetaAnalytic.exists_eichlerPrimitive,
+      ``MockThetaAnalytic.hasDerivAt_eichlerPrimitive_vertical,
+      ``MockThetaAnalytic.norm_fktyTheta_le_height, ``MockThetaAnalytic.norm_horizontal_bridge_le,
+      ``MockThetaAnalytic.eichlerTransportMap, ``MockThetaAnalytic.eichlerTargetRay,
+      ``MockThetaAnalytic.eichlerInverseRay, ``MockThetaAnalytic.eichlerRayDenom,
+      ``MockThetaAnalytic.eichlerInverseRay_coordinates,
+      ``MockThetaAnalytic.eichlerInverseRay_im_pos,
+      ``MockThetaAnalytic.eichlerTransportMap_inverseRay,
+      ``MockThetaAnalytic.eichlerInverseRay_hasDerivAt,
+      ``MockThetaAnalytic.eichlerInverseRay_offset_zero,
+      ``MockThetaAnalytic.eichlerInverseRay_offset_infty,
+      ``MockThetaAnalytic.eichlerInverseRay_height_zero,
+      ``MockThetaAnalytic.eichlerInverseRay_height_infty,
+      ``MockThetaAnalytic.eichlerInverseRay_pullback,
+      ``MockThetaAnalytic.hasDerivAt_eichlerPrimitive_inverseRay,
+      ``MockThetaAnalytic.tendsto_eichlerTail_zero, ``MockThetaAnalytic.primitive_ray_endpoints,
+      ``MockThetaAnalytic.eichlerPrimitive_vertical_gap_top,
+      ``MockThetaAnalytic.eichlerPrimitive_inverseRay_gap_zero,
+      ``MockThetaAnalytic.eichlerPrimitive_inverseRay_gap_infty,
+      ``MockThetaAnalytic.fkty_defect34_eq_period,
+      ``MockThetaAnalytic.boundary34_from_period_and_ten_unconditional,
+      ``MockThetaAnalytic.normalizedPacketDefect_eq_period_unconditional,
+      ``MockThetaAnalytic.fPackets34_tendsto_order10_period_of_FOR]
   unless required.all audited.contains do throwError "required public result missing from the audit"
   logInfo m!"PASS analytic audit: {audited.size} declarations in {modules.size} modules"

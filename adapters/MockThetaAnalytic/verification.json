@@ -4,19 +4,31 @@
   "lean": "Lean (version 4.27.0-rc1, x86_64-unknown-linux-gnu, commit 2fcce7258eeb6e324366bc25f9058293b04b7547, Release)",
   "lake": "Lake version 5.0.0-src+2fcce72 (Lean version 4.27.0-rc1)",
   "source_sha256": {
-    "AnalyticAudit.lean": "a83da6129f86eceea6ae8bad32a05d5d474701829a1079beb86ab6d4e7da405f",
+    "AnalyticAudit.lean": "8382f61bb2d2c2f45fa48b6700802ecdc93b704bdc2b333065642d903af775bf",
     "BoundaryObservation34.lean": "73318ea3eb934774e0161e6110befe6ab3b8794ca33045eda40291c324d521c6",
     "BoundaryValues34.lean": "c6785f766b25b1dc9ef667e542ce4fec9cc4eaa957c165ee9ff3498efe76bde2",
     "CoefficientEvaluation.lean": "b2c60c60d2341f0477d6433cd1aae12627e5dcdad856d2ad232298f7572b410b",
+    "EichlerBoundaryValues.lean": "bc4b95ffab3c1134f58183b7412d8b521b03c509b60d04ecf0e24ee594d360fd",
+    "EichlerBridge.lean": "96623d544ffb8318d147170db48e21bf955a071bcc8864ae89163d85b8a87d5e",
+    "EichlerCuspLimit.lean": "11c0cd343080bb28e049f7904673821606a172eb6d89479a29229acf96222e5e",
+    "EichlerEndpointFTC.lean": "e799908dbd589afc5aa54216033a4f8598216fd3ba344dd001a3107dd6c343b0",
+    "EichlerHorizontal.lean": "d4d194c1523207da63a2ee00511f0be55a80ddc2e43bf533536058e9236b15ea",
+    "EichlerPathLimits.lean": "25e0b9a2e72d03af895ddb6d139b4bffa6c69e1d1050f77d1a1622293b44a876",
+    "EichlerPrimitive.lean": "748f2a2b7511996df1055dccf7fb3eec29a1ad536537be82ab106d7bbd8a999c",
+    "EichlerProfile.lean": "c93db8bd8083f1041c441373574b8e4fde411ffa115b412b084327e3ca8e626c",
+    "EichlerTransportPath.lean": "d15cb87318fac091672212cd3051fe5206d84fb313d67ad8bba39b2081af9d65",
     "FKTYCuspModes.lean": "23fa216ee1d3d6b4a606d21d28fb65d31af086d71b7e33a2def8f72ff00752cd",
     "FKTYCuspMoments.lean": "70230b7632f92a8e457a4f2816b9bdc79fa6f4f62187ae4439cefdbf6d5454a6",
     "FKTYPeriodRegularity.lean": "0cffbd30ddca9e89aa80f22a987231ebc3fa62df24078c9095f033f36e2dcd83",
     "FKTYTheta.lean": "e23fd95ab728c9be45d1f3763df810f6e48529f786a05adcd3fb7bd4fb86b912",
+    "FKTYThetaTransform.lean": "fee7d6ec541f9ddd3f1bf999103d9f7af9e6f692b22a19c8bf53b6fada022dd4",
     "FifthSeventhHolomorphic.lean": "b5b5ece3dd30833c6cc0441dccf70954d4105b7a0f4eef6b730bfc3e6d42df45",
-    "GaussianPairIntegrable.lean": "45480c07d063366135bedb2666bf0a22f0dafe1487f9111dd808bb7701d9b4fd",
+    "GaussianPairIntegrable.lean": "73959cf672fde111eaa102f1638a1b4b5146df4feb8d6b359a580910a3dd073b",
     "MockCompletion.lean": "337afd2b887661b0e1f90bcc3b900af9d3413f0106d2468d92e301a26fea4cea",
     "MockHolomorphic.lean": "b6f120d3a73965f812d620eda25fa33795d705fd0e60cf1edd3fb6a9df511589",
+    "Order34QuantumPackets.lean": "0425b3535e19530fd1d8a65a561d59fc009b33f7b77c703b092fa146eaccd431",
     "Order34Source.lean": "b0eb848c0d07c74d1a92fbc8774d652d5c89b5624cca0071922543747d2e793d",
+    "PeriodicSmoothing.lean": "10a49713ca2d365807faebda6b4094ac90d3eb7e43f4d75ab10916d841f0e505",
     "QuantumRadialLimit.lean": "671b4257bb4c5e0897a356712a61ca8e99e80d2b4311f732e168a5f97094adda",
     "QuantumStrange.lean": "31f436f1457011667812f602d454116bbb39b46f39be8ba1df103d8c1b912d52",
     "QuantumTransport34.lean": "bb875181cfc16da528551a05ee1eb6b3dae48befc1766686c9f6b001614cec3b",
@@ -31,7 +43,7 @@
     "ThirdOrderRows.lean": "e4ab038de9d557b04d214e03034716ca66cb245bf5a5004a9c71f0100a93a339",
     "ThirdOrderTaylor.lean": "5aecf2287b8754df83ec5558f63b9de7b39aaa400affe08ce0ca2d2cc9f32466",
     "lake-manifest.json": "8d378ae8a3b5ddea4958ac94aed50eb575998f8e083c8d04aed4c52b0e5ce765",
-    "lakefile.toml": "24b96c56fb32c828b14fe161e25d648a84b8da188298e34100d175931005674d",
+    "lakefile.toml": "30bdeef5195b2de4964021f0808762bd44172fc2eb50440ed168d53c02d661e1",
     "lean-toolchain": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
     "verify_analytic.py": "bde7abd4e67bc96e97699f70d2df11e2ce6ac2e14fe050db5234896f19e501a3"
   },
@@ -163,6 +175,54 @@
     "ThirdOrderTaylor": {
       "theorems": 6,
       "declarations": 6
+    },
+    "PeriodicSmoothing": {
+      "theorems": 12,
+      "declarations": 15
+    },
+    "EichlerProfile": {
+      "theorems": 23,
+      "declarations": 25
+    },
+    "EichlerCuspLimit": {
+      "theorems": 39,
+      "declarations": 44
+    },
+    "EichlerBoundaryValues": {
+      "theorems": 8,
+      "declarations": 8
+    },
+    "FKTYThetaTransform": {
+      "theorems": 36,
+      "declarations": 37
+    },
+    "EichlerPrimitive": {
+      "theorems": 19,
+      "declarations": 22
+    },
+    "EichlerHorizontal": {
+      "theorems": 4,
+      "declarations": 4
+    },
+    "EichlerTransportPath": {
+      "theorems": 60,
+      "declarations": 64
+    },
+    "EichlerEndpointFTC": {
+      "theorems": 2,
+      "declarations": 2
+    },
+    "EichlerPathLimits": {
+      "theorems": 11,
+      "declarations": 11
+    },
+    "EichlerBridge": {
+      "theorems": 4,
+      "declarations": 4
+    },
+    "Order34QuantumPackets": {
+      "theorems": 3,
+      "declarations": 3
     }
   },
   "theorem_axioms": {
@@ -1647,12 +1707,12 @@
         "Quot.sound",
         "propext"
       ],
-      "MockThetaAnalytic.integral_norm_gaussianMode_sub_le": [
+      "MockThetaAnalytic.integrable_tsum_of_summable_integral_norm": [
         "Classical.choice",
         "Quot.sound",
         "propext"
       ],
-      "_private.GaussianPairIntegrable.0.MockThetaAnalytic.integrable_tsum_of_summable_integral_norm": [
+      "MockThetaAnalytic.integral_norm_gaussianMode_sub_le": [
         "Classical.choice",
         "Quot.sound",
         "propext"
@@ -2319,6 +2379,975 @@
         "propext"
       ],
       "_private.ThirdOrderTaylor.0.MockThetaAnalytic.weighted_row_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "PeriodicSmoothing": {
+      "MockThetaAnalytic.tendsto_periodic_convex_smoothing": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.PeriodicSmoothing.0.MockThetaAnalytic.block_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.PeriodicSmoothing.0.MockThetaAnalytic.block_bound._simp_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.PeriodicSmoothing.0.MockThetaAnalytic.blocks_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.PeriodicSmoothing.0.MockThetaAnalytic.drop.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.PeriodicSmoothing.0.MockThetaAnalytic.drop_mesh_antitone": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.PeriodicSmoothing.0.MockThetaAnalytic.interpolation_error": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.PeriodicSmoothing.0.MockThetaAnalytic.mesh_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.PeriodicSmoothing.0.MockThetaAnalytic.moment.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.PeriodicSmoothing.0.MockThetaAnalytic.period_shift": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.PeriodicSmoothing.0.MockThetaAnalytic.segment_bounds": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.PeriodicSmoothing.0.MockThetaAnalytic.segment_bounds._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EichlerProfile": {
+      "MockThetaAnalytic.antitoneOn_eichlerProfile": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.antitoneOn_erfc": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.continuous_eichlerProfile": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.continuous_erfc": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.convexOn_eichlerProfile": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.convexOn_erfc": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.deriv2_eichlerProfile": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerProfile._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerProfile.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerProfile_nonneg": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerProfile_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.erfc_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.summable_eichlerProfile_mesh": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.summable_erfc_mesh": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.tendsto_eichlerProfile_atTop": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.tendsto_erfc_atTop": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerProfile.0.MockThetaAnalytic.erfc_le_exp_tail": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerProfile.0.MockThetaAnalytic.hasDerivAt_profile": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerProfile.0.MockThetaAnalytic.hasDerivAt_slope": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerProfile.0.MockThetaAnalytic.profile_tail": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerProfile.0.MockThetaAnalytic.profile_tail_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerProfile.0.MockThetaAnalytic.slope.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerProfile.0.MockThetaAnalytic.summable_mesh_of_exp_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EichlerCuspLimit": {
+      "MockThetaAnalytic.fktyEichlerIntegrand._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyEichlerTrunc.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyEichlerTrunc_eq_boundary_series": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyEichlerTrunc_eq_lower_series": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyEichlerTrunc_eq_series": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyScale.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyTheta_ray": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.integrableOn_fktyEichlerTrunc": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.eichlerTrunc_evaluation": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.eichlerTrunc_evaluation._simp_1_1": [
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.eichlerTrunc_evaluation._simp_1_2": [
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.eichlerTrunc_evaluation._simp_1_3": [
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.eichlerTrunc_evaluation._simp_1_4": [
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.eichlerTrunc_evaluation._simp_1_5": [
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.eichlerTrunc_evaluation._simp_1_6": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.eichlerTrunc_evaluation._simp_1_7": [
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.erfc_tendsto_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.eval_mode": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.modeTail.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.mode_integrable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.mode_primitive": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.mode_primitive._simp_1_1": [
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.mode_primitive._simp_1_2": [
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.mode_primitive._simp_1_3": [
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.mode_primitive._simp_1_4": [
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.mode_primitive._simp_1_5": [
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.mode_primitive._simp_1_6": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.mode_primitive._simp_1_7": [
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.mode_primitive_limit": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.norm_rayCoeff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.rate._proof_1": [
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.rate.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.rate_pos": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.rate_sq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.root_I_mul": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.root_I_sq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.scale_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.shadowTerm_ray": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerCuspLimit.0.MockThetaAnalytic.summable_modeTail": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EichlerBoundaryValues": {
+      "MockThetaAnalytic.fktyEichler_boundaryLimits10": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyEichler_boundaryLimits10._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyEichler_boundaryLimits34": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyEichler_boundaryLimits34._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyEichler_boundaryLimits_of_period": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerBoundaryValues.0.MockThetaAnalytic.tendsto_mesh_at_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerBoundaryValues.0.MockThetaAnalytic.tendsto_profile_moment": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerBoundaryValues.0.MockThetaAnalytic.tendsto_profile_moment._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FKTYThetaTransform": {
+      "MockThetaAnalytic.fktyTheta_eq_shiftedJacobi": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyTheta_lower_unipotent": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.im_pos_neg_recip": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.positiveClass._proof_1": [
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.positiveClass._proof_2": [
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.positiveClass.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.positiveClass_hasSum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.positiveClass_hasSum._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.positiveClass_hasSum._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.positiveClass_hasSum._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.right_div_cpow": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.shifted_hasSum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.shifted_transform": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.shifted_transform._simp_1_1": [
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.shifted_transform._simp_1_2": [
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.shifted_transform._simp_1_3": [
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.shifted_transform._simp_1_4": [
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.shifted_transform._simp_1_5": [
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.shifted_transform._simp_1_6": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.shifted_transform._simp_1_7": [
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_10": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_11": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_12": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_13": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_14": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_15": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_6": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_7": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_8": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._proof_1_9": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYThetaTransform.0.MockThetaAnalytic.split_classes._simp_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EichlerPrimitive": {
+      "MockThetaAnalytic.differentiableAt_fktyTheta": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerForm._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.exists_eichlerPrimitive": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.hasDerivAt_eichlerPrimitive_vertical": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.isExactOn_upperHalf": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.isExactOn_upperHalf._simp_1_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.isExactOn_upperHalf._simp_1_2": [
+        "propext"
+      ],
+      "MockThetaAnalytic.isExactOn_upperHalf._simp_1_3": [
+        "propext"
+      ],
+      "MockThetaAnalytic.isExactOn_upperHalf._simp_1_4": [
+        "propext"
+      ],
+      "MockThetaAnalytic.isExactOn_upperHalf._simp_1_5": [
+        "propext"
+      ],
+      "MockThetaAnalytic.isExactOn_upperHalf._simp_1_6": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.isExactOn_upperHalf._simp_1_7": [
+        "propext"
+      ],
+      "_private.EichlerPrimitive.0.MockThetaAnalytic.differentiableAt_shadowSeries": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerPrimitive.0.MockThetaAnalytic.fromDisk.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerPrimitive.0.MockThetaAnalytic.fromDisk_im": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerPrimitive.0.MockThetaAnalytic.fromDisk_ne": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerPrimitive.0.MockThetaAnalytic.toDisk.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerPrimitive.0.MockThetaAnalytic.toDisk_mem": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerPrimitive.0.MockThetaAnalytic.upper_ne": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EichlerHorizontal": {
+      "MockThetaAnalytic.norm_fktyTheta_le_height": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.norm_horizontal_bridge_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerHorizontal.0.MockThetaAnalytic.gaussianPartial": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerHorizontal.0.MockThetaAnalytic.gaussianStep": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EichlerTransportPath": {
+      "MockThetaAnalytic.eichlerInverseRay.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_coordinates": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_hasDerivAt": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_height_infty": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_height_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_im_pos": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_infty": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_infty._simp_1_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_infty._simp_1_2": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_infty._simp_1_3": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_infty._simp_1_4": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_infty._simp_1_5": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_infty._simp_1_6": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_infty._simp_1_7": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_zero._simp_1_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_zero._simp_1_2": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_zero._simp_1_3": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_zero._simp_1_4": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_zero._simp_1_5": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_zero._simp_1_6": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_offset_zero._simp_1_7": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_pullback": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_pullback._simp_1_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_pullback._simp_1_2": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_pullback._simp_1_3": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_pullback._simp_1_4": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_pullback._simp_1_5": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_pullback._simp_1_6": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerInverseRay_pullback._simp_1_7": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerRayDenom._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerRayDenom._proof_2": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerRayDenom.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerTargetRay._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerTargetRay.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerTransportMap._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerTransportMap.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerTransportMap_inverseRay": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.hasDerivAt_eichlerPrimitive_inverseRay": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.denom_im": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.denom_pos": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.denom_re": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.inverseRay_root_factor": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.jacobian_inverseRay": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.jacobian_inverseRay._simp_1_1": [
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.jacobian_inverseRay._simp_1_2": [
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.jacobian_inverseRay._simp_1_3": [
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.jacobian_inverseRay._simp_1_4": [
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.jacobian_inverseRay._simp_1_5": [
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.jacobian_inverseRay._simp_1_6": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.jacobian_inverseRay._simp_1_7": [
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.ray_denom_ne": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.re_shift34": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.re_shift34._simp_1_1": [
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.re_shift34._simp_1_2": [
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.re_shift34._simp_1_3": [
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.re_shift34._simp_1_4": [
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.re_shift34._simp_1_5": [
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.re_shift34._simp_1_6": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerTransportPath.0.MockThetaAnalytic.re_shift34._simp_1_7": [
+        "propext"
+      ]
+    },
+    "EichlerEndpointFTC": {
+      "MockThetaAnalytic.primitive_ray_endpoints": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.tendsto_eichlerTail_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "EichlerPathLimits": {
+      "MockThetaAnalytic.eichlerPrimitive_inverseRay_gap_infty": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerPrimitive_inverseRay_gap_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.eichlerPrimitive_vertical_gap_top": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerPathLimits.0.MockThetaAnalytic.primitive_gap_of_quadratic_offset": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerPathLimits.0.MockThetaAnalytic.primitive_gap_of_quadratic_offset._simp_1_1": [
+        "propext"
+      ],
+      "_private.EichlerPathLimits.0.MockThetaAnalytic.primitive_gap_of_quadratic_offset._simp_1_2": [
+        "propext"
+      ],
+      "_private.EichlerPathLimits.0.MockThetaAnalytic.primitive_gap_of_quadratic_offset._simp_1_3": [
+        "propext"
+      ],
+      "_private.EichlerPathLimits.0.MockThetaAnalytic.primitive_gap_of_quadratic_offset._simp_1_4": [
+        "propext"
+      ],
+      "_private.EichlerPathLimits.0.MockThetaAnalytic.primitive_gap_of_quadratic_offset._simp_1_5": [
+        "propext"
+      ],
+      "_private.EichlerPathLimits.0.MockThetaAnalytic.primitive_gap_of_quadratic_offset._simp_1_6": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.EichlerPathLimits.0.MockThetaAnalytic.primitive_gap_of_quadratic_offset._simp_1_7": [
+        "propext"
+      ]
+    },
+    "EichlerBridge": {
+      "MockThetaAnalytic.eichlerForm.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyEichlerIntegrand.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyVerticalPeriod.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fkty_defect34_eq_period": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "Order34QuantumPackets": {
+      "MockThetaAnalytic.boundary34_from_period_and_ten_unconditional": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fPackets34_tendsto_order10_period_of_FOR": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.normalizedPacketDefect_eq_period_unconditional": [
         "Classical.choice",
         "Quot.sound",
         "propext"

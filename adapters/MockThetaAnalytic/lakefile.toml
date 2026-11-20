@@ -21,4 +21,7 @@ roots = [
   "Order34Source", "GaussianPairIntegrable", "FKTYCuspModes",
   "FKTYPeriodRegularity", "CoefficientEvaluation", "FifthSeventhHolomorphic", "FKTYCuspMoments",
   "ThirdOrderRows", "ThirdOrderTaylor",
+  "PeriodicSmoothing", "EichlerProfile", "EichlerCuspLimit", "EichlerBoundaryValues",
+  "FKTYThetaTransform", "EichlerPrimitive", "EichlerHorizontal", "EichlerTransportPath",
+  "EichlerEndpointFTC", "EichlerPathLimits", "EichlerBridge", "Order34QuantumPackets",
 ]

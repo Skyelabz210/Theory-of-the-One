@@ -74,7 +74,8 @@ theorem integral_norm_gaussianMode_sub_le (a : ℝ) (ha : 0 < a) (m D : ℕ) (hm
       ring_nf
       nlinarith [mul_nonneg (sq_nonneg d) hx.le, mul_nonneg (sq_nonneg d) hd]
 
-private theorem integrable_tsum_of_summable_integral_norm {μ : Measure ℝ} (F : ℕ → ℝ → ℂ)
+/-- A summable sequence of L¹ norms gives an integrable pointwise sum. -/
+theorem integrable_tsum_of_summable_integral_norm {μ : Measure ℝ} (F : ℕ → ℝ → ℂ)
     (hi : ∀ m, Integrable (F m) μ) (hs : Summable (fun m => ∫ t, ‖F m t‖ ∂μ)) :
     Integrable (fun t => ∑' m, F m t) μ := by
   have hm (m : ℕ) : AEMeasurable (fun t => ‖F m t‖ₑ) μ := (hi m).1.enorm

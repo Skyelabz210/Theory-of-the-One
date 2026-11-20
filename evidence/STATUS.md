@@ -1,12 +1,18 @@
 # Evidence status — research draft
 
+## 20 November 2026 — unconditional order-34 to order-10 quantum period
+
+Lean proves the normalized weight-$1/2$ defect at $-1/34$ equals the Eichler period from $-1/24$ to $i\infty$, with multiplier $\sqrt{17/5}$ on the order-10 value. The proof derives the theta transformation on the upper half-plane and proves the two cusp limits from periodic first moments. Every signed source with its primary and same-source mod-17 readings gives the same period after phase normalization of the complete packets. The radial packet convergence theorem uses FOR’s compensated limit for $f+b$ at the positive-angle order-34 root. [Scalar identity](../adapters/MockThetaAnalytic/EichlerBridge.lean) · [Packet identities and radial transfer](../adapters/MockThetaAnalytic/Order34QuantumPackets.lean) · [Current kernel audit](../adapters/MockThetaAnalytic/verification.json)
+
+The 37-module analytic audit checked 343 authored theorems and 828 kernel declarations. Rebuilding the local analytic and imported core modules in a separate checkout produced a byte-identical audit receipt. The standard-library verification also reproduced 44,196 exact mock theta and crank assertions. [Analytic receipt](../adapters/MockThetaAnalytic/verification.json) · [Reproduction commands](../adapters/MockThetaAnalytic/README.md#reproduction)
+
 ## 20 November 2026 — source-bound phases, convergence of the period, and mock theta Taylor expansions
 
 Lean proves absolute integrability of the order-34 FKTY period and real analyticity away from $-1/24$. The primary and a same-source mod-17 reading recover both endpoint phases for any signed source. Sources $0$ and $30030$ give equal primary readings and different order-34 phases. For these complete packet arrays, agreement with the integral is equivalent to the single FKTY equation at $-1/34$. [Period](../adapters/MockThetaAnalytic/FKTYPeriodRegularity.lean) · [Signed-source packet theorem](../adapters/MockThetaAnalytic/Order34Source.lean) · [Exact cusp moments](../adapters/MockThetaAnalytic/FKTYCuspMoments.lean)
 
 The integer coefficients of third-order $f$, fifth-order $\chi_0$, and seventh-order $\mathcal F_0$ sum to their defining series on $|q|<1$. FOR’s radial law now suffices for the $f$ packet limit at every primitive even root. [Signed Taylor and radial transfer](../adapters/MockThetaAnalytic/ThirdOrderTaylor.lean) · [Fifth- and seventh-order series](../adapters/MockThetaAnalytic/FifthSeventhHolomorphic.lean)
 
-The 25-module audit covers 243 authored theorems, 150 public and 93 private. Lean checked 589 kernel declarations, including 487 theorem entries with generated helpers. The separate standard-library regression run passed 44,196 exact assertions. [Current analytic verification](../adapters/MockThetaAnalytic/verification.json) · [Reproduction commands](../adapters/MockThetaAnalytic/README.md#reproduction)
+The 25-module audit covers 243 authored theorems, 150 public and 93 private. Lean checked 589 kernel declarations, including 487 theorem entries with generated helpers. The separate standard-library regression run passed 44,196 exact assertions. [25-module verification](https://github.com/Skyelabz210/Theory-of-the-One/blob/73a0930f49f1ab5ed5278789c824b7143dd9bf8a/adapters/MockThetaAnalytic/verification.json) · [Reproduction commands](../adapters/MockThetaAnalytic/README.md#reproduction)
 
 ## 20 November 2026 — the order-34 to order-10 quantum transformation
 

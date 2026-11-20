@@ -280,7 +280,7 @@ specializations. Independent numerical checks evaluate the corrected
 interior functions on four radial paths and repeat at higher precision.
 [Exact smoke program](../../formal/universal/QuantumRadialSmoke.lean) · [Radial numerical receipt](../../evidence/current/quantum-radial/numerical.json)
 
-The order-34 and order-10 values of $B_k$ also enter FKTY’s weight-$1/2$ law on the even-denominator quantum set. The comparison uses reflected cusps and the $-1$ twist of $U$. [Exact normalization and period](2026-11-20-order-34-to-10.md)
+The order-34 and order-10 values of $B_k$ also enter FKTY’s weight-$1/2$ law on the even-denominator quantum set. At the $-1$ twist of $U$, Lean proves the fixed-pair identity by evaluating the two reflected cusp limits and transporting a primitive of the theta kernel. [Lean period identity](../../adapters/MockThetaAnalytic/EichlerBridge.lean) · [Exact normalization and period](2026-11-20-order-34-to-10.md)
 
 [Coefficient coverage](2026-11-20-seventh-order-mock-theta.md)
 · [Third-order shadow](2026-11-20-third-order-analytic-shadow.md)
