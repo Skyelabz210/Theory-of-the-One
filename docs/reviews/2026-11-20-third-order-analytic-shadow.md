@@ -42,6 +42,13 @@ kernel derivatives away from the real boundary.
 [Zwegers, *Mock θ-functions and real analytic modular forms*](https://doi.org/10.1090/conm/291/04907)
 · [Ono, §3.1, p. 29, equations (3.1)–(3.4) and Theorem 3.1](https://swc-math.github.io/aws/2013/2013OnoNotes.pdf#page=29)
 
+Guerzhoy, Kent, and Ono also display the same scaled $M_f$ and its integral.
+Their theta function in the integrand is $-6g_1(w)$, whose first power is
+$e(w/24)$. Below, $\Theta(z)=-6g_1(24z)$ has integer exponents. The
+differential operator fixes the scalar relating that series to $\xi_{1/2}M_f$.
+[Guerzhoy–Kent–Ono, p. 6169](https://doi.org/10.1073/pnas.1001355107)
+· [Author manuscript, p. 1](https://uva.theopenscholar.com/files/ken-ono/files/125.pdf#page=1)
+
 Use $\xi_k U=2iy^k\overline{\partial_{\bar z}U}$ with
 $\partial_{\bar z}=(\partial_x+i\partial_y)/2$. In the integral the
 integrand is holomorphic in $\tau$. Differentiating the lower endpoint gives
@@ -78,9 +85,12 @@ $$
 
 The bound $\Gamma(1/2,v)\le v^{-1/2}e^{-v}$ cancels the growth of
 $q^{-m^2}$ and leaves Gaussian decay on each $y\ge\eta>0$.
-It justifies termwise integration and locally uniform summation.
-Using $\partial_v\Gamma(1/2,v)=-v^{-1/2}e^{-v}$ in each Fourier term
-also gives $4m q^{m^2}$ under $\xi_{1/2}$.
+In fact, for $y\ge\eta>0$ the absolute value of the $m$th correction
+term is at most $e^{-2\pi m^2\eta}/(\pi|m|\sqrt\eta)$. Its first $x$ and
+$y$ derivatives are each bounded by $6|m|e^{-2\pi m^2\eta}/\sqrt\eta$,
+using $\partial_v\Gamma(1/2,v)=-v^{-1/2}e^{-v}$. Both majorants are summable.
+Thus differentiating the entire correction term by term is valid on the upper
+half-plane. Each signed Fourier term gives $4m q^{m^2}$ under $\xi_{1/2}$.
 
 ## Projecting the completion by degree modulo 11
 
@@ -144,7 +154,7 @@ completion from partition crank observations remains open.
 ## Verification by result
 
 Zwegers supplies the modular transformation theorem for the completed vector.
-The differential and projection arguments above are written mathematical proofs.
+The Mathlib package below checks the differential and projection operations independently.
 The standard-library Lean module proves the coefficient support of the Laurent
 series and its finite evaluation at any ring unit. For a positive square root
 $m$, `shadowWeight` is $m$ at $m\equiv1\pmod6$, $-m$ at $m\equiv5\pmod6$,
@@ -181,3 +191,39 @@ bounds and the step-halving comparison. Quadrature, roundoff, and
 differentiation errors were assessed numerically.
 [Checker](../../tools/check_analytic_shadow.py)
 · [Pointwise numerical receipt](../../evidence/current/analytic-shadow/numerical.json)
+
+## Complex analysis in Lean
+
+The analytic adapter compiles 45 explicitly declared theorems across six
+modules. Its kernel audit checks 124 constants, including 103 theorem entries
+with generated helpers. The adapter imports the exact `shadowWeight` from
+the standard-library package. At every $|u|<1$ it proves absolute summability of
+$\sum_{m\ge0}\operatorname{shadowWeight}(m)u^{m^2}$, using $m|u|^m$ as a
+summable majorant. It proves that the eleven degree bins sum to the entire
+series, and that normalized translation by elevenths selects the bin with the
+prescribed exponent. This applies both to signed Laurent monomials and to
+the convergent theta series in the upper half-plane.
+[Convergence](../../adapters/MockThetaAnalytic/ShadowConvergence.lean)
+· [Fourier degree projections](../../adapters/MockThetaAnalytic/ShadowProjection.lean)
+
+Lean defines $\xi_{1/2}$ from the real Fréchet derivative. It proves that
+$\xi_{1/2}P_r=P_{-r}\xi_{1/2}$ when the function is real differentiable
+at all eleven translates. In `xiHalf_project11_of_shadow`, identifying the
+input with the completed $f$ uses the published formula for its $\xi_{1/2}$
+image at those points as an explicit hypothesis.
+[Operator and index reversal](../../adapters/MockThetaAnalytic/ShadowOperator.lean)
+· [Hypotheses of the completed projection](../../adapters/MockThetaAnalytic/ShadowProjection.lean)
+
+For the nonholomorphic Fourier modes, Lean differentiates the complementary
+error function defined by a Gaussian integral. The theorem
+`xiHalf_finiteCompletion` combines this calculation with the actual mock
+coefficients. For every holomorphic cutoff $D$ and magnitude cutoff $M$, it
+differentiates that finite completion and obtains four times the signed unary
+sum through $m=M$. At each $y>0$,
+`tendsto_xiHalf_finiteCompletion` proves those derivatives converge to
+$4\Theta(z)$ as $M\to\infty$ for any choice $D=D(M)$. The theorem takes
+the limit after differentiation. The written Gaussian majorants above
+justify differentiating the infinite correction itself.
+[Fourier modes, finite completion, and limiting theorem](../../adapters/MockThetaAnalytic/ShadowMode.lean)
+· [Kernel audit](../../adapters/MockThetaAnalytic/verification.json)
+· [Reproduction](../../adapters/MockThetaAnalytic/README.md)

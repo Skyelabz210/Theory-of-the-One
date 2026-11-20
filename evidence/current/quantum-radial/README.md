@@ -11,7 +11,7 @@ FOR's Theorems 1.1 and 1.2 identify their radial limits.
 |---|---|
 | [Exact Lean proof](../../../formal/universal/QuantumRadial.lean) | Finite stabilization, degree packets, coupled-anchor evaluation, and the diagonal rank/crank right side |
 | [Exact execution](../profinite-mock-theta/quantum-radial-smoke.log) | 1,579 assertions. The finite-field checks cover all primitive roots of orders 2, 4, 6, 8, 10, and 22 in the field of 1,321 elements and an order-11 fixture in the field of 727 elements |
-| [Numerical receipt](numerical.json) | Four radial paths, repeated at 340 and 370 decimal digits. The record gives the two interior function values, their corrected difference, analytic tail estimates, precision comparisons, and controls |
+| [Numerical receipt](numerical.json) | Four FOR radial paths at 340 and 370 decimal digits, plus three BOPR cusp transformations at 45 and 65 decimal digits. The receipt records the two sets of assumptions, truncation bounds, precision comparisons and controls |
 | [Numerical program](../../../tools/check_quantum_radial.py) | Independent evaluations of the interior rank and crank functions, the finite boundary value, and compensation sign or phase |
 
 The even roots $-1$, $i$ and $e(1/6)$ use $t=1-1/d$ for
@@ -23,6 +23,14 @@ These are distances of interior samples to boundary values. The receipt
 separately records arithmetic agreement between precisions and the effect
 of changing the compensating phase.
 
+At $x=1/11$, $-11$, and $1/2$, the BOPR checks evaluate the terminating
+$U(1;e(x))$ and Kontsevich sums, the translated value, and the inversion
+defect against an independent integral of Dedekind’s eta function. The largest
+absolute discrepancy with the integral was below $2\times10^{-61}$ at 65
+decimal digits. At $x=1/11$ using the opposite translation multiplier gives
+error above 18. These are evaluations of a published weight-$3/2$ law on
+rational cusps. [BOPR, Theorems 1.1 and 1.3](https://doi.org/10.1073/pnas.1211964109)
+
 From the repository root, reproduce the finite proofs and exact checks with
 the pinned Lean toolchain. Reproduce the numerical run with Python and
 `mpmath==1.3.0`.
@@ -31,3 +39,8 @@ the pinned Lean toolchain. Reproduce the numerical run with Python and
 python3 tools/verify_profinite_mock_theta.py --lean lean
 python3 tools/check_quantum_radial.py --dps 340 --receipt evidence/current/quantum-radial/numerical.json
 ```
+
+The Mathlib adapter also proves the diagonal cutoff theorem for the finite
+coefficient packets with the Taylor identification and FOR's radial limit as
+hypotheses. [Radial transfer](../../../adapters/MockThetaAnalytic/QuantumRadialLimit.lean)
+· [Kernel audit](../../../adapters/MockThetaAnalytic/verification.json)

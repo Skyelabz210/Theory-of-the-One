@@ -5,7 +5,7 @@
   "source_pdf_sha256": "0f3a0105a62adc6341a5a13fb765a0aa93596d8e3da55e423ca3cc05e8b38a4e",
   "source_location": "Theorems 1.1 and 1.2, equations (1.4)–(1.6), pp. 4–6",
   "command": "python3 tools/check_quantum_radial.py --dps 340 --receipt evidence/current/quantum-radial/numerical.json",
-  "script_sha256": "aba7be7f02e7d09a8bc82a64acbcc245d2392b76fae7e971f9b6ea6d57b9db95",
+  "script_sha256": "a1fc2cbd6cbb2883671ff56deee7bef40f7a3279bd6140546242c89061bb0eb0",
   "python": "3.12.14",
   "mpmath": "1.3.0",
   "working_decimal_digits": 340,
@@ -480,5 +480,105 @@
         }
       ]
     }
-  ]
+  ],
+  "bopr_weight_three_halves": {
+    "source": "https://doi.org/10.1073/pnas.1211964109",
+    "source_pdf": "https://europepmc.org/articles/PMC3479563?pdf=render",
+    "source_pdf_sha256": "0af7acb4a5307f42e1a4f73279cf93f39305c6813bc19fb4a8944bc199293100",
+    "source_location": "Equations (1.1),(1.5), Theorems 1.1 and 1.3, pp. 16063–16064.",
+    "twist": "phi(x)=e(-x/24) U_BOPR(-1;e(x))=e(-x/24) U_FOR(1;e(x))",
+    "domain_tested": "Three nonzero rational boundary points",
+    "period_integral": "sqrt(3)/(2*pi) integral_0^infty eta(it)*(t-i*x)^(-3/2) dt",
+    "integration_range_t": [
+      "1/512",
+      "512"
+    ],
+    "eta_pentagonal_pairs": 5,
+    "period_evaluation_dps": [
+      45,
+      65
+    ],
+    "comparison_threshold": "1e-32",
+    "scope": "Explicit endpoint and eta-series tail estimates; finite quadrature checked by precision replication.",
+    "cases": [
+      {
+        "x": "1/11",
+        "U_FOR_at_w_one": [
+          "-18.22239003074546377103",
+          "31.50851468133629510801"
+        ],
+        "normalized_phi": [
+          "-17.46739925067135542529",
+          "31.93324222928580557149"
+        ],
+        "eta_period": [
+          "0.7740370962833437448443",
+          "0.3381476733266479423092"
+        ],
+        "absolute_disagreements": {
+          "U_vs_Kontsevich_F_at_inverse_root": "1.917258358230821759094e-63",
+          "translation": "1.899113549151959749495e-65",
+          "inversion_vs_eta_period": "1.974434521493043459999e-61",
+          "period_at_45_vs_65_digits": "7.661639501441799767948e-47"
+        },
+        "wrong_translation_phase_error": "18.84118740654664394451",
+        "wrong_inversion_sign_error": "72.96574538781879668053",
+        "integral_low_t_tail_bound": "5.438432025129270902e-59",
+        "integral_high_t_tail_bound": "5.560528789494633122063e-63",
+        "eta_series_integrated_tail_bound": "2.886035546635043914464e-138"
+      },
+      {
+        "x": "-11",
+        "U_FOR_at_w_one": [
+          "1.0",
+          "0.0"
+        ],
+        "normalized_phi": [
+          "-0.9659258262890682867497",
+          "0.2588190451025207623489"
+        ],
+        "eta_period": [
+          "-0.008448357929654655372581",
+          "-0.02155623541824088885421"
+        ],
+        "absolute_disagreements": {
+          "U_vs_Kontsevich_F_at_inverse_root": "0.0",
+          "translation": "5.308183741118337608519e-66",
+          "inversion_vs_eta_period": "5.414499875932631691979e-63",
+          "period_at_45_vs_65_digits": "4.141329941903573814379e-48"
+        },
+        "wrong_translation_phase_error": "0.5176380902050415246978",
+        "wrong_inversion_sign_error": "1.995368036571747552369",
+        "integral_low_t_tail_bound": "4.085974474176762510894e-62",
+        "integral_high_t_tail_bound": "5.560528789494633122063e-63",
+        "eta_series_integrated_tail_bound": "1.456272625697203419118e-139"
+      },
+      {
+        "x": "1/2",
+        "U_FOR_at_w_one": [
+          "3.0",
+          "0.0"
+        ],
+        "normalized_phi": [
+          "2.974334584121431233434",
+          "-0.3915785766601547746452"
+        ],
+        "eta_period": [
+          "0.2422837765525539399062",
+          "0.3404722309087225188822"
+        ],
+        "absolute_disagreements": {
+          "U_vs_Kontsevich_F_at_inverse_root": "0.0",
+          "translation": "0.0",
+          "inversion_vs_eta_period": "1.233099933335303612218e-62",
+          "period_at_45_vs_65_digits": "3.252835144007257233836e-47"
+        },
+        "wrong_translation_phase_error": "1.552914270615124574093",
+        "wrong_inversion_sign_error": "5.656854249492380195207",
+        "integral_low_t_tail_bound": "4.216282194941286266266e-60",
+        "integral_high_t_tail_bound": "5.560528789494633122063e-63",
+        "eta_series_integrated_tail_bound": "3.561836416692763841443e-139"
+      }
+    ]
+  }
 }

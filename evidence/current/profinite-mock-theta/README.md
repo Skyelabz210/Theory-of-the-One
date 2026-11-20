@@ -106,7 +106,7 @@ completes the seventeen coefficient constructions. The [crank and shadow review]
 covers partition statistics, finite character sums, and the S8 reading hypotheses.
 The [analytic review of third-order $f$](../../../docs/reviews/2026-11-20-third-order-analytic-shadow.md)
 identifies the complex-analytic operator and the independent numerical
-checks. This directory records the standard-library Lean proofs and exact
+checks. The [Mathlib audit](../../../adapters/MockThetaAnalytic/verification.json) records the complex-analytic proofs. This directory records the standard-library Lean proofs and exact
 executions. The [quantum radial review](../../../docs/reviews/2026-11-20-quantum-radial.md)
 gives the separate published limit theorem and the numerical checks on four
 radial paths. Topological duality and production observation constructors

@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
-"""Evaluate the interior q-series in Folsom–Ono–Rhoades, Thms. 1.1 and 1.2.
+"""Check Folsom–Ono–Rhoades radial data and the distinct BOPR quantum twist.
 
 Requires mpmath==1.3.0. The input is q=(1-1/d)ζ. No endpoint identity is
 used to compute interior R or C. Exact-series tail estimates below exclude
 roundoff; two working precisions test the net effect of arithmetic error.
 Source (2013), pp. 4–6, equations (1.4)–(1.6): https://doi.org/10.1017/fmp.2013.3
+At three rational x, also compare the finite weight-3/2 inversion defect
+with the eta integral of Bryson–Ono–Pitman–Rhoades, Theorem 1.3 (2012).
+https://doi.org/10.1073/pnas.1211964109
 """
 
 import argparse
+from fractions import Fraction
 import hashlib
 import json
 from pathlib import Path
@@ -204,6 +208,104 @@ def check_path(order, u, phase_power, divisors, precision):
             'endpoint_disagreement': number(abs(finite-closed)), 'samples': samples}
 
 
+def bopr_value(x):
+    """BOPR (1.1),(1.5): t=-1 in BOPR is w=1 in FOR. Compare Thm 1.1."""
+    z = roots(x.denominator)
+    a, k = x.numerator, x.denominator
+    value = strange = mp.mpc(0)
+    poch = inverse_poch = mp.mpc(1)
+    for n in range(k):
+        if n:
+            poch *= 1-z[(a*n) % k]
+            inverse_poch *= 1-z[(-a*n) % k]
+        value += poch**2*z[(a*(n+1)) % k]
+        strange += inverse_poch
+    lift = mp.mpf(a)/k
+    return mp.exp(-mp.pi*mp.j*lift/12)*value, value, strange
+
+
+def bopr_period(x):
+    """Real-axis η-period, BOPR Thm 1.3, with principal complex powers."""
+    cutoff, pairs = 512, 5
+    exponent = mp.mpf(3)/2
+    x = mp.mpf(x.numerator)/x.denominator
+    c = mp.sqrt(3)/(2*mp.pi)
+    a = mp.pi/12
+
+    def integrand(s):
+        # Combine t=s and t=1/s using η(i s)=η(i/s)/sqrt(s).
+        # At 1/s ≥ 1 the Euler series for η(i/s) converges uniformly fast.
+        q = mp.exp(-2*mp.pi/s)
+        product = 1
+        for j in range(1, pairs+1):
+            p = j*(3*j-1)//2
+            product += (-1)**j*(q**p+q**(p+j))
+        eta = mp.exp(-a/s)*product
+        return eta*((s-mp.j*x)**(-exponent)/mp.sqrt(s) +
+                    (1/s-mp.j*x)**(-exponent)/s**2)
+
+    eps = mp.mpf(1)/cutoff
+    period = c*mp.quad(integrand, [eps, mp.mpf(1)/32, mp.mpf(1)/4, 1])
+    # For 0<t<eps, |η(it)|≤t^(-1/2)exp(-a/t). For t>T, |η(it)|≤exp(-at).
+    low = c*2*mp.sqrt(eps)*mp.exp(-a/eps)/abs(x)**exponent
+    high = c*mp.exp(-a*cutoff)/(a*cutoff**exponent)
+    # On t≥1 each omitted Euler pair has magnitude ≤ 2 exp(-2π t p).
+    j = pairs+1
+    p = j*(3*j-1)//2
+    product_tail = 2*mp.exp(-2*mp.pi*p)/(1-mp.exp(-2*mp.pi*(3*j+1)))
+    eta_series = c*product_tail*(2/abs(x)**exponent+1/a)
+    return period, low, high, eta_series
+
+
+def check_bopr():
+    """Test the distinct FOR w=1 specialization against its quantum period."""
+    cases = []
+    for x in (Fraction(1, 11), Fraction(-11), Fraction(1, 2)):
+        with mp.workdps(45):
+            period_low, _, _, _ = bopr_period(x)
+        with mp.workdps(65):
+            phi, value, strange = bopr_value(x)
+            translated, _, _ = bopr_value(x+1)
+            inverted, _, _ = bopr_value(-1/x)
+            phase = mp.exp(-mp.pi*mp.j/12)
+            lift = mp.mpf(x.numerator)/x.denominator
+            inversion_term = (-mp.j*lift)**(-mp.mpf(3)/2)*inverted
+            period, low, high, eta_tail = bopr_period(x)
+            disagreements = {
+                'U_vs_Kontsevich_F_at_inverse_root': abs(value-strange),
+                'translation': abs(translated-phase*phi),
+                'inversion_vs_eta_period': abs(phi+inversion_term-period),
+                'period_at_45_vs_65_digits': abs(period-period_low),
+            }
+            require(max(disagreements.values()) < mp.mpf('1e-32'),
+                    f"BOPR identity discrepancy at x={x}")
+            wrong_T = abs(translated-phi/phase)
+            wrong_S = abs(phi-inversion_term-period)
+            require(min(wrong_T, wrong_S) > mp.mpf('0.01'), "BOPR phase/sign control")
+            require(low+high+eta_tail < mp.mpf('1e-55'), "BOPR analytic tail")
+            cases.append({'x': str(x), 'U_FOR_at_w_one': coordinates(value),
+                          'normalized_phi': coordinates(phi), 'eta_period': coordinates(period),
+                          'absolute_disagreements': {k: number(v) for k, v in disagreements.items()},
+                          'wrong_translation_phase_error': number(wrong_T),
+                          'wrong_inversion_sign_error': number(wrong_S),
+                          'integral_low_t_tail_bound': number(low),
+                          'integral_high_t_tail_bound': number(high),
+                          'eta_series_integrated_tail_bound': number(eta_tail)})
+    return {
+        'source': 'https://doi.org/10.1073/pnas.1211964109',
+        'source_pdf': 'https://europepmc.org/articles/PMC3479563?pdf=render',
+        'source_pdf_sha256': '0af7acb4a5307f42e1a4f73279cf93f39305c6813bc19fb4a8944bc199293100',
+        'source_location': 'Equations (1.1),(1.5), Theorems 1.1 and 1.3, pp. 16063–16064.',
+        'twist': 'phi(x)=e(-x/24) U_BOPR(-1;e(x))=e(-x/24) U_FOR(1;e(x))',
+        'domain_tested': 'Three nonzero rational boundary points',
+        'period_integral': 'sqrt(3)/(2*pi) integral_0^infty eta(it)*(t-i*x)^(-3/2) dt',
+        'integration_range_t': ['1/512', '512'], 'eta_pentagonal_pairs': 5,
+        'period_evaluation_dps': [45, 65], 'comparison_threshold': '1e-32',
+        'scope': 'Explicit endpoint and eta-series tail estimates; finite quadrature checked by precision replication.',
+        'cases': cases,
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--dps', type=int, default=340, help="working decimal digits (default 340)")
@@ -227,6 +329,7 @@ def main():
         'crank_convention': 'Product (1.5); [q]C(w;q)=w+w^(-1)-1.',
         'scope': 'Interior samples and exact-series tail estimates evaluated in multiprecision; no interval rounding certificate or numerical proof of the limit.',
         'cases': cases,
+        'bopr_weight_three_halves': check_bopr(),
     }
     result = json.dumps(receipt, indent=2, ensure_ascii=False)+'\n'
     if args.receipt:

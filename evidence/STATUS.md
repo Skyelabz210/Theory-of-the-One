@@ -1,5 +1,24 @@
 # Evidence status — research draft
 
+## 20 November 2026 — complex-analytic shadow and radial operators in Lean
+
+The separate Mathlib adapter compiled 45 explicitly declared theorems across
+six modules, 36 public and nine private. The kernel audit covered 124 constants,
+including 103 theorem entries when compiler-generated helpers are counted.
+An independent checkout rebuilt the core and all six analytic modules and
+produced a byte-identical receipt. The proofs establish absolute convergence of the signed unary series, its degree
+projections, and sign reversal under the conjugate differential operator.
+For every finite completion the derivative gives the corresponding unary
+sum. These derivatives converge to the analytic shadow for every point in
+the upper half-plane. The radial transfer theorem takes the interior Taylor
+identity and FOR limit as hypotheses and gives cutoffs for finite packet
+evaluations. For the BOPR specialization at $w=1$, the adapter proves the
+terminating cusp values, normalized translation law, and exact prime-11
+polynomial. BOPR supplies the inversion law, independently tested against
+the eta period at three cusps.
+[Result and exact hypotheses](../docs/reviews/2026-11-20-third-order-analytic-shadow.md#complex-analysis-in-lean)
+· [Analytic kernel audit](../adapters/MockThetaAnalytic/verification.json)
+
 ## 20 November 2026 — rank/crank quantum radial values
 
 FOR's radial theorem identifies the compensated limit of the third-order
@@ -10,9 +29,9 @@ formula. The audit compiled 367 declarations, including 20 in `QuantumRadial`.
 The combined exact suites passed 44,196 assertions, including 1,579 for the
 radial formulas. The numerical study compares four radial approaches with
 the source predictions.
-[Proof, literature, and domain map](../docs/reviews/2026-11-20-quantum-radial.md)
-· [Exact execution](current/profinite-mock-theta/quantum-radial-smoke.log)
-· [Numerical evidence](current/quantum-radial/README.md)
+[Proof, literature, and domain map](https://github.com/Skyelabz210/Theory-of-the-One/blob/6e6666c3a56247c2907c714b78b0aac11f59220a/docs/reviews/2026-11-20-quantum-radial.md)
+· [Exact execution](https://github.com/Skyelabz210/Theory-of-the-One/blob/6e6666c3a56247c2907c714b78b0aac11f59220a/evidence/current/profinite-mock-theta/quantum-radial-smoke.log)
+· [Numerical evidence](https://github.com/Skyelabz210/Theory-of-the-One/blob/6e6666c3a56247c2907c714b78b0aac11f59220a/evidence/current/quantum-radial/README.md)
 
 ## 20 November 2026 — analytic shadow of the third-order f
 

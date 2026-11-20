@@ -30,8 +30,8 @@ $(-\zeta;\zeta)_n=\prod_{j=1}^n(1+\zeta^j)$ contains $1+\zeta^k=0$
 as soon as $n\ge k$. At $\zeta=-1$ the single retained term gives 4 and
 the compensating expression is $f+b$. At $\zeta=i$ the two terms inside
 the sum are $i$ and $-2i$, so $B_2(i)=4i$ and the expression is $f-b$.
-The odd-order cusp is regular for the displayed $f$ series. The order-11
-singular example below specializes a different rank character.
+FOR notes that the defining series for $f$ converges at odd-order roots.
+The order-11 singular example below specializes a different rank character.
 [FOR, pp. 3–5, Theorem 1.1 and examples](https://afolsom.people.amherst.edu/FolsomOnoRhoades-ForumPi.pdf#page=4)
 
 ## Two limits and the CRAM observation
@@ -56,10 +56,47 @@ $$
  \left|f(t_j\zeta)-(-1)^kb(t_j\zeta)-B_k(\zeta)\right|\longrightarrow0 .
 $$
 
+The Mathlib theorem `for_limit_from_f_packets` implements this transfer with
+the named coefficient function, the hypergeometric series `radialF`, and
+the modular product `radialB`. Its hypotheses include the Taylor identity
+inside the disk, FOR's compensated radial limit, a primitive $2k$th root,
+and a positive period $L$ with $2k\mid L$. The auxiliary theorem
+`exists_packet_cutoffs` obtains an error at most $1/(j+1)$ from pointwise
+convergence of each interior Taylor series. Every larger cutoff works.
+[Formal radial transfer and its analytic inputs](../../adapters/MockThetaAnalytic/QuantumRadialLimit.lean)
+
 This proof uses the interior absolute tail at each chosen radius. A fixed
 truncation has a finite polynomial value at $\zeta$ while $b(t\zeta)$ can
-diverge. The finite sum defining $B_k$ uses summand index $n<k$, a
-different cutoff from the coefficient degree $d<N_j$.
+diverge. The packet schedule approximates $f$ and uses the modular product
+$b(t_j\zeta)$ at that same point. The finite sum defining $B_k$ uses
+summand index $n<k$, a different cutoff from the coefficient degree $d<N_j$.
+
+There is also a sufficient cutoff depending only on the radius. Put
+$s=1-t$ and $R=1-s/2$. Absolute expansion of the summands of $f$ gives
+
+$$
+ \sum_{d\ge0}|a_d|R^d
+ \le \prod_{j\ge1}(1-R^j)^{-2}\sum_{n\ge0}R^{n^2}
+ \le \frac{2}{s}e^{8/s^2}.
+$$
+
+Indeed $-\log(1-R^j)\le R^j/(1-R)$, so the log of the product is at most
+$2R/(1-R)^2\le8/s^2$. The last sum is bounded by the geometric series
+$1/(1-R)=2/s$. For every $|\zeta|=1$, the tail after retaining $N$
+coefficient degrees satisfies
+
+$$
+ \left|f(t\zeta)-f_N(t\zeta)\right|
+ \le (t/R)^N\sum_{d\ge0}|a_d|R^d
+ \le \frac{2}{s}\exp(8/s^2-Ns/2),
+$$
+
+since $t/R=1-s/(2R)\le e^{-s/2}$. Therefore
+$N(t)=\lceil18/(1-t)^3\rceil$ gives error at most
+$(2/s)e^{-1/s^2}\to0$, uniformly in the chosen root. Combining this bound
+with FOR identifies the limit of that particular packet schedule. This bound
+on Taylor degrees is conservative. The numerical checker uses the
+hypergeometric series with its own truncation estimates.
 
 The standard-library Lean construction freezes the factor
 $(-\zeta;\zeta)_n^2$ at the supplied root and applies the finite character
@@ -140,6 +177,68 @@ A table of radial constants gives boundary values. Quantum modularity also
 requires this transformation and regularity data.
 [Zagier, *Quantum Modular Forms*, equations (1)–(3)](https://people.mpim-bonn.mpg.de/zagier/files/qmf/fulltext.pdf#page=2)
 
+### A quantum modular form from the same two-variable series
+
+Set $w=1$ in the repository's $U$ and in FOR equation (1.6). At a root $q$
+of exact order $L$ this gives $U(1;q)=\sum_{n=0}^{L-1}(q;q)_n^2 q^{n+1}$.
+The first omitted product contains $1-q^L=0$. Bryson, Ono, Pitman, and
+Rhoades (BOPR) write this specialization as $U(-1;q)$ because they use
+the opposite sign on the statistic variable. Their Theorem 1.1 identifies
+it with Kontsevich's strange function
+$F(q^{-1})=\sum_{n=0}^{L-1}(q^{-1};q^{-1})_n$ at every root of unity.
+For $q=-1$, both expressions give $3$, and for $q=i$ both give $8+3i$.
+[BOPR, Theorem 1.1](https://uva.theopenscholar.com/files/ken-ono/files/140_8.pdf#page=2)
+· [FOR's convention, p. 7](https://afolsom.people.amherst.edu/FolsomOnoRhoades-ForumPi.pdf#page=7)
+
+BOPR Theorem 1.3 supplies the transformation and regularity for this
+particular observable. With the normalization
+$\phi(x)=e(-x/24)U(1;e(x))$, the two generator laws are
+
+$$
+ \phi(x+1)=e(-1/24)\phi(x),\qquad
+ \phi(x)+(-ix)^{-3/2}\phi(-1/x)=h(x).
+$$
+
+The inversion formula holds for $x\in(\mathbb Q\cup\mathbb H)\setminus\{0\}$
+with the principal power. On the rational boundary the defect is the
+eta period integral
+$h(x)=\frac{\sqrt3}{2\pi i}\int_0^{i\infty}\eta(u)[-i(x+u)]^{-3/2}\,du$.
+It extends smoothly on $\mathbb R$ and is real analytic away from zero.
+The interior formula in the source includes a second term. This is the
+weight-$3/2$ quantum modular law for $w=1$. The compensated limits above
+use $w=-1$ and $w=e(1/11)$, respectively.
+[BOPR, Theorem 1.3 and equation (1.5)](https://doi.org/10.1073/pnas.1211964109)
+· [Author manuscript, pp. 2–3](https://uva.theopenscholar.com/files/ken-ono/files/140_8.pdf#page=3)
+
+For $\zeta=e(1/11)$, reduction of that finite polynomial modulo
+$\Phi_{11}(X)=1+X+\cdots+X^{10}$ gives a degree-nine representative
+
+$$
+ U(1;\zeta)=43+22\zeta+22\zeta^2+22\zeta^3+31\zeta^4
+  +22\zeta^5+33\zeta^6+19\zeta^7+22\zeta^8+7\zeta^9 .
+$$
+
+Lean proves the polynomial identity at every primitive eleventh root.
+Its `strangeCusp` takes the actual sum of the $w=1$ terms, proves that it
+terminates at a root of unity (including any larger compatible cutoff),
+and proves the normalized translation law. The inversion law and regularity
+of the eta period are BOPR's analytic result.
+[Terminating values and translation in Lean](../../adapters/MockThetaAnalytic/QuantumStrange.lean)
+
+The quantum value is $\phi(1/11)=e(-1/264)U(1;\zeta)$,
+approximately $-17.46739925+31.93324223i$. At $x=1/11$, the second
+inversion value is $\phi(-11)=e(11/24)$, so the two finite root sums give
+a nonzero defect of about $0.77403710+0.33814767i$. Independent integration
+of the eta period agrees. At $1/11$, $-11$, and $1/2$ the largest absolute
+discrepancy was below $2\times10^{-61}$. The numerical receipt also checks
+translation and the independent terminating strange-function sum.
+[Numerical transformation checks](../../evidence/current/quantum-radial/numerical.json)
+
+The same root gives $U(\zeta;\zeta)=\zeta$ in FOR's rank/crank limit because its
+statistic parameter selects different factors.
+
+### A second example from Zagier
+
 Zagier's Example 1 provides a concrete law. For $x\in\mathbb Q$, $q=e(x)$,
 let $Z(x)=e(x/24)\sigma(q)$, where the terminating series at a root is
 $\sigma(q)=1+\sum_{n\ge0}(-1)^n q^{n+1}(q;q)_n$. Its weight-one
@@ -157,9 +256,9 @@ For the distinct Rogers–Fine functions $G,H$, FOR Theorem 1.3(2) gives a
 weight-$1/2$ vector transformation under $x\mapsto 1/(2x)$ with an explicit
 period integral. In the specialization $(a,b)=(1,2)$ its rational domain
 $Q_{1,2}$ consists of positive reduced fractions with odd numerator and
-odd denominator. That statement concerns $G,H$. Quantum modularity of
-the repository's own boundary packet observables would require specifying
-their slash action and proving regularity of its defect.
+odd denominator. That statement concerns $G,H$. Extending a quantum transformation law to
+another specialization of the packet observables would require its own
+slash action and a proof of regularity for its defect.
 [Zagier, Example 1, equations (8), (10), (11)](https://people.mpim-bonn.mpg.de/zagier/files/qmf/fulltext.pdf#page=5)
 · [FOR, pp. 8–9, Theorem 1.3 and its vector-valued interpretation](https://afolsom.people.amherst.edu/FolsomOnoRhoades-ForumPi.pdf#page=8)
 
@@ -169,11 +268,12 @@ their slash action and proving regularity of its defect.
 |---|---|
 | All 17 mock theta coefficient families | Lean coefficient, packet, refinement and finite root theorems |
 | Mod-11 crank of a partition | Lean proves S6 projection, S8 recovery under an authentic affine transition, and the independent seventh-order size-weighted finite crank pairing |
-| Third-order $f$ and its normalized shadow | Exact Lean coefficients and mod-11 support. Zwegers supplies modularity. The worked analytic derivation and pointwise numerics specify the factor 4 and the opposite residue under $\xi_{1/2}$ |
+| Third-order $f$ and its normalized shadow | Exact Lean coefficients and support. Mathlib proves finite completion derivatives, their pointwise limit $4\Theta$, and the sign reversal of the degree projection. The infinite modular completion is supplied by Zwegers |
 | FOR's even-order boundary sum | Lean finite product and tail termination. FOR Theorem 1.1 identifies the compensated radial limit |
-| Approaching the boundary by coefficient packets | The cutoff argument above composes the interior coefficient transform with the published radial limit |
+| Approaching the boundary by coefficient packets | Mathlib proves the cutoff transfer for the actual packet evaluations with the Taylor identity and FOR’s radial limit as hypotheses |
 | Rank/crank limit at the eleventh root | FOR Theorem 1.2 with the statistic character and cusp specified separately |
-| Modular transformations on rational cusps | Zagier's Example 1 and FOR's Theorem 1.3 include their domains, weights and regularity statements |
+| $U(1;q)$ at a root | Mathlib proves the terminating sum, the normalized translation law and the prime-11 polynomial. BOPR supplies inversion and analytic regularity, with independent three-cusp numerical checks |
+| Other modular transformations on rational cusps | Zagier's Example 1 and FOR's Theorem 1.3 include their domains, weights and regularity statements |
 
 The exact suite passed 1,579 checks, including 133 for order-eleven rank/crank
 specializations. Independent numerical checks evaluate the corrected

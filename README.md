@@ -61,9 +61,13 @@ For $q=e^{2\pi i z}$, the holomorphic part of the normalized completion $M_f$ is
 
 The Laurent normalization and unary theta coefficients passed **9,504 exact checks**. [Exact execution](evidence/current/profinite-mock-theta/third-order-shadow-smoke.log) · [Numerical evidence](evidence/current/analytic-shadow/README.md)
 
+The separate Mathlib adapter compiles **45 explicitly declared theorems across six modules**. It proves the mod-11 projection law for the differential operator and evaluates it on finite completions built from the actual coefficients of $f$. Their derivatives converge to $4\Theta(z)$ throughout the upper half-plane. [Finite completion and its limiting derivative values](adapters/MockThetaAnalytic/ShadowMode.lean) · [Fourier projections](adapters/MockThetaAnalytic/ShadowProjection.lean) · [Analytic audit](adapters/MockThetaAnalytic/verification.json)
+
 ## Quantum radial limits of the rank and crank
 
-At the cusp $-1$ the singular terms of $f(q)+b(q)$ cancel and leave 4. At $i$, the corrected function is $f(q)-b(q)$ and the value is $4i$. Folsom, Ono, and Rhoades prove both limits. At the eleventh root $w=\zeta=e^{2\pi i/11}$ their general rank/crank theorem gives $(1-\zeta)^2$ with compensating scalar $\zeta$. Lean proves the finite boundary formulas. The review shows how a sequence of interior coefficient packet evaluations approaches the compensated limit, and gives Zagier's separate transformation criterion for quantum modularity. [Radial formulas and proof map](docs/reviews/2026-11-20-quantum-radial.md) · [Finite Lean source](formal/universal/QuantumRadial.lean) · [Numerical evidence](evidence/current/quantum-radial/README.md)
+At the cusp $-1$ the singular terms of $f(q)+b(q)$ cancel and leave 4. At $i$, the corrected function is $f(q)-b(q)$ and the value is $4i$. Folsom, Ono, and Rhoades prove both limits. At the eleventh root $w=\zeta=e^{2\pi i/11}$ their general rank/crank theorem gives $(1-\zeta)^2$ with compensating scalar $\zeta$. Lean proves the finite boundary formulas. A Mathlib theorem transfers FOR's limit to interior coefficient packet evaluations once the cutoffs approximate the Taylor series at each chosen radius. The review gives its hypotheses and Zagier's separate transformation criterion for quantum modularity. [Radial formulas and proof map](docs/reviews/2026-11-20-quantum-radial.md) · [Finite boundary formulas](formal/universal/QuantumRadial.lean) · [Analytic cutoff transfer](adapters/MockThetaAnalytic/QuantumRadialLimit.lean) · [Numerical evidence](evidence/current/quantum-radial/README.md)
+
+At $w=1$, the same two-variable series gives the weight-$3/2$ quantum modular form proved by Bryson, Ono, Pitman, and Rhoades. Lean evaluates its terminating cusp sums and proves its translation law. At $x=1/11$, the finite inversion defect agrees with an independent eta period integral to better than $2\times10^{-61}$. [Known quantum form and source conventions](docs/reviews/2026-11-20-quantum-radial.md#a-quantum-modular-form-from-the-same-two-variable-series) · [Exact cusp construction](adapters/MockThetaAnalytic/QuantumStrange.lean)
 
 The standard-library audit compiled **367 theorem declarations**. The six mock theta and radial suites plus the crank suite passed **44,196 exact assertions**, including 1,579 finite checks for the radial formulas. [Proof audit and execution](evidence/current/profinite-mock-theta/README.md)
 
@@ -117,7 +121,7 @@ lake env lean QuantumRadialSmoke.lean
 lake env lean CrankShadowSmoke.lean
 ```
 
-The checker rebuilds project imports in a fresh temporary directory. The smoke commands execute the concrete operations and independent coefficient oracles; neither the proof checker nor the default Lake target runs them automatically. No Mathlib dependency is required. The latest receipts are under `evidence/current/profinite-mock-theta/`; the 16 November run remains under `evidence/current/lean/`, and supplied historical receipts remain under `evidence/historical/formal/`.
+The standard-library checker rebuilds project imports in a fresh temporary directory. The smoke commands execute the concrete operations and independent coefficient oracles. The complex-analytic adapter has a separate Mathlib build and audit. [Analytic verification command](adapters/MockThetaAnalytic/README.md#reproduction) The latest receipts are under `evidence/current/profinite-mock-theta/`; the 16 November run remains under `evidence/current/lean/`, and supplied historical receipts remain under `evidence/historical/formal/`.
 
 ## Development contract
 

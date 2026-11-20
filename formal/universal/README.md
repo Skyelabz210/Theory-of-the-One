@@ -107,7 +107,7 @@ supply the period through their LCM/GCD resolution. Evaluation uses the
 complete distribution of coefficient packets at that period.
 
 The selected primary is 30030. The exact coefficient bridge for the analytic
-shadow of $f$ and the written derivation from its published completion are described in the
+shadow of $f$ supplies the coefficients for a separate [Mathlib analytic package](../../adapters/MockThetaAnalytic/README.md). Its proof scope and the published completion appear in the
 [analytic review](../../docs/reviews/2026-11-20-third-order-analytic-shadow.md).
 The [quantum radial review](../../docs/reviews/2026-11-20-quantum-radial.md)
 connects the finite endpoint and packet machinery to published radial limits. The seventh-order constructions complete the original

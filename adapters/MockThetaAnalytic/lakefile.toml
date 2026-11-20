@@ -1,0 +1,16 @@
+name = "MockThetaAnalytic"
+version = "0.1.0"
+defaultTargets = ["MockThetaAnalytic"]
+
+[[require]]
+name = "k_elimination_universal"
+path = "../../formal/universal"
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "3bdc7047b97538f795b725dc0713c28c0f53ed10"
+
+[[lean_lib]]
+name = "MockThetaAnalytic"
+roots = ["ShadowConvergence", "ShadowOperator", "ShadowProjection", "ShadowMode", "QuantumRadialLimit", "QuantumStrange"]
