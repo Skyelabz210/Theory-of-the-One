@@ -1,11 +1,19 @@
 # Evidence status — research draft
 
+## 20 November 2026 — source-bound phases, convergence of the period, and mock theta Taylor expansions
+
+Lean proves absolute integrability of the order-34 FKTY period and real analyticity away from $-1/24$. The primary and a same-source mod-17 reading recover both endpoint phases for any signed source. Sources $0$ and $30030$ give equal primary readings and different order-34 phases. For these complete packet arrays, agreement with the integral is equivalent to the single FKTY equation at $-1/34$. [Period](../adapters/MockThetaAnalytic/FKTYPeriodRegularity.lean) · [Signed-source packet theorem](../adapters/MockThetaAnalytic/Order34Source.lean) · [Exact cusp moments](../adapters/MockThetaAnalytic/FKTYCuspMoments.lean)
+
+The integer coefficients of third-order $f$, fifth-order $\chi_0$, and seventh-order $\mathcal F_0$ sum to their defining series on $|q|<1$. FOR’s radial law now suffices for the $f$ packet limit at every primitive even root. [Signed Taylor and radial transfer](../adapters/MockThetaAnalytic/ThirdOrderTaylor.lean) · [Fifth- and seventh-order series](../adapters/MockThetaAnalytic/FifthSeventhHolomorphic.lean)
+
+The 25-module audit covers 243 authored theorems, 150 public and 93 private. Lean checked 589 kernel declarations, including 487 theorem entries with generated helpers. The separate standard-library regression run passed 44,196 exact assertions. [Current analytic verification](../adapters/MockThetaAnalytic/verification.json) · [Reproduction commands](../adapters/MockThetaAnalytic/README.md#reproduction)
+
 ## 20 November 2026 — the order-34 to order-10 quantum transformation
 
 At $x=-1/34$, the weight-$1/2$ defect for the matrix $\left(\begin{smallmatrix}1&0\\24&1\end{smallmatrix}\right)$ is about $-2.51133957-2.93870810i$. The order-34 endpoint requires quotient resolution divisible by 17. The order-10 endpoint uses the primary alone. Independent finite sums and numerical quadrature of the FKTY theta period agree within $1.07\times10^{-46}$.
 Lean proves the finite endpoint formulas and identifies the period integrand with half the differential shadow. The transport theorem takes FKTY’s analytic law as a hypothesis. The 16-module audit covers 149 authored theorems, including 66 in the four new modules, and 360 kernel declarations.
 [Specialization and observation formulas](../docs/reviews/2026-11-20-order-34-to-10.md)
-· [Analytic kernel audit](../adapters/MockThetaAnalytic/verification.json)
+· [Checkpoint kernel audit](https://github.com/Skyelabz210/Theory-of-the-One/blob/1915b7908bbc737c76d6435668319cbc30134d65/adapters/MockThetaAnalytic/verification.json)
 · [Numerical receipt](current/quantum-radial/transport34.json)
 
 ## 20 November 2026 — infinite differentiation of the third-order completion

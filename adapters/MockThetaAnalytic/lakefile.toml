@@ -18,4 +18,7 @@ roots = [
   "QuantumRadialLimit", "QuantumStrange", "ShadowGaussian", "ShadowBounds",
   "ShadowInfinite", "MockHolomorphic", "ShadowSectors", "MockCompletion",
   "BoundaryObservation34", "BoundaryValues34", "FKTYTheta", "QuantumTransport34",
+  "Order34Source", "GaussianPairIntegrable", "FKTYCuspModes",
+  "FKTYPeriodRegularity", "CoefficientEvaluation", "FifthSeventhHolomorphic", "FKTYCuspMoments",
+  "ThirdOrderRows", "ThirdOrderTaylor",
 ]

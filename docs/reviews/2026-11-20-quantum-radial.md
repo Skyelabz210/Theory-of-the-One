@@ -63,7 +63,7 @@ inside the disk, FOR's compensated radial limit, a primitive $2k$th root,
 and a positive period $L$ with $2k\mid L$. The auxiliary theorem
 `exists_packet_cutoffs` obtains an error at most $1/(j+1)$ from pointwise
 convergence of each interior Taylor series. Every larger cutoff works.
-[Formal radial transfer and its analytic inputs](../../adapters/MockThetaAnalytic/QuantumRadialLimit.lean)
+The theorem `hasSum_radialF_coefficients` now proves that Taylor identity throughout the disk. In `for_limit_from_f_packets_of_radial_law`, FOR’s radial limit is the sole remaining analytic input. [Initial cutoff transfer](../../adapters/MockThetaAnalytic/QuantumRadialLimit.lean) · [Taylor identification and strengthened transfer](../../adapters/MockThetaAnalytic/ThirdOrderTaylor.lean)
 
 This proof uses the interior absolute tail at each chosen radius. A fixed
 truncation has a finite polynomial value at $\zeta$ while $b(t\zeta)$ can
@@ -270,7 +270,7 @@ slash action and a proof of regularity for its defect.
 | Mod-11 crank of a partition | Lean proves S6 projection, S8 recovery under an authentic affine transition, and the independent seventh-order size-weighted finite crank pairing |
 | Third-order $f$ and its normalized shadow | Mathlib proves the full Fourier-completion derivative $4\Theta$, the sign reversal of its degree projection, and the exact vanishing sectors. Zwegers supplies the modular transformation law |
 | FOR's even-order boundary sum | Lean finite product and tail termination. FOR Theorem 1.1 identifies the compensated radial limit |
-| Approaching the boundary by coefficient packets | Mathlib proves the cutoff transfer for the actual packet evaluations with the Taylor identity and FOR’s radial limit as hypotheses |
+| Approaching the boundary by coefficient packets | Lean proves the Taylor identity in the open disk and the cutoff transfer for actual packets given FOR’s radial limit |
 | Rank/crank limit at the eleventh root | FOR Theorem 1.2 with the statistic character and cusp specified separately |
 | $U(1;q)$ at a root | Mathlib proves the terminating sum, the normalized translation law and the prime-11 polynomial. BOPR supplies inversion and analytic regularity, with independent three-cusp numerical checks |
 | Other modular transformations on rational cusps | Zagier's Example 1 and FOR's Theorem 1.3 include their domains, weights and regularity statements |

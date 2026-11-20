@@ -53,7 +53,5 @@ python3 tools/check_quantum_radial.py --dps 340 --receipt evidence/current/quant
 python3 tools/check_quantum_transport34.py --receipt evidence/current/quantum-radial/transport34.json
 ```
 
-The Mathlib adapter also proves the diagonal cutoff theorem for the finite
-coefficient packets with the Taylor identification and FOR's radial limit as
-hypotheses. [Radial transfer](../../../adapters/MockThetaAnalytic/QuantumRadialLimit.lean)
+The Mathlib adapter proves the interior Taylor identification for the signed coefficients of $f$. Its diagonal cutoff theorem for finite packets at any primitive even root uses FOR’s compensated radial limit as its analytic hypothesis. [Taylor identity and radial transfer](../../../adapters/MockThetaAnalytic/ThirdOrderTaylor.lean)
 · [Kernel audit](../../../adapters/MockThetaAnalytic/verification.json)

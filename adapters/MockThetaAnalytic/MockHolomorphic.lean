@@ -18,16 +18,17 @@ open scoped Topology
 def radialFTerm (n : ℕ) (q : ℂ) : ℂ :=
   q^(n*n) / ∏ j ∈ Finset.range n, (1 + q^(j+1))^2
 
-private def majorant (r : ℝ) (n : ℕ) : ℝ := (r^n / (1-r)^2)^n
+/-- Uniform bound for the square-shift series on a disk of radius r. -/
+def mockSquareBound (r : ℝ) (n : ℕ) : ℝ := (r^n / (1-r)^2)^n
 
-private theorem summable_majorant {r : ℝ} (hr : 0 ≤ r) (hr1 : r < 1) :
-    Summable (majorant r) := by
+theorem summable_mockSquareBound {r : ℝ} (hr : 0 ≤ r) (hr1 : r < 1) :
+    Summable (mockSquareBound r) := by
   have hgeom := summable_geometric_of_norm_lt_one (by norm_num : ‖(1/2 : ℝ)‖ < 1)
   apply hgeom.of_norm_bounded_eventually_nat
   have hd : 0 < (1-r)^2 := pow_pos (sub_pos.mpr hr1) _
   have ht := tendsto_pow_atTop_nhds_zero_of_lt_one hr hr1
   filter_upwards [ht.eventually_lt_const (show 0 < (1/2 : ℝ)*(1-r)^2 by positivity)] with n hn
-  rw [majorant, Real.norm_eq_abs, abs_of_nonneg (by positivity)]
+  rw [mockSquareBound, Real.norm_eq_abs, abs_of_nonneg (by positivity)]
   exact pow_le_pow_left₀ (by positivity) ((div_le_iff₀ hd).2 hn.le) n
 
 private theorem factor_lower_bound {r : ℝ} {q : ℂ} (hr1 : r < 1) (hq : ‖q‖ ≤ r) (j : ℕ) :
@@ -40,20 +41,20 @@ private theorem factor_lower_bound {r : ℝ} {q : ℂ} (hr1 : r < 1) (hq : ‖q�
   exact (sub_le_sub_left hp 1).trans h
 
 private theorem norm_radialFTerm_le {r : ℝ} {q : ℂ} (hr1 : r < 1) (hq : ‖q‖ ≤ r) (n : ℕ) :
-    ‖radialFTerm n q‖ ≤ majorant r n := by
+    ‖radialFTerm n q‖ ≤ mockSquareBound r n := by
   have hp : ((1-r)^2)^n ≤ ∏ j ∈ Finset.range n, ‖(1+q^(j+1))^2‖ := by
     calc
       _ = ∏ _j ∈ Finset.range n, (1-r)^2 := by simp
       _ ≤ _ := Finset.prod_le_prod (fun _ _ => sq_nonneg _) (fun j _ => by
         rw [norm_pow]
         exact pow_le_pow_left₀ (sub_nonneg.mpr hr1.le) (factor_lower_bound hr1 hq j) 2)
-  rw [radialFTerm, norm_div, norm_pow, norm_prod, majorant, div_pow, ← pow_mul]
+  rw [radialFTerm, norm_div, norm_pow, norm_prod, mockSquareBound, div_pow, ← pow_mul]
   exact div_le_div₀ (pow_nonneg ((norm_nonneg q).trans hq) _) (pow_le_pow_left₀ (norm_nonneg q) hq _)
     (pow_pos (pow_pos (sub_pos.mpr hr1) _) _) hp
 
 /-- The defining series has an actual sum at every interior point. -/
 theorem summable_radialFTerm (q : ℂ) (hq : ‖q‖ < 1) : Summable (fun n => radialFTerm n q) :=
-  (summable_majorant (norm_nonneg q) hq).of_norm_bounded
+  (summable_mockSquareBound (norm_nonneg q) hq).of_norm_bounded
     (fun n => norm_radialFTerm_le hq (le_refl _) n)
 
 theorem hasSum_radialF (q : ℂ) (hq : ‖q‖ < 1) :
@@ -77,7 +78,7 @@ theorem differentiableAt_radialF (q : ℂ) (hq : ‖q‖ < 1) : DifferentiableAt
   obtain ⟨r, hqr, hr⟩ := exists_between hq
   have hopen : IsOpen {w : ℂ | ‖w‖ < r} := isOpen_lt continuous_norm continuous_const
   have h := Complex.differentiableOn_tsum_of_summable_norm
-    (summable_majorant ((norm_nonneg q).trans hqr.le) hr)
+    (summable_mockSquareBound ((norm_nonneg q).trans hqr.le) hr)
     (fun n w hw => (differentiableAt_term n w (lt_trans hw hr)).differentiableWithinAt)
     hopen (fun n w hw => norm_radialFTerm_le hr (le_of_lt hw) n)
   exact h.differentiableAt (hopen.mem_nhds hqr)
