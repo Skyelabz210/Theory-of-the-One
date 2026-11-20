@@ -74,9 +74,13 @@ The execution passed **1,819 seventh-order assertions**. Of these, 1,206
 exercise named coefficients and their observation APIs, 599 check initial
 summands and cutoff boundaries, and 14 check the Euler-weighted identities.
 Together the three original groups contribute all **17 named series**. The
-full audit compiled 299 declarations, including 17 in `MockThetaSeventh`.
+full audit at `df9dce4` compiled 299 declarations, including 17 in `MockThetaSeventh`.
 Infinite analytic limits and modular transformation laws remain separate
 proof obligations.
-[Seventh-order execution](../../evidence/current/profinite-mock-theta/seventh-smoke.log)
+[Seventh-order execution](https://github.com/Skyelabz210/Theory-of-the-One/blob/df9dce4a039ec9d386f72f46925243816025435d/evidence/current/profinite-mock-theta/seventh-smoke.log)
 · [Smoke program](../../formal/universal/SeventhSmoke.lean)
-· [Proof audit](../../evidence/current/profinite-mock-theta/verification.json)
+· [Proof audit](https://github.com/Skyelabz210/Theory-of-the-One/blob/df9dce4a039ec9d386f72f46925243816025435d/evidence/current/profinite-mock-theta/verification.json)
+
+A subsequent construction uses these three coefficient series as partition-size
+weights for finite crank character sums modulo 11.
+[Seventh-order crank pairing](2026-11-20-crank-shadow-eleven.md#size-weights-from-the-seventh-order-series)

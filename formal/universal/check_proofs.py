@@ -20,7 +20,7 @@ MODULES = ["ExactObservation", "UniversalLift", "RingReadout",
            "CoupledAnchors", "ResidueAlgorithms", "ResiduePrimitives", "StarLift",
            "ResidueSeries", "ProfiniteObservations", "CoefficientObservations", "MockTheta", "MockThetaPhi",
            "MockThetaPsi", "MockThetaChi", "FifthOrderSeries", "MockThetaFifthZero", "MockThetaFifthOne", "MockThetaSeventh",
-           "UniversalKElimination"]
+           "PartitionCrank11", "CrankShadow11", "CrankCharacter11", "UniversalKElimination"]
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 
 
@@ -122,6 +122,8 @@ def main():
                    "IntegerSpecialization", "CostedReadout"]),
               "closure_and_starlift_declarations": sum(counts[m] for m in closure_modules),
               "profinite_mock_theta_declarations": sum(counts[m] for m in bridge_modules),
+              "crank_shadow_declarations": sum(counts[m] for m in
+                  ["PartitionCrank11", "CrankShadow11", "CrankCharacter11"]),
               "axiom_free_declarations": sum(not t["axioms"] for t in all_theorems),
               "allowed_foundational_axioms": sorted(ALLOWED_AXIOMS),
               "files": files}

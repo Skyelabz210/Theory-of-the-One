@@ -1,0 +1,8 @@
+Rank parity and third-order f: 43 assertions (degrees 0..40)
+Crank at size 6: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Crank at size 17: [27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27]
+Crank at size 28: [338, 338, 338, 338, 338, 338, 338, 338, 338, 338, 338]
+Crank at size 39: [2835, 2835, 2835, 2835, 2835, 2835, 2835, 2835, 2835, 2835, 2835]
+ℱ₂ at weight t=3, crank root 2 in Fin 23, degrees 0..7: 15
+Rank/crank Fourier: 57; crank histograms: 88; S6/S8 coordinates: 45; seventh-order weighted character: 14.
+Total: 247 exact assertions.

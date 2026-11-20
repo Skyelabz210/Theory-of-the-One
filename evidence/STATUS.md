@@ -1,19 +1,35 @@
 # Evidence status — research draft
 
+## 20 November 2026 — partition crank and shadow prime 11
+
+Lean proves the size-six rank and crank histograms, an integer criterion for
+uniformity modulo 11, and evaluation of all three finite seventh-order
+weighted crank sums from authentic per-partition S8 transitions. The independent
+crank check counts each residue class at sizes 6, 17, 28, and 39.
+[Definitions, proofs, and finite examples](../docs/reviews/2026-11-20-crank-shadow-eleven.md)
+
+The audit compiled 329 declarations, including 169 in the profinite and mock
+theta modules and 30 in the crank and shadow modules. All eight commands
+passed. The four mock theta suites passed 32,866 assertions and the crank suite
+passed 247, for 33,113 combined. The closure smoke separately passed 1,809
+comparison/divmod/GCD pairs and four controls.
+[Execution](current/profinite-mock-theta/execution.json) · [Proof audit](current/profinite-mock-theta/verification.json)
+· [Crank checks](current/profinite-mock-theta/crank-shadow-smoke.log)
+
 ## 20 November 2026 — the three seventh-order functions
 
 The three seventh-order coefficient families complete the 17 original functions.
 Their formal definitions prove the denominator reciprocal and the exact
 leading coefficient of each summand. Each family specializes the packet,
 cylinder, and coupled-anchor evaluation theorems.
-[Proof and source map](../docs/reviews/2026-11-20-seventh-order-mock-theta.md)
+[Proof and source map](https://github.com/Skyelabz210/Theory-of-the-One/blob/df9dce4a039ec9d386f72f46925243816025435d/docs/reviews/2026-11-20-seventh-order-mock-theta.md)
 
 The audit passed 299 theorem declarations (169 in the profinite and mock
 theta modules). The four mock theta suites passed 32,866 exact assertions,
 including 1,819 in the seventh-order suite. The separate closure smoke passed
 1,809 comparison/divmod/GCD pairs and four controls.
-[Execution](current/profinite-mock-theta/execution.json) · [Proof audit](current/profinite-mock-theta/verification.json)
-· [Seventh-order checks](current/profinite-mock-theta/seventh-smoke.log)
+[Execution](https://github.com/Skyelabz210/Theory-of-the-One/blob/df9dce4a039ec9d386f72f46925243816025435d/evidence/current/profinite-mock-theta/execution.json) · [Proof audit](https://github.com/Skyelabz210/Theory-of-the-One/blob/df9dce4a039ec9d386f72f46925243816025435d/evidence/current/profinite-mock-theta/verification.json)
+· [Seventh-order checks](https://github.com/Skyelabz210/Theory-of-the-One/blob/df9dce4a039ec9d386f72f46925243816025435d/evidence/current/profinite-mock-theta/seventh-smoke.log)
 
 ## 20 November 2026 — both original fifth-order groups
 

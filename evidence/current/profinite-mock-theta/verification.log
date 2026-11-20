@@ -385,4 +385,40 @@ $ lean -o MockThetaSeventh.olean MockThetaSeventh.lean
 'KElimination.MockThetaSeventh.finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
 'KElimination.MockThetaSeventh.from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
 
+$ lean -o PartitionCrank11.olean PartitionCrank11.lean
+'KElimination.PartitionCrank11.mem_partitionsAtMost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.PartitionCrank11.mem_partitions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.PartitionCrank11.nodup_partitionsAtMost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.PartitionCrank11.partitions_nodup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.PartitionCrank11.empty_statistics' does not depend on any axioms
+'KElimination.PartitionCrank11.singleton_one_statistics' does not depend on any axioms
+'KElimination.PartitionCrank11.partitions_six_count' depends on axioms: [propext, Quot.sound]
+'KElimination.PartitionCrank11.rank_histogram_six' depends on axioms: [propext, Quot.sound]
+'KElimination.PartitionCrank11.crank_histogram_six' depends on axioms: [propext, Quot.sound]
+'KElimination.PartitionCrank11.crank_six_uniform' depends on axioms: [propext, Quot.sound]
+'KElimination.PartitionCrank11.rank_six_not_uniform' depends on axioms: [propext, Quot.sound]
+
+$ lean -o CrankShadow11.olean CrankShadow11.lean
+'KElimination.CrankShadow11.statClass_lt' depends on axioms: [propext, Quot.sound]
+'KElimination.CrankShadow11.direct_statistic_coordinate' depends on axioms: [propext, Quot.sound]
+'KElimination.CrankShadow11.s6_statistic_coordinate' depends on axioms: [propext, Quot.sound]
+'KElimination.CrankShadow11.splitPayload_factorization' does not depend on any axioms
+'KElimination.CrankShadow11.splitPayload_inverse' does not depend on any axioms
+'KElimination.CrankShadow11.s8_increment_statClass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.CrankShadow11.s8_quotient_readout' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.CrankShadow11.s8_quotient_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.CrankShadow11.s8_joint_period' depends on axioms: [propext, Quot.sound]
+
+$ lean -o CrankCharacter11.olean CrankCharacter11.lean
+'KElimination.CrankCharacter11.histPair_eq_samplePair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.CrankCharacter11.reduced_zero_iff_uniform' depends on axioms: [propext, Quot.sound]
+'KElimination.CrankCharacter11.histPair_reduced' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.CrankCharacter11.weighted_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.CrankCharacter11.seventh_crank_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.CrankCharacter11.statistic_character_add' depends on axioms: [propext, Quot.sound]
+'KElimination.CrankCharacter11.s8_crank_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.CrankCharacter11.crank_six_vanishes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.CrankCharacter11.rank_six_reduced_witness' depends on axioms: [propext, Quot.sound]
+'KElimination.CrankCharacter11.seventh_crank_from_s8' depends on axioms: [propext, Classical.choice, Quot.sound]
+
 $ lean -o UniversalKElimination.olean UniversalKElimination.lean

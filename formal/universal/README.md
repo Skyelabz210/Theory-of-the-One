@@ -5,11 +5,14 @@ Standalone CRAM observation proofs and the exact mock theta coefficient bridge. 
 The proof package covers coefficient construction, residue packets, cylinder
 observation, and finite transforms for the four original third-order series
 and all ten fifth-order and three seventh-order series in the original list.
+It also proves finite character sums on signed partition statistics modulo 11
+and evaluates a new seventh-order weighted crank sum using authentic S8 readings.
 The execution receipt identifies the exact source and compiler, and the audit
 lists the transitive axioms of every theorem.
 [Formalization review](../../docs/reviews/2026-11-20-profinite-mock-theta-formalization.md)
 · [Seventh-order constructions](../../docs/reviews/2026-11-20-seventh-order-mock-theta.md)
 · [Fifth-order constructions](../../docs/reviews/2026-11-20-fifth-order-mock-theta.md)
+· [Crank and shadow eleven](../../docs/reviews/2026-11-20-crank-shadow-eleven.md)
 · [Execution receipt](../../evidence/current/profinite-mock-theta/execution.json)
 · [Proof audit](../../evidence/current/profinite-mock-theta/verification.json)
 
@@ -29,6 +32,7 @@ lake env lean MockThetaSmoke.lean
 lake env lean FifthZeroSmoke.lean
 lake env lean FifthOneSmoke.lean
 lake env lean SeventhSmoke.lean
+lake env lean CrankShadowSmoke.lean
 ```
 
 The audit compiles project imports in a fresh temporary directory and checks
@@ -42,6 +46,9 @@ zero-subscript series and checks the relations in Ramanujan's letter at the same
 geometric summands, and Watson's shifted relation through degree 41.
 `SeventhSmoke` verifies the three seventh-order sequences through degree 40,
 checks their cutoffs, and tests Garvan's Euler-weighted relations.
+`CrankShadowSmoke` checks ordinary crank bins through four sizes of the form
+$11k+6$, the signed-rank parity coefficients through degree 40, finite-field
+characters, and the S6 and S8 readouts.
 
 | Module | Freshly checked theorem count |
 |---|---:|
@@ -66,7 +73,10 @@ checks their cutoffs, and tests Garvan's Euler-weighted relations.
 | MockThetaFifthZero | 13 |
 | MockThetaFifthOne | 15 |
 | MockThetaSeventh | 17 |
-| **Total** | **299** |
+| [PartitionCrank11](PartitionCrank11.lean) | 11 |
+| [CrankShadow11](CrankShadow11.lean) | 9 |
+| [CrankCharacter11](CrankCharacter11.lean) | 10 |
+| **Total** | **329** |
 
 The original compiler receipt and log are retained in `../../evidence/historical/formal/`. Read the root architecture contract before interpreting proof variables as runtime state.
 

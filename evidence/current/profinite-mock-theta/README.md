@@ -1,9 +1,9 @@
-# Exact mock theta coefficient bridge: execution receipts
+# Mock theta, partition crank, and shadow-eleven execution receipts
 
-The 20 November 2026 audit compiled **299 theorem declarations** with
+The 20 November 2026 audit compiled **329 theorem declarations** with
 `leanprover/lean4:v4.27.0-rc1` and its bundled standard library. Of those
-declarations, 42 have empty axiom lists. The remaining lists contain only
-`propext`, `Classical.choice`, and `Quot.sound`. All seven commands passed
+declarations, 46 have empty axiom lists. The remaining lists contain only
+`propext`, `Classical.choice`, and `Quot.sound`. All eight commands passed
 without compiler warnings.
 
 | File | Meaning |
@@ -18,6 +18,7 @@ without compiler warnings.
 | [fifth-zero-smoke.log](fifth-zero-smoke.log) | 2,133 exact assertions for the five zero-subscript fifth-order series |
 | [fifth-one-smoke.log](fifth-one-smoke.log) | 2,135 exact assertions for the five one-subscript fifth-order series |
 | [seventh-smoke.log](seventh-smoke.log) | 1,819 exact assertions for the three seventh-order series |
+| [crank-shadow-smoke.log](crank-shadow-smoke.log) | 247 finite partition, character, and signed observation checks |
 
 Four independent finite factor calculations give the integer coefficients of
 $f$, $\phi$, $\psi$, and $\chi$ through degree 40. For $\psi$, geometric
@@ -44,6 +45,14 @@ The complete mock theta total is 32,866. In `execution.json`,
 `total_mock_theta_smoke_assertions` records their sum. The original
 `mock_theta_smoke_assertions` field counts the third-order suite.
 
+The crank suite checks rank parity through degree 40 and compares all eleven
+crank bins against an independent partition count at sizes 6, 17, 28, and 39.
+It exercises finite-field characters, signed S6 and S8 readouts, and the
+seventh-order size weights. At $N=8$, $t=3$, $z=2$ in $\mathbb F_{23}$, the
+$\mathcal F_2$ crank sum is 15 from both the histogram and the S8
+transitions. In `execution.json`, `crank_shadow_11_assertions` is 247 and
+`total_mock_theta_and_crank_assertions` is 33,113.
+
 Earlier receipts contain 202 declarations and 6,251 mock theta assertions for
 $f$ at `853ed93`, then 217 declarations and 12,803 assertions for $f$ and
 $\phi$ at `769b724`. The four-function third-order checkpoint reached 247
@@ -54,6 +63,8 @@ passed 28,912 mock theta assertions. [Receipts at `a028a79`](https://github.com/
 
 The combined third-order and fifth-order checkpoint compiled 282 declarations
 and passed 31,047 mock theta assertions. [Receipts at `63cd3a7`](https://github.com/Skyelabz210/Theory-of-the-One/blob/63cd3a7723ed4a986322b6ad0f83c668dbc4c05b/evidence/current/profinite-mock-theta/execution.json)
+
+The seventh-order checkpoint compiled 299 declarations and passed 32,866 mock theta assertions. [Receipts at `df9dce4`](https://github.com/Skyelabz210/Theory-of-the-One/blob/df9dce4a039ec9d386f72f46925243816025435d/evidence/current/profinite-mock-theta/execution.json)
 
 The current receipt records the base commit and hashes of
 the files used in this run.
@@ -75,6 +86,8 @@ Mathlib download are needed.
 The [formalization review](../../../docs/reviews/2026-11-20-profinite-mock-theta-formalization.md)
 covers the third-order group. The [fifth-order review](../../../docs/reviews/2026-11-20-fifth-order-mock-theta.md)
 records both groups of five. The [seventh-order review](../../../docs/reviews/2026-11-20-seventh-order-mock-theta.md)
-completes the seventeen coefficient constructions. Topological duality, infinite analytic
+completes the seventeen coefficient constructions. The [crank and shadow review](../../../docs/reviews/2026-11-20-crank-shadow-eleven.md)
+covers partition statistics, finite character sums, and the S8 reading hypotheses.
+Topological duality, infinite analytic
 evaluation, radial asymptotics, analytic shadows, and production observation
 constructors are outside these receipts.

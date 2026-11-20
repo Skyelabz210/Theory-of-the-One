@@ -1,8 +1,8 @@
 {
   "status": "PASS",
-  "started_at_utc": "2026-11-20T10:16:17.396012+00:00",
-  "source_base_commit": "63cd3a7723ed4a986322b6ad0f83c668dbc4c05b",
-  "scope": "Formal coefficients, compatible residue tuples, finite transforms, and arithmetic observation criteria",
+  "started_at_utc": "2026-11-20T10:20:20.241100+00:00",
+  "source_base_commit": "df9dce4a039ec9d386f72f46925243816025435d",
+  "scope": "Formal coefficients, compatible residue tuples, finite transforms, partition statistics, and authentic shadow-eleven readouts",
   "commands": [
     {
       "portable_reproduction_command": [
@@ -15,8 +15,8 @@
       "log": "proof-audit.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 17.735,
-      "sha256": "0a30164d2760738c6eb9a33c4020cf09e5f8a5b61f6edc7689fd45230f7e4bb2"
+      "seconds": 21.296,
+      "sha256": "af658790b3ba677845a167356d01e137a91ac67f7d731b334ffb8ce4197fbf39"
     },
     {
       "portable_reproduction_command": [
@@ -27,8 +27,8 @@
       "log": "lake-build.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 8.119,
-      "sha256": "7c06ee0069a4d932562cc7e45cabd9a015368619b8541b8c93ee0c37e57b2e62"
+      "seconds": 1.751,
+      "sha256": "1c887794e339fcfeddc024ad230f04c102c9fe4070e0d7f8634ec98a320a0e57"
     },
     {
       "portable_reproduction_command": [
@@ -41,7 +41,7 @@
       "log": "closure-smoke.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 0.539,
+      "seconds": 0.641,
       "sha256": "7c20cf621a8a3b6c6153246ac4a405d49366ddfa165b4b2e5920f71ee8e2473a"
     },
     {
@@ -55,7 +55,7 @@
       "log": "mock-theta-smoke.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 6.29,
+      "seconds": 6.734,
       "sha256": "abddfa622d2c19fcd678b7158240ac444274a956564ae179018b57a39df23797"
     },
     {
@@ -69,7 +69,7 @@
       "log": "fifth-zero-smoke.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 0.792,
+      "seconds": 0.808,
       "sha256": "0696d10b3ff03fce56b34ac1882d3286772532c195a86abb9a1bc07efc3ee394"
     },
     {
@@ -83,7 +83,7 @@
       "log": "fifth-one-smoke.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 0.817,
+      "seconds": 0.851,
       "sha256": "dffd2a35b1ecc28de4a91b80570ad7a72c503ba1a6b42ab4294723817fe7d647"
     },
     {
@@ -97,8 +97,22 @@
       "log": "seventh-smoke.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 1.355,
+      "seconds": 1.368,
       "sha256": "8bb05b78d27e79b6554a5b8721344005aef18208615f8e6dde0fd5fb85e335b9"
+    },
+    {
+      "portable_reproduction_command": [
+        "lake",
+        "env",
+        "lean",
+        "CrankShadowSmoke.lean"
+      ],
+      "working_directory": "formal/universal",
+      "log": "crank-shadow-smoke.log",
+      "exit_code": 0,
+      "compiler_warning_or_error": false,
+      "seconds": 4.11,
+      "sha256": "d31adac0d0f7e56ae784690cb7d0753379a5aeb1d2c72ddd69b6b481cfda9788"
     }
   ],
   "toolchain": "leanprover/lean4:v4.27.0-rc1",
@@ -111,6 +125,9 @@
     "formal/universal/CoefficientObservations.lean": "8930853125f308e1a7e0f1c6927bea995a4f1f35d04aa68a6ccd2421c54c42a0",
     "formal/universal/CostedReadout.lean": "2946863aa7d1252b8687f0feb9073f073b4ba769368567cc9ea9cc3987a534d7",
     "formal/universal/CoupledAnchors.lean": "4357100f2e4b0632d36c1e16cfcaa5da10fe2285a8029773aa1b2112a8b9e95d",
+    "formal/universal/CrankCharacter11.lean": "96fe982d0e55fe57a1cd72159a9127601f2baeb6d1b31a64d22f41a3649e5f0d",
+    "formal/universal/CrankShadow11.lean": "7ab6c345ee8293b2a380617112a30a4ed475468e796a0815b40dfe5548dd0816",
+    "formal/universal/CrankShadowSmoke.lean": "e8b1ca9f0a849b2690e29f0cfaaa5cab4d3f6cc8d45b5333c394e17896892d3a",
     "formal/universal/ExactObservation.lean": "3e4f0dc07d9ecb189b4b3a7e490d07fad3a0f828e4ad773fa251876263a3f195",
     "formal/universal/FifthOneSmoke.lean": "d1bcef415773728487c588dd45bcf972ede9aa91424e4f0c5d382ec88a2f73e3",
     "formal/universal/FifthOrderSeries.lean": "ac57cdbece347b339a16a3c06d305a3ad52401893743b5791374f809d0667df4",
@@ -125,6 +142,7 @@
     "formal/universal/MockThetaPsi.lean": "5261ef6b68b033c9ba93d2d14ec0e05f2369e166e5d6ecef0b390ce55b131e9a",
     "formal/universal/MockThetaSeventh.lean": "6ab14991170f18d37f59717dda9873deca444be3b5e4dd66b37720fb8028e17a",
     "formal/universal/MockThetaSmoke.lean": "43f06cf68480d7fc17a6eca48bf089beb8a0c58203580dc6f0eb788c3acc5c6a",
+    "formal/universal/PartitionCrank11.lean": "7670e2ebb690b6f4eb941448076b3e611ac5eab7221bd2bd6d979ee42cfe1617",
     "formal/universal/ProfiniteObservations.lean": "fab92ff0ca0593e80487aef025de007b02a59b8126d392ddc9985777656ad5ac",
     "formal/universal/ReferenceChange.lean": "ecd6296ba0e850d03a6cd7093947a0d1803b37f3502c1c77256c8f242711b0e1",
     "formal/universal/ResidueAlgorithms.lean": "852030cea0a3404654d2a77f677e35a147efc917be33d26ba85ceb6b6d5b7b67",
@@ -133,17 +151,18 @@
     "formal/universal/RingReadout.lean": "033dc2f2903b7fcffcb7576fcbdfba70dff2cf247b9a9f0d8ce2dd5495d1e67b",
     "formal/universal/SeventhSmoke.lean": "7793c6e78b5bffbfa69e8fd8d4712ef7320bb5ab7259cb023a73579352539814",
     "formal/universal/StarLift.lean": "90947ad64ef314f2e4f07af16a1586f2685ba9e453e74da097b5ea9b44cdde9c",
-    "formal/universal/UniversalKElimination.lean": "6ad56bab0c29005b2e65fccb1f7f01bf20dc572b06f38b0daed0da3a34cf1991",
+    "formal/universal/UniversalKElimination.lean": "eaabdd9a74a37f50e575b86310f3bac55d2aa86c2a153da9e6786fb21083b688",
     "formal/universal/UniversalLift.lean": "00da716f76d10806dc86f3d5a4206c380ea8f6b5a99c6d4f788c4053efba2924",
-    "formal/universal/check_proofs.py": "0c452e7a0027e33cb5a43f806796b57d4496716d46a799013da53f480acfd92a",
-    "formal/universal/lakefile.toml": "cdda73513111721f218f738cf23372aee014e597297b1afc07789ca9068b2a78",
+    "formal/universal/check_proofs.py": "4e93f3e198242d5ca17432ab10634cba9836bb41ad18f19a7a7b7bf40dafaf97",
+    "formal/universal/lakefile.toml": "4311ed7dacf5b0df028e98b5d9f69dd936993259d79c195b9aca65d0dbb939dc",
     "formal/universal/lake-manifest.json": "cd0fa1eeeeab2f4e5fcb97850d37c871a495349737aa5699113f68bfd08f12e0",
     "formal/universal/lean-toolchain": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
-    "tools/verify_profinite_mock_theta.py": "5f2f3cac68993b92352144eea010b7dc268cb5c6fbcc55911c6ac37be39d1f49"
+    "tools/verify_profinite_mock_theta.py": "943d6272610357b1bdf785af7c2d77a24ad4b4de8c3962ad7297065e83f6ad43"
   },
-  "theorem_declarations": 299,
+  "theorem_declarations": 329,
   "profinite_mock_theta_declarations": 169,
-  "axiom_free_declarations": 42,
+  "axiom_free_declarations": 46,
+  "crank_shadow_declarations": 30,
   "mock_theta_smoke_assertions": 26779,
   "mock_theta_assertions_by_suite": {
     "third_order": 26779,
@@ -152,5 +171,7 @@
     "seventh_order": 1819
   },
   "total_mock_theta_smoke_assertions": 32866,
-  "finished_at_utc": "2026-11-20T10:16:53.089922+00:00"
+  "crank_shadow_11_assertions": 247,
+  "total_mock_theta_and_crank_assertions": 33113,
+  "finished_at_utc": "2026-11-20T10:20:57.853138+00:00"
 }

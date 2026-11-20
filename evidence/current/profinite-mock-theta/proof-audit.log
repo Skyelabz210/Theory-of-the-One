@@ -5,7 +5,7 @@
   "fresh_temporary_build": true,
   "project_olean_reused": false,
   "imports": "Pinned Lean bundled Std; no Mathlib dependency",
-  "theorem_declarations": 299,
+  "theorem_declarations": 329,
   "module_theorem_counts": {
     "ExactObservation": 9,
     "UniversalLift": 15,
@@ -28,13 +28,17 @@
     "MockThetaFifthZero": 13,
     "MockThetaFifthOne": 15,
     "MockThetaSeventh": 17,
+    "PartitionCrank11": 11,
+    "CrankShadow11": 9,
+    "CrankCharacter11": 10,
     "UniversalKElimination": 0
   },
   "reused_observation_theorems": 9,
   "prior_universal_core_declarations": 75,
   "closure_and_starlift_declarations": 52,
   "profinite_mock_theta_declarations": 169,
-  "axiom_free_declarations": 42,
+  "crank_shadow_declarations": 30,
+  "axiom_free_declarations": 46,
   "allowed_foundational_axioms": [
     "Classical.choice",
     "Quot.sound",
