@@ -20,6 +20,10 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 FORMAL = ROOT / "formal" / "universal"
 RECEIPTS = ROOT / "evidence" / "current" / "profinite-mock-theta"
+MOCK_SMOKE_SUITES = [
+    ("third_order", "MockThetaSmoke.lean", "mock-theta-smoke.log"),
+    ("fifth_zero", "FifthZeroSmoke.lean", "fifth-zero-smoke.log"),
+]
 
 
 def digest(path):
@@ -42,7 +46,7 @@ def main():
     # A failed attempt must not leave an older success as its current receipt.
     for name in ["execution.json", "verification.json", "verification.log",
                  "proof-audit.log", "lake-build.log", "closure-smoke.log",
-                 "mock-theta-smoke.log"]:
+                 *(log for _, _, log in MOCK_SMOKE_SUITES)]:
         (RECEIPTS / name).unlink(missing_ok=True)
 
     receipt = {
@@ -78,9 +82,10 @@ def main():
             ([str(lake), "build"], ["lake", "build"], "lake-build.log"),
             ([str(lake), "env", "lean", "ClosureSmoke.lean"],
              ["lake", "env", "lean", "ClosureSmoke.lean"], "closure-smoke.log"),
-            ([str(lake), "env", "lean", "MockThetaSmoke.lean"],
-             ["lake", "env", "lean", "MockThetaSmoke.lean"], "mock-theta-smoke.log"),
         ]
+        for _, module, log in MOCK_SMOKE_SUITES:
+            commands.append(([str(lake), "env", "lean", module],
+                             ["lake", "env", "lean", module], log))
         for argv, portable, log_name in commands:
             started = time.monotonic()
             with (RECEIPTS / log_name).open("w") as out:
@@ -110,11 +115,16 @@ def main():
         receipt["theorem_declarations"] = verification["theorem_declarations"]
         receipt["profinite_mock_theta_declarations"] = verification["profinite_mock_theta_declarations"]
         receipt["axiom_free_declarations"] = verification["axiom_free_declarations"]
-        smoke = (RECEIPTS / "mock-theta-smoke.log").read_text()
-        match = re.search(r"Total: (\d+) exact assertions", smoke)
-        if match is None:
-            raise RuntimeError("Mock theta smoke receipt did not report its assertion count")
-        receipt["mock_theta_smoke_assertions"] = int(match.group(1))
+        counts = {}
+        for suite, _, log in MOCK_SMOKE_SUITES:
+            output = (RECEIPTS / log).read_text()
+            totals = re.findall(r"^Total: ([1-9]\d*) exact assertions\.?$", output, re.M)
+            if len(totals) != 1:
+                raise RuntimeError(f"{log} must report one positive assertion total")
+            counts[suite] = int(totals[0])
+        receipt["mock_theta_smoke_assertions"] = counts["third_order"]
+        receipt["mock_theta_assertions_by_suite"] = counts
+        receipt["total_mock_theta_smoke_assertions"] = sum(counts.values())
         receipt["status"] = "PASS"
     except Exception as exc:
         receipt["status"] = "FAIL"

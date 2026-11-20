@@ -43,8 +43,7 @@ prove a separate analytic result for $f$ at primitive roots of every even
 order. [Folsom–Ono–Rhoades](https://afolsom.people.amherst.edu/FolsomOnoRhoades-ForumPi.pdf)
 
 The named constructions cover **all four original third-order functions**.
-The letter's ten fifth-order and three seventh-order functions remain open
-in this package. Watson's further third-order examples $\omega$, $\nu$,
+The subsequent [fifth-order review](2026-11-20-fifth-order-mock-theta.md) records progress on the other groups. Watson's further third-order examples $\omega$, $\nu$,
 and $\rho$ are outside the four counted here.
 
 ## Source-to-proof map
@@ -408,12 +407,12 @@ Each named finite root evaluation accepts any certified root.
 
 ## 5. Verification and independent finite evidence
 
-The proof audit compiles every registered project module in a fresh temporary
+The third-order checkpoint at `c59b985` compiled every registered project module in a fresh temporary
 directory using Lean 4.27.0-rc1 and the bundled standard library. The execution
 receipt identifies the compiler, source bytes, commands, and output logs. The
 proof audit passed 247 declarations, with empty axiom lists for 41. The
-remaining declarations use only `propext`, `Classical.choice`, and `Quot.sound`. [Execution receipt](../../evidence/current/profinite-mock-theta/execution.json)
-· [Proof receipt](../../evidence/current/profinite-mock-theta/verification.json)
+remaining declarations use only `propext`, `Classical.choice`, and `Quot.sound`. [Execution receipt](https://github.com/Skyelabz210/Theory-of-the-One/blob/c59b9850f20b9071b7c2ba28b2013cbe55d4d6a4/evidence/current/profinite-mock-theta/execution.json)
+· [Proof receipt](https://github.com/Skyelabz210/Theory-of-the-One/blob/c59b9850f20b9071b7c2ba28b2013cbe55d4d6a4/evidence/current/profinite-mock-theta/verification.json)
 
 The mock theta smoke run passed **26,779 exact assertions**. The independent
 coefficient checks cover $d=0,\ldots,40$ for all four series.
@@ -430,7 +429,7 @@ points and evaluates at the primitive fourth root $z=2$ in $\mathbb{F}_5$.
 Using $t=4$ gives $tz=3$ in that field. With
 $M=3$ and anchors 4 and 6, the resolution is 4 and the retained period is 12.
 [Smoke source](../../formal/universal/MockThetaSmoke.lean)
-· [Execution log](../../evidence/current/profinite-mock-theta/mock-theta-smoke.log)
+· [Execution log](https://github.com/Skyelabz210/Theory-of-the-One/blob/c59b9850f20b9071b7c2ba28b2013cbe55d4d6a4/evidence/current/profinite-mock-theta/mock-theta-smoke.log)
 
 Write $T(q)=1+2\sum_{k\ge1}(-1)^k q^{k^2}$. Watson gives the identities
 
@@ -493,7 +492,7 @@ This slice does not claim any of the following:
 | Infinite analytic Fourier/measure identity | Convergence, summability, complex evaluation, and the justified limiting operation |
 | Radial mock theta asymptotics | Root-dependent subtraction and analytic control at the unit circle |
 | Analytic shadow correspondence | Explicit analytic and observation-side operators with an intertwining theorem |
-| Formalization of all seventeen original examples | Coefficient definitions for the ten fifth-order and three seventh-order functions and their specializations of the packet theorems |
+| Formalization of all seventeen original examples | The third-order checkpoint covered four functions. See the [fifth-order review](2026-11-20-fifth-order-mock-theta.md) for later coverage. |
 | Production CRAM implementation | Authentic observation constructors, permitted runtime operations, admission and rejection behavior, and conformance proofs |
 
 The external analytic statements discussed in the paper remain attributed to

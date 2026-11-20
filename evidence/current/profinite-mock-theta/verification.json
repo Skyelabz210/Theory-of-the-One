@@ -5,7 +5,7 @@
   "fresh_temporary_build": true,
   "project_olean_reused": false,
   "imports": "Pinned Lean bundled Std; no Mathlib dependency",
-  "theorem_declarations": 247,
+  "theorem_declarations": 267,
   "module_theorem_counts": {
     "ExactObservation": 9,
     "UniversalLift": 15,
@@ -24,12 +24,14 @@
     "MockThetaPhi": 11,
     "MockThetaPsi": 14,
     "MockThetaChi": 14,
+    "FifthOrderSeries": 7,
+    "MockThetaFifthZero": 13,
     "UniversalKElimination": 0
   },
   "reused_observation_theorems": 9,
   "prior_universal_core_declarations": 75,
   "closure_and_starlift_declarations": 52,
-  "profinite_mock_theta_declarations": 117,
+  "profinite_mock_theta_declarations": 137,
   "axiom_free_declarations": 41,
   "allowed_foundational_axioms": [
     "Classical.choice",
@@ -1816,8 +1818,169 @@
       ]
     },
     {
+      "file": "FifthOrderSeries.lean",
+      "sha256": "ac57cdbece347b339a16a3c06d305a3ad52401893743b5791374f809d0667df4",
+      "theorem_count": 7,
+      "theorems": [
+        {
+          "name": "KElimination.FifthOrderSeries.mulProduct_reciprocalProduct",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.FifthOrderSeries.mulProduct_injective",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.FifthOrderSeries.reciprocalProduct_unique",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.FifthOrderSeries.mulProduct_eq_one_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.FifthOrderSeries.triangular_mono",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "KElimination.FifthOrderSeries.le_triangular",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.FifthOrderSeries.shiftedCoeff_stable",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "MockThetaFifthZero.lean",
+      "sha256": "abc149a565cc35150abc0e78de832effce02893a735c616c4ff98dd05494ef01",
+      "theorem_count": 13,
+      "theorems": [
+        {
+          "name": "KElimination.MockThetaFifthZero.exponent_mono",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthZero.le_exponent",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthZero.f_denominator_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthZero.chi_denominator_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthZero.bigF_denominator_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthZero.summand_support",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthZero.coeff_stable",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthZero.degreePacket_refinement",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthZero.cylinder_observable",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthZero.cylinder_refinement",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthZero.weightedPacket_refinement",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthZero.finite_root_evaluation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaFifthZero.from_coupled_anchors",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
       "file": "UniversalKElimination.lean",
-      "sha256": "2511affe3de4e8ca6cc5a1da9ed51bc05065c7fb921c3bac3fbc2551f17f9ea3",
+      "sha256": "b3b8a855f0ea1c7c3d69ea1d90f42b5a083f0ba0d59842ae93c7cb7195cfbc12",
       "theorem_count": 0,
       "theorems": []
     }

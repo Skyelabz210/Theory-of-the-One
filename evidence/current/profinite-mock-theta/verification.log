@@ -325,4 +325,28 @@ $ lean -o MockThetaChi.olean MockThetaChi.lean
 'KElimination.MockThetaChi.chi_finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
 'KElimination.MockThetaChi.chi_from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
 
+$ lean -o FifthOrderSeries.olean FifthOrderSeries.lean
+'KElimination.FifthOrderSeries.mulProduct_reciprocalProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.FifthOrderSeries.mulProduct_injective' depends on axioms: [propext, Quot.sound]
+'KElimination.FifthOrderSeries.reciprocalProduct_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.FifthOrderSeries.mulProduct_eq_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.FifthOrderSeries.triangular_mono' depends on axioms: [propext]
+'KElimination.FifthOrderSeries.le_triangular' depends on axioms: [propext, Quot.sound]
+'KElimination.FifthOrderSeries.shiftedCoeff_stable' depends on axioms: [propext, Quot.sound]
+
+$ lean -o MockThetaFifthZero.olean MockThetaFifthZero.lean
+'KElimination.MockThetaFifthZero.exponent_mono' depends on axioms: [propext]
+'KElimination.MockThetaFifthZero.le_exponent' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaFifthZero.f_denominator_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaFifthZero.chi_denominator_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaFifthZero.bigF_denominator_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaFifthZero.summand_support' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaFifthZero.coeff_stable' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaFifthZero.degreePacket_refinement' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaFifthZero.cylinder_observable' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaFifthZero.cylinder_refinement' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaFifthZero.weightedPacket_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaFifthZero.finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaFifthZero.from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+
 $ lean -o UniversalKElimination.olean UniversalKElimination.lean

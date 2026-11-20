@@ -1,5 +1,19 @@
 # Evidence status — research draft
 
+## 20 November 2026 — fifth-order series, subscript zero
+
+The five named series $f_0,\phi_0,\psi_0,\chi_0,F_0$ join the four original
+third-order functions. Each has a coefficient formula, support bound, packet
+and cylinder construction, and finite root evaluation under the coupled-anchor
+period contract. [Fifth-order formalization](../docs/reviews/2026-11-20-fifth-order-mock-theta.md)
+
+The fresh audit passed 267 theorem declarations. The fifth-order zero-subscript
+suite passed 2,133 exact assertions and the third-order suite passed 26,779,
+for 28,912 mock theta assertions in total. The existing closure smoke passed
+1,809 comparison/divmod/GCD pairs and four controls.
+[Audit](current/profinite-mock-theta/verification.json) · [Execution](current/profinite-mock-theta/execution.json)
+· [Zero-subscript smoke](current/profinite-mock-theta/fifth-zero-smoke.log)
+
 ## 20 November 2026 — original third-order group
 
 All four named coefficient constructions reach the finite transform through the same
@@ -8,10 +22,10 @@ of each proof are recorded in the [formalization review](../docs/reviews/2026-11
 
 | Executed check | Result | Receipt |
 |---|---|---|
-| Fresh temporary proof build and transitive axiom audit | 247 declarations passed, including 14 each in `MockThetaPsi` and `MockThetaChi` | [Proof receipt](current/profinite-mock-theta/verification.json) |
-| Pinned Lake package build | Passed | [Build log](current/profinite-mock-theta/lake-build.log) |
-| Concrete comparison/divmod/GCD execution | 1,809 pairs and four controls | [Closure smoke](current/profinite-mock-theta/closure-smoke.log) |
-| Mock theta execution | 26,779 exact assertions passed, including 41 independent coefficients per series and 123 comparisons with Watson's relations | [Smoke log](current/profinite-mock-theta/mock-theta-smoke.log) |
+| Fresh temporary proof build and transitive axiom audit | 247 declarations passed, including 14 each in `MockThetaPsi` and `MockThetaChi` | [Proof receipt](https://github.com/Skyelabz210/Theory-of-the-One/blob/c59b9850f20b9071b7c2ba28b2013cbe55d4d6a4/evidence/current/profinite-mock-theta/verification.json) |
+| Pinned Lake package build | Passed | [Build log](https://github.com/Skyelabz210/Theory-of-the-One/blob/c59b9850f20b9071b7c2ba28b2013cbe55d4d6a4/evidence/current/profinite-mock-theta/lake-build.log) |
+| Concrete comparison/divmod/GCD execution | 1,809 pairs and four controls | [Closure smoke](https://github.com/Skyelabz210/Theory-of-the-One/blob/c59b9850f20b9071b7c2ba28b2013cbe55d4d6a4/evidence/current/profinite-mock-theta/closure-smoke.log) |
+| Mock theta execution | 26,779 exact assertions passed, including 41 independent coefficients per series and 123 comparisons with Watson's relations | [Smoke log](https://github.com/Skyelabz210/Theory-of-the-One/blob/c59b9850f20b9071b7c2ba28b2013cbe55d4d6a4/evidence/current/profinite-mock-theta/mock-theta-smoke.log) |
 
 The earlier $f$ implementation at `853ed93` passed 202 theorem declarations and
 6,251 mock theta assertions. The $f$, $\phi$ implementation at `769b724` passed 217

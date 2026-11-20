@@ -19,7 +19,8 @@ MODULES = ["ExactObservation", "UniversalLift", "RingReadout",
            "IntegerSpecialization", "CostedReadout", "ReferenceChange",
            "CoupledAnchors", "ResidueAlgorithms", "ResiduePrimitives", "StarLift",
            "ResidueSeries", "ProfiniteObservations", "CoefficientObservations", "MockTheta", "MockThetaPhi",
-           "MockThetaPsi", "MockThetaChi", "UniversalKElimination"]
+           "MockThetaPsi", "MockThetaChi", "FifthOrderSeries", "MockThetaFifthZero",
+           "UniversalKElimination"]
 ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
 
 
@@ -107,7 +108,8 @@ def main():
                           "theorem_count": len(found), "theorems": module_theorems})
     counts = {f["file"].removesuffix(".lean"): f["theorem_count"] for f in files}
     bridge_modules = ["ResidueSeries", "ProfiniteObservations", "CoefficientObservations",
-                      "MockTheta", "MockThetaPhi", "MockThetaPsi", "MockThetaChi"]
+                      "MockTheta", "MockThetaPhi", "MockThetaPsi", "MockThetaChi",
+                      "FifthOrderSeries", "MockThetaFifthZero"]
     closure_modules = ["CoupledAnchors", "ResidueAlgorithms", "ResiduePrimitives", "StarLift"]
     report = {"status": "PASS", "toolchain": toolchain, "lean_version": version,
               "fresh_temporary_build": True, "project_olean_reused": False,
