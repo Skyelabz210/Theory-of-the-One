@@ -421,4 +421,28 @@ $ lean -o CrankCharacter11.olean CrankCharacter11.lean
 'KElimination.CrankCharacter11.rank_six_reduced_witness' depends on axioms: [propext, Quot.sound]
 'KElimination.CrankCharacter11.seventh_crank_from_s8' depends on axioms: [propext, Classical.choice, Quot.sound]
 
+$ lean -o MockThetaShadow.olean MockThetaShadow.lean
+'KElimination.MockThetaShadow.holomorphicCoeff_at_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaShadow.exponent_range_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaShadow.holomorphicCoeff_off_lattice' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaShadow.laurentPower_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaShadow.normalizedTrunc_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaShadow.shadowSign_period' depends on axioms: [propext]
+'KElimination.MockThetaShadow.shadowWeight_natAbs_le' depends on axioms: [propext]
+'KElimination.MockThetaShadow.shadowWeight_ne_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaShadow.shadowWeight_signed_lattice' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaShadow.shadowWeight_lattice_of_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KElimination.MockThetaShadow.shadowCoeff_stable' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaShadow.shadowCoeff_square' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaShadow.shadowCoeff_ne_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaShadow.shadowCoeff_mod_24' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaShadow.eleven_dvd_shadowCoeff_square_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KElimination.MockThetaShadow.shadowCoeff_bin_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaShadow.shadowCoeff_sector_support_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaShadow.shadowTrunc_eq_magnitude_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+
 $ lean -o UniversalKElimination.olean UniversalKElimination.lean

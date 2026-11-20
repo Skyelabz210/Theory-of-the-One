@@ -5,7 +5,7 @@
   "fresh_temporary_build": true,
   "project_olean_reused": false,
   "imports": "Pinned Lean bundled Std; no Mathlib dependency",
-  "theorem_declarations": 329,
+  "theorem_declarations": 347,
   "module_theorem_counts": {
     "ExactObservation": 9,
     "UniversalLift": 15,
@@ -31,12 +31,13 @@
     "PartitionCrank11": 11,
     "CrankShadow11": 9,
     "CrankCharacter11": 10,
+    "MockThetaShadow": 18,
     "UniversalKElimination": 0
   },
   "reused_observation_theorems": 9,
   "prior_universal_core_declarations": 75,
   "closure_and_starlift_declarations": 52,
-  "profinite_mock_theta_declarations": 169,
+  "profinite_mock_theta_declarations": 187,
   "crank_shadow_declarations": 30,
   "axiom_free_declarations": 46,
   "allowed_foundational_axioms": [
@@ -2465,8 +2466,151 @@
       ]
     },
     {
+      "file": "MockThetaShadow.lean",
+      "sha256": "7541436d118a3e57a7b5321fb9021a310ad10681319e4b058ae6dcc7ed238fad",
+      "theorem_count": 18,
+      "theorems": [
+        {
+          "name": "KElimination.MockThetaShadow.holomorphicCoeff_at_degree",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.exponent_range_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.holomorphicCoeff_off_lattice",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.laurentPower_normalized",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.normalizedTrunc_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.shadowSign_period",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.shadowWeight_natAbs_le",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.shadowWeight_ne_zero_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.shadowWeight_signed_lattice",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.shadowWeight_lattice_of_ne_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.shadowCoeff_stable",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.shadowCoeff_square",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.shadowCoeff_ne_zero_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.shadowCoeff_mod_24",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.eleven_dvd_shadowCoeff_square_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.shadowCoeff_bin_zero_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.shadowCoeff_sector_support_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaShadow.shadowTrunc_eq_magnitude_sum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
       "file": "UniversalKElimination.lean",
-      "sha256": "eaabdd9a74a37f50e575b86310f3bac55d2aa86c2a153da9e6786fb21083b688",
+      "sha256": "0e33938ff54279e94467bf0c858a4d00b226711131efb033e45ea2cc7c02327d",
       "theorem_count": 0,
       "theorems": []
     }

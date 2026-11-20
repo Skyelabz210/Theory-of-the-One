@@ -491,7 +491,7 @@ This slice does not claim any of the following:
 | Cofinality of the fully refined affine star family | A formal statement and proof of the additional admission/refinement hypotheses from the paper |
 | Infinite analytic Fourier/measure identity | Convergence, summability, complex evaluation, and the justified limiting operation |
 | Radial mock theta asymptotics | Root-dependent subtraction and analytic control at the unit circle |
-| Analytic shadow correspondence | Explicit analytic and observation-side operators with an intertwining theorem |
+| Analytic shadow correspondence | The [subsequent third-order review](2026-11-20-third-order-analytic-shadow.md) derives the degree projection of the completed $f$ under the shadow operator. Constructing the completion from crank observations remains open. |
 | Formalization of all seventeen original examples | The third-order checkpoint covered four functions. The [fifth-order](2026-11-20-fifth-order-mock-theta.md) and [seventh-order](2026-11-20-seventh-order-mock-theta.md) checkpoints complete the other thirteen. |
 | Production CRAM implementation | Authentic observation constructors, permitted runtime operations, admission and rejection behavior, and conformance proofs |
 
@@ -500,6 +500,8 @@ their original sources: [Folsom–Ono–Rhoades](https://afolsom.people.amherst.
 [Griffin–Ono–Rolen](https://math.vanderbilt.edu/rolenl/rama_mock_live.pdf),
 [Rhoades](https://pmc.ncbi.nlm.nih.gov/articles/PMC3651474/), and
 [Bringmann–Rolen](https://www.mi.uni-koeln.de/Bringmann/mock_definition_publish.pdf).
-Local radial subtraction, a harmonic-Maass analytic shadow, and CRAM's
-designated shadow-eleven role remain distinct constructions until an explicit
-additional theorem connects them.
+For the subsequent third-order result, the degree-mod-11 projection acts
+on the completed analytic function and reverses its index under the shadow
+operator. A relation recovering that completion from a partition crank
+readout, and the radial subtraction problem, remain open.
+[Completion and residue projections](2026-11-20-third-order-analytic-shadow.md)

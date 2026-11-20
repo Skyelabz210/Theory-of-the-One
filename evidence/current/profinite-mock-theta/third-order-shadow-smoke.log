@@ -1,0 +1,4 @@
+PASS Laurent exponents, rank-parity comparison and unit evaluations: 1085 assertions
+PASS signed lattice coefficients, degree packets, weights and ξ scaling: 8169 assertions
+PASS finite unary mass and eleven-fold character pairings: 250 assertions
+Total: 9504 exact assertions.

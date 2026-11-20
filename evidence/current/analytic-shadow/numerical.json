@@ -1,0 +1,318 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "tools/check_analytic_shadow.py",
+    "--dps",
+    "65",
+    "--receipt",
+    "evidence/current/analytic-shadow/numerical.json"
+  ],
+  "source": "https://doi.org/10.1090/conm/291/04907",
+  "script_sha256": "c1179e982654437482368e861f236b6323116381c872c825e47d37e241a4b8d5",
+  "python": "3.12.14",
+  "mpmath": "1.3.0",
+  "decimal_precision": 65,
+  "scope": "Pointwise numerical checks with analytic series-tail majorants. Differencing, quadrature and rounding are not interval-certified.",
+  "max_hypergeometric_index": 8,
+  "max_taylor_degree": 40,
+  "max_unary_root_index": 36,
+  "vertical_quadrature_breaks": [
+    0,
+    1,
+    4,
+    16,
+    64,
+    128,
+    384
+  ],
+  "difference_steps": [
+    "1e-18",
+    "5e-19"
+  ],
+  "absolute_tolerance": "1e-27",
+  "negative_control_minimum": "1e-3",
+  "points": [
+    {
+      "tau": {
+        "real": "1/7",
+        "imag": "1/40"
+      },
+      "status": "PASS",
+      "completed": {
+        "real": "0.092508754126574617",
+        "imag": "-0.100981820118911983"
+      },
+      "xi_half_step": {
+        "real": "2.49917937911993643",
+        "imag": "2.84370020617750114"
+      },
+      "four_theta": {
+        "real": "2.49917937911993643",
+        "imag": "2.84370020617750114"
+      },
+      "exact_arithmetic_tail_majorants_numerically_evaluated": {
+        "hypergeometric_tail": "2.96196575176700269e-133",
+        "taylor_tail": "1.39476421376571851e-42",
+        "unary_theta_tail": "1.50190933000756432e-92",
+        "erfc_series_tail": "8.11842713258039887e-94",
+        "retained_vertical_modes_after_cutoff": "2.10070692035212463e-45",
+        "xi_stencil_series_tails": "5.13454415141276577e-76"
+      },
+      "absolute_discrepancies": {
+        "holomorphic_vs_taylor": "2.44695179943598961e-65",
+        "eichler_integral_vs_erfc": "2.0904426201394557e-45",
+        "xi_vs_4theta": "6.88434759542281818e-33",
+        "xi_half_step_vs_4theta": "1.72108689885570443e-33",
+        "xi_step_halving": "5.16326069656711375e-33"
+      },
+      "negative_control_separations": {
+        "reversed_shadow_sign": "7.5716651884858917",
+        "omitted_xi_dilation_factor": "3.01305275195191874",
+        "theta_at_wrong_argument": "3.81166064372975088"
+      }
+    },
+    {
+      "tau": {
+        "real": "-2/11",
+        "imag": "1/16"
+      },
+      "status": "PASS",
+      "completed": {
+        "real": "0.356750802176521958",
+        "imag": "0.780982465694056609"
+      },
+      "xi_half_step": {
+        "real": "1.12305166121635405",
+        "imag": "-2.45715715689620643"
+      },
+      "four_theta": {
+        "real": "1.12305166121635405",
+        "imag": "-2.45715715689620643"
+      },
+      "exact_arithmetic_tail_majorants_numerically_evaluated": {
+        "hypergeometric_tail": "4.23802158050556854e-332",
+        "taylor_tail": "3.2657026067432697e-143",
+        "unary_theta_tail": "1.228282241547189e-232",
+        "erfc_series_tail": "6.63936346782261423e-234",
+        "retained_vertical_modes_after_cutoff": "1.65586488466692444e-45",
+        "xi_stencil_series_tails": "6.63936346782261423e-216"
+      },
+      "absolute_discrepancies": {
+        "holomorphic_vs_taylor": "0.0",
+        "eichler_integral_vs_erfc": "1.64781122741919916e-45",
+        "xi_vs_4theta": "1.66026730550725063e-34",
+        "xi_half_step_vs_4theta": "4.15066826376810291e-35",
+        "xi_step_halving": "1.24520047913044034e-34"
+      },
+      "negative_control_separations": {
+        "reversed_shadow_sign": "5.40328282711429455",
+        "omitted_xi_dilation_factor": "2.15017116929160741",
+        "theta_at_wrong_argument": "2.70150742388974129"
+      }
+    },
+    {
+      "tau": {
+        "real": "2/9",
+        "imag": "1/8"
+      },
+      "status": "PASS",
+      "completed": {
+        "real": "0.322725335501529413",
+        "imag": "-1.83026625935808636"
+      },
+      "xi_half_step": {
+        "real": "0.316691355865527407",
+        "imag": "1.79604563278220886"
+      },
+      "four_theta": {
+        "real": "0.316691355865527407",
+        "imag": "1.79604563278220886"
+      },
+      "exact_arithmetic_tail_majorants_numerically_evaluated": {
+        "hypergeometric_tail": "1.79550296643967705e-663",
+        "taylor_tail": "7.34669404387408621e-311",
+        "unary_theta_tail": "4.07750612135046698e-466",
+        "erfc_series_tail": "2.20405736289214431e-467",
+        "retained_vertical_modes_after_cutoff": "1.11378414442415952e-45",
+        "xi_stencil_series_tails": "3.11700781485034892e-449"
+      },
+      "absolute_discrepancies": {
+        "holomorphic_vs_taylor": "0.0",
+        "eichler_integral_vs_erfc": "1.10840809229640947e-45",
+        "xi_vs_4theta": "8.85612506476848778e-35",
+        "xi_half_step_vs_4theta": "2.21403126619206978e-35",
+        "xi_step_halving": "6.642093798576418e-35"
+      },
+      "negative_control_separations": {
+        "reversed_shadow_sign": "3.64750508151311073",
+        "omitted_xi_dilation_factor": "1.45148061226006017",
+        "theta_at_wrong_argument": "1.8237525208013674"
+      }
+    }
+  ],
+  "mod11_projection": {
+    "tau": {
+      "real": "1/7",
+      "imag": "1/40"
+    },
+    "classes": [
+      {
+        "completion_class": 0,
+        "shadow_degree_class": 0,
+        "observed_xi": {
+          "real": "5.44937393109308515e-8",
+          "imag": "-2.38752671709603892e-7"
+        },
+        "four_theta_by_degree": {
+          "real": "5.44937393109308515e-8",
+          "imag": "-2.38752671709603892e-7"
+        },
+        "absolute_discrepancy": "3.3808273675779098e-38",
+        "status": "PASS"
+      },
+      {
+        "completion_class": 1,
+        "shadow_degree_class": 10,
+        "observed_xi": {
+          "real": "9.54794546764079949e-34",
+          "imag": "4.18322823605420559e-33"
+        },
+        "four_theta_by_degree": {
+          "real": "0.0",
+          "imag": "0.0"
+        },
+        "absolute_discrepancy": "4.2908077446387184e-33",
+        "same_class_negative_control_separation": "3.41854399661293372",
+        "status": "PASS"
+      },
+      {
+        "completion_class": 2,
+        "shadow_degree_class": 9,
+        "observed_xi": {
+          "real": "-1.61633058169020133e-23",
+          "imag": "-7.78383783744409825e-24"
+        },
+        "four_theta_by_degree": {
+          "real": "-1.61633058169020122e-23",
+          "imag": "-7.7838378374440969e-24"
+        },
+        "absolute_discrepancy": "1.72620851114595927e-39",
+        "status": "PASS"
+      },
+      {
+        "completion_class": 3,
+        "shadow_degree_class": 8,
+        "observed_xi": {
+          "real": "-3.75662951822829675e-34",
+          "imag": "1.6458869320429735e-33"
+        },
+        "four_theta_by_degree": {
+          "real": "0.0",
+          "imag": "0.0"
+        },
+        "absolute_discrepancy": "1.68821398123640514e-33",
+        "status": "PASS"
+      },
+      {
+        "completion_class": 4,
+        "shadow_degree_class": 7,
+        "observed_xi": {
+          "real": "-1.13557651082052263e-41",
+          "imag": "-4.97528576931486469e-41"
+        },
+        "four_theta_by_degree": {
+          "real": "0.0",
+          "imag": "0.0"
+        },
+        "absolute_discrepancy": "5.10323451335271457e-41",
+        "status": "PASS"
+      },
+      {
+        "completion_class": 5,
+        "shadow_degree_class": 6,
+        "observed_xi": {
+          "real": "-1.25480994991564091e-34",
+          "imag": "1.57348190849873833e-34"
+        },
+        "four_theta_by_degree": {
+          "real": "0.0",
+          "imag": "0.0"
+        },
+        "absolute_discrepancy": "2.01255890020146372e-34",
+        "status": "PASS"
+      },
+      {
+        "completion_class": 6,
+        "shadow_degree_class": 5,
+        "observed_xi": {
+          "real": "0.0127185020531770921",
+          "imag": "-1.63599421677988885e-42"
+        },
+        "four_theta_by_degree": {
+          "real": "0.0127185020531770921",
+          "imag": "-3.85075124598386253e-56"
+        },
+        "absolute_discrepancy": "2.15713008587871918e-35",
+        "status": "PASS"
+      },
+      {
+        "completion_class": 7,
+        "shadow_degree_class": 4,
+        "observed_xi": {
+          "real": "9.59074861991818385e-11",
+          "imag": "1.20264183778707167e-10"
+        },
+        "four_theta_by_degree": {
+          "real": "9.59074861991818385e-11",
+          "imag": "1.20264183778707167e-10"
+        },
+        "absolute_discrepancy": "1.1114571838278667e-35",
+        "status": "PASS"
+      },
+      {
+        "completion_class": 8,
+        "shadow_degree_class": 3,
+        "observed_xi": {
+          "real": "0.355033503383551469",
+          "imag": "0.170975124055835228"
+        },
+        "four_theta_by_degree": {
+          "real": "0.355033503383551469",
+          "imag": "0.170975124055835228"
+        },
+        "absolute_discrepancy": "3.73046644816905117e-34",
+        "status": "PASS"
+      },
+      {
+        "completion_class": 9,
+        "shadow_degree_class": 2,
+        "observed_xi": {
+          "real": "-5.03629531697134974e-37",
+          "imag": "4.94839958088289779e-50"
+        },
+        "four_theta_by_degree": {
+          "real": "0.0",
+          "imag": "0.0"
+        },
+        "absolute_discrepancy": "5.03629531697134974e-37",
+        "status": "PASS"
+      },
+      {
+        "completion_class": 10,
+        "shadow_degree_class": 1,
+        "observed_xi": {
+          "real": "2.13142731909356107",
+          "imag": "2.67272532075407344"
+        },
+        "four_theta_by_degree": {
+          "real": "2.13142731909356107",
+          "imag": "2.67272532075407344"
+        },
+        "absolute_discrepancy": "7.80003341271005983e-34",
+        "same_class_negative_control_separation": "3.41854399661293372",
+        "status": "PASS"
+      }
+    ]
+  }
+}

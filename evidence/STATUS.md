@@ -1,20 +1,34 @@
 # Evidence status — research draft
 
+## 20 November 2026 — analytic shadow of the third-order f
+
+For the normalized completion with holomorphic part $q^{-1}f(q^{24})$, the
+review derives the weight-$3/2$ unary shadow and its eleven Fourier-degree
+projections from Zwegers' real-analytic modular form. The standard-library
+audit compiled 347 declarations, including 18 for the signed square coefficients and Laurent normalization. The new executable
+suite passed 9,504 exact checks, bringing the combined mock theta and crank
+total to 42,617. Numerical differentiation tests
+the completed function at three points and every projection at one point.
+[Normalization, derivation, and proof map](../docs/reviews/2026-11-20-third-order-analytic-shadow.md)
+· [Proof audit](current/profinite-mock-theta/verification.json)
+· [Exact execution](current/profinite-mock-theta/third-order-shadow-smoke.log)
+· [Numerical execution](current/analytic-shadow/numerical.json)
+
 ## 20 November 2026 — partition crank and shadow prime 11
 
 Lean proves the size-six rank and crank histograms, an integer criterion for
 uniformity modulo 11, and evaluation of all three finite seventh-order
 weighted crank sums from authentic per-partition S8 transitions. The independent
 crank check counts each residue class at sizes 6, 17, 28, and 39.
-[Definitions, proofs, and finite examples](../docs/reviews/2026-11-20-crank-shadow-eleven.md)
+[Definitions, proofs, and finite examples](https://github.com/Skyelabz210/Theory-of-the-One/blob/d8d55d9aed97ff5c1919d6d5cf3e0f11bc1cac39/docs/reviews/2026-11-20-crank-shadow-eleven.md)
 
 The audit compiled 329 declarations, including 169 in the profinite and mock
 theta modules and 30 in the crank and shadow modules. All eight commands
 passed. The four mock theta suites passed 32,866 assertions and the crank suite
 passed 247, for 33,113 combined. The closure smoke separately passed 1,809
 comparison/divmod/GCD pairs and four controls.
-[Execution](current/profinite-mock-theta/execution.json) · [Proof audit](current/profinite-mock-theta/verification.json)
-· [Crank checks](current/profinite-mock-theta/crank-shadow-smoke.log)
+[Execution](https://github.com/Skyelabz210/Theory-of-the-One/blob/d8d55d9aed97ff5c1919d6d5cf3e0f11bc1cac39/evidence/current/profinite-mock-theta/execution.json) · [Proof audit](https://github.com/Skyelabz210/Theory-of-the-One/blob/d8d55d9aed97ff5c1919d6d5cf3e0f11bc1cac39/evidence/current/profinite-mock-theta/verification.json)
+· [Crank checks](https://github.com/Skyelabz210/Theory-of-the-One/blob/d8d55d9aed97ff5c1919d6d5cf3e0f11bc1cac39/evidence/current/profinite-mock-theta/crank-shadow-smoke.log)
 
 ## 20 November 2026 — the three seventh-order functions
 

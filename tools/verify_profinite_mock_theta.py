@@ -25,6 +25,7 @@ MOCK_SMOKE_SUITES = [
     ("fifth_zero", "FifthZeroSmoke.lean", "fifth-zero-smoke.log"),
     ("fifth_one", "FifthOneSmoke.lean", "fifth-one-smoke.log"),
     ("seventh_order", "SeventhSmoke.lean", "seventh-smoke.log"),
+    ("third_order_shadow", "MockThetaShadowSmoke.lean", "third-order-shadow-smoke.log"),
 ]
 CRANK_SUITE = ("crank_shadow_11", "CrankShadowSmoke.lean", "crank-shadow-smoke.log")
 ALL_SMOKE_SUITES = [*MOCK_SMOKE_SUITES, CRANK_SUITE]

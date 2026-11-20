@@ -18,3 +18,4 @@ import MockThetaFifthZero
 import MockThetaFifthOne
 import MockThetaSeventh
 import CrankCharacter11
+import MockThetaShadow

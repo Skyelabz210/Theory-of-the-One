@@ -45,7 +45,7 @@ Both fifth-order groups are formalized. For $i=0,1$, each of $f_i,\phi_i,\psi_i,
 
 The seventh-order module constructs $\mathcal F_0,\mathcal F_1,\mathcal F_2$ and proves finite evaluation for each. This completes coefficient and packet coverage for all seventeen original functions, across the groups of four, ten, and three. [Seventh-order Lean source](formal/universal/MockThetaSeventh.lean) · [Formulas, index conventions, and independent checks](docs/reviews/2026-11-20-seventh-order-mock-theta.md)
 
-The four mock theta suites passed **32,866 exact assertions**, including independent coefficients of all seventeen functions through degree 40 and fourteen seventh-order Euler-product comparisons reaching degree 108. Infinite analytic transforms and radial asymptotics remain open here.
+The four mock theta suites passed **32,866 exact assertions**, including independent coefficients of all seventeen functions through degree 40 and fourteen seventh-order Euler-product comparisons reaching degree 108. Boundary limits and radial asymptotics remain open here.
 
 The standalone Lean adapter pairs a signed NINE65 quotient and target readout with the finite packet evaluation for each of the four third-order functions. Its Lake project pins the two upstream revisions and includes executable examples for adjacent and other invertible anchors. [CRAMMockThetaBridge source and verification](adapters/CRAMMockThetaBridge/README.md)
 
@@ -53,7 +53,13 @@ The standalone Lean adapter pairs a signed NINE65 quotient and target readout wi
 
 The eleven partitions of six have one ordinary crank in each class modulo 11. Their rank histogram has empty bins at 4 and 7. Lean proves both results and exact integer criteria for uniform counts. It also proves that the coefficients of each seventh-order series can weight partition sizes in a finite crank character sum. Paired S8 readings evaluate that sum when each partition's crank supplies the signed increment in the specified transition. [Partition definitions](formal/universal/PartitionCrank11.lean) · [S6 and S8 readings](formal/universal/CrankShadow11.lean) · [Character and weighted pairing theorems](formal/universal/CrankCharacter11.lean) · [Formulas and examples](docs/reviews/2026-11-20-crank-shadow-eleven.md)
 
-The current audit compiled **329 theorem declarations**. The crank and shadow suite passed **247 exact assertions**, bringing the combined mock theta and crank total to **33,113**. [Execution receipts](evidence/current/profinite-mock-theta/README.md)
+The crank and shadow suite passed **247 exact assertions**. [Crank execution log](evidence/current/profinite-mock-theta/crank-shadow-smoke.log)
+
+## The analytic shadow of the third-order f
+
+For $q=e^{2\pi i z}$, the holomorphic part of the normalized completion $M_f$ is $q^{-1}f(q^{24})$. Its weight-$3/2$ shadow is $4\sum_{m\equiv1\ (6)}m q^{m^2}$. Projecting the completion onto Fourier degrees $r$ modulo 11 projects its shadow onto degrees $-r$. Exactly five of the eleven projected completions have zero shadow. The review derives this result from Zwegers' completion and spells out what a CRAM degree observation supplies. [Formula, proof, and evidence](docs/reviews/2026-11-20-third-order-analytic-shadow.md) · [Exact Lean coefficients](formal/universal/MockThetaShadow.lean)
+
+The standard-library audit compiled **347 declarations**. Its five mock theta suites and the crank suite passed **42,617 exact assertions**, including 9,504 for the Laurent normalization and unary theta coefficients. [Audit and execution](evidence/current/profinite-mock-theta/README.md) · [Numerical evidence](evidence/current/analytic-shadow/README.md)
 
 ## Read the project in four layers
 
@@ -100,6 +106,7 @@ lake env lean MockThetaSmoke.lean
 lake env lean FifthZeroSmoke.lean
 lake env lean FifthOneSmoke.lean
 lake env lean SeventhSmoke.lean
+lake env lean MockThetaShadowSmoke.lean
 lake env lean CrankShadowSmoke.lean
 ```
 

@@ -32,6 +32,7 @@ lake env lean MockThetaSmoke.lean
 lake env lean FifthZeroSmoke.lean
 lake env lean FifthOneSmoke.lean
 lake env lean SeventhSmoke.lean
+lake env lean MockThetaShadowSmoke.lean
 lake env lean CrankShadowSmoke.lean
 ```
 
@@ -48,7 +49,9 @@ geometric summands, and Watson's shifted relation through degree 41.
 checks their cutoffs, and tests Garvan's Euler-weighted relations.
 `CrankShadowSmoke` checks ordinary crank bins through four sizes of the form
 $11k+6$, the signed-rank parity coefficients through degree 40, finite-field
-characters, and the S6 and S8 readouts.
+characters, and the S6 and S8 readouts. `MockThetaShadowSmoke` checks the
+integer-exponent normalization of $f$, the signed unary theta coefficients
+through degree 625, and their degree packets modulo 11.
 
 | Module | Freshly checked theorem count |
 |---|---:|
@@ -76,7 +79,8 @@ characters, and the S6 and S8 readouts.
 | [PartitionCrank11](PartitionCrank11.lean) | 11 |
 | [CrankShadow11](CrankShadow11.lean) | 9 |
 | [CrankCharacter11](CrankCharacter11.lean) | 10 |
-| **Total** | **329** |
+| [MockThetaShadow](MockThetaShadow.lean) | 18 |
+| **Total** | **347** |
 
 The original compiler receipt and log are retained in `../../evidence/historical/formal/`. Read the root architecture contract before interpreting proof variables as runtime state.
 
@@ -98,8 +102,10 @@ are `mockTheta_from_coupled_anchors`, `phi_from_coupled_anchors`,
 supply the period through their LCM/GCD resolution. Evaluation uses the
 complete distribution of coefficient packets at that period.
 
-The selected primary is 30030. Topology, infinite analytic limits, and
-harmonic-Maass shadows remain open here. The seventh-order constructions complete the original
+The selected primary is 30030. The exact coefficient bridge for the analytic
+shadow of $f$ and the written derivation from its published completion are described in the
+[analytic review](../../docs/reviews/2026-11-20-third-order-analytic-shadow.md).
+Topology and boundary limits remain open here. The seventh-order constructions complete the original
 seventeen named series. Earlier
 source and execution records are available for each proof package.
 [First $f$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/853ed937d0fa3545683d668e72f6439b599529b5/evidence/current/profinite-mock-theta) · [$f$, $\phi$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/769b724802ba1fd2e042718ac2dbc95b79d6fed1/evidence/current/profinite-mock-theta)

@@ -1,4 +1,4 @@
-ℹ [2/28] Replayed ExactObservation
+ℹ [2/29] Replayed ExactObservation
 info: ExactObservation.lean:136:0: 'KElimination.ExactObservation.recoverable_iff' depends on axioms: [Classical.choice]
 info: ExactObservation.lean:137:0: 'KElimination.ExactObservation.refined_observation_suffices' does not depend on any axioms
 info: ExactObservation.lean:138:0: 'KElimination.ExactObservation.collision_obstructs_query' does not depend on any axioms
@@ -8,7 +8,7 @@ info: ExactObservation.lean:141:0: 'KElimination.ExactObservation.finite_program
 info: ExactObservation.lean:142:0: 'KElimination.ExactObservation.finite_program_identifies_result' does not depend on any axioms
 info: ExactObservation.lean:143:0: 'KElimination.ExactObservation.transduction_composes' does not depend on any axioms
 info: ExactObservation.lean:144:0: 'KElimination.ExactObservation.transduction_round_trip' does not depend on any axioms
-ℹ [3/28] Replayed UniversalLift
+ℹ [3/29] Replayed UniversalLift
 info: UniversalLift.lean:233:0: 'KElimination.UniversalLift.AddMap.map_zero' depends on axioms: [propext]
 info: UniversalLift.lean:234:0: 'KElimination.UniversalLift.AddMap.map_neg' depends on axioms: [propext]
 info: UniversalLift.lean:235:0: 'KElimination.UniversalLift.AddMap.map_sub' depends on axioms: [propext]
@@ -24,7 +24,7 @@ info: UniversalLift.lean:244:0: 'KElimination.UniversalLift.constructive_query_c
 info: UniversalLift.lean:245:0: 'KElimination.UniversalLift.constructive_lift_correct' does not depend on any axioms
 info: UniversalLift.lean:246:0: 'KElimination.UniversalLift.target_projection' does not depend on any axioms
 info: UniversalLift.lean:247:0: 'KElimination.UniversalLift.direct_target_query' does not depend on any axioms
-ℹ [4/28] Replayed RingReadout
+ℹ [4/29] Replayed RingReadout
 info: RingReadout.lean:183:0: 'KElimination.RingReadout.Observation.map_zero' depends on axioms: [propext]
 info: RingReadout.lean:184:0: 'KElimination.RingReadout.Observation.map_sub' does not depend on any axioms
 info: RingReadout.lean:185:0: 'KElimination.RingReadout.Observation.map_neg' depends on axioms: [propext]
@@ -41,7 +41,7 @@ info: RingReadout.lean:195:0: 'KElimination.RingReadout.lift_null_neg' depends o
 info: RingReadout.lean:196:0: 'KElimination.RingReadout.lift_null_mul_right' does not depend on any axioms
 info: RingReadout.lean:197:0: 'KElimination.RingReadout.lift_null_mul_left' does not depend on any axioms
 info: RingReadout.lean:198:0: 'KElimination.RingReadout.target_projection' does not depend on any axioms
-ℹ [5/28] Replayed IntegerSpecialization
+ℹ [5/29] Replayed IntegerSpecialization
 info: IntegerSpecialization.lean:363:0: 'KElimination.IntegerSpecialization.query_fused' depends on axioms: [propext]
 info: IntegerSpecialization.lean:364:0: 'KElimination.IntegerSpecialization.query_of_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: IntegerSpecialization.lean:365:0: 'KElimination.IntegerSpecialization.query_chart_of_decomposition' depends on axioms: [propext,
@@ -98,7 +98,7 @@ info: IntegerSpecialization.lean:387:0: 'KElimination.IntegerSpecialization.sign
 info: IntegerSpecialization.lean:388:0: 'KElimination.IntegerSpecialization.same_views_source_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: IntegerSpecialization.lean:389:0: 'KElimination.IntegerSpecialization.paired_views_periodic' depends on axioms: [propext]
 info: IntegerSpecialization.lean:390:0: 'KElimination.IntegerSpecialization.no_unbounded_pair_quotient_decoder' depends on axioms: [propext]
-ℹ [6/28] Replayed CostedReadout
+ℹ [6/29] Replayed CostedReadout
 info: CostedReadout.lean:117:0: 'KElimination.CostedReadout.program_counts' does not depend on any axioms
 info: CostedReadout.lean:118:0: 'KElimination.CostedReadout.program_evaluates_to_readout' does not depend on any axioms
 info: CostedReadout.lean:119:0: 'KElimination.CostedReadout.program_correct' does not depend on any axioms
@@ -108,11 +108,11 @@ info: CostedReadout.lean:122:0: 'KElimination.CostedReadout.adjacent_program_eva
  Classical.choice,
  Quot.sound]
 info: CostedReadout.lean:123:0: 'KElimination.CostedReadout.ring_is_universal_instance' does not depend on any axioms
-ℹ [7/28] Replayed ReferenceChange
+ℹ [7/29] Replayed ReferenceChange
 info: ReferenceChange.lean:56:0: 'KElimination.ReferenceChange.shifted_decomposition' depends on axioms: [propext]
 info: ReferenceChange.lean:57:0: 'KElimination.ReferenceChange.shifted_defect' depends on axioms: [propext]
 info: ReferenceChange.lean:58:0: 'KElimination.ReferenceChange.target_invariant_under_reference_change' depends on axioms: [propext]
-ℹ [8/28] Replayed CoupledAnchors
+ℹ [8/29] Replayed CoupledAnchors
 info: CoupledAnchors.lean:218:0: 'KElimination.CoupledAnchors.anchor_lcm_dvd_iff' depends on axioms: [propext, Quot.sound]
 info: CoupledAnchors.lean:219:0: 'KElimination.CoupledAnchors.anchor_lcm_pos' depends on axioms: [propext, Quot.sound]
 info: CoupledAnchors.lean:220:0: 'KElimination.CoupledAnchors.nat_reduced_kernel' depends on axioms: [propext, Quot.sound]
@@ -132,14 +132,14 @@ info: CoupledAnchors.lean:233:0: 'KElimination.CoupledAnchors.resolution_minimal
 info: CoupledAnchors.lean:234:0: 'KElimination.CoupledAnchors.source_readings_iff' depends on axioms: [propext, Quot.sound]
 info: CoupledAnchors.lean:235:0: 'KElimination.CoupledAnchors.main_and_anchor_readings_iff' depends on axioms: [propext, Quot.sound]
 info: CoupledAnchors.lean:236:0: 'KElimination.CoupledAnchors.dependent_anchor_resolution' depends on axioms: [propext, Quot.sound]
-ℹ [9/28] Replayed ResidueAlgorithms
+ℹ [9/29] Replayed ResidueAlgorithms
 info: ResidueAlgorithms.lean:160:0: 'KElimination.ResidueAlgorithms.divLoop_correct' depends on axioms: [propext, Quot.sound]
 info: ResidueAlgorithms.lean:161:0: 'KElimination.ResidueAlgorithms.encode_injective_on' depends on axioms: [propext, Quot.sound]
 info: ResidueAlgorithms.lean:162:0: 'KElimination.ResidueAlgorithms.divmod_correct' depends on axioms: [propext, Quot.sound]
 info: ResidueAlgorithms.lean:163:0: 'KElimination.ResidueAlgorithms.divmod_zero_refused' depends on axioms: [propext]
 info: ResidueAlgorithms.lean:164:0: 'KElimination.ResidueAlgorithms.gcdLoop_correct' depends on axioms: [propext, Quot.sound]
 info: ResidueAlgorithms.lean:165:0: 'KElimination.ResidueAlgorithms.gcd_correct' depends on axioms: [propext, Quot.sound]
-ℹ [10/28] Replayed ResiduePrimitives
+ℹ [10/29] Replayed ResiduePrimitives
 info: ResiduePrimitives.lean:190:0: 'KElimination.ResiduePrimitives.zero_eq_encode' depends on axioms: [propext]
 info: ResiduePrimitives.lean:191:0: 'KElimination.ResiduePrimitives.kQuery_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ResiduePrimitives.lean:192:0: 'KElimination.ResiduePrimitives.increment_encode' depends on axioms: [propext]
@@ -154,7 +154,7 @@ info: ResiduePrimitives.lean:200:0: 'KElimination.ResiduePrimitives.ops_correct'
 info: ResiduePrimitives.lean:201:0: 'KElimination.ResiduePrimitives.divmod_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ResiduePrimitives.lean:202:0: 'KElimination.ResiduePrimitives.divmod_zero_refused' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ResiduePrimitives.lean:203:0: 'KElimination.ResiduePrimitives.gcd_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [11/28] Replayed StarLift
+ℹ [11/29] Replayed StarLift
 info: StarLift.lean:128:0: 'KElimination.StarLift.negate_residue' depends on axioms: [propext]
 info: StarLift.lean:129:0: 'KElimination.StarLift.negative_query_eq_negate' depends on axioms: [propext]
 info: StarLift.lean:130:0: 'KElimination.StarLift.negative_query_of_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -168,7 +168,7 @@ info: StarLift.lean:137:0: 'KElimination.StarLift.positive_adjacent_exact_source
 info: StarLift.lean:138:0: 'KElimination.StarLift.unit_kernel_equal' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: StarLift.lean:139:0: 'KElimination.StarLift.adjacent_kernel_equal' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: StarLift.lean:140:0: 'KElimination.StarLift.negative_nonunit_chart_query' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [12/28] Replayed ResidueSeries
+ℹ [12/29] Replayed ResidueSeries
 info: ResidueSeries.lean:300:0: 'KElimination.ResidueSeries.sumBelow_zero_bound' does not depend on any axioms
 info: ResidueSeries.lean:301:0: 'KElimination.ResidueSeries.sumBelow_succ' does not depend on any axioms
 info: ResidueSeries.lean:302:0: 'KElimination.ResidueSeries.sumBelow_congr' depends on axioms: [propext, Quot.sound]
@@ -198,7 +198,7 @@ info: ResidueSeries.lean:325:0: 'KElimination.ResidueSeries.root_of_dividing_ord
 info: ResidueSeries.lean:326:0: 'KElimination.ResidueSeries.product_power' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ResidueSeries.lean:327:0: 'KElimination.ResidueSeries.finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ResidueSeries.lean:328:0: 'KElimination.ResidueSeries.finite_root_evaluation_of_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [13/28] Replayed ProfiniteObservations
+ℹ [13/29] Replayed ProfiniteObservations
 info: ProfiniteObservations.lean:249:0: 'KElimination.ProfiniteObservations.selected_primary_factorization' does not depend on any axioms
 info: ProfiniteObservations.lean:250:0: 'KElimination.ProfiniteObservations.point_ext' depends on axioms: [Quot.sound]
 info: ProfiniteObservations.lean:251:0: 'KElimination.ProfiniteObservations.nat_point_projection' depends on axioms: [propext]
@@ -228,7 +228,7 @@ info: ProfiniteObservations.lean:268:0: 'KElimination.ProfiniteObservations.comb
 info: ProfiniteObservations.lean:269:0: 'KElimination.ProfiniteObservations.combined_target_recoverable_iff' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [14/28] Replayed CoefficientObservations
+ℹ [14/29] Replayed CoefficientObservations
 info: CoefficientObservations.lean:62:0: 'KElimination.CoefficientObservations.coefficientCylinder_observable' does not depend on any axioms
 info: CoefficientObservations.lean:63:0: 'KElimination.CoefficientObservations.coefficientCylinder_refinement' depends on axioms: [propext, Quot.sound]
 info: CoefficientObservations.lean:64:0: 'KElimination.CoefficientObservations.finite_root_evaluation_from_reduced_winding' depends on axioms: [propext,
@@ -237,7 +237,7 @@ info: CoefficientObservations.lean:64:0: 'KElimination.CoefficientObservations.f
 info: CoefficientObservations.lean:65:0: 'KElimination.CoefficientObservations.finite_root_evaluation_from_coupled_anchors' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [15/28] Replayed MockTheta
+ℹ [15/29] Replayed MockTheta
 info: MockTheta.lean:269:0: 'KElimination.MockTheta.squareSum_stable' depends on axioms: [propext, Quot.sound]
 info: MockTheta.lean:270:0: 'KElimination.MockTheta.divideBinomial_at_or_above' depends on axioms: [propext, Quot.sound]
 info: MockTheta.lean:271:0: 'KElimination.MockTheta.divideBinomial_below' depends on axioms: [propext, Quot.sound]
@@ -264,7 +264,7 @@ info: MockTheta.lean:289:0: 'KElimination.MockTheta.mockCylinder_observable' dep
 info: MockTheta.lean:290:0: 'KElimination.MockTheta.mockWeightedCylinder_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockTheta.lean:291:0: 'KElimination.MockTheta.mockTheta_from_reduced_winding' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockTheta.lean:292:0: 'KElimination.MockTheta.mockTheta_from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [16/28] Replayed MockThetaPhi
+ℹ [16/29] Replayed MockThetaPhi
 info: MockThetaPhi.lean:127:0: 'KElimination.MockThetaPhi.phiDenominatorAction_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaPhi.lean:128:0: 'KElimination.MockThetaPhi.phiDenominatorAction_injective' depends on axioms: [propext, Quot.sound]
 info: MockThetaPhi.lean:129:0: 'KElimination.MockThetaPhi.inverseEvenPochhammer_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -276,7 +276,7 @@ info: MockThetaPhi.lean:134:0: 'KElimination.MockThetaPhi.phiCylinder_refinement
 info: MockThetaPhi.lean:135:0: 'KElimination.MockThetaPhi.phiWeightedPacket_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaPhi.lean:136:0: 'KElimination.MockThetaPhi.phi_finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaPhi.lean:137:0: 'KElimination.MockThetaPhi.phi_from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [17/28] Replayed MockThetaPsi
+ℹ [17/29] Replayed MockThetaPsi
 info: MockThetaPsi.lean:141:0: 'KElimination.MockThetaPsi.psiDenominatorAction_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaPsi.lean:142:0: 'KElimination.MockThetaPsi.psiDenominatorAction_injective' depends on axioms: [propext, Quot.sound]
 info: MockThetaPsi.lean:143:0: 'KElimination.MockThetaPsi.inverseOddPochhammer_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -291,7 +291,7 @@ info: MockThetaPsi.lean:151:0: 'KElimination.MockThetaPsi.psiCylinder_refinement
 info: MockThetaPsi.lean:152:0: 'KElimination.MockThetaPsi.psiWeightedPacket_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaPsi.lean:153:0: 'KElimination.MockThetaPsi.psi_finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaPsi.lean:154:0: 'KElimination.MockThetaPsi.psi_from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [18/28] Replayed MockThetaChi
+ℹ [18/29] Replayed MockThetaChi
 info: MockThetaChi.lean:160:0: 'KElimination.MockThetaChi.trinomial_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaChi.lean:161:0: 'KElimination.MockThetaChi.mulTrinomial_divideTrinomial' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaChi.lean:162:0: 'KElimination.MockThetaChi.mulTrinomial_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -306,7 +306,7 @@ info: MockThetaChi.lean:170:0: 'KElimination.MockThetaChi.chiCylinder_refinement
 info: MockThetaChi.lean:171:0: 'KElimination.MockThetaChi.chiWeightedPacket_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaChi.lean:172:0: 'KElimination.MockThetaChi.chi_finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaChi.lean:173:0: 'KElimination.MockThetaChi.chi_from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [19/28] Replayed FifthOrderSeries
+ℹ [19/29] Replayed FifthOrderSeries
 info: FifthOrderSeries.lean:92:0: 'KElimination.FifthOrderSeries.mulProduct_reciprocalProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: FifthOrderSeries.lean:93:0: 'KElimination.FifthOrderSeries.mulProduct_injective' depends on axioms: [propext, Quot.sound]
 info: FifthOrderSeries.lean:94:0: 'KElimination.FifthOrderSeries.reciprocalProduct_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -314,7 +314,7 @@ info: FifthOrderSeries.lean:95:0: 'KElimination.FifthOrderSeries.mulProduct_eq_o
 info: FifthOrderSeries.lean:96:0: 'KElimination.FifthOrderSeries.triangular_mono' depends on axioms: [propext]
 info: FifthOrderSeries.lean:97:0: 'KElimination.FifthOrderSeries.le_triangular' depends on axioms: [propext, Quot.sound]
 info: FifthOrderSeries.lean:98:0: 'KElimination.FifthOrderSeries.shiftedCoeff_stable' depends on axioms: [propext, Quot.sound]
-ℹ [20/28] Replayed MockThetaFifthZero
+ℹ [20/29] Replayed MockThetaFifthZero
 info: MockThetaFifthZero.lean:143:0: 'KElimination.MockThetaFifthZero.exponent_mono' depends on axioms: [propext]
 info: MockThetaFifthZero.lean:144:0: 'KElimination.MockThetaFifthZero.le_exponent' depends on axioms: [propext, Quot.sound]
 info: MockThetaFifthZero.lean:145:0: 'KElimination.MockThetaFifthZero.f_denominator_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -328,7 +328,7 @@ info: MockThetaFifthZero.lean:152:0: 'KElimination.MockThetaFifthZero.cylinder_r
 info: MockThetaFifthZero.lean:153:0: 'KElimination.MockThetaFifthZero.weightedPacket_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaFifthZero.lean:154:0: 'KElimination.MockThetaFifthZero.finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaFifthZero.lean:155:0: 'KElimination.MockThetaFifthZero.from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [21/28] Replayed MockThetaFifthOne
+ℹ [21/29] Replayed MockThetaFifthOne
 info: MockThetaFifthOne.lean:160:0: 'KElimination.MockThetaFifthOne.exponent_mono' depends on axioms: [propext]
 info: MockThetaFifthOne.lean:161:0: 'KElimination.MockThetaFifthOne.le_exponent' depends on axioms: [propext, Quot.sound]
 info: MockThetaFifthOne.lean:162:0: 'KElimination.MockThetaFifthOne.f_denominator_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -344,7 +344,7 @@ info: MockThetaFifthOne.lean:171:0: 'KElimination.MockThetaFifthOne.cylinder_ref
 info: MockThetaFifthOne.lean:172:0: 'KElimination.MockThetaFifthOne.weightedPacket_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaFifthOne.lean:173:0: 'KElimination.MockThetaFifthOne.finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaFifthOne.lean:174:0: 'KElimination.MockThetaFifthOne.from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [22/28] Replayed MockThetaSeventh
+ℹ [22/29] Replayed MockThetaSeventh
 info: MockThetaSeventh.lean:166:0: 'KElimination.MockThetaSeventh.exponent_mono' does not depend on any axioms
 info: MockThetaSeventh.lean:167:0: 'KElimination.MockThetaSeventh.le_exponent' depends on axioms: [propext]
 info: MockThetaSeventh.lean:168:0: 'KElimination.MockThetaSeventh.denominator_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -362,7 +362,7 @@ info: MockThetaSeventh.lean:179:0: 'KElimination.MockThetaSeventh.cylinder_refin
 info: MockThetaSeventh.lean:180:0: 'KElimination.MockThetaSeventh.weightedPacket_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaSeventh.lean:181:0: 'KElimination.MockThetaSeventh.finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: MockThetaSeventh.lean:182:0: 'KElimination.MockThetaSeventh.from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [23/28] Replayed PartitionCrank11
+ℹ [23/29] Replayed PartitionCrank11
 info: PartitionCrank11.lean:124:0: 'KElimination.PartitionCrank11.mem_partitionsAtMost' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: PartitionCrank11.lean:125:0: 'KElimination.PartitionCrank11.mem_partitions' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: PartitionCrank11.lean:126:0: 'KElimination.PartitionCrank11.nodup_partitionsAtMost' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -374,7 +374,7 @@ info: PartitionCrank11.lean:131:0: 'KElimination.PartitionCrank11.rank_histogram
 info: PartitionCrank11.lean:132:0: 'KElimination.PartitionCrank11.crank_histogram_six' depends on axioms: [propext, Quot.sound]
 info: PartitionCrank11.lean:133:0: 'KElimination.PartitionCrank11.crank_six_uniform' depends on axioms: [propext, Quot.sound]
 info: PartitionCrank11.lean:134:0: 'KElimination.PartitionCrank11.rank_six_not_uniform' depends on axioms: [propext, Quot.sound]
-ℹ [24/28] Replayed CrankShadow11
+ℹ [24/29] Replayed CrankShadow11
 info: CrankShadow11.lean:88:0: 'KElimination.CrankShadow11.statClass_lt' depends on axioms: [propext, Quot.sound]
 info: CrankShadow11.lean:89:0: 'KElimination.CrankShadow11.direct_statistic_coordinate' depends on axioms: [propext, Quot.sound]
 info: CrankShadow11.lean:90:0: 'KElimination.CrankShadow11.s6_statistic_coordinate' depends on axioms: [propext, Quot.sound]
@@ -384,7 +384,7 @@ info: CrankShadow11.lean:93:0: 'KElimination.CrankShadow11.s8_increment_statClas
 info: CrankShadow11.lean:94:0: 'KElimination.CrankShadow11.s8_quotient_readout' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: CrankShadow11.lean:95:0: 'KElimination.CrankShadow11.s8_quotient_window' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: CrankShadow11.lean:96:0: 'KElimination.CrankShadow11.s8_joint_period' depends on axioms: [propext, Quot.sound]
-ℹ [26/28] Built CrankCharacter11 (1.3s)
+ℹ [25/29] Replayed CrankCharacter11
 info: CrankCharacter11.lean:181:0: 'KElimination.CrankCharacter11.histPair_eq_samplePair' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: CrankCharacter11.lean:182:0: 'KElimination.CrankCharacter11.reduced_zero_iff_uniform' depends on axioms: [propext, Quot.sound]
 info: CrankCharacter11.lean:183:0: 'KElimination.CrankCharacter11.histPair_reduced' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -395,5 +395,28 @@ info: CrankCharacter11.lean:187:0: 'KElimination.CrankCharacter11.s8_crank_pairi
 info: CrankCharacter11.lean:188:0: 'KElimination.CrankCharacter11.crank_six_vanishes' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: CrankCharacter11.lean:189:0: 'KElimination.CrankCharacter11.rank_six_reduced_witness' depends on axioms: [propext, Quot.sound]
 info: CrankCharacter11.lean:190:0: 'KElimination.CrankCharacter11.seventh_crank_from_s8' depends on axioms: [propext, Classical.choice, Quot.sound]
-✔ [27/28] Built UniversalKElimination (307ms)
-Build completed successfully (28 jobs).
+ℹ [27/29] Built MockThetaShadow (2.6s)
+info: MockThetaShadow.lean:256:0: 'KElimination.MockThetaShadow.holomorphicCoeff_at_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MockThetaShadow.lean:257:0: 'KElimination.MockThetaShadow.exponent_range_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MockThetaShadow.lean:258:0: 'KElimination.MockThetaShadow.holomorphicCoeff_off_lattice' depends on axioms: [propext, Quot.sound]
+info: MockThetaShadow.lean:259:0: 'KElimination.MockThetaShadow.laurentPower_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MockThetaShadow.lean:260:0: 'KElimination.MockThetaShadow.normalizedTrunc_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MockThetaShadow.lean:261:0: 'KElimination.MockThetaShadow.shadowSign_period' depends on axioms: [propext]
+info: MockThetaShadow.lean:262:0: 'KElimination.MockThetaShadow.shadowWeight_natAbs_le' depends on axioms: [propext]
+info: MockThetaShadow.lean:263:0: 'KElimination.MockThetaShadow.shadowWeight_ne_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MockThetaShadow.lean:264:0: 'KElimination.MockThetaShadow.shadowWeight_signed_lattice' depends on axioms: [propext, Quot.sound]
+info: MockThetaShadow.lean:265:0: 'KElimination.MockThetaShadow.shadowWeight_lattice_of_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: MockThetaShadow.lean:266:0: 'KElimination.MockThetaShadow.shadowCoeff_stable' depends on axioms: [propext, Quot.sound]
+info: MockThetaShadow.lean:267:0: 'KElimination.MockThetaShadow.shadowCoeff_square' depends on axioms: [propext, Quot.sound]
+info: MockThetaShadow.lean:268:0: 'KElimination.MockThetaShadow.shadowCoeff_ne_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MockThetaShadow.lean:269:0: 'KElimination.MockThetaShadow.shadowCoeff_mod_24' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MockThetaShadow.lean:270:0: 'KElimination.MockThetaShadow.eleven_dvd_shadowCoeff_square_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: MockThetaShadow.lean:271:0: 'KElimination.MockThetaShadow.shadowCoeff_bin_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MockThetaShadow.lean:272:0: 'KElimination.MockThetaShadow.shadowCoeff_sector_support_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MockThetaShadow.lean:273:0: 'KElimination.MockThetaShadow.shadowTrunc_eq_magnitude_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [28/29] Built UniversalKElimination (538ms)
+Build completed successfully (29 jobs).

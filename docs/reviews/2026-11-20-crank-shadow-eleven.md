@@ -116,5 +116,9 @@ The all-degree identity is a literature result.
 The new suite passed **247 exact assertions**. It includes 43 rank-parity
 and boundary checks, 88 crank-bin counts, 57 finite Fourier checks, 45 signed
 S6 and S8 observation checks and controls, and 14 size-weighted checks.
-[Crank execution log](../../evidence/current/profinite-mock-theta/crank-shadow-smoke.log)
-· [Source and compiler receipt](../../evidence/current/profinite-mock-theta/execution.json)
+[Crank execution log](https://github.com/Skyelabz210/Theory-of-the-One/blob/d8d55d9aed97ff5c1919d6d5cf3e0f11bc1cac39/evidence/current/profinite-mock-theta/crank-shadow-smoke.log)
+· [Source and compiler receipt](https://github.com/Skyelabz210/Theory-of-the-One/blob/d8d55d9aed97ff5c1919d6d5cf3e0f11bc1cac39/evidence/current/profinite-mock-theta/execution.json)
+
+For the third-order $f$, the completed analytic function has a separate
+mod-11 projection by Fourier degree. Its differential shadow has an explicit
+unary theta series. [Normalization, projection, and operator](2026-11-20-third-order-analytic-shadow.md)
