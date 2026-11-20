@@ -4,9 +4,9 @@
   "lean": "Lean (version 4.27.0-rc1, x86_64-unknown-linux-gnu, commit 2fcce7258eeb6e324366bc25f9058293b04b7547, Release)",
   "lake": "Lake version 5.0.0-src+2fcce72 (Lean version 4.27.0-rc1)",
   "source_sha256": {
-    "AnalyticAudit.lean": "8382f61bb2d2c2f45fa48b6700802ecdc93b704bdc2b333065642d903af775bf",
+    "AnalyticAudit.lean": "60c414312aeb7de14cac35a8ee7fba5fb3d6ec4d3082de4ee198bc62d45017ba",
     "BoundaryObservation34.lean": "73318ea3eb934774e0161e6110befe6ab3b8794ca33045eda40291c324d521c6",
-    "BoundaryValues34.lean": "c6785f766b25b1dc9ef667e542ce4fec9cc4eaa957c165ee9ff3498efe76bde2",
+    "BoundaryValues34.lean": "ddf83f243f814663b5f2a53d44e03c42dea78aff942048b5400bc8c9789d669c",
     "CoefficientEvaluation.lean": "b2c60c60d2341f0477d6433cd1aae12627e5dcdad856d2ad232298f7572b410b",
     "EichlerBoundaryValues.lean": "bc4b95ffab3c1134f58183b7412d8b521b03c509b60d04ecf0e24ee594d360fd",
     "EichlerBridge.lean": "96623d544ffb8318d147170db48e21bf955a071bcc8864ae89163d85b8a87d5e",
@@ -22,7 +22,17 @@
     "FKTYPeriodRegularity.lean": "0cffbd30ddca9e89aa80f22a987231ebc3fa62df24078c9095f033f36e2dcd83",
     "FKTYTheta.lean": "e23fd95ab728c9be45d1f3763df810f6e48529f786a05adcd3fb7bd4fb86b912",
     "FKTYThetaTransform.lean": "fee7d6ec541f9ddd3f1bf999103d9f7af9e6f692b22a19c8bf53b6fada022dd4",
+    "FORCyclotomicBlock.lean": "5b3a3df8d09f5d2d8700f37d29b18d972c8717daa9856134ae4c657f000c1260",
+    "FORGaussFinite.lean": "bdbe1da7325240696368cd523a738c82568d6964b5a4a7f52e0d87a0bba286dc",
+    "FORGaussLimit.lean": "43668db5ed571c5ebed8a132902980a8436eaed3e684d3771b3fab57c493e5ee",
+    "FOROrder34.lean": "d304d19d9398392b2f78ea450626b2673b84ccc705d7f59293b736b6262ba675",
+    "FORPhiProduct.lean": "d04f70be22a6e2fdcb50398f5e2265d2f90ec5293843916534b7ca14c43f57e0",
+    "FORPhiRadial.lean": "268b0e49817cd1456548113b46b37691ed7f081c80a5c76bb39a5f391097711e",
+    "FORRadialIdentity.lean": "04051ce5dd23d110ad85d132515c46222bdecfb09dd2b80c312eab373a87ecbe",
+    "FORRadialProducts.lean": "e8a1dbf50740c22f7f6dde9bc24cae14ec4eca04ae0676dd065c0b32ef026081",
+    "FORRankProduct.lean": "b3212176e4969da5109e0160e3562a10e9367c18e5ebdc92681bf0b79a3086aa",
     "FifthSeventhHolomorphic.lean": "b5b5ece3dd30833c6cc0441dccf70954d4105b7a0f4eef6b730bfc3e6d42df45",
+    "FineRank.lean": "532ab7148c6f6b84944bce2b43ab4558258de453bcb86313f31cef0a7af38e7e",
     "GaussianPairIntegrable.lean": "73959cf672fde111eaa102f1638a1b4b5146df4feb8d6b359a580910a3dd073b",
     "MockCompletion.lean": "337afd2b887661b0e1f90bcc3b900af9d3413f0106d2468d92e301a26fea4cea",
     "MockHolomorphic.lean": "b6f120d3a73965f812d620eda25fa33795d705fd0e60cf1edd3fb6a9df511589",
@@ -43,7 +53,7 @@
     "ThirdOrderRows.lean": "e4ab038de9d557b04d214e03034716ca66cb245bf5a5004a9c71f0100a93a339",
     "ThirdOrderTaylor.lean": "5aecf2287b8754df83ec5558f63b9de7b39aaa400affe08ce0ca2d2cc9f32466",
     "lake-manifest.json": "8d378ae8a3b5ddea4958ac94aed50eb575998f8e083c8d04aed4c52b0e5ce765",
-    "lakefile.toml": "30bdeef5195b2de4964021f0808762bd44172fc2eb50440ed168d53c02d661e1",
+    "lakefile.toml": "4f3ba06b61a4d49e3b402cac075d8918d3b1b729d68a4640f3b7b6df8d376b14",
     "lean-toolchain": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
     "verify_analytic.py": "bde7abd4e67bc96e97699f70d2df11e2ce6ac2e14fe050db5234896f19e501a3"
   },
@@ -129,8 +139,8 @@
       "declarations": 22
     },
     "BoundaryValues34": {
-      "theorems": 59,
-      "declarations": 74
+      "theorems": 73,
+      "declarations": 91
     },
     "FKTYTheta": {
       "theorems": 42,
@@ -221,6 +231,46 @@
       "declarations": 4
     },
     "Order34QuantumPackets": {
+      "theorems": 3,
+      "declarations": 3
+    },
+    "FORRadialProducts": {
+      "theorems": 14,
+      "declarations": 16
+    },
+    "FORCyclotomicBlock": {
+      "theorems": 3,
+      "declarations": 3
+    },
+    "FORPhiRadial": {
+      "theorems": 15,
+      "declarations": 17
+    },
+    "FineRank": {
+      "theorems": 32,
+      "declarations": 36
+    },
+    "FORGaussFinite": {
+      "theorems": 49,
+      "declarations": 56
+    },
+    "FORRadialIdentity": {
+      "theorems": 22,
+      "declarations": 29
+    },
+    "FORPhiProduct": {
+      "theorems": 14,
+      "declarations": 14
+    },
+    "FORRankProduct": {
+      "theorems": 16,
+      "declarations": 16
+    },
+    "FORGaussLimit": {
+      "theorems": 16,
+      "declarations": 16
+    },
+    "FOROrder34": {
       "theorems": 3,
       "declarations": 3
     }
@@ -1157,6 +1207,15 @@
         "Quot.sound",
         "propext"
       ],
+      "MockThetaAnalytic.watsonPhi_head34": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPhi_head34._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
       "_private.BoundaryValues34.0.MockThetaAnalytic.addVec.eq_1": [
         "propext"
       ],
@@ -1329,6 +1388,49 @@
       "_private.BoundaryValues34.0.MockThetaAnalytic.val_shift": [
         "Classical.choice",
         "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonAdvance.eq_1": [
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonDen.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates.eq_1": [
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._simp_1_10": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._simp_1_11": [
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._simp_1_5": [
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._simp_1_6": [
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._simp_1_7": [
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._simp_1_8": [
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._simp_1_9": [
         "propext"
       ]
     },
@@ -3348,6 +3450,829 @@
         "propext"
       ],
       "MockThetaAnalytic.normalizedPacketDefect_eq_period_unconditional": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORRadialProducts": {
+      "MockThetaAnalytic.exists_radialPlus_interval_bounds": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.exists_radialPlus_prefix_bounds": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.exists_radialPlus_shift_lower": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.hasProd_radialB": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.hasProd_radialPochhammers": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialB_eq_pochhammers": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialB_ne_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialEulerProduct.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialEuler_mul_plus": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPochhammers_ne_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialProducts.0.MockThetaAnalytic.plusFactor_ne_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialProducts.0.MockThetaAnalytic.radialB_product_quotient": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialProducts.0.MockThetaAnalytic.radial_pow_norm_lt_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialProducts.0.MockThetaAnalytic.summable_norm_radial_pow": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORCyclotomicBlock": {
+      "MockThetaAnalytic.order34_even_block": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.order34_even_block._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORCyclotomicBlock.0.MockThetaAnalytic.prod_one_add_pow": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORPhiRadial": {
+      "MockThetaAnalytic.norm_watsonPhiTerm_radial_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.norm_watsonPhiTerm_radial_le._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.summable_norm_watsonPhiTerm": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPhiTerm.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPhiTerm_add_seventeen": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPhiTerm_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPhi_eq_two_mul_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPhi_radial_limit": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Nat.divModEquiv.congr_simp": [
+        "propext"
+      ],
+      "_private.FORPhiRadial.0.MockThetaAnalytic.radialFactor_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPhiRadial.0.MockThetaAnalytic.radialFactor_le._simp_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPhiRadial.0.MockThetaAnalytic.watsonEvenFactor_ne_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPhiRadial.0.MockThetaAnalytic.watsonPhiTerm_continuousAt": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPhiRadial.0.MockThetaAnalytic.watsonPhiTerm_geometric": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPhiRadial.0.MockThetaAnalytic.watsonPhiTerm_geometric._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FineRank": {
+      "MockThetaAnalytic.radialF_eq_two_sub_fine": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.summable_rankFine": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineDen.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineDen_head": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineDen_head._simp_1_2": [],
+      "_private.FineRank.0.MockThetaAnalytic.fineDen_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineRem.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineSum.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineSum_recurrence": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineSum_recurrence._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineSum_recurrence._simp_1_10": [
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineSum_recurrence._simp_1_4": [
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineSum_recurrence._simp_1_5": [
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineSum_recurrence._simp_1_6": [
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineSum_recurrence._simp_1_7": [
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineSum_recurrence._simp_1_8": [
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineSum_recurrence._simp_1_9": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineSum_shift": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineSum_sub_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineTerm.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.fineTerm_summable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.norm_fineSum_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.radialF_fine_of_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.rem_step": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.rem_step._simp_1_2": [
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.rem_step._simp_1_3": [
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.rem_step._simp_1_4": [
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.rem_step._simp_1_5": [
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.rem_step._simp_1_6": [
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.rem_step._simp_1_7": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.rem_step._simp_1_8": [
+        "propext"
+      ],
+      "_private.FineRank.0.MockThetaAnalytic.rem_tendsto_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORGaussFinite": {
+      "MockThetaAnalytic.gaussEuler.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.gaussEuler_ne_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.gaussWeight.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.gauss_finite": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.gauss_finite._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.gauss_finite._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.binTerm.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_diag": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._proof_1_6": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._proof_1_7": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._proof_1_8": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._simp_1_10": [
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._simp_1_11": [
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._simp_1_12": [
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._simp_1_13": [
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._simp_1_14": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._simp_1_15": [
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_next._simp_1_9": [
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.chooseQ_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.coeff.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.coeff_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.euler_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.gaussian_expansion": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scale.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_coeff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_coeff_high": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_coeff_high._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_coeff_high._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_coeff_high._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_coeff_low": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_coeff_low._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_coeff_low._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_coeff_low._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_negative_factors": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_negative_factors._simp_1_2": [
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_negative_factors._simp_1_3": [
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_negative_factors._simp_1_4": [
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_negative_factors._simp_1_5": [
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_negative_factors._simp_1_6": [
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_negative_factors._simp_1_7": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_negative_factors._simp_1_8": [
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_product": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussFinite.0.MockThetaAnalytic.scaled_product._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORRadialIdentity": {
+      "MockThetaAnalytic.watsonA_hasSum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonEvenTail_hasProd": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonOddTail_hasProd": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonThetaHalf_hasSum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_least_part_split": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_weighted_phi_eq_theta_add_leastOdd": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.oddChoice.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.oddChoice_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.oddChoice_bound._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.progressionTail.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.progression_factor_ne": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.progression_factor_ne._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.progression_norm_summable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.progression_norm_summable._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.progression_split": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.summable_watsonA": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.tailSquare.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.tailSquare_sub": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.tailSquare_sub._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.tailSquare_sub._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.tail_bounds": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.tendsto_progressionTail": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORPhiProduct": {
+      "MockThetaAnalytic.radialPlus_mul_watsonPhi": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_3": [
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_4": [
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_5": [
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_6": [
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_7": [
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_8": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_9": [
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPhi.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPhiProduct.0.MockThetaAnalytic.evenPrefix_ne_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPhiProduct.0.MockThetaAnalytic.evenPrefix_ne_zero._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPhiProduct.0.MockThetaAnalytic.radialPlus_eq_odd_mul_even": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPhiProduct.0.MockThetaAnalytic.watsonEvenTail_split": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORRankProduct": {
+      "MockThetaAnalytic.radialPlusProduct.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_radialF": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonA.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRankProduct.0.MockThetaAnalytic.rank_odd_parts_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRankProduct.0.MockThetaAnalytic.rank_odd_parts_sum._proof_1_10": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRankProduct.0.MockThetaAnalytic.rank_odd_parts_sum._proof_1_9": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRankProduct.0.MockThetaAnalytic.rank_odd_parts_sum._simp_1_2": [
+        "propext"
+      ],
+      "_private.FORRankProduct.0.MockThetaAnalytic.rank_odd_parts_sum._simp_1_3": [
+        "propext"
+      ],
+      "_private.FORRankProduct.0.MockThetaAnalytic.rank_odd_parts_sum._simp_1_4": [
+        "propext"
+      ],
+      "_private.FORRankProduct.0.MockThetaAnalytic.rank_odd_parts_sum._simp_1_5": [
+        "propext"
+      ],
+      "_private.FORRankProduct.0.MockThetaAnalytic.rank_odd_parts_sum._simp_1_6": [
+        "propext"
+      ],
+      "_private.FORRankProduct.0.MockThetaAnalytic.rank_odd_parts_sum._simp_1_7": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRankProduct.0.MockThetaAnalytic.rank_odd_parts_sum._simp_1_8": [
+        "propext"
+      ],
+      "_private.FORRankProduct.0.MockThetaAnalytic.watsonOddTerm_eq_tail": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRankProduct.0.MockThetaAnalytic.watsonOddTerm_eq_tail._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRankProduct.0.MockThetaAnalytic.watsonOddTerm_eq_tail._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORGaussLimit": {
+      "MockThetaAnalytic.radialB.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlusProduct.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_radialB_eq_gauss": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_radialB_eq_gauss._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_radialB_eq_gauss._simp_1_3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_radialB_eq_thetaHalf": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussLimit.0.MockThetaAnalytic.gaussEuler_limit": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussLimit.0.MockThetaAnalytic.gaussWeight_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussLimit.0.MockThetaAnalytic.gaussWeight_limit": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussLimit.0.MockThetaAnalytic.gaussWeight_limit._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussLimit.0.MockThetaAnalytic.gauss_odd_limit": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussLimit.0.MockThetaAnalytic.gauss_odd_split": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussLimit.0.MockThetaAnalytic.gauss_odd_split._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussLimit.0.MockThetaAnalytic.gauss_odd_split._simp_1_2": [],
+      "_private.FORGaussLimit.0.MockThetaAnalytic.index_twice_limit": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORGaussLimit.0.MockThetaAnalytic.index_twice_limit._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FOROrder34": {
+      "MockThetaAnalytic.fPackets34_tendsto_order10_period_unconditional": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialF_add_radialB_tendsto_order34": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_compensated_identity": [
         "Classical.choice",
         "Quot.sound",
         "propext"

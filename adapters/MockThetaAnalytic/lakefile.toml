@@ -24,4 +24,6 @@ roots = [
   "PeriodicSmoothing", "EichlerProfile", "EichlerCuspLimit", "EichlerBoundaryValues",
   "FKTYThetaTransform", "EichlerPrimitive", "EichlerHorizontal", "EichlerTransportPath",
   "EichlerEndpointFTC", "EichlerPathLimits", "EichlerBridge", "Order34QuantumPackets",
+  "FORRadialProducts", "FORCyclotomicBlock", "FORPhiRadial", "FineRank", "FORGaussFinite",
+  "FORRadialIdentity", "FORPhiProduct", "FORRankProduct", "FORGaussLimit", "FOROrder34",
 ]

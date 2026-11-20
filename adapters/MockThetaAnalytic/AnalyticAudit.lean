@@ -26,6 +26,16 @@ import EichlerEndpointFTC
 import EichlerPathLimits
 import EichlerBridge
 import Order34QuantumPackets
+import FORRadialProducts
+import FORCyclotomicBlock
+import FORPhiRadial
+import FineRank
+import FORGaussFinite
+import FORRadialIdentity
+import FORPhiProduct
+import FORRankProduct
+import FORGaussLimit
+import FOROrder34
 import Lean.Util.CollectAxioms
 import Lean.Elab.Command
 
@@ -225,7 +235,7 @@ example (X : ℤ) (N34 N10 : ℕ) (h34 : 17 ≤ N34) (h10 : 5 ≤ N10) :
       fktyVerticalPeriod (fun u => xiHalf mockCompletion (u/24) / 2) (-1/24) (-1/34) :=
   normalizedPacketDefect_eq_period_unconditional X N34 N10 h34 h10
 
-/- FOR supplies the radial limit of f; the period transformation is proved here. -/
+/- Compatibility with the earlier packet transfer, which accepts a supplied radial limit. -/
 example (r : ℕ → ℝ) (hr : ∀ j, 0 < r j ∧ r j < 1)
     (hl : Filter.Tendsto r Filter.atTop (𝓝[<] (1 : ℝ)))
     (hb : Filter.Tendsto (fun t : ℝ => radialF ((t : ℂ) * integerNome (1/34)) +
@@ -238,6 +248,26 @@ example (r : ℕ → ℝ) (hr : ∀ j, 0 < r j ∧ r j < 1)
           ((fktyScale * integerNome (-1/240)) * boundaryValue 5 (integerNome (1/10)))) /
             (fktyScale * integerNome (-1/816)))) :=
   fPackets34_tendsto_order10_period_of_FOR r hr hl hb
+
+/- Watson's disk identity and the actual FOR boundary value at every primitive 34th root. -/
+example (q : ℂ) (hq : ‖q‖ < 1) : radialF q + radialB q = 2 * watsonPhi q :=
+  watson_compensated_identity q hq
+
+example (ζ : ℂ) (hζ : IsPrimitiveRoot ζ 34) :
+    Tendsto (fun t : ℝ => radialF ((t : ℂ)*ζ) + radialB ((t : ℂ)*ζ))
+      (𝓝[<] 1) (𝓝 (boundaryValue 17 ζ)) :=
+  radialF_add_radialB_tendsto_order34 ζ hζ
+
+/- With only the radial path supplied, the packet truncations converge to the shadow period formula. -/
+example (r : ℕ → ℝ) (hr : ∀ j, 0 < r j ∧ r j < 1)
+    (hl : Filter.Tendsto r Filter.atTop (𝓝[<] (1 : ℝ))) :
+    ∃ K : ℕ → ℕ, (∀ j, j ≤ K j) ∧ ∀ N : ℕ → ℕ, (∀ j, K j ≤ N j) →
+      Filter.Tendsto (fun j => fPacketAtRadius (N j) 510510 (r j) (integerNome (1/34)) +
+        radialB ((r j : ℂ) * integerNome (1/34))) Filter.atTop
+        (𝓝 ((fktyVerticalPeriod fktyTheta (-1/24) (-1/34) + (Real.sqrt (17/5) : ℂ) *
+          ((fktyScale * integerNome (-1/240)) * boundaryValue 5 (integerNome (1/10)))) /
+            (fktyScale * integerNome (-1/816)))) :=
+  fPackets34_tendsto_order10_period_unconditional r hr hl
 
 end
 
@@ -253,7 +283,9 @@ run_cmd do
       `ThirdOrderRows, `ThirdOrderTaylor,
       `PeriodicSmoothing, `EichlerProfile, `EichlerCuspLimit, `EichlerBoundaryValues,
       `FKTYThetaTransform, `EichlerPrimitive, `EichlerHorizontal, `EichlerTransportPath,
-      `EichlerEndpointFTC, `EichlerPathLimits, `EichlerBridge, `Order34QuantumPackets]
+      `EichlerEndpointFTC, `EichlerPathLimits, `EichlerBridge, `Order34QuantumPackets,
+      `FORRadialProducts, `FORCyclotomicBlock, `FORPhiRadial, `FineRank, `FORGaussFinite,
+      `FORRadialIdentity, `FORPhiProduct, `FORRankProduct, `FORGaussLimit, `FOROrder34]
   let mut audited := #[]
   for mod in modules do
     let some idx := env.getModuleIdx? mod | throwError "missing module {mod}"
@@ -408,6 +440,50 @@ run_cmd do
       ``MockThetaAnalytic.fkty_defect34_eq_period,
       ``MockThetaAnalytic.boundary34_from_period_and_ten_unconditional,
       ``MockThetaAnalytic.normalizedPacketDefect_eq_period_unconditional,
-      ``MockThetaAnalytic.fPackets34_tendsto_order10_period_of_FOR]
+      ``MockThetaAnalytic.fPackets34_tendsto_order10_period_of_FOR,
+      ``MockThetaAnalytic.watsonPhi_head34,
+      ``MockThetaAnalytic.radialEulerProduct,
+      ``MockThetaAnalytic.radialPlusProduct,
+      ``MockThetaAnalytic.hasProd_radialPochhammers,
+      ``MockThetaAnalytic.radialPochhammers_ne_zero,
+      ``MockThetaAnalytic.exists_radialPlus_prefix_bounds,
+      ``MockThetaAnalytic.exists_radialPlus_interval_bounds,
+      ``MockThetaAnalytic.exists_radialPlus_shift_lower,
+      ``MockThetaAnalytic.radialEuler_mul_plus,
+      ``MockThetaAnalytic.hasProd_radialB,
+      ``MockThetaAnalytic.radialB_eq_pochhammers,
+      ``MockThetaAnalytic.radialB_ne_zero,
+      ``MockThetaAnalytic.order34_even_block,
+      ``MockThetaAnalytic.watsonPhiTerm,
+      ``MockThetaAnalytic.watsonPhi,
+      ``MockThetaAnalytic.watsonPhiTerm_succ,
+      ``MockThetaAnalytic.norm_watsonPhiTerm_radial_le,
+      ``MockThetaAnalytic.watsonPhiTerm_add_seventeen,
+      ``MockThetaAnalytic.summable_norm_watsonPhiTerm,
+      ``MockThetaAnalytic.watsonPhi_eq_two_mul_sum,
+      ``MockThetaAnalytic.watsonPhi_radial_limit,
+      ``MockThetaAnalytic.summable_rankFine,
+      ``MockThetaAnalytic.radialF_eq_two_sub_fine,
+      ``MockThetaAnalytic.gaussEuler,
+      ``MockThetaAnalytic.gaussWeight,
+      ``MockThetaAnalytic.gaussEuler_ne_zero,
+      ``MockThetaAnalytic.gauss_finite,
+      ``MockThetaAnalytic.watsonOddTail,
+      ``MockThetaAnalytic.watsonEvenTail,
+      ``MockThetaAnalytic.watsonA,
+      ``MockThetaAnalytic.watsonThetaHalf,
+      ``MockThetaAnalytic.watsonOddTail_hasProd,
+      ``MockThetaAnalytic.watsonEvenTail_hasProd,
+      ``MockThetaAnalytic.watsonA_hasSum,
+      ``MockThetaAnalytic.watson_least_part_split,
+      ``MockThetaAnalytic.watsonThetaHalf_hasSum,
+      ``MockThetaAnalytic.watson_weighted_phi_eq_theta_add_leastOdd,
+      ``MockThetaAnalytic.radialPlus_mul_watsonPhi,
+      ``MockThetaAnalytic.radialPlus_mul_radialF,
+      ``MockThetaAnalytic.radialPlus_mul_radialB_eq_gauss,
+      ``MockThetaAnalytic.radialPlus_mul_radialB_eq_thetaHalf,
+      ``MockThetaAnalytic.watson_compensated_identity,
+      ``MockThetaAnalytic.radialF_add_radialB_tendsto_order34,
+      ``MockThetaAnalytic.fPackets34_tendsto_order10_period_unconditional]
   unless required.all audited.contains do throwError "required public result missing from the audit"
   logInfo m!"PASS analytic audit: {audited.size} declarations in {modules.size} modules"

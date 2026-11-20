@@ -63,7 +63,7 @@ inside the disk, FOR's compensated radial limit, a primitive $2k$th root,
 and a positive period $L$ with $2k\mid L$. The auxiliary theorem
 `exists_packet_cutoffs` obtains an error at most $1/(j+1)$ from pointwise
 convergence of each interior Taylor series. Every larger cutoff works.
-The theorem `hasSum_radialF_coefficients` now proves that Taylor identity throughout the disk. In `for_limit_from_f_packets_of_radial_law`, FOR’s radial limit is the sole remaining analytic input. [Initial cutoff transfer](../../adapters/MockThetaAnalytic/QuantumRadialLimit.lean) · [Taylor identification and strengthened transfer](../../adapters/MockThetaAnalytic/ThirdOrderTaylor.lean)
+The theorem `hasSum_radialF_coefficients` now proves that Taylor identity throughout the disk. For general even order, `for_limit_from_f_packets_of_radial_law` takes FOR’s radial limit as its analytic input. At order 34, Lean proves that input for every primitive root and composes it with the packet theorem at $e^{2\pi i/34}$. [Order-34 radial proof](../../adapters/MockThetaAnalytic/FOROrder34.lean) [Initial cutoff transfer](../../adapters/MockThetaAnalytic/QuantumRadialLimit.lean) · [Taylor identification and strengthened transfer](../../adapters/MockThetaAnalytic/ThirdOrderTaylor.lean)
 
 This proof uses the interior absolute tail at each chosen radius. A fixed
 truncation has a finite polynomial value at $\zeta$ while $b(t\zeta)$ can
@@ -103,7 +103,7 @@ $(-\zeta;\zeta)_n^2$ at the supplied root and applies the finite character
 transform to the remaining exponent $n+1$. Once $\zeta^k=-1$ and $k>0$,
 the tail vanishes identically. An admitted target of order $2k$ supplies
 $2k\mid L$ at the coupled-anchor period. The identity identifying this
-finite expression as the radial limit is FOR's theorem.
+finite expression as the radial limit is FOR's theorem. The order-34 case also has a Lean proof from Watson’s disk identity.
 [Finite product, termination, and period proofs](../../formal/universal/QuantumRadial.lean)
 
 ## The rank and crank at the shadow prime 11
@@ -269,8 +269,8 @@ slash action and a proof of regularity for its defect.
 | All 17 mock theta coefficient families | Lean coefficient, packet, refinement and finite root theorems |
 | Mod-11 crank of a partition | Lean proves S6 projection, S8 recovery under an authentic affine transition, and the independent seventh-order size-weighted finite crank pairing |
 | Third-order $f$ and its normalized shadow | Mathlib proves the full Fourier-completion derivative $4\Theta$, the sign reversal of its degree projection, and the exact vanishing sectors. Zwegers supplies the modular transformation law |
-| FOR's even-order boundary sum | Lean finite product and tail termination. FOR Theorem 1.1 identifies the compensated radial limit |
-| Approaching the boundary by coefficient packets | Lean proves the Taylor identity in the open disk and the cutoff transfer for actual packets given FOR’s radial limit |
+| FOR's even-order boundary sum | Lean finite product and tail termination. FOR Theorem 1.1 identifies the compensated radial limit at general even order. Lean proves the limit at every primitive 34th root |
+| Approaching the boundary by coefficient packets | Lean proves the Taylor identity in the open disk and the cutoff transfer given a radial limit. The positive-angle order-34 packet theorem discharges that premise |
 | Rank/crank limit at the eleventh root | FOR Theorem 1.2 with the statistic character and cusp specified separately |
 | $U(1;q)$ at a root | Mathlib proves the terminating sum, the normalized translation law and the prime-11 polynomial. BOPR supplies inversion and analytic regularity, with independent three-cusp numerical checks |
 | Other modular transformations on rational cusps | Zagier's Example 1 and FOR's Theorem 1.3 include their domains, weights and regularity statements |

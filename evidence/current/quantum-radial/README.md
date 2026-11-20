@@ -44,6 +44,8 @@ identity from the two cusp limits and the theta transformation.
 · [Period computation](../../../tools/check_quantum_transport34.py)
 · [Numerical receipt](transport34.json)
 
+At $\zeta=e^{2\pi i/34}$, independent evaluations of the defining $f$, the product $b$ and the third-order $\phi(-q)$ check the disk cancellation. For radii $0.999$, $0.9998$, $0.99995$ and $0.99999$, the distances of $f+b$ to the finite boundary are approximately $2.50$, $0.755$, $0.214$ and $0.0445$. At the last radius the opposite compensation sign gives a distance of $1.71\times10^{64}$. The receipt records both precisions and the separate truncation bounds. [Watson calculation](../../../tools/check_watson_radial34.py) · [Numerical receipt](watson34.json) · [Lean radial theorem](../../../adapters/MockThetaAnalytic/FOROrder34.lean)
+
 From the repository root, reproduce the finite proofs and exact checks with
 the pinned Lean toolchain. Reproduce the numerical run with Python and
 `mpmath==1.3.0`.
@@ -52,7 +54,8 @@ the pinned Lean toolchain. Reproduce the numerical run with Python and
 python3 tools/verify_profinite_mock_theta.py --lean lean
 python3 tools/check_quantum_radial.py --dps 340 --receipt evidence/current/quantum-radial/numerical.json
 python3 tools/check_quantum_transport34.py --receipt evidence/current/quantum-radial/transport34.json
+python3 tools/check_watson_radial34.py --receipt evidence/current/quantum-radial/watson34.json
 ```
 
-The Mathlib adapter proves the interior Taylor identification for the signed coefficients of $f$. Its diagonal cutoff theorem for finite packets at any primitive even root uses FOR’s compensated radial limit as its analytic hypothesis. [Taylor identity and radial transfer](../../../adapters/MockThetaAnalytic/ThirdOrderTaylor.lean)
+The Mathlib adapter proves the interior Taylor identification for the signed coefficients of $f$. Its diagonal cutoff theorem for finite packets at any primitive even root uses FOR’s compensated radial limit as its analytic hypothesis. At order 34 the analytic package proves that limit. [Order-34 packet theorem](../../../adapters/MockThetaAnalytic/FOROrder34.lean) · [Taylor identity and radial transfer](../../../adapters/MockThetaAnalytic/ThirdOrderTaylor.lean)
 · [Kernel audit](../../../adapters/MockThetaAnalytic/verification.json)

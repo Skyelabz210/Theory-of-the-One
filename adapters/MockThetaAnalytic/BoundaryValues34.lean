@@ -241,6 +241,77 @@ theorem boundaryValue_cyclotomic34 (q : ℂ) (h : IsPrimitiveRoot q 34) :
   apply mul_right_cancel₀ (add_one_ne_zero (by decide) h)
   linear_combination 8 * hq
 
+/- The product of the even factors clears all the denominators in the
+order-34 Watson head. In the second component, Wₙ is Dₙ times the sum of
+the first n terms. Thus Wₙ₊₁ = (Wₙ + (−q)^(n²)) (1 + q^(2n+2)). -/
+private def watsonAdvance (k n : ℕ) (v : Coeff k × Coeff k) : Coeff k × Coeff k :=
+  let monomial := shiftVec (constantVec k ((-1)^(n^2))) (n^2 % (2*k))
+  (factorVec (2*n+2) v.1, factorVec (2*n+2) (addVec v.2 monomial))
+
+private def watsonStates (k N : ℕ) : Coeff k × Coeff k :=
+  Nat.rec (constantVec k 1, constantVec k 0) (watsonAdvance k) N
+
+private def watsonDen (q : ℂ) (n : ℕ) : ℂ := ∏ j ∈ Finset.range n, (1+q^(2*j+2))
+
+private theorem watsonStates_correct (q : ℂ) (hq : q^17 = -1) (n : ℕ) :
+    val q (watsonStates 17 n).1 = watsonDen q n ∧
+    val q (watsonStates 17 n).2 = watsonDen q n *
+      ∑ j ∈ Finset.range n, (-q)^(j^2) / watsonDen q j := by
+  have h34 : q^34 = 1 := by
+    rw [show 34 = 17*2 by decide, pow_mul, hq]
+    norm_num
+  have even_factor (i : ℕ) : 1+q^(2*i+2) ≠ 0 := by
+    intro hz
+    have he : q^(2*i+2) = -1 := by linear_combination hz
+    have h : (q^(2*i+2))^17 = (-1 : ℂ)^17 := congrArg (·^(17:ℕ)) he
+    rw [← pow_mul, show (2*i+2)*17=34*(i+1) by omega, pow_mul, h34] at h
+    norm_num at h
+  have hd (j : ℕ) : watsonDen q j ≠ 0 :=
+    Finset.prod_ne_zero_iff.mpr fun i _ => even_factor i
+  induction n with
+  | zero =>
+    simp [watsonStates, val_constant q 17 (by decide), watsonDen]
+  | succ n ih =>
+    change val q (watsonAdvance 17 n (watsonStates 17 n)).1 = _ ∧
+      val q (watsonAdvance 17 n (watsonStates 17 n)).2 = _
+    have hp : q^(n^2 % 34) = q^(n^2) := by
+      conv_rhs => rw [← Nat.mod_add_div (n^2) 34, pow_add, pow_mul, h34, one_pow, mul_one]
+    have den : watsonDen q (n+1) = watsonDen q n * (1+q^(2*n+2)) := Finset.prod_range_succ _ _
+    simp only [watsonAdvance, val_factor q (by decide) hq, val_add, val_shift q (by decide) hq,
+      val_constant q 17 (by decide), ih.1, ih.2, den, Finset.sum_range_succ]
+    refine ⟨True.intro, ?_⟩
+    change (_ + q^(n^2 % 34) * _) * _ = _
+    rw [hp]
+    push_cast
+    rw [← neg_one_mul q, mul_pow]
+    field_simp [hd n]
+
+set_option maxHeartbeats 700000 in
+/-- At a primitive order-34 root, the first 17 terms of the denominator
+expansion of φ(−q), multiplied by four, give the exact FOR boundary value. -/
+theorem watsonPhi_head34 (q : ℂ) (h : IsPrimitiveRoot q 34) :
+    4 * (∑ n ∈ Finset.range 17, (-q)^(n^2) /
+      ∏ j ∈ Finset.range n, (1+q^(2*j+2))) = boundaryValue 17 q := by
+  have hq := primitive_half (k := 17) (by decide) h
+  obtain ⟨hD,hW⟩ := watsonStates_correct q hq 17
+  have hc : watsonStates 17 17 =
+      (#v[7712,-7710,7710,-7710,7710,-7710,7710,-7710,7710,-7710,7710,-7710,7710,-7710,7710,-7710,7710],
+       #v[15422,-15420,15422,-15420,15420,-15418,15420,-15420,15422,-15420,15418,-15418,15420,-15420,15420,-15418,15424]) := by
+    decide +kernel
+  rw [hc] at hD hW
+  norm_num [val, ev_succ, ev_zero] at hD hW
+  have den : watsonDen q 17 = 2 := by
+    rw [← hD]
+    apply mul_right_cancel₀ (add_one_ne_zero (by decide) h)
+    linear_combination 7710 * hq
+  rw [den] at hW
+  change 4 * (∑ n ∈ Finset.range 17, (-q)^(n^2) / watsonDen q n) = _
+  rw [show 4 * (∑ n ∈ Finset.range 17, (-q)^(n^2) / watsonDen q n) =
+      2 * (2 * (∑ n ∈ Finset.range 17, (-q)^(n^2) / watsonDen q n)) by ring, ← hW,
+      boundaryValue_cyclotomic34 _ h]
+  apply mul_right_cancel₀ (add_one_ne_zero (by decide) h)
+  linear_combination 30848 * hq
+
 /-- The FKTY scale (12i)^(1/2), with Mathlib's principal complex power. -/
 def fktyScale : ℂ := (12 * Complex.I : ℂ)^(1/2 : ℂ)
 
