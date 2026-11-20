@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "command": "./verify_bridge.sh",
+  "lean": "Lean (version 4.27.0-rc1, x86_64-unknown-linux-gnu, commit 2fcce7258eeb6e324366bc25f9058293b04b7547, Release)",
+  "lake": "Lake version 5.0.0-src+2fcce72 (Lean version 4.27.0-rc1)",
+  "source_sha256": {
+    "BridgeArithmetic.lean": "21d0cc8cf96297bb51636154205727667a4f71da4799adb5d151f8411171e470",
+    "BridgeAudit.lean": "9130c856ed2fd91cdba461f5b14e0f64e1f8700be527c537b9a85f865e67255e",
+    "BridgeSmoke.lean": "e8b3669a23d8a2d711c49e073d49d2541fa08018b7ecb5ea4cc30b1b63dfb1dc",
+    "MockThetaAdapter.lean": "7cd114d9d7c6dbba4ce3311679baf90270076043c2a4dccb027b2f7b573e888a",
+    "lake-manifest.json": "ecd6f824b3b863155e0c329f9f9b77607d0273c605e56816cd8ba8023d6aaced",
+    "lakefile.toml": "25fb6a70d894cc9dab04d473dda82f399c93aae6a3292ccdff4159e3b27345cb",
+    "lean-toolchain": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
+    "verify_bridge.py": "b27fb2a0c5219683b1ccb22da980ed80cffccf5cdb5603283cb284e14ba7a07b",
+    "verify_bridge.sh": "3ae4bfd6402ceeff9a593de21905aba3734b87af34a813e8062c33e2420cd7bf"
+  },
+  "locked_git_revisions": {
+    "Cli": "726b98c53e2da249c1de768fbbbb5e67bc9cef60",
+    "KElimination": "64c1c89b191093dc12cf81b87da5fb1a02c46dc1",
+    "LeanSearchClient": "5ce7f0a355f522a952a3d678d696bd563bb4fd28",
+    "Qq": "8920dcbb96a4e8bf641fc399ac9c0888e4a6be72",
+    "aesop": "fa78cf032194308a950a264ed87b422a2a7c1c6c",
+    "batteries": "2e16f91af2a97975e5d2fac906494cd6c17ba255",
+    "importGraph": "cff9dd30f2c161b9efd7c657cafed1f967645890",
+    "k_elimination_universal": "c59b9850f20b9071b7c2ba28b2013cbe55d4d6a4",
+    "mathlib": "3bdc7047b97538f795b725dc0713c28c0f53ed10",
+    "plausible": "b3dd6c3ebc0a71685e86bea9223be39ea4c299fb",
+    "proofwidgets": "ef8377f31b5535430b6753a974d685b0019d0681"
+  },
+  "fresh_build_packages": [
+    "CRAMMockThetaBridge",
+    "KElimination",
+    "k_elimination_universal"
+  ],
+  "kernel_declarations_audited": 23,
+  "required_declaration_axioms": {
+    "CRAMMockThetaBridge.ReadoutCertificate": [],
+    "CRAMMockThetaBridge.chi_from_nine65_adjacent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CRAMMockThetaBridge.fiber_constant_of_period_dvd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CRAMMockThetaBridge.finite_evaluation_from_nine65_adjacent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CRAMMockThetaBridge.finite_evaluation_from_nine65_anchor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CRAMMockThetaBridge.gcd_eq_one_of_inverse": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CRAMMockThetaBridge.int_dvd_mul_iff_period_dvd": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CRAMMockThetaBridge.mockTheta_from_nine65_adjacent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CRAMMockThetaBridge.nat_dvd_mul_iff_period_dvd": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CRAMMockThetaBridge.phi_from_nine65_adjacent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CRAMMockThetaBridge.psi_from_nine65_adjacent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CRAMMockThetaBridge.readout_and_target": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CRAMMockThetaBridge.singleton_resolution_of_inverse": [
+      "Quot.sound",
+      "propext"
+    ],
+    "CRAMMockThetaBridge.target_fiber_constant_of_inverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "smoke_assertions": 24,
+  "smoke_checks": [
+    "signed general-anchor readout",
+    "signed adjacent readout",
+    "transported target",
+    "reversed subtraction class",
+    "reversed subtraction changes target",
+    "wrong inverse changes target",
+    "stale anchor changes target",
+    "aliased primary readings",
+    "aliased anchor readings",
+    "target 5 fails divisibility",
+    "target 5 distinguishes aliased sources",
+    "inverse at non-adjacent anchor",
+    "non-adjacent target",
+    "non-adjacent finite transform",
+    "anchor modulus one",
+    "target modulus one",
+    "root has order 14",
+    "f degree truncation",
+    "phi degree truncation",
+    "psi degree truncation",
+    "chi degree truncation",
+    "empty coefficient truncation",
+    "wrapped degree packets",
+    "uncertified root changes evaluation"
+  ]
+}

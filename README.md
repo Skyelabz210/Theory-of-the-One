@@ -43,6 +43,8 @@ Each denominator has a unique formal reciprocal. Only summands with $n^2\le d$ c
 
 The audit compiled **247 theorem declarations**. The smoke run passed **26,779 exact assertions**, including independent integer coefficients for all four series and checks of three Watson relations through degree 40. The remaining original examples are ten fifth-order and three seventh-order series. The infinite analytic transform and radial asymptotics remain open here. [Execution receipts](evidence/current/profinite-mock-theta/README.md)
 
+The standalone Lean adapter pairs a signed NINE65 quotient and target readout with the finite packet evaluation for each of these four functions. Its Lake project pins the two upstream revisions and includes executable examples for adjacent and other invertible anchors. [CRAMMockThetaBridge source and verification](adapters/CRAMMockThetaBridge/README.md)
+
 ## Read the project in four layers
 
 | Layer | Purpose | Start here |

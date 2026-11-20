@@ -1,0 +1,19 @@
+name = "CRAMMockThetaBridge"
+version = "0.1.0"
+defaultTargets = ["MockThetaAdapter"]
+
+[[require]]
+name = "KElimination"
+git = "https://github.com/Skyelabz210/NINE65_v7.git"
+rev = "64c1c89b191093dc12cf81b87da5fb1a02c46dc1"
+subDir = "lean4/CRAMUniversal"
+
+[[require]]
+name = "k_elimination_universal"
+git = "https://github.com/Skyelabz210/Theory-of-the-One.git"
+rev = "c59b9850f20b9071b7c2ba28b2013cbe55d4d6a4"
+subDir = "formal/universal"
+
+[[lean_lib]]
+name = "MockThetaAdapter"
+roots = ["BridgeArithmetic", "MockThetaAdapter"]
