@@ -45,7 +45,7 @@ Both fifth-order groups are formalized. For $i=0,1$, each of $f_i,\phi_i,\psi_i,
 
 The seventh-order module constructs $\mathcal F_0,\mathcal F_1,\mathcal F_2$ and proves finite evaluation for each. This completes coefficient and packet coverage for all seventeen original functions, across the groups of four, ten, and three. [Seventh-order Lean source](formal/universal/MockThetaSeventh.lean) · [Formulas, index conventions, and independent checks](docs/reviews/2026-11-20-seventh-order-mock-theta.md)
 
-The four mock theta suites passed **32,866 exact assertions**, including independent coefficients of all seventeen functions through degree 40 and fourteen seventh-order Euler-product comparisons reaching degree 108. Boundary limits and radial asymptotics remain open here.
+The four mock theta suites passed **32,866 exact assertions**, including independent coefficients of all seventeen functions through degree 40 and fourteen seventh-order Euler-product comparisons reaching degree 108. The even-order boundary values of the third-order $f$ are covered below.
 
 The standalone Lean adapter pairs a signed NINE65 quotient and target readout with the finite packet evaluation for each of the four third-order functions. Its Lake project pins the two upstream revisions and includes executable examples for adjacent and other invertible anchors. [CRAMMockThetaBridge source and verification](adapters/CRAMMockThetaBridge/README.md)
 
@@ -59,7 +59,13 @@ The crank and shadow suite passed **247 exact assertions**. [Crank execution log
 
 For $q=e^{2\pi i z}$, the holomorphic part of the normalized completion $M_f$ is $q^{-1}f(q^{24})$. Its weight-$3/2$ shadow is $4\sum_{m\equiv1\ (6)}m q^{m^2}$. Projecting the completion onto Fourier degrees $r$ modulo 11 projects its shadow onto degrees $-r$. Exactly five of the eleven projected completions have zero shadow. The review derives this result from Zwegers' completion and spells out what a CRAM degree observation supplies. [Formula, proof, and evidence](docs/reviews/2026-11-20-third-order-analytic-shadow.md) · [Exact Lean coefficients](formal/universal/MockThetaShadow.lean)
 
-The standard-library audit compiled **347 declarations**. Its five mock theta suites and the crank suite passed **42,617 exact assertions**, including 9,504 for the Laurent normalization and unary theta coefficients. [Audit and execution](evidence/current/profinite-mock-theta/README.md) · [Numerical evidence](evidence/current/analytic-shadow/README.md)
+The Laurent normalization and unary theta coefficients passed **9,504 exact checks**. [Exact execution](evidence/current/profinite-mock-theta/third-order-shadow-smoke.log) · [Numerical evidence](evidence/current/analytic-shadow/README.md)
+
+## Quantum radial limits of the rank and crank
+
+At the cusp $-1$ the singular terms of $f(q)+b(q)$ cancel and leave 4. At $i$, the corrected function is $f(q)-b(q)$ and the value is $4i$. Folsom, Ono, and Rhoades prove both limits. At the eleventh root $w=\zeta=e^{2\pi i/11}$ their general rank/crank theorem gives $(1-\zeta)^2$ with compensating scalar $\zeta$. Lean proves the finite boundary formulas. The review shows how a sequence of interior coefficient packet evaluations approaches the compensated limit, and gives Zagier's separate transformation criterion for quantum modularity. [Radial formulas and proof map](docs/reviews/2026-11-20-quantum-radial.md) · [Finite Lean source](formal/universal/QuantumRadial.lean) · [Numerical evidence](evidence/current/quantum-radial/README.md)
+
+The standard-library audit compiled **367 theorem declarations**. The six mock theta and radial suites plus the crank suite passed **44,196 exact assertions**, including 1,579 finite checks for the radial formulas. [Proof audit and execution](evidence/current/profinite-mock-theta/README.md)
 
 ## Read the project in four layers
 
@@ -107,6 +113,7 @@ lake env lean FifthZeroSmoke.lean
 lake env lean FifthOneSmoke.lean
 lake env lean SeventhSmoke.lean
 lake env lean MockThetaShadowSmoke.lean
+lake env lean QuantumRadialSmoke.lean
 lake env lean CrankShadowSmoke.lean
 ```
 

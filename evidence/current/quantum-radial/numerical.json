@@ -1,0 +1,484 @@
+{
+  "status": "pass",
+  "source": "https://doi.org/10.1017/fmp.2013.3",
+  "source_pdf": "https://afolsom.people.amherst.edu/FolsomOnoRhoades-ForumPi.pdf",
+  "source_pdf_sha256": "0f3a0105a62adc6341a5a13fb765a0aa93596d8e3da55e423ca3cc05e8b38a4e",
+  "source_location": "Theorems 1.1 and 1.2, equations (1.4)–(1.6), pp. 4–6",
+  "command": "python3 tools/check_quantum_radial.py --dps 340 --receipt evidence/current/quantum-radial/numerical.json",
+  "script_sha256": "aba7be7f02e7d09a8bc82a64acbcc245d2392b76fae7e971f9b6ea6d57b9db95",
+  "python": "3.12.14",
+  "mpmath": "1.3.0",
+  "working_decimal_digits": 340,
+  "repeat_decimal_digits": 370,
+  "absolute_arithmetic_agreement_threshold": "1e-28",
+  "root": "zeta=exp(2*pi*i/order)",
+  "correction": "R(w;t*zeta) - phase*C(w;t*zeta)",
+  "crank_convention": "Product (1.5); [q]C(w;q)=w+w^(-1)-1.",
+  "scope": "Interior samples and exact-series tail estimates evaluated in multiprecision; no interval rounding certificate or numerical proof of the limit.",
+  "cases": [
+    {
+      "order": 2,
+      "w_power_of_zeta": 1,
+      "correction_phase_power_of_zeta": 1,
+      "first_zero_factor_in_R_at_cusp": 1,
+      "degree_one_crank_control": {
+        "t": "1e-40",
+        "product_coefficient": [
+          "-3.0",
+          "0.0"
+        ],
+        "slope_error": "2.0e-40",
+        "distance_to_ordinary_singleton_weight": "2.0"
+      },
+      "finite_endpoint": [
+        "4.0",
+        "0.0"
+      ],
+      "reduced_endpoint": [
+        "4.0",
+        "0.0"
+      ],
+      "endpoint_disagreement": "0.0",
+      "samples": [
+        {
+          "t": "49/50",
+          "rank_R": [
+            "-8624382801.50557828173",
+            "0.0"
+          ],
+          "crank_C": [
+            "8624382805.429882214573",
+            "0.0"
+          ],
+          "regularized": [
+            "3.924303932842745958782",
+            "0.0"
+          ],
+          "distance_to_endpoint": "0.07569606715725404121759",
+          "wrong_sign_distance": "17248765610.9354604963",
+          "rank_last_index": 79,
+          "theta_pairs_each_sum": 274,
+          "absolute_truncation_bound": "2.501556351329815024651e-39",
+          "max_absolute_disagreement_at_extra_30_digits": "3.143548352292239297269e-296",
+          "direct_crank_product": {
+            "last_factor": 5800,
+            "absolute_truncation_bound": "1.637888660759546304437e-39",
+            "distance_to_theta_quotient": "1.65443299066620838832e-41"
+          }
+        },
+        {
+          "t": "99/100",
+          "rank_R": [
+            "-10411173581794487382.99",
+            "0.0"
+          ],
+          "crank_C": [
+            "10411173581794487386.95",
+            "0.0"
+          ],
+          "regularized": [
+            "3.961133459629991629622",
+            "0.0"
+          ],
+          "distance_to_endpoint": "0.03886654037000837037762",
+          "wrong_sign_distance": "20822347163588974773.94",
+          "rank_last_index": 128,
+          "theta_pairs_each_sum": 388,
+          "absolute_truncation_bound": "2.904912550190731159121e-39",
+          "max_absolute_disagreement_at_extra_30_digits": "2.325410455396958349371e-259"
+        },
+        {
+          "t": "199/200",
+          "rank_R": [
+            "-1.067509669896093680568e+37",
+            "0.0"
+          ],
+          "crank_C": [
+            "1.067509669896093680568e+37",
+            "0.0"
+          ],
+          "regularized": [
+            "3.980291358265502681648",
+            "0.0"
+          ],
+          "distance_to_endpoint": "0.01970864173449731835183",
+          "wrong_sign_distance": "2.135019339792187361136e+37",
+          "rank_last_index": 219,
+          "theta_pairs_each_sum": 549,
+          "absolute_truncation_bound": "3.835546309842186060295e-39",
+          "max_absolute_disagreement_at_extra_30_digits": "4.041282417396830814992e-187"
+        },
+        {
+          "t": "399/400",
+          "rank_R": [
+            "-7.91646460058703838805e+72",
+            "0.0"
+          ],
+          "crank_C": [
+            "7.91646460058703838805e+72",
+            "0.0"
+          ],
+          "regularized": [
+            "3.990073897973635516588",
+            "0.0"
+          ],
+          "distance_to_endpoint": "0.009926102026364483411881",
+          "wrong_sign_distance": "1.58329292011740767761e+73",
+          "rank_last_index": 394,
+          "theta_pairs_each_sum": 777,
+          "absolute_truncation_bound": "1.055293398685550047603e-39",
+          "max_absolute_disagreement_at_extra_30_digits": "4.085160772257367757189e-44"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "w_power_of_zeta": 2,
+      "correction_phase_power_of_zeta": 0,
+      "first_zero_factor_in_R_at_cusp": 2,
+      "degree_one_crank_control": {
+        "t": "1e-40",
+        "product_coefficient": [
+          "-3.0",
+          "0.0"
+        ],
+        "slope_error": "2.0e-40",
+        "distance_to_ordinary_singleton_weight": "2.0"
+      },
+      "finite_endpoint": [
+        "0.0",
+        "4.0"
+      ],
+      "reduced_endpoint": [
+        "0.0",
+        "4.0"
+      ],
+      "endpoint_disagreement": "0.0",
+      "samples": [
+        {
+          "t": "49/50",
+          "rank_R": [
+            "546.9987736822434809423",
+            "-1316.585604972713617253"
+          ],
+          "crank_C": [
+            "546.8712553531787763185",
+            "-1320.264001545644259303"
+          ],
+          "regularized": [
+            "0.1275183290647046238236",
+            "3.678396572930642049505"
+          ],
+          "distance_to_endpoint": "0.3459619755843265070132",
+          "wrong_sign_distance": "2858.432837180212837992",
+          "rank_last_index": 69,
+          "theta_pairs_each_sum": 274,
+          "absolute_truncation_bound": "3.84161233129815346475e-39",
+          "max_absolute_disagreement_at_extra_30_digits": "9.553136316886638317264e-323",
+          "direct_crank_product": {
+            "last_factor": 5000,
+            "absolute_truncation_bound": "2.836228607668852227365e-39",
+            "distance_to_theta_quotient": "4.051341772680742044077e-41"
+          }
+        },
+        {
+          "t": "99/100",
+          "rank_R": [
+            "132488.1092526853445988",
+            "-319850.5970789951395102"
+          ],
+          "crank_C": [
+            "132488.0387265776090574",
+            "-319854.4199459155049062"
+          ],
+          "regularized": [
+            "0.07052610773554143228461",
+            "3.822866920365395947006"
+          ],
+          "distance_to_endpoint": "0.1906569164052649262334",
+          "wrong_sign_distance": "692416.0493958135249889",
+          "rank_last_index": 104,
+          "theta_pairs_each_sum": 388,
+          "absolute_truncation_bound": "1.173925930382651715836e-39",
+          "max_absolute_disagreement_at_extra_30_digits": "1.186760774456829096446e-312"
+        },
+        {
+          "t": "199/200",
+          "rank_R": [
+            "5473423307.650124725609",
+            "-13214012777.94136930169"
+          ],
+          "crank_C": [
+            "5473423307.612723788547",
+            "-13214012781.84764275014"
+          ],
+          "regularized": [
+            "0.03740093706142115076425",
+            "3.906273448445101214486"
+          ],
+          "distance_to_endpoint": "0.1009133121022468776085",
+          "wrong_sign_distance": "28605488739.37268024597",
+          "rank_last_index": 160,
+          "theta_pairs_each_sum": 549,
+          "absolute_truncation_bound": "5.709833958727014118553e-39",
+          "max_absolute_disagreement_at_extra_30_digits": "4.066035257665429833422e-294"
+        },
+        {
+          "t": "399/400",
+          "rank_R": [
+            "6590576730226062625.426",
+            "-15911059725972287258.96"
+          ],
+          "crank_C": [
+            "6590576730226062625.406",
+            "-15911059725972287262.91"
+          ],
+          "regularized": [
+            "0.01931539733956603635799",
+            "3.951652469040401315184"
+          ],
+          "distance_to_endpoint": "0.05206311865682527512954",
+          "wrong_sign_distance": "34444013891557678101.29",
+          "rank_last_index": 277,
+          "theta_pairs_each_sum": 777,
+          "absolute_truncation_bound": "4.733456732209788201971e-48",
+          "max_absolute_disagreement_at_extra_30_digits": "2.112208294837732451416e-258"
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "w_power_of_zeta": 3,
+      "correction_phase_power_of_zeta": 3,
+      "first_zero_factor_in_R_at_cusp": 3,
+      "degree_one_crank_control": {
+        "t": "1e-40",
+        "product_coefficient": [
+          "-3.0",
+          "0.0"
+        ],
+        "slope_error": "2.0e-40",
+        "distance_to_ordinary_singleton_weight": "2.0"
+      },
+      "finite_endpoint": [
+        "-2.0",
+        "-3.464101615137754587055"
+      ],
+      "reduced_endpoint": [
+        "-2.0",
+        "-3.464101615137754587055"
+      ],
+      "endpoint_disagreement": "6.33090237936788686507e-370",
+      "samples": [
+        {
+          "t": "49/50",
+          "rank_R": [
+            "42.88858556740156447848",
+            "50.02717374764822511601"
+          ],
+          "crank_C": [
+            "-44.38727563113440181576",
+            "-52.89869519887385161853"
+          ],
+          "regularized": [
+            "-1.498690063732837337287",
+            "-2.871521451225626502513"
+          ],
+          "distance_to_endpoint": "0.7761848380780903134696",
+          "wrong_sign_distance": "138.8848632099664964229",
+          "rank_last_index": 67,
+          "theta_pairs_each_sum": 274,
+          "absolute_truncation_bound": "3.026075099960831973041e-39",
+          "max_absolute_disagreement_at_extra_30_digits": "1.176492347142455177509e-327",
+          "direct_crank_product": {
+            "last_factor": 4800,
+            "absolute_truncation_bound": "7.792407434324466714646e-39",
+            "distance_to_theta_quotient": "1.57398285137497273684e-40"
+          }
+        },
+        {
+          "t": "99/100",
+          "rank_R": [
+            "616.706121584468077893",
+            "733.8786615235781398958"
+          ],
+          "crank_C": [
+            "-618.4092460221819565539",
+            "-736.9914406404119909425"
+          ],
+          "regularized": [
+            "-1.703124437713878660866",
+            "-3.112779116833851046749"
+          ],
+          "distance_to_endpoint": "0.45995934309153566399",
+          "wrong_sign_distance": "1924.607954156267078108",
+          "rank_last_index": 98,
+          "theta_pairs_each_sum": 388,
+          "absolute_truncation_bound": "3.508101893411938796445e-39",
+          "max_absolute_disagreement_at_extra_30_digits": "1.624656988927824785414e-322"
+        },
+        {
+          "t": "199/200",
+          "rank_R": [
+            "84495.2485921772775679",
+            "100696.4342192746911029"
+          ],
+          "crank_C": [
+            "-84497.08315643816882835",
+            "-100699.7024154168939202"
+          ],
+          "regularized": [
+            "-1.834564260891260441963",
+            "-3.268196142202817284783"
+          ],
+          "distance_to_endpoint": "0.2564136074788473295124",
+          "wrong_sign_distance": "262908.5075456951698681",
+          "rank_last_index": 146,
+          "theta_pairs_each_sum": 549,
+          "absolute_truncation_bound": "8.198707720582209113628e-39",
+          "max_absolute_disagreement_at_extra_30_digits": "6.987242033081281325264e-314"
+        },
+        {
+          "t": "399/400",
+          "rank_R": [
+            "1112982905.277139989138",
+            "1326401374.778748515156"
+          ],
+          "crank_C": [
+            "-1112982907.188941759365",
+            "-1326401378.138369491723"
+          ],
+          "regularized": [
+            "-1.911801770227040083515",
+            "-3.359620976566642152409"
+          ],
+          "distance_to_endpoint": "0.1367301414148001985842",
+          "wrong_sign_distance": "3462988055.341144710142",
+          "rank_last_index": 277,
+          "theta_pairs_each_sum": 777,
+          "absolute_truncation_bound": "8.852918665064132596771e-67",
+          "max_absolute_disagreement_at_extra_30_digits": "5.753018740958103149046e-298"
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "w_power_of_zeta": 1,
+      "correction_phase_power_of_zeta": 1,
+      "first_zero_factor_in_R_at_cusp": 1,
+      "degree_one_crank_control": {
+        "t": "1e-40",
+        "product_coefficient": [
+          "0.6825070656623623377236",
+          "2.70442746403510830518e-371"
+        ],
+        "slope_error": "8.308300260037728510585e-41",
+        "distance_to_ordinary_singleton_weight": "0.5634651136828593954228"
+      },
+      "finite_endpoint": [
+        "-0.2670920526604759121943",
+        "-0.1716496395566767928036"
+      ],
+      "reduced_endpoint": [
+        "-0.2670920526604759121943",
+        "-0.1716496395566767928036"
+      ],
+      "endpoint_disagreement": "2.056298755517774115061e-371",
+      "samples": [
+        {
+          "t": "199/200",
+          "rank_R": [
+            "22.62097475664082907761",
+            "159.001523143083247869"
+          ],
+          "crank_C": [
+            "105.2619266556816674047",
+            "121.4787391304901107943"
+          ],
+          "regularized": [
+            "-0.2546280880845897929963",
+            "-0.1017893883979007400763"
+          ],
+          "distance_to_endpoint": "0.07096340680178915187767",
+          "wrong_sign_distance": "321.5497388649426561253",
+          "rank_last_index": 139,
+          "theta_pairs_each_sum": 549,
+          "absolute_truncation_bound": "1.867592441402746527226e-39",
+          "max_absolute_disagreement_at_extra_30_digits": "2.007050796048449889273e-324",
+          "omitted_phase_distance": "90.58875821175295997694",
+          "direct_crank_product": {
+            "last_factor": 19800,
+            "absolute_truncation_bound": "7.569992702183030562087e-39",
+            "distance_to_theta_quotient": "1.531988854211225896462e-41"
+          }
+        },
+        {
+          "t": "399/400",
+          "rank_R": [
+            "490.6585581104457419991",
+            "3414.282765303819035378"
+          ],
+          "crank_C": [
+            "2258.95821576541357882",
+            "2606.976753306767394033"
+          ],
+          "regularized": [
+            "-0.259978424719563857664",
+            "-0.1306547937130781444023"
+          ],
+          "distance_to_endpoint": "0.04160746433300330373882",
+          "wrong_sign_distance": "6899.09080353415016301",
+          "rank_last_index": 277,
+          "theta_pairs_each_sum": 777,
+          "absolute_truncation_bound": "1.083821804363357383701e-76",
+          "max_absolute_disagreement_at_extra_30_digits": "1.190486605259100593369e-319",
+          "omitted_phase_distance": "1943.697334224750691194"
+        },
+        {
+          "t": "799/800",
+          "rank_R": [
+            "159694.0857170026574965",
+            "1110698.44466885893851"
+          ],
+          "crank_C": [
+            "734832.4308447043757988",
+            "848041.8324776070976329"
+          ],
+          "regularized": [
+            "-0.2632227930770549584673",
+            "-0.1489963215974471343511"
+          ],
+          "distance_to_endpoint": "0.02298138342845904196389",
+          "wrong_sign_distance": "2244240.340812028519493",
+          "rank_last_index": 554,
+          "theta_pairs_each_sum": 1100,
+          "absolute_truncation_bound": "3.711359585714367043529e-155",
+          "max_absolute_disagreement_at_extra_30_digits": "1.606231712711183024178e-310",
+          "omitted_phase_distance": "632275.5688022281108717"
+        },
+        {
+          "t": "1599/1600",
+          "rank_R": [
+            "11942518132.45243134546",
+            "83062038092.56537527286"
+          ],
+          "crank_C": [
+            "54953413744.02787150574",
+            "63419620223.91238903196"
+          ],
+          "regularized": [
+            "-0.2650595590364508807475",
+            "-0.1596466772905363279077"
+          ],
+          "distance_to_endpoint": "0.01217382986139096040941",
+          "wrong_sign_distance": "167832367694.2991820038",
+          "rank_last_index": 1108,
+          "theta_pairs_each_sum": 1556,
+          "absolute_truncation_bound": "4.23367578106435300587e-291",
+          "max_absolute_disagreement_at_extra_30_digits": "9.761065883543725280459e-292",
+          "omitted_phase_distance": "47283842071.2655822819"
+        }
+      ]
+    }
+  ]
+}

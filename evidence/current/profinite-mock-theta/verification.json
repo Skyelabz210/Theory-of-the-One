@@ -5,7 +5,7 @@
   "fresh_temporary_build": true,
   "project_olean_reused": false,
   "imports": "Pinned Lean bundled Std; no Mathlib dependency",
-  "theorem_declarations": 347,
+  "theorem_declarations": 367,
   "module_theorem_counts": {
     "ExactObservation": 9,
     "UniversalLift": 15,
@@ -32,12 +32,13 @@
     "CrankShadow11": 9,
     "CrankCharacter11": 10,
     "MockThetaShadow": 18,
+    "QuantumRadial": 20,
     "UniversalKElimination": 0
   },
   "reused_observation_theorems": 9,
   "prior_universal_core_declarations": 75,
   "closure_and_starlift_declarations": 52,
-  "profinite_mock_theta_declarations": 187,
+  "profinite_mock_theta_declarations": 207,
   "crank_shadow_declarations": 30,
   "axiom_free_declarations": 46,
   "allowed_foundational_axioms": [
@@ -2609,8 +2610,173 @@
       ]
     },
     {
+      "file": "QuantumRadial.lean",
+      "sha256": "eb0849b15059c1314213dd0ef06cf215e55cde854a781f3132660d3e5d7d2aaf",
+      "theorem_count": 20,
+      "theorems": [
+        {
+          "name": "KElimination.QuantumRadial.uProduct_eq_pochhammer",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.uProduct_zero_of_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.uPolynomial_stable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.boundaryValue_stable",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.twice_half_period",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.uPolynomial_as_degrees",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.uPacket_refinement",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.uPacket_evaluation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.boundaryValue_from_packets",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.boundaryValue_from_coupled_anchors",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.boundaryValue_at_neg_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.boundaryValue_at_fourth_root",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.uTwoPartial_at_neg_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.rankCrankRhs_at_neg_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.pochhammer_one_succ",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.uTwoPartial_diagonal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.rankCrankRhs_diagonal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.rankCrankRhs_eleventh_root",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.crankEuler_degree_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.QuantumRadial.crankEuler_minus_ordinary_degree_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
       "file": "UniversalKElimination.lean",
-      "sha256": "0e33938ff54279e94467bf0c858a4d00b226711131efb033e45ea2cc7c02327d",
+      "sha256": "76a59fe7603fd21dbe388991c549a603d5aa3ecffb917d66ffd515e54144d5be",
       "theorem_count": 0,
       "theorems": []
     }

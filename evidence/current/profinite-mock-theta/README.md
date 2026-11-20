@@ -1,9 +1,9 @@
 # Mock theta coefficients, unary shadow, and partition crank execution receipts
 
-The 20 November 2026 audit compiled **347 theorem declarations** with
+The 20 November 2026 audit compiled **367 theorem declarations** with
 `leanprover/lean4:v4.27.0-rc1` and its bundled standard library. Of those
 declarations, 46 have empty axiom lists. The remaining lists contain only
-`propext`, `Classical.choice`, and `Quot.sound`. All nine commands passed
+`propext`, `Classical.choice`, and `Quot.sound`. All ten commands passed
 without compiler warnings.
 
 | File | Meaning |
@@ -19,6 +19,7 @@ without compiler warnings.
 | [fifth-one-smoke.log](fifth-one-smoke.log) | 2,135 exact assertions for the five one-subscript fifth-order series |
 | [seventh-smoke.log](seventh-smoke.log) | 1,819 exact assertions for the three seventh-order series |
 | [third-order-shadow-smoke.log](third-order-shadow-smoke.log) | 9,504 exact assertions for the Laurent normalization of $f$ and the integer coefficients and packets of its unary shadow |
+| [quantum-radial-smoke.log](quantum-radial-smoke.log) | 1,579 exact assertions for terminating even-order boundary sums and the order-11 rank/crank specialization |
 | [crank-shadow-smoke.log](crank-shadow-smoke.log) | 247 finite partition, character, and signed observation checks |
 
 Four independent finite factor calculations give the integer coefficients of
@@ -45,7 +46,11 @@ The four original coefficient suites contribute 32,866 checks. The new
 third-order shadow suite compares Laurent coefficients against signed rank
 parity through degree 40, checks the signed unary lattice through exponent 625,
 and exercises the degree packets modulo 11. Its 9,504 checks bring the complete
-mock theta total to 42,370. In `execution.json`,
+total for those five suites to 42,370. The quantum radial suite adds 1,579
+assertions on the finite right sides of FOR's formulas. It compares integer
+cyclotomic reductions and their finite-field evaluations, including
+the order-11 diagonal and off-diagonal rank/crank terms. The six mock theta
+and radial suites together contribute 43,949 assertions. In `execution.json`,
 `mock_theta_assertions_by_suite` records each suite and
 `total_mock_theta_smoke_assertions` records their sum. The original
 `mock_theta_smoke_assertions` field counts the third-order suite.
@@ -56,7 +61,7 @@ It exercises finite-field characters, signed S6 and S8 readouts, and the
 seventh-order size weights. At $N=8$, $t=3$, $z=2$ in $\mathbb F_{23}$, the
 $\mathcal F_2$ crank sum is 15 from both the histogram and the S8
 transitions. In `execution.json`, `crank_shadow_11_assertions` is 247 and
-`total_mock_theta_and_crank_assertions` is 42,617.
+`total_mock_theta_and_crank_assertions` is 44,196.
 
 Earlier receipts contain 202 declarations and 6,251 mock theta assertions for
 $f$ at `853ed93`, then 217 declarations and 12,803 assertions for $f$ and
@@ -73,6 +78,9 @@ The seventh-order checkpoint compiled 299 declarations and passed 32,866 mock th
 
 The crank and shadow-eleven checkpoint compiled 329 declarations and passed
 33,113 combined mock theta and crank assertions. [Receipts at `d8d55d9`](https://github.com/Skyelabz210/Theory-of-the-One/blob/d8d55d9aed97ff5c1919d6d5cf3e0f11bc1cac39/evidence/current/profinite-mock-theta/execution.json)
+
+The third-order analytic-shadow coefficient checkpoint compiled 347 declarations
+and passed 42,617 combined assertions. [Receipts at `8ffbe91`](https://github.com/Skyelabz210/Theory-of-the-One/blob/8ffbe91a022dd5fba68977d3a788e8f7c3c2f09e/evidence/current/profinite-mock-theta/execution.json)
 
 The current receipt records the base commit and hashes of
 the files used in this run.
@@ -99,5 +107,7 @@ covers partition statistics, finite character sums, and the S8 reading hypothese
 The [analytic review of third-order $f$](../../../docs/reviews/2026-11-20-third-order-analytic-shadow.md)
 identifies the complex-analytic operator and the independent numerical
 checks. This directory records the standard-library Lean proofs and exact
-executions. Boundary asymptotics, topological duality, and production
-observation constructors remain outside their scope.
+executions. The [quantum radial review](../../../docs/reviews/2026-11-20-quantum-radial.md)
+gives the separate published limit theorem and the numerical checks on four
+radial paths. Topological duality and production observation constructors
+remain outside these receipts.

@@ -1,0 +1,9 @@
+PASS 8 empty, sign, shift, order and f-truncation controls
+PASS order 2: 1 primitive roots, endpoint mod Φ_2=[4], 25 assertions
+PASS order 4: 2 primitive roots, endpoint mod Φ_4=[0, 4], 61 assertions
+PASS order 6: 2 primitive roots, endpoint mod Φ_6=[0, -4], 51 assertions
+PASS order 8: 4 primitive roots, endpoint mod Φ_8=[4, 4, -4, 0], 175 assertions
+PASS order 10: 4 primitive roots, endpoint mod Φ_10=[0, 4, -4, 8], 203 assertions
+PASS order 22: 10 primitive roots, endpoint mod Φ_22=[-4, 0, 0, 0, 4, 0, 4, 4, 0, -4], 923 assertions
+PASS genuine eleventh-order rank/crank endpoints and compensation: 133 assertions
+Total: 1579 exact assertions.

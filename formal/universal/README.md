@@ -33,6 +33,7 @@ lake env lean FifthZeroSmoke.lean
 lake env lean FifthOneSmoke.lean
 lake env lean SeventhSmoke.lean
 lake env lean MockThetaShadowSmoke.lean
+lake env lean QuantumRadialSmoke.lean
 lake env lean CrankShadowSmoke.lean
 ```
 
@@ -51,7 +52,9 @@ checks their cutoffs, and tests Garvan's Euler-weighted relations.
 $11k+6$, the signed-rank parity coefficients through degree 40, finite-field
 characters, and the S6 and S8 readouts. `MockThetaShadowSmoke` checks the
 integer-exponent normalization of $f$, the signed unary theta coefficients
-through degree 625, and their degree packets modulo 11.
+through degree 625, and their degree packets modulo 11. `QuantumRadialSmoke`
+checks terminating even-order boundary products and the two-variable
+rank/crank specialization at eleven against cyclotomic calculations.
 
 | Module | Freshly checked theorem count |
 |---|---:|
@@ -80,7 +83,8 @@ through degree 625, and their degree packets modulo 11.
 | [CrankShadow11](CrankShadow11.lean) | 9 |
 | [CrankCharacter11](CrankCharacter11.lean) | 10 |
 | [MockThetaShadow](MockThetaShadow.lean) | 18 |
-| **Total** | **347** |
+| [QuantumRadial](QuantumRadial.lean) | 20 |
+| **Total** | **367** |
 
 The original compiler receipt and log are retained in `../../evidence/historical/formal/`. Read the root architecture contract before interpreting proof variables as runtime state.
 
@@ -105,7 +109,8 @@ complete distribution of coefficient packets at that period.
 The selected primary is 30030. The exact coefficient bridge for the analytic
 shadow of $f$ and the written derivation from its published completion are described in the
 [analytic review](../../docs/reviews/2026-11-20-third-order-analytic-shadow.md).
-Topology and boundary limits remain open here. The seventh-order constructions complete the original
+The [quantum radial review](../../docs/reviews/2026-11-20-quantum-radial.md)
+connects the finite endpoint and packet machinery to published radial limits. The seventh-order constructions complete the original
 seventeen named series. Earlier
 source and execution records are available for each proof package.
 [First $f$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/853ed937d0fa3545683d668e72f6439b599529b5/evidence/current/profinite-mock-theta) · [$f$, $\phi$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/769b724802ba1fd2e042718ac2dbc95b79d6fed1/evidence/current/profinite-mock-theta)

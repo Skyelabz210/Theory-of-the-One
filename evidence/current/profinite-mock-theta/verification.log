@@ -445,4 +445,30 @@ $ lean -o MockThetaShadow.olean MockThetaShadow.lean
 'KElimination.MockThetaShadow.shadowCoeff_sector_support_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 'KElimination.MockThetaShadow.shadowTrunc_eq_magnitude_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
 
+$ lean -o QuantumRadial.olean QuantumRadial.lean
+'KElimination.QuantumRadial.uProduct_eq_pochhammer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.uProduct_zero_of_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.uPolynomial_stable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.boundaryValue_stable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.twice_half_period' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.uPolynomial_as_degrees' depends on axioms: [propext]
+'KElimination.QuantumRadial.uPacket_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.uPacket_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.boundaryValue_from_packets' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.boundaryValue_from_coupled_anchors' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'KElimination.QuantumRadial.boundaryValue_at_neg_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.boundaryValue_at_fourth_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.uTwoPartial_at_neg_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.rankCrankRhs_at_neg_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.pochhammer_one_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.uTwoPartial_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.rankCrankRhs_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.rankCrankRhs_eleventh_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.crankEuler_degree_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.QuantumRadial.crankEuler_minus_ordinary_degree_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
 $ lean -o UniversalKElimination.olean UniversalKElimination.lean

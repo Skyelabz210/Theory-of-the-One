@@ -1,5 +1,19 @@
 # Evidence status — research draft
 
+## 20 November 2026 — rank/crank quantum radial values
+
+FOR's radial theorem identifies the compensated limit of the third-order
+$f$ at primitive even roots and, in a separate specialization, the rank/crank
+limit at the eleventh root. The Lean package proves termination and packet
+evaluation of the finite boundary polynomial and the diagonal rank/crank
+formula. The audit compiled 367 declarations, including 20 in `QuantumRadial`.
+The combined exact suites passed 44,196 assertions, including 1,579 for the
+radial formulas. The numerical study compares four radial approaches with
+the source predictions.
+[Proof, literature, and domain map](../docs/reviews/2026-11-20-quantum-radial.md)
+· [Exact execution](current/profinite-mock-theta/quantum-radial-smoke.log)
+· [Numerical evidence](current/quantum-radial/README.md)
+
 ## 20 November 2026 — analytic shadow of the third-order f
 
 For the normalized completion with holomorphic part $q^{-1}f(q^{24})$, the
@@ -9,10 +23,10 @@ audit compiled 347 declarations, including 18 for the signed square coefficients
 suite passed 9,504 exact checks, bringing the combined mock theta and crank
 total to 42,617. Numerical differentiation tests
 the completed function at three points and every projection at one point.
-[Normalization, derivation, and proof map](../docs/reviews/2026-11-20-third-order-analytic-shadow.md)
-· [Proof audit](current/profinite-mock-theta/verification.json)
-· [Exact execution](current/profinite-mock-theta/third-order-shadow-smoke.log)
-· [Numerical execution](current/analytic-shadow/numerical.json)
+[Normalization, derivation, and proof map](https://github.com/Skyelabz210/Theory-of-the-One/blob/8ffbe91a022dd5fba68977d3a788e8f7c3c2f09e/docs/reviews/2026-11-20-third-order-analytic-shadow.md)
+· [Proof audit](https://github.com/Skyelabz210/Theory-of-the-One/blob/8ffbe91a022dd5fba68977d3a788e8f7c3c2f09e/evidence/current/profinite-mock-theta/verification.json)
+· [Exact execution](https://github.com/Skyelabz210/Theory-of-the-One/blob/8ffbe91a022dd5fba68977d3a788e8f7c3c2f09e/evidence/current/profinite-mock-theta/third-order-shadow-smoke.log)
+· [Numerical execution](https://github.com/Skyelabz210/Theory-of-the-One/blob/8ffbe91a022dd5fba68977d3a788e8f7c3c2f09e/evidence/current/analytic-shadow/numerical.json)
 
 ## 20 November 2026 — partition crank and shadow prime 11
 

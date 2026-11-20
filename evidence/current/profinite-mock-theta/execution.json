@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "started_at_utc": "2026-11-20T10:39:14.220729+00:00",
-  "source_base_commit": "d8d55d9aed97ff5c1919d6d5cf3e0f11bc1cac39",
+  "started_at_utc": "2026-11-20T11:01:08.227639+00:00",
+  "source_base_commit": "8ffbe91a022dd5fba68977d3a788e8f7c3c2f09e",
   "scope": "Formal coefficients, compatible residue tuples, finite transforms, partition statistics, and authentic shadow-eleven readouts",
   "commands": [
     {
@@ -15,8 +15,8 @@
       "log": "proof-audit.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 49.498,
-      "sha256": "20a5f07ea7fb1e6b6b6a8ec2521f1c18de5334d9fe3ec266fb5cb79e92e11dd0"
+      "seconds": 53.664,
+      "sha256": "84271ea0b7fa9600738c619fee3309dfe639fd5dd6b28a778b64bd20eb2a38bb"
     },
     {
       "portable_reproduction_command": [
@@ -27,8 +27,8 @@
       "log": "lake-build.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 3.297,
-      "sha256": "8d9df737296af5461a88eb0e18fe4ae42e0d9c9c0888dc0ff946f8912ccf2767"
+      "seconds": 0.791,
+      "sha256": "17d64d7a8183af6cb7892b3c3bb3f894c3084635f9f9afe815c59ad29e8441ca"
     },
     {
       "portable_reproduction_command": [
@@ -41,7 +41,7 @@
       "log": "closure-smoke.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 1.028,
+      "seconds": 0.992,
       "sha256": "7c20cf621a8a3b6c6153246ac4a405d49366ddfa165b4b2e5920f71ee8e2473a"
     },
     {
@@ -55,7 +55,7 @@
       "log": "mock-theta-smoke.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 12.113,
+      "seconds": 12.126,
       "sha256": "abddfa622d2c19fcd678b7158240ac444274a956564ae179018b57a39df23797"
     },
     {
@@ -69,7 +69,7 @@
       "log": "fifth-zero-smoke.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 1.627,
+      "seconds": 1.543,
       "sha256": "0696d10b3ff03fce56b34ac1882d3286772532c195a86abb9a1bc07efc3ee394"
     },
     {
@@ -83,7 +83,7 @@
       "log": "fifth-one-smoke.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 1.25,
+      "seconds": 2.856,
       "sha256": "dffd2a35b1ecc28de4a91b80570ad7a72c503ba1a6b42ab4294723817fe7d647"
     },
     {
@@ -97,7 +97,7 @@
       "log": "seventh-smoke.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 2.443,
+      "seconds": 4.236,
       "sha256": "8bb05b78d27e79b6554a5b8721344005aef18208615f8e6dde0fd5fb85e335b9"
     },
     {
@@ -111,8 +111,22 @@
       "log": "third-order-shadow-smoke.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 17.706,
+      "seconds": 14.323,
       "sha256": "d2bb7f20df60863ec1e608d1f3403cbfffa5f0cd5e6971fd4e82d9f10066f23c"
+    },
+    {
+      "portable_reproduction_command": [
+        "lake",
+        "env",
+        "lean",
+        "QuantumRadialSmoke.lean"
+      ],
+      "working_directory": "formal/universal",
+      "log": "quantum-radial-smoke.log",
+      "exit_code": 0,
+      "compiler_warning_or_error": false,
+      "seconds": 2.479,
+      "sha256": "43654825f38d43cbb215336d753cbaa5b21171606c841d34bf370c89cb431d28"
     },
     {
       "portable_reproduction_command": [
@@ -125,7 +139,7 @@
       "log": "crank-shadow-smoke.log",
       "exit_code": 0,
       "compiler_warning_or_error": false,
-      "seconds": 6.805,
+      "seconds": 7.99,
       "sha256": "d31adac0d0f7e56ae784690cb7d0753379a5aeb1d2c72ddd69b6b481cfda9788"
     }
   ],
@@ -160,6 +174,8 @@
     "formal/universal/MockThetaSmoke.lean": "43f06cf68480d7fc17a6eca48bf089beb8a0c58203580dc6f0eb788c3acc5c6a",
     "formal/universal/PartitionCrank11.lean": "7670e2ebb690b6f4eb941448076b3e611ac5eab7221bd2bd6d979ee42cfe1617",
     "formal/universal/ProfiniteObservations.lean": "fab92ff0ca0593e80487aef025de007b02a59b8126d392ddc9985777656ad5ac",
+    "formal/universal/QuantumRadial.lean": "eb0849b15059c1314213dd0ef06cf215e55cde854a781f3132660d3e5d7d2aaf",
+    "formal/universal/QuantumRadialSmoke.lean": "25978ec33db23eb04e43f9c6fe0932acfdb0f971bb491e6529bb66c38176b398",
     "formal/universal/ReferenceChange.lean": "ecd6296ba0e850d03a6cd7093947a0d1803b37f3502c1c77256c8f242711b0e1",
     "formal/universal/ResidueAlgorithms.lean": "852030cea0a3404654d2a77f677e35a147efc917be33d26ba85ceb6b6d5b7b67",
     "formal/universal/ResiduePrimitives.lean": "61ad481a6dd7e7c9831259416a883a90c8b82162ab326dbc293945425ef9de95",
@@ -167,16 +183,16 @@
     "formal/universal/RingReadout.lean": "033dc2f2903b7fcffcb7576fcbdfba70dff2cf247b9a9f0d8ce2dd5495d1e67b",
     "formal/universal/SeventhSmoke.lean": "7793c6e78b5bffbfa69e8fd8d4712ef7320bb5ab7259cb023a73579352539814",
     "formal/universal/StarLift.lean": "90947ad64ef314f2e4f07af16a1586f2685ba9e453e74da097b5ea9b44cdde9c",
-    "formal/universal/UniversalKElimination.lean": "0e33938ff54279e94467bf0c858a4d00b226711131efb033e45ea2cc7c02327d",
+    "formal/universal/UniversalKElimination.lean": "76a59fe7603fd21dbe388991c549a603d5aa3ecffb917d66ffd515e54144d5be",
     "formal/universal/UniversalLift.lean": "00da716f76d10806dc86f3d5a4206c380ea8f6b5a99c6d4f788c4053efba2924",
-    "formal/universal/check_proofs.py": "c5bc61f8b5f5f3c68f2323f93f6b81c98bdf44155e43a93988c65ea088113639",
-    "formal/universal/lakefile.toml": "98edc0e8d52fbc4b84b2dd4e178785b7a104810dae5ebb39337263d7c00500fd",
+    "formal/universal/check_proofs.py": "65d3cb0159cc670e0175e2eaff5883f0ab913acd9fae2800a413651d5d618781",
+    "formal/universal/lakefile.toml": "3e7e98d7cdb86d9df6fbdce24bf9188afbcaad1f8ccf741d30553391a869e1e4",
     "formal/universal/lake-manifest.json": "cd0fa1eeeeab2f4e5fcb97850d37c871a495349737aa5699113f68bfd08f12e0",
     "formal/universal/lean-toolchain": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
-    "tools/verify_profinite_mock_theta.py": "1595f2b45003df199cbd230fcb41e7e2c42d21b8ce56ad01c36065715905eb3c"
+    "tools/verify_profinite_mock_theta.py": "37cb405fa3e7e28064a146ddf68603303a8c2c9a40a4c516a8d6719bd4f24648"
   },
-  "theorem_declarations": 347,
-  "profinite_mock_theta_declarations": 187,
+  "theorem_declarations": 367,
+  "profinite_mock_theta_declarations": 207,
   "axiom_free_declarations": 46,
   "crank_shadow_declarations": 30,
   "mock_theta_smoke_assertions": 26779,
@@ -185,10 +201,11 @@
     "fifth_zero": 2133,
     "fifth_one": 2135,
     "seventh_order": 1819,
-    "third_order_shadow": 9504
+    "third_order_shadow": 9504,
+    "quantum_radial": 1579
   },
-  "total_mock_theta_smoke_assertions": 42370,
+  "total_mock_theta_smoke_assertions": 43949,
   "crank_shadow_11_assertions": 247,
-  "total_mock_theta_and_crank_assertions": 42617,
-  "finished_at_utc": "2026-11-20T10:40:50.084047+00:00"
+  "total_mock_theta_and_crank_assertions": 44196,
+  "finished_at_utc": "2026-11-20T11:02:49.371273+00:00"
 }
