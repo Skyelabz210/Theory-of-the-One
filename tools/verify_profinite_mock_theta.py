@@ -24,6 +24,7 @@ MOCK_SMOKE_SUITES = [
     ("third_order", "MockThetaSmoke.lean", "mock-theta-smoke.log"),
     ("fifth_zero", "FifthZeroSmoke.lean", "fifth-zero-smoke.log"),
     ("fifth_one", "FifthOneSmoke.lean", "fifth-one-smoke.log"),
+    ("seventh_order", "SeventhSmoke.lean", "seventh-smoke.log"),
 ]
 
 

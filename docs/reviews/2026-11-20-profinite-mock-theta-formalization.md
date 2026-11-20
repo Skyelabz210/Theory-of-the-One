@@ -43,7 +43,7 @@ prove a separate analytic result for $f$ at primitive roots of every even
 order. [Folsom–Ono–Rhoades](https://afolsom.people.amherst.edu/FolsomOnoRhoades-ForumPi.pdf)
 
 The named constructions cover **all four original third-order functions**.
-The subsequent [fifth-order review](2026-11-20-fifth-order-mock-theta.md) records progress on the other groups. Watson's further third-order examples $\omega$, $\nu$,
+The remaining groups are covered by the [fifth-order review](2026-11-20-fifth-order-mock-theta.md) and [seventh-order review](2026-11-20-seventh-order-mock-theta.md). Watson's further third-order examples $\omega$, $\nu$,
 and $\rho$ are outside the four counted here.
 
 ## Source-to-proof map
@@ -492,7 +492,7 @@ This slice does not claim any of the following:
 | Infinite analytic Fourier/measure identity | Convergence, summability, complex evaluation, and the justified limiting operation |
 | Radial mock theta asymptotics | Root-dependent subtraction and analytic control at the unit circle |
 | Analytic shadow correspondence | Explicit analytic and observation-side operators with an intertwining theorem |
-| Formalization of all seventeen original examples | The third-order checkpoint covered four functions. See the [fifth-order review](2026-11-20-fifth-order-mock-theta.md) for later coverage. |
+| Formalization of all seventeen original examples | The third-order checkpoint covered four functions. The [fifth-order](2026-11-20-fifth-order-mock-theta.md) and [seventh-order](2026-11-20-seventh-order-mock-theta.md) checkpoints complete the other thirteen. |
 | Production CRAM implementation | Authentic observation constructors, permitted runtime operations, admission and rejection behavior, and conformance proofs |
 
 The external analytic statements discussed in the paper remain attributed to

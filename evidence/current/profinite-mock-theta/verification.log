@@ -366,4 +366,23 @@ $ lean -o MockThetaFifthOne.olean MockThetaFifthOne.lean
 'KElimination.MockThetaFifthOne.finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
 'KElimination.MockThetaFifthOne.from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
 
+$ lean -o MockThetaSeventh.olean MockThetaSeventh.lean
+'KElimination.MockThetaSeventh.exponent_mono' does not depend on any axioms
+'KElimination.MockThetaSeventh.le_exponent' depends on axioms: [propext]
+'KElimination.MockThetaSeventh.denominator_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaSeventh.factors_constant' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaSeventh.summand_support' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaSeventh.summand_at_leading_degree' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaSeventh.f1_summand_eq_f2_shift' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaSeventh.f0_summand_at_index_zero' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaSeventh.f2_summand_at_index_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaSeventh.f1_summand_at_index_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaSeventh.coeff_stable' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaSeventh.degreePacket_refinement' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaSeventh.cylinder_observable' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaSeventh.cylinder_refinement' depends on axioms: [propext, Quot.sound]
+'KElimination.MockThetaSeventh.weightedPacket_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaSeventh.finite_root_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KElimination.MockThetaSeventh.from_coupled_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+
 $ lean -o UniversalKElimination.olean UniversalKElimination.lean

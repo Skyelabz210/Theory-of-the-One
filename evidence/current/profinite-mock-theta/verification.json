@@ -5,7 +5,7 @@
   "fresh_temporary_build": true,
   "project_olean_reused": false,
   "imports": "Pinned Lean bundled Std; no Mathlib dependency",
-  "theorem_declarations": 282,
+  "theorem_declarations": 299,
   "module_theorem_counts": {
     "ExactObservation": 9,
     "UniversalLift": 15,
@@ -27,13 +27,14 @@
     "FifthOrderSeries": 7,
     "MockThetaFifthZero": 13,
     "MockThetaFifthOne": 15,
+    "MockThetaSeventh": 17,
     "UniversalKElimination": 0
   },
   "reused_observation_theorems": 9,
   "prior_universal_core_declarations": 75,
   "closure_and_starlift_declarations": 52,
-  "profinite_mock_theta_declarations": 152,
-  "axiom_free_declarations": 41,
+  "profinite_mock_theta_declarations": 169,
+  "axiom_free_declarations": 42,
   "allowed_foundational_axioms": [
     "Classical.choice",
     "Quot.sound",
@@ -2099,8 +2100,136 @@
       ]
     },
     {
+      "file": "MockThetaSeventh.lean",
+      "sha256": "6ab14991170f18d37f59717dda9873deca444be3b5e4dd66b37720fb8028e17a",
+      "theorem_count": 17,
+      "theorems": [
+        {
+          "name": "KElimination.MockThetaSeventh.exponent_mono",
+          "axioms": []
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.le_exponent",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.denominator_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.factors_constant",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.summand_support",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.summand_at_leading_degree",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.f1_summand_eq_f2_shift",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.f0_summand_at_index_zero",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.f2_summand_at_index_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.f1_summand_at_index_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.coeff_stable",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.degreePacket_refinement",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.cylinder_observable",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.cylinder_refinement",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.weightedPacket_refinement",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.finite_root_evaluation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "KElimination.MockThetaSeventh.from_coupled_anchors",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ]
+    },
+    {
       "file": "UniversalKElimination.lean",
-      "sha256": "43e063e03137aaaf405eac5bba8c45d5b3f96f6009304c7328eff5b986819e9e",
+      "sha256": "6ad56bab0c29005b2e65fccb1f7f01bf20dc572b06f38b0daed0da3a34cf1991",
       "theorem_count": 0,
       "theorems": []
     }

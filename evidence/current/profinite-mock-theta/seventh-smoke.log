@@ -1,0 +1,8 @@
+PASS ℱ₀: 402 assertions, coefficients 0..40: [1, 1, 0, 1, 1, 1, 0, 2, 1, 2, 1, 2, 1, 3, 2, 3, 3, 3, 2, 5, 3, 5, 4, 6, 5, 7, 5, 7, 7, 9, 7, 11, 9, 11, 11, 13, 12, 15, 13, 17, 16]
+PASS ℱ₀ initial summand and cutoff boundaries: 180 assertions
+PASS ℱ₁: 402 assertions, coefficients 0..40: [0, 1, 1, 1, 2, 1, 2, 2, 2, 3, 3, 2, 4, 4, 4, 4, 6, 5, 6, 6, 7, 8, 9, 8, 10, 11, 11, 12, 14, 13, 16, 16, 18, 19, 21, 20, 24, 25, 26, 28, 31]
+PASS ℱ₁ initial summand and cutoff boundaries: 220 assertions
+PASS ℱ₂: 402 assertions, coefficients 0..40: [1, 1, 2, 1, 2, 2, 3, 2, 3, 3, 4, 4, 5, 4, 6, 5, 7, 7, 8, 8, 10, 9, 11, 11, 13, 13, 16, 15, 17, 18, 21, 20, 23, 23, 27, 27, 31, 31, 35, 35, 39]
+PASS ℱ₂ initial summand and cutoff boundaries: 199 assertions
+PASS Garvan Euler-product identities: 14 assertions (largest degree 108)
+Total: 1819 exact assertions.

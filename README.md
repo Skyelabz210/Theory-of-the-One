@@ -41,9 +41,11 @@ Lean constructs the coefficients of all four functions in Ramanujan's original t
 
 Each denominator has a unique formal reciprocal. Only summands with $n^2\le d$ can contribute to coefficient degree $d$. For each series $g$, the finite root theorem recovers $g_N(t\zeta)$ from the complete weighted residue packets at period $L$ when $\zeta^L=1$. The coupled-anchor theorem supplies such a period for a certified target root. [Formalization and source map](docs/reviews/2026-11-20-profinite-mock-theta-formalization.md)
 
-Both fifth-order groups are formalized. For $i=0,1$, each of $f_i,\phi_i,\psi_i,\chi_i,F_i$ has a coefficient construction, a bound on its contributing summands, and a finite root evaluation using the coupled-anchor period. The three seventh-order functions remain open. [Zero-subscript Lean source](formal/universal/MockThetaFifthZero.lean) · [One-subscript Lean source](formal/universal/MockThetaFifthOne.lean) · [Formulas and proof map](docs/reviews/2026-11-20-fifth-order-mock-theta.md)
+Both fifth-order groups are formalized. For $i=0,1$, each of $f_i,\phi_i,\psi_i,\chi_i,F_i$ has a coefficient construction, a bound on its contributing summands, and a finite root evaluation using the coupled-anchor period. [Zero-subscript Lean source](formal/universal/MockThetaFifthZero.lean) · [One-subscript Lean source](formal/universal/MockThetaFifthOne.lean) · [Formulas and proof map](docs/reviews/2026-11-20-fifth-order-mock-theta.md)
 
-The audit compiled **282 theorem declarations**. The mock theta executions passed **31,047 exact assertions**, including independent coefficient calculations and cross-function identities through degree 40. Infinite analytic transforms and radial asymptotics remain open here. [Execution receipts](evidence/current/profinite-mock-theta/README.md)
+The seventh-order module constructs $\mathcal F_0,\mathcal F_1,\mathcal F_2$ and proves finite evaluation for each. This completes coefficient and packet coverage for all seventeen original functions, across the groups of four, ten, and three. [Seventh-order Lean source](formal/universal/MockThetaSeventh.lean) · [Formulas, index conventions, and independent checks](docs/reviews/2026-11-20-seventh-order-mock-theta.md)
+
+The audit compiled **299 theorem declarations**. The mock theta executions passed **32,866 exact assertions**, including independent coefficients of all seventeen functions through degree 40 and fourteen seventh-order Euler-product comparisons reaching degree 108. Infinite analytic transforms and radial asymptotics remain open here. [Execution receipts](evidence/current/profinite-mock-theta/README.md)
 
 The standalone Lean adapter pairs a signed NINE65 quotient and target readout with the finite packet evaluation for each of the four third-order functions. Its Lake project pins the two upstream revisions and includes executable examples for adjacent and other invertible anchors. [CRAMMockThetaBridge source and verification](adapters/CRAMMockThetaBridge/README.md)
 
@@ -91,6 +93,7 @@ lake env lean ClosureSmoke.lean
 lake env lean MockThetaSmoke.lean
 lake env lean FifthZeroSmoke.lean
 lake env lean FifthOneSmoke.lean
+lake env lean SeventhSmoke.lean
 ```
 
 The checker rebuilds project imports in a fresh temporary directory. The smoke commands execute the concrete operations and independent coefficient oracles; neither the proof checker nor the default Lake target runs them automatically. No Mathlib dependency is required. The latest receipts are under `evidence/current/profinite-mock-theta/`; the 16 November run remains under `evidence/current/lean/`, and supplied historical receipts remain under `evidence/historical/formal/`.

@@ -1,9 +1,9 @@
 # Exact mock theta coefficient bridge: execution receipts
 
-The 20 November 2026 audit compiled **282 theorem declarations** with
+The 20 November 2026 audit compiled **299 theorem declarations** with
 `leanprover/lean4:v4.27.0-rc1` and its bundled standard library. Of those
-declarations, 41 have empty axiom lists. The remaining lists contain only
-`propext`, `Classical.choice`, and `Quot.sound`. All six commands passed
+declarations, 42 have empty axiom lists. The remaining lists contain only
+`propext`, `Classical.choice`, and `Quot.sound`. All seven commands passed
 without compiler warnings.
 
 | File | Meaning |
@@ -17,6 +17,7 @@ without compiler warnings.
 | [mock-theta-smoke.log](mock-theta-smoke.log) | 26,779 exact assertions for the four third-order series and three Watson relations |
 | [fifth-zero-smoke.log](fifth-zero-smoke.log) | 2,133 exact assertions for the five zero-subscript fifth-order series |
 | [fifth-one-smoke.log](fifth-one-smoke.log) | 2,135 exact assertions for the five one-subscript fifth-order series |
+| [seventh-smoke.log](seventh-smoke.log) | 1,819 exact assertions for the three seventh-order series |
 
 Four independent finite factor calculations give the integer coefficients of
 $f$, $\phi$, $\psi$, and $\chi$ through degree 40. For $\psi$, geometric
@@ -34,7 +35,11 @@ identity through degree 41 and independently checks the extra coefficient
 of $\phi_1$ at that degree. The two fifth-order suites account for
 4,268 assertions.
 
-The complete mock theta total is 31,047. In `execution.json`,
+The seventh-order suite includes 1,206 coefficient and observation checks,
+599 initial-summand and cutoff comparisons, and 14 checks of Garvan's
+Euler-weighted coefficient relations, for 1,819 assertions.
+
+The complete mock theta total is 32,866. In `execution.json`,
 `mock_theta_assertions_by_suite` records each suite and
 `total_mock_theta_smoke_assertions` records their sum. The original
 `mock_theta_smoke_assertions` field counts the third-order suite.
@@ -46,6 +51,9 @@ theorems and 26,779 assertions. [Third-order receipts at `c59b985`](https://gith
 
 The zero-subscript fifth-order checkpoint compiled 267 declarations and
 passed 28,912 mock theta assertions. [Receipts at `a028a79`](https://github.com/Skyelabz210/Theory-of-the-One/blob/a028a794b0eccdac35281b09dae825455d0ea73e/evidence/current/profinite-mock-theta/execution.json)
+
+The combined third-order and fifth-order checkpoint compiled 282 declarations
+and passed 31,047 mock theta assertions. [Receipts at `63cd3a7`](https://github.com/Skyelabz210/Theory-of-the-One/blob/63cd3a7723ed4a986322b6ad0f83c668dbc4c05b/evidence/current/profinite-mock-theta/execution.json)
 
 The current receipt records the base commit and hashes of
 the files used in this run.
@@ -66,6 +74,7 @@ Mathlib download are needed.
 
 The [formalization review](../../../docs/reviews/2026-11-20-profinite-mock-theta-formalization.md)
 covers the third-order group. The [fifth-order review](../../../docs/reviews/2026-11-20-fifth-order-mock-theta.md)
-records the newer formulas and execution scope. Topological duality, infinite analytic
+records both groups of five. The [seventh-order review](../../../docs/reviews/2026-11-20-seventh-order-mock-theta.md)
+completes the seventeen coefficient constructions. Topological duality, infinite analytic
 evaluation, radial asymptotics, analytic shadows, and production observation
 constructors are outside these receipts.

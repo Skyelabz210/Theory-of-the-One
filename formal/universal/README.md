@@ -4,10 +4,11 @@ Standalone CRAM observation proofs and the exact mock theta coefficient bridge. 
 
 The proof package covers coefficient construction, residue packets, cylinder
 observation, and finite transforms for the four original third-order series
-and all ten original fifth-order series.
+and all ten fifth-order and three seventh-order series in the original list.
 The execution receipt identifies the exact source and compiler, and the audit
 lists the transitive axioms of every theorem.
 [Formalization review](../../docs/reviews/2026-11-20-profinite-mock-theta-formalization.md)
+· [Seventh-order constructions](../../docs/reviews/2026-11-20-seventh-order-mock-theta.md)
 · [Fifth-order constructions](../../docs/reviews/2026-11-20-fifth-order-mock-theta.md)
 · [Execution receipt](../../evidence/current/profinite-mock-theta/execution.json)
 · [Proof audit](../../evidence/current/profinite-mock-theta/verification.json)
@@ -27,6 +28,7 @@ lake env lean ClosureSmoke.lean
 lake env lean MockThetaSmoke.lean
 lake env lean FifthZeroSmoke.lean
 lake env lean FifthOneSmoke.lean
+lake env lean SeventhSmoke.lean
 ```
 
 The audit compiles project imports in a fresh temporary directory and checks
@@ -38,6 +40,8 @@ relations from Watson through degree 40. `FifthZeroSmoke` covers the five
 zero-subscript series and checks the relations in Ramanujan's letter at the same degrees.
 `FifthOneSmoke` covers the five one-subscript series, their two initial
 geometric summands, and Watson's shifted relation through degree 41.
+`SeventhSmoke` verifies the three seventh-order sequences through degree 40,
+checks their cutoffs, and tests Garvan's Euler-weighted relations.
 
 | Module | Freshly checked theorem count |
 |---|---:|
@@ -61,7 +65,8 @@ geometric summands, and Watson's shifted relation through degree 41.
 | FifthOrderSeries | 7 |
 | MockThetaFifthZero | 13 |
 | MockThetaFifthOne | 15 |
-| **Total** | **282** |
+| MockThetaSeventh | 17 |
+| **Total** | **299** |
 
 The original compiler receipt and log are retained in `../../evidence/historical/formal/`. Read the root architecture contract before interpreting proof variables as runtime state.
 
@@ -84,8 +89,8 @@ supply the period through their LCM/GCD resolution. Evaluation uses the
 complete distribution of coefficient packets at that period.
 
 The selected primary is 30030. Topology, infinite analytic limits, and
-harmonic-Maass shadows remain open here. The three seventh-order functions require separate
-coefficient constructions. Earlier
+harmonic-Maass shadows remain open here. The seventh-order constructions complete the original
+seventeen named series. Earlier
 source and execution records are available for each proof package.
 [First $f$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/853ed937d0fa3545683d668e72f6439b599529b5/evidence/current/profinite-mock-theta) · [$f$, $\phi$ receipts](https://github.com/Skyelabz210/Theory-of-the-One/tree/769b724802ba1fd2e042718ac2dbc95b79d6fed1/evidence/current/profinite-mock-theta)
 · [Zero-subscript checkpoint](https://github.com/Skyelabz210/Theory-of-the-One/blob/a028a794b0eccdac35281b09dae825455d0ea73e/evidence/current/profinite-mock-theta/execution.json)

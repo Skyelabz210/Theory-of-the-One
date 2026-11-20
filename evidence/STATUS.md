@@ -1,19 +1,34 @@
 # Evidence status — research draft
 
+## 20 November 2026 — the three seventh-order functions
+
+The three seventh-order coefficient families complete the 17 original functions.
+Their formal definitions prove the denominator reciprocal and the exact
+leading coefficient of each summand. Each family specializes the packet,
+cylinder, and coupled-anchor evaluation theorems.
+[Proof and source map](../docs/reviews/2026-11-20-seventh-order-mock-theta.md)
+
+The audit passed 299 theorem declarations (169 in the profinite and mock
+theta modules). The four mock theta suites passed 32,866 exact assertions,
+including 1,819 in the seventh-order suite. The separate closure smoke passed
+1,809 comparison/divmod/GCD pairs and four controls.
+[Execution](current/profinite-mock-theta/execution.json) · [Proof audit](current/profinite-mock-theta/verification.json)
+· [Seventh-order checks](current/profinite-mock-theta/seventh-smoke.log)
+
 ## 20 November 2026 — both original fifth-order groups
 
 All ten fifth-order functions have formal coefficients, residue packets,
 cylinders, and a finite evaluation theorem at the coupled-anchor period.
 With the original four third-order functions, coverage is 14 of 17.
-[Fifth-order proof and source map](../docs/reviews/2026-11-20-fifth-order-mock-theta.md)
+[Fifth-order proof and source map](https://github.com/Skyelabz210/Theory-of-the-One/blob/63cd3a7723ed4a986322b6ad0f83c668dbc4c05b/docs/reviews/2026-11-20-fifth-order-mock-theta.md)
 
 The fresh Lean build and audit passed 282 theorem declarations, 152 in the
 profinite and mock theta modules. The three mock theta suites passed 31,047
 exact assertions (26,779 third-order, 2,133 fifth-order zero, 2,135
 fifth-order one). The separate closure smoke passed 1,809 comparison/divmod/GCD
 pairs and four controls.
-[Proof audit](current/profinite-mock-theta/verification.json) · [Execution](current/profinite-mock-theta/execution.json)
-· [One-subscript smoke](current/profinite-mock-theta/fifth-one-smoke.log)
+[Proof audit](https://github.com/Skyelabz210/Theory-of-the-One/blob/63cd3a7723ed4a986322b6ad0f83c668dbc4c05b/evidence/current/profinite-mock-theta/verification.json) · [Execution](https://github.com/Skyelabz210/Theory-of-the-One/blob/63cd3a7723ed4a986322b6ad0f83c668dbc4c05b/evidence/current/profinite-mock-theta/execution.json)
+· [One-subscript smoke](https://github.com/Skyelabz210/Theory-of-the-One/blob/63cd3a7723ed4a986322b6ad0f83c668dbc4c05b/evidence/current/profinite-mock-theta/fifth-one-smoke.log)
 
 ## 20 November 2026 — fifth-order series, subscript zero
 

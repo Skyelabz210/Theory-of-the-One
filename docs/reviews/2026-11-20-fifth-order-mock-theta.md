@@ -132,22 +132,23 @@ target of period 4 and reject one of period 5. The zero-subscript cross-function
 named coefficients through degree 40 in $\mathbb{Z}[q]/(q^{41})$.
 The infinite identities above are attributed to their sources.
 [Smoke source](../../formal/universal/FifthZeroSmoke.lean)
-· [Zero-subscript log](../../evidence/current/profinite-mock-theta/fifth-zero-smoke.log)
+· [Zero-subscript log](https://github.com/Skyelabz210/Theory-of-the-One/blob/63cd3a7723ed4a986322b6ad0f83c668dbc4c05b/evidence/current/profinite-mock-theta/fifth-zero-smoke.log)
 
 The one-subscript suite passed **2,135 exact assertions**. In addition to
 402 checks per series, it confirms the two index-zero geometric summands at
 degrees 0 through 40, checks $[q^{41}]\phi_1$ independently, and compares
 all 42 coefficients of the shifted Watson identity. The full proof audit
-compiled 282 theorem declarations. [One-subscript log](../../evidence/current/profinite-mock-theta/fifth-one-smoke.log)
-· [Proof audit](../../evidence/current/profinite-mock-theta/verification.json)
+compiled 282 theorem declarations. [One-subscript log](https://github.com/Skyelabz210/Theory-of-the-One/blob/63cd3a7723ed4a986322b6ad0f83c668dbc4c05b/evidence/current/profinite-mock-theta/fifth-one-smoke.log)
+· [Proof audit](https://github.com/Skyelabz210/Theory-of-the-One/blob/63cd3a7723ed4a986322b6ad0f83c668dbc4c05b/evidence/current/profinite-mock-theta/verification.json)
 
 The zero-subscript checkpoint at `a028a79` compiled 267 theorem declarations.
 Its 28,912 mock theta assertions cover the original third-order group and the
 five zero-subscript functions. [Zero-subscript checkpoint](https://github.com/Skyelabz210/Theory-of-the-One/blob/a028a794b0eccdac35281b09dae825455d0ea73e/evidence/current/profinite-mock-theta/execution.json)
 
 Together the two groups account for all ten original fifth-order functions.
-Fourteen of the seventeen original functions now have coefficient constructions
-and finite transform theorems. The three seventh-order functions, infinite
-analytic evaluations, radial limits, and analytic shadows remain outside the
-present proofs. [Proof audit](../../evidence/current/profinite-mock-theta/verification.json)
-· [Current execution](../../evidence/current/profinite-mock-theta/execution.json)
+At the fifth-order checkpoint, fourteen of the seventeen original functions had
+coefficient constructions and finite transform theorems. The later
+[seventh-order review](2026-11-20-seventh-order-mock-theta.md) covers the
+remaining three series. Infinite analytic evaluations, radial limits, and
+analytic shadows remain open. [Proof audit](https://github.com/Skyelabz210/Theory-of-the-One/blob/63cd3a7723ed4a986322b6ad0f83c668dbc4c05b/evidence/current/profinite-mock-theta/verification.json)
+· [Fifth-order checkpoint execution](https://github.com/Skyelabz210/Theory-of-the-One/blob/63cd3a7723ed4a986322b6ad0f83c668dbc4c05b/evidence/current/profinite-mock-theta/execution.json)
