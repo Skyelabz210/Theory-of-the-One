@@ -89,6 +89,8 @@ The original fifth-order $\chi_0$ and seventh-order $\mathcal F_0$ have verified
 
 The standard-library audit compiled **367 theorem declarations**. The six mock theta and radial suites plus the crank suite passed **44,196 exact assertions**, including 1,579 finite checks for the radial formulas. [Proof audit and execution](evidence/current/profinite-mock-theta/README.md)
 
+The research handoff starts with certified numerical evaluation of the order-34 endpoint. It includes the Lean counterexample to classifying all seventeen functions by a shared target resolution, the fluid comparison controls, and completion tests for the remaining work. [Research handoff](docs/reviews/2026-11-24-cram-research-handoff.md)
+
 ## Read the project in four layers
 
 | Layer | Purpose | Start here |

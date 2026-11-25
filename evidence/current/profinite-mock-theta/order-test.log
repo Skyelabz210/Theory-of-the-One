@@ -1,0 +1,12 @@
+'OrderTest.finite_transform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrderTest.least_universal_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrderTest.packet_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrderTest.least_occupied' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrderTest.least_unoccupied' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrderTest.packet_minimum_dichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrderTest.no_common_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrderTest.all_seventeen_occupied34' depends on axioms: [propext, Quot.sound]
+'OrderTest.all_seventeen_exact34' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrderTest.all_seventeen_least34' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrderTest.historical_order_fails34' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrderTest.repo_targets' does not depend on any axioms

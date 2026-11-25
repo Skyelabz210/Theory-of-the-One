@@ -4,6 +4,8 @@ Paths start at the Theory-of-the-One root. Read each declaration at the revision
 
 ## Source observation and finite evaluation
 
+For the next experiment and the checked failure of the common-resolution definition of family order, see the [research handoff](../../../../docs/reviews/2026-11-24-cram-research-handoff.md) and the [standalone order test](../../../../formal/controls/OrderTest.lean).
+
 | Result | Lean route | Contract |
 | --- | --- | --- |
 | Exact recovery from coupled anchors | `formal/universal/CoupledAnchors.lean` → `source_period`, `resolution_eq_lcm_reduced`. `formal/universal/ProfiniteObservations.lean` → `combined_target_fiber_constant_iff`, `combined_target_recoverable_iff` | Positive target and anchors, same source in the signed chart. Reuse the fiber criterion before constructing a decoder. |
