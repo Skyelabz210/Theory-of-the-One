@@ -63,7 +63,7 @@ inside the disk, FOR's compensated radial limit, a primitive $2k$th root,
 and a positive period $L$ with $2k\mid L$. The auxiliary theorem
 `exists_packet_cutoffs` obtains an error at most $1/(j+1)$ from pointwise
 convergence of each interior Taylor series. Every larger cutoff works.
-The theorem `hasSum_radialF_coefficients` now proves that Taylor identity throughout the disk. For general even order, `for_limit_from_f_packets_of_radial_law` takes FOR’s radial limit as its analytic input. At order 34, Lean proves that input for every primitive root and composes it with the packet theorem at $e^{2\pi i/34}$. [Order-34 radial proof](../../adapters/MockThetaAnalytic/FOROrder34.lean) [Initial cutoff transfer](../../adapters/MockThetaAnalytic/QuantumRadialLimit.lean) · [Taylor identification and strengthened transfer](../../adapters/MockThetaAnalytic/ThirdOrderTaylor.lean)
+The theorem `hasSum_radialF_coefficients` proves that Taylor identity throughout the disk. The adapter identifies the compensated limit with FOR’s polynomial at every primitive even root. The Taylor packets converge at every positive period divisible by the root order, and the normalized limit gives the FKTY value at the reflected cusp. [Even-order radial and packet theorems](../../adapters/MockThetaAnalytic/FOREvenRoot.lean) · [Initial cutoff transfer](../../adapters/MockThetaAnalytic/QuantumRadialLimit.lean) · [Taylor identification](../../adapters/MockThetaAnalytic/ThirdOrderTaylor.lean)
 
 This proof uses the interior absolute tail at each chosen radius. A fixed
 truncation has a finite polynomial value at $\zeta$ while $b(t\zeta)$ can
@@ -103,7 +103,7 @@ $(-\zeta;\zeta)_n^2$ at the supplied root and applies the finite character
 transform to the remaining exponent $n+1$. Once $\zeta^k=-1$ and $k>0$,
 the tail vanishes identically. An admitted target of order $2k$ supplies
 $2k\mid L$ at the coupled-anchor period. The identity identifying this
-finite expression as the radial limit is FOR's theorem. The order-34 case also has a Lean proof from Watson’s disk identity.
+finite expression as the radial limit is FOR's theorem. Lean proves it at every primitive even root from Watson’s disk identities and a uniform finite Newton transformation. [Proof and exact replay](2026-11-22-cram-even-roots.md)
 [Finite product, termination, and period proofs](../../formal/universal/QuantumRadial.lean)
 
 ## The rank and crank at the shadow prime 11
@@ -151,6 +151,9 @@ inverse. At least one term is retained. The analytic limit is FOR's theorem.
 At order 22, Theorem 1.1 instead applies to $w=-1$ and any primitive
 $22$nd root for the size variable. Both 11 and 22 divide the selected CRAM
 primary $30030$, so its degree coordinate projects to either modulus.
+The order-22 theorem proves the actual compensated limit from these packets.
+Omitting prime 11 from S6 loses the order-22 phase, and a matching mod-11
+reading restores it. [Order-22 proof and control](2026-11-22-cram-even-roots.md)
 Evaluation needs the complete distribution of weighted packets at the chosen
 period. In the prime-eleven example the two variables happen to use the
 same root, with their roles visible in the exponents. In the earlier seventh-order polynomial

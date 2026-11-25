@@ -9,7 +9,7 @@ following the cutoff. -/
 noncomputable section
 namespace MockThetaAnalytic
 
-private theorem radialPlus_eq_odd_mul_even {q : ℂ} (hq : ‖q‖ < 1) :
+theorem radialPlus_eq_odd_mul_even {q : ℂ} (hq : ‖q‖ < 1) :
     radialPlusProduct q = watsonOddTail q 0 * watsonEvenTail q 0 := by
   have ho := watsonOddTail_hasProd hq 0
   have he := watsonEvenTail_hasProd hq 0

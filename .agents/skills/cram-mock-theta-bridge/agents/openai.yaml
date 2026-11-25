@@ -1,0 +1,4 @@
+interface:
+  display_name: "CRAM Mock Theta Bridge"
+  short_description: "Verify and extend CRAM mock theta proofs"
+  default_prompt: "Use $cram-mock-theta-bridge to trace my claim to Lean, reproduce the relevant evidence, and prove the next missing step."

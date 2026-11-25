@@ -1,0 +1,524 @@
+{
+  "status": "PASS",
+  "order": 24,
+  "primary": 30030,
+  "period": 120120,
+  "mpmath": "1.3.0",
+  "decimal_precisions": [
+    70,
+    100
+  ],
+  "stable_blocks": 144,
+  "source_sha256": {
+    "check_watson_radial24.py": "b3816dae414486c2de68e87c8069123b62a6b8d3fbe8a0c5fc98dd9bf495d2d8",
+    "check_quantum_radial.py": "a1fc2cbd6cbb2883671ff56deee7bef40f7a3279bd6140546242c89061bb0eb0"
+  },
+  "exact_polynomials": {
+    "odd_denominator": [
+      4,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "cleared_watson_head": [
+      0,
+      -2,
+      3,
+      1,
+      0,
+      2,
+      -1,
+      0,
+      0,
+      -3,
+      3,
+      -1
+    ],
+    "for_boundary_at_positive_root": [
+      4,
+      0,
+      -4,
+      -4,
+      0,
+      0,
+      -4,
+      0,
+      0,
+      4,
+      -4,
+      4
+    ],
+    "order8_odd_denominator_control": [
+      8,
+      0,
+      0,
+      0
+    ]
+  },
+  "signed_readout": {
+    "least_anchor_modulus": 8,
+    "quotient_resolution": 4,
+    "checked_signed_sources": 120124,
+    "checked_translations": 1201240,
+    "exact_packet_sources": [
+      -1000000000000000000000000000000000000000000000000000000000001,
+      -1000000000000000000000000000000000000000000000000000000000000,
+      1000000000000000000000000000000000000000000000000000000000000,
+      1000000000000000000000000000000000000000000000000000000000001,
+      -120121,
+      -30030,
+      -1,
+      0,
+      1,
+      30030,
+      60060,
+      120121
+    ],
+    "mod4_alias_sources": [
+      0,
+      60060
+    ]
+  },
+  "radial_samples": [
+    {
+      "generator": 1,
+      "radius": "0.98",
+      "distance_to_boundary": "6.25127746265032094",
+      "stable_tail_bound": "5.36668706688e-42",
+      "stable_precision_change": "6.14934709704e-70",
+      "direct_rank_terms": 66,
+      "direct_crank_factors": 4700,
+      "direct_tail_bound": "1.06396612038e-38",
+      "direct_residual": "3.15420035736e-39",
+      "direct_precision_change": "4.82967936803e-69",
+      "opposite_sign_residual": "7.49739889144"
+    },
+    {
+      "generator": 1,
+      "radius": "0.995",
+      "distance_to_boundary": "3.45692155896515815",
+      "stable_tail_bound": "5.36668706688e-42",
+      "stable_precision_change": "1.86532877766e-69",
+      "direct_rank_terms": 139,
+      "direct_crank_factors": 19300,
+      "direct_tail_bound": "9.61020940999e-39",
+      "direct_residual": "1.32273575282e-40",
+      "direct_precision_change": "1.94459333018e-68",
+      "opposite_sign_residual": "25.5460127827"
+    },
+    {
+      "generator": 1,
+      "radius": "0.999",
+      "distance_to_boundary": "1.3113095812411859",
+      "stable_tail_bound": "5.36668706688e-42",
+      "stable_precision_change": "3.79020139851e-69"
+    },
+    {
+      "generator": 1,
+      "radius": "0.9999",
+      "distance_to_boundary": "0.179012148199952218",
+      "stable_tail_bound": "5.36668706688e-42",
+      "stable_precision_change": "2.89951436186e-69"
+    },
+    {
+      "generator": 1,
+      "radius": "0.99999",
+      "distance_to_boundary": "0.0187176050705006612",
+      "stable_tail_bound": "5.36668706688e-42",
+      "stable_precision_change": "3.13674586651e-69"
+    },
+    {
+      "generator": 1,
+      "radius": "0.999999",
+      "distance_to_boundary": "0.00188060732290930258",
+      "stable_tail_bound": "5.36668706688e-42",
+      "stable_precision_change": "4.00195388811e-69"
+    },
+    {
+      "generator": 5,
+      "radius": "0.98",
+      "distance_to_boundary": "5.90826448352295855",
+      "stable_tail_bound": "3.41779453515e-42",
+      "stable_precision_change": "6.78552082633e-70",
+      "direct_rank_terms": 66,
+      "direct_crank_factors": 4700,
+      "direct_tail_bound": "4.96494466513e-39",
+      "direct_residual": "5.40015556182e-40",
+      "direct_precision_change": "7.62013721777e-69",
+      "opposite_sign_residual": "8.09292419519"
+    },
+    {
+      "generator": 5,
+      "radius": "0.995",
+      "distance_to_boundary": "3.45588017117348134",
+      "stable_tail_bound": "3.41779453515e-42",
+      "stable_precision_change": "5.03712961125e-70",
+      "direct_rank_terms": 138,
+      "direct_crank_factors": 19300,
+      "direct_tail_bound": "9.49971294044e-39",
+      "direct_residual": "2.93692976682e-41",
+      "direct_precision_change": "2.43642139986e-68",
+      "opposite_sign_residual": "25.5460752441"
+    },
+    {
+      "generator": 5,
+      "radius": "0.999",
+      "distance_to_boundary": "1.31143634692477091",
+      "stable_tail_bound": "3.41779453515e-42",
+      "stable_precision_change": "1.70207176622e-69"
+    },
+    {
+      "generator": 5,
+      "radius": "0.9999",
+      "distance_to_boundary": "0.179033626548101864",
+      "stable_tail_bound": "3.41779453515e-42",
+      "stable_precision_change": "3.7137411097e-69"
+    },
+    {
+      "generator": 5,
+      "radius": "0.99999",
+      "distance_to_boundary": "0.0187198426886764134",
+      "stable_tail_bound": "3.41779453515e-42",
+      "stable_precision_change": "4.42180593941e-69"
+    },
+    {
+      "generator": 5,
+      "radius": "0.999999",
+      "distance_to_boundary": "0.00188083198197291256",
+      "stable_tail_bound": "3.41779453515e-42",
+      "stable_precision_change": "9.40319838248e-69"
+    },
+    {
+      "generator": 7,
+      "radius": "0.98",
+      "distance_to_boundary": "5.82566618216124783",
+      "stable_tail_bound": "3.48384586272e-42",
+      "stable_precision_change": "6.65700053309e-70",
+      "direct_rank_terms": 66,
+      "direct_crank_factors": 4700,
+      "direct_tail_bound": "4.52282764228e-39",
+      "direct_residual": "7.60677964949e-40",
+      "direct_precision_change": "6.2828094261e-69",
+      "opposite_sign_residual": "8.5248736381"
+    },
+    {
+      "generator": 7,
+      "radius": "0.995",
+      "distance_to_boundary": "3.51099571563161744",
+      "stable_tail_bound": "3.48384586272e-42",
+      "stable_precision_change": "1.80032257161e-69",
+      "direct_rank_terms": 138,
+      "direct_crank_factors": 19300,
+      "direct_tail_bound": "8.01843634006e-39",
+      "direct_residual": "2.48684117599e-41",
+      "direct_precision_change": "9.38315261846e-68",
+      "opposite_sign_residual": "25.546120969"
+    },
+    {
+      "generator": 7,
+      "radius": "0.999",
+      "distance_to_boundary": "1.32301242888101356",
+      "stable_tail_bound": "3.48384586272e-42",
+      "stable_precision_change": "4.37328027563e-69"
+    },
+    {
+      "generator": 7,
+      "radius": "0.9999",
+      "distance_to_boundary": "0.180204898058234413",
+      "stable_tail_bound": "3.48384586272e-42",
+      "stable_precision_change": "6.82826592782e-69"
+    },
+    {
+      "generator": 7,
+      "radius": "0.99999",
+      "distance_to_boundary": "0.018837107281202415",
+      "stable_tail_bound": "3.48384586272e-42",
+      "stable_precision_change": "6.85888974152e-69"
+    },
+    {
+      "generator": 7,
+      "radius": "0.999999",
+      "distance_to_boundary": "0.00189255981326053882",
+      "stable_tail_bound": "3.48384586272e-42",
+      "stable_precision_change": "5.40877100027e-69"
+    },
+    {
+      "generator": 11,
+      "radius": "0.98",
+      "distance_to_boundary": "5.6495582311324335",
+      "stable_tail_bound": "7.0125267755e-42",
+      "stable_precision_change": "1.83241353089e-70",
+      "direct_rank_terms": 66,
+      "direct_crank_factors": 4700,
+      "direct_tail_bound": "5.01565836987e-39",
+      "direct_residual": "5.8761916161e-40",
+      "direct_precision_change": "5.27979525204e-69",
+      "opposite_sign_residual": "9.11236265774"
+    },
+    {
+      "generator": 11,
+      "radius": "0.995",
+      "distance_to_boundary": "3.59957780831742805",
+      "stable_tail_bound": "7.0125267755e-42",
+      "stable_precision_change": "3.84226131964e-69",
+      "direct_rank_terms": 138,
+      "direct_crank_factors": 19300,
+      "direct_tail_bound": "8.36844707648e-39",
+      "direct_residual": "2.10480080159e-41",
+      "direct_precision_change": "4.46412925927e-68",
+      "opposite_sign_residual": "25.5461834303"
+    },
+    {
+      "generator": 11,
+      "radius": "0.999",
+      "distance_to_boundary": "1.34186437839711097",
+      "stable_tail_bound": "7.0125267755e-42",
+      "stable_precision_change": "9.76422551649e-69"
+    },
+    {
+      "generator": 11,
+      "radius": "0.9999",
+      "distance_to_boundary": "0.182119606281217805",
+      "stable_tail_bound": "7.0125267755e-42",
+      "stable_precision_change": "1.51197841025e-68"
+    },
+    {
+      "generator": 11,
+      "radius": "0.99999",
+      "distance_to_boundary": "0.019028887142653599",
+      "stable_tail_bound": "7.0125267755e-42",
+      "stable_precision_change": "1.77608394357e-68"
+    },
+    {
+      "generator": 11,
+      "radius": "0.999999",
+      "distance_to_boundary": "0.00191174090904307698",
+      "stable_tail_bound": "7.0125267755e-42",
+      "stable_precision_change": "1.51193866919e-68"
+    },
+    {
+      "generator": 13,
+      "radius": "0.98",
+      "distance_to_boundary": "5.6495582311324335",
+      "stable_tail_bound": "7.0125267755e-42",
+      "stable_precision_change": "1.60564142164e-69",
+      "direct_rank_terms": 66,
+      "direct_crank_factors": 4700,
+      "direct_tail_bound": "5.01565836987e-39",
+      "direct_residual": "5.8761916161e-40",
+      "direct_precision_change": "5.78021882581e-69",
+      "opposite_sign_residual": "9.11236265774"
+    },
+    {
+      "generator": 13,
+      "radius": "0.995",
+      "distance_to_boundary": "3.59957780831742805",
+      "stable_tail_bound": "7.0125267755e-42",
+      "stable_precision_change": "6.65222152263e-69",
+      "direct_rank_terms": 138,
+      "direct_crank_factors": 19300,
+      "direct_tail_bound": "8.36844707648e-39",
+      "direct_residual": "2.10480080159e-41",
+      "direct_precision_change": "6.62212686665e-68",
+      "opposite_sign_residual": "25.5461834303"
+    },
+    {
+      "generator": 13,
+      "radius": "0.999",
+      "distance_to_boundary": "1.34186437839711097",
+      "stable_tail_bound": "7.0125267755e-42",
+      "stable_precision_change": "1.35514413954e-68"
+    },
+    {
+      "generator": 13,
+      "radius": "0.9999",
+      "distance_to_boundary": "0.182119606281217805",
+      "stable_tail_bound": "7.0125267755e-42",
+      "stable_precision_change": "2.04080903336e-68"
+    },
+    {
+      "generator": 13,
+      "radius": "0.99999",
+      "distance_to_boundary": "0.019028887142653599",
+      "stable_tail_bound": "7.0125267755e-42",
+      "stable_precision_change": "2.22982692544e-68"
+    },
+    {
+      "generator": 13,
+      "radius": "0.999999",
+      "distance_to_boundary": "0.00191174090904307698",
+      "stable_tail_bound": "7.0125267755e-42",
+      "stable_precision_change": "2.04743874272e-68"
+    },
+    {
+      "generator": 17,
+      "radius": "0.98",
+      "distance_to_boundary": "5.82566618216124783",
+      "stable_tail_bound": "3.48384586272e-42",
+      "stable_precision_change": "2.32003954903e-69",
+      "direct_rank_terms": 66,
+      "direct_crank_factors": 4700,
+      "direct_tail_bound": "4.52282764228e-39",
+      "direct_residual": "7.60677964949e-40",
+      "direct_precision_change": "1.73150538496e-68",
+      "opposite_sign_residual": "8.5248736381"
+    },
+    {
+      "generator": 17,
+      "radius": "0.995",
+      "distance_to_boundary": "3.51099571563161744",
+      "stable_tail_bound": "3.48384586272e-42",
+      "stable_precision_change": "9.63107025271e-69",
+      "direct_rank_terms": 138,
+      "direct_crank_factors": 19300,
+      "direct_tail_bound": "8.01843634006e-39",
+      "direct_residual": "2.48684117599e-41",
+      "direct_precision_change": "2.00584999921e-67",
+      "opposite_sign_residual": "25.546120969"
+    },
+    {
+      "generator": 17,
+      "radius": "0.999",
+      "distance_to_boundary": "1.32301242888101356",
+      "stable_tail_bound": "3.48384586272e-42",
+      "stable_precision_change": "2.08946095451e-68"
+    },
+    {
+      "generator": 17,
+      "radius": "0.9999",
+      "distance_to_boundary": "0.180204898058234413",
+      "stable_tail_bound": "3.48384586272e-42",
+      "stable_precision_change": "2.95095262813e-68"
+    },
+    {
+      "generator": 17,
+      "radius": "0.99999",
+      "distance_to_boundary": "0.018837107281202415",
+      "stable_tail_bound": "3.48384586272e-42",
+      "stable_precision_change": "3.10177128763e-68"
+    },
+    {
+      "generator": 17,
+      "radius": "0.999999",
+      "distance_to_boundary": "0.00189255981326053882",
+      "stable_tail_bound": "3.48384586272e-42",
+      "stable_precision_change": "3.36230863394e-68"
+    },
+    {
+      "generator": 19,
+      "radius": "0.98",
+      "distance_to_boundary": "5.90826448352295855",
+      "stable_tail_bound": "3.41779453515e-42",
+      "stable_precision_change": "3.45886532636e-69",
+      "direct_rank_terms": 66,
+      "direct_crank_factors": 4700,
+      "direct_tail_bound": "4.96494466513e-39",
+      "direct_residual": "5.40015556182e-40",
+      "direct_precision_change": "2.033284408e-68",
+      "opposite_sign_residual": "8.09292419519"
+    },
+    {
+      "generator": 19,
+      "radius": "0.995",
+      "distance_to_boundary": "3.45588017117348134",
+      "stable_tail_bound": "3.41779453515e-42",
+      "stable_precision_change": "2.54061704363e-69",
+      "direct_rank_terms": 138,
+      "direct_crank_factors": 19300,
+      "direct_tail_bound": "9.49971294044e-39",
+      "direct_residual": "2.93692976682e-41",
+      "direct_precision_change": "1.63735447482e-67",
+      "opposite_sign_residual": "25.5460752441"
+    },
+    {
+      "generator": 19,
+      "radius": "0.999",
+      "distance_to_boundary": "1.31143634692477091",
+      "stable_tail_bound": "3.41779453515e-42",
+      "stable_precision_change": "1.91162963499e-69"
+    },
+    {
+      "generator": 19,
+      "radius": "0.9999",
+      "distance_to_boundary": "0.179033626548101864",
+      "stable_tail_bound": "3.41779453515e-42",
+      "stable_precision_change": "5.12053296336e-69"
+    },
+    {
+      "generator": 19,
+      "radius": "0.99999",
+      "distance_to_boundary": "0.0187198426886764134",
+      "stable_tail_bound": "3.41779453515e-42",
+      "stable_precision_change": "7.34344754187e-69"
+    },
+    {
+      "generator": 19,
+      "radius": "0.999999",
+      "distance_to_boundary": "0.00188083198197291256",
+      "stable_tail_bound": "3.41779453515e-42",
+      "stable_precision_change": "9.59198290239e-69"
+    },
+    {
+      "generator": 23,
+      "radius": "0.98",
+      "distance_to_boundary": "6.25127746265032094",
+      "stable_tail_bound": "5.36668706688e-42",
+      "stable_precision_change": "4.74390374915e-69",
+      "direct_rank_terms": 66,
+      "direct_crank_factors": 4700,
+      "direct_tail_bound": "1.06396612038e-38",
+      "direct_residual": "3.15420035736e-39",
+      "direct_precision_change": "2.81691035586e-69",
+      "opposite_sign_residual": "7.49739889144"
+    },
+    {
+      "generator": 23,
+      "radius": "0.995",
+      "distance_to_boundary": "3.45692155896515815",
+      "stable_tail_bound": "5.36668706688e-42",
+      "stable_precision_change": "1.51061883786e-68",
+      "direct_rank_terms": 139,
+      "direct_crank_factors": 19300,
+      "direct_tail_bound": "9.61020940999e-39",
+      "direct_residual": "1.32273575282e-40",
+      "direct_precision_change": "9.57619312567e-68",
+      "opposite_sign_residual": "25.5460127827"
+    },
+    {
+      "generator": 23,
+      "radius": "0.999",
+      "distance_to_boundary": "1.3113095812411859",
+      "stable_tail_bound": "5.36668706688e-42",
+      "stable_precision_change": "2.95407156827e-68"
+    },
+    {
+      "generator": 23,
+      "radius": "0.9999",
+      "distance_to_boundary": "0.179012148199952218",
+      "stable_tail_bound": "5.36668706688e-42",
+      "stable_precision_change": "3.96818385769e-68"
+    },
+    {
+      "generator": 23,
+      "radius": "0.99999",
+      "distance_to_boundary": "0.0187176050705006612",
+      "stable_tail_bound": "5.36668706688e-42",
+      "stable_precision_change": "4.18091763579e-68"
+    },
+    {
+      "generator": 23,
+      "radius": "0.999999",
+      "distance_to_boundary": "0.00188060732290930258",
+      "stable_tail_bound": "5.36668706688e-42",
+      "stable_precision_change": "4.27873803782e-68"
+    }
+  ]
+}

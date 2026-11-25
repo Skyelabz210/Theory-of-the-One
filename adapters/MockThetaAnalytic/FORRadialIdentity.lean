@@ -188,4 +188,146 @@ theorem watson_weighted_phi_eq_theta_add_leastOdd {q : ℂ} (hq : ‖q‖ < 1) :
   rw [pow_succ (-1:ℂ) k]
   linear_combination (-1:ℂ)^k * h
 
+private def evenChoice (q : ℂ) (k j : ℕ) : ℂ :=
+  q^(k*k+2*j+2) * watsonEvenTail q (j+1) * watsonOddTail q (k+j+1)
+
+private def watsonEvenA (q : ℂ) (k : ℕ) : ℂ := ∑' j : ℕ, evenChoice q k j
+
+private theorem evenChoice_bound {q : ℂ} (hq : ‖q‖ < 1) {C : ℝ} (hc : 0 ≤ C)
+    (ho : ∀ j, ‖watsonOddTail q j‖ ≤ C) (he : ∀ j, ‖watsonEvenTail q j‖ ≤ C) (k j : ℕ) :
+    ‖evenChoice q k j‖ ≤ (‖q‖^k*C*C)*‖q‖^j := by
+  have hk := Nat.le_mul_self k
+  have hp := pow_le_pow_of_le_one (norm_nonneg q) hq.le
+    (show k+j ≤ k*k+2*j+2 by omega)
+  rw [evenChoice, norm_mul, norm_mul, norm_pow]
+  calc
+    _ ≤ ‖q‖^(k+j)*C*C := mul_le_mul (mul_le_mul hp (he _) (norm_nonneg _) (by positivity)) (ho _)
+      (norm_nonneg _) (mul_nonneg (by positivity) hc)
+    _ = _ := by rw [pow_add]; ring
+
+private theorem watsonEvenA_hasSum {q : ℂ} (hq : ‖q‖ < 1) (k : ℕ) :
+    HasSum (evenChoice q k) (watsonEvenA q k) := by
+  obtain ⟨C,hC,ho,he⟩ := tail_bounds hq
+  exact ((summable_geometric_of_lt_one (norm_nonneg q) hq).mul_left
+    (‖q‖^k*C*C)).of_norm_bounded (evenChoice_bound hq hC ho he k) |>.hasSum
+
+private theorem summable_watsonEvenA {q : ℂ} (hq : ‖q‖ < 1) : Summable (watsonEvenA q) := by
+  obtain ⟨C,hC,ho,he⟩ := tail_bounds hq
+  let S := ∑' j : ℕ, ‖q‖^j
+  have hg := summable_geometric_of_lt_one (norm_nonneg q) hq
+  apply (hg.mul_right (C*C*S)).of_norm_bounded
+  intro k
+  have h := tsum_of_norm_bounded (hg.hasSum.mul_left (‖q‖^k*C*C)) (evenChoice_bound hq hC ho he k)
+  change ‖watsonEvenA q k‖ ≤ ‖q‖^k * (C*C*S)
+  convert h using 1
+  dsimp [S]
+  ring
+
+private def evenTailSquare (q : ℂ) (k j : ℕ) :=
+  q^(k*k)*watsonEvenTail q j*watsonOddTail q (k+j+1)
+
+private theorem evenTailSquare_sub (q : ℂ) (hq : ‖q‖ < 1) (k j : ℕ) :
+    evenTailSquare q k j - evenTailSquare q k (j+1) = evenChoice q k j + evenChoice q (k+1) j := by
+  have he : watsonEvenTail q j = (1+q^(2*j+2))*watsonEvenTail q (j+1) :=
+    progression_split hq 2 j
+  have ho : watsonOddTail q (k+j+1) = (1+q^(2*(k+j+1)+1))*watsonOddTail q (k+j+1+1) :=
+    progression_split hq 1 (k+j+1)
+  rw [evenTailSquare, evenTailSquare, evenChoice, evenChoice, he, ho,
+    show k*k+2*j+2 = k*k+(2*j+2) by omega,
+    show (k+1)*(k+1)+2*j+2 = k*k+(2*(k+j+1)+1) by ring,
+    pow_add q (k*k), pow_add q (k*k),
+    show k+(j+1)+1 = k+j+1+1 by omega, show k+1+j+1 = k+j+1+1 by omega]
+  ring
+
+private theorem watson_even_least_part_split {q : ℂ} (hq : ‖q‖ < 1) (k : ℕ) :
+    q^(k*k)*watsonEvenTail q 0*watsonOddTail q (k+1) - q^(k*k) =
+      watsonEvenA q k + watsonEvenA q (k+1) := by
+  have hh : HasSum (fun j => evenTailSquare q k j-evenTailSquare q k (j+1))
+      (watsonEvenA q k+watsonEvenA q (k+1)) :=
+    ((watsonEvenA_hasSum hq k).add (watsonEvenA_hasSum hq (k+1))).congr_fun (evenTailSquare_sub q hq k)
+  have he : Tendsto (watsonEvenTail q) atTop (𝓝 1) := tendsto_progressionTail hq (by decide : 0<2)
+  have ho : Tendsto (fun j => watsonOddTail q (k+j+1)) atTop (𝓝 1) := by
+    simpa [Nat.add_comm, Nat.add_left_comm, Function.comp_def] using
+      (tendsto_progressionTail hq (by decide : 0<1)).comp (tendsto_add_atTop_nat (k+1))
+  have ht : Tendsto (evenTailSquare q k) atTop (𝓝 (q^(k*k))) := by
+    simpa [evenTailSquare] using (he.const_mul (q^(k*k))).mul ho
+  have e := tendsto_nhds_unique ((tendsto_const_nhds (x := evenTailSquare q k 0)).sub ht)
+    (show Tendsto (fun j => evenTailSquare q k 0-evenTailSquare q k j) atTop _ by
+      simpa only [Finset.sum_range_sub'] using hh.tendsto_sum_nat)
+  simpa [evenTailSquare] using e
+
+private theorem watson_shifted_odd_product {q : ℂ} (hq : ‖q‖ < 1) :
+    ∑' k : ℕ, (-1:ℂ)^k*q^(k*k)*watsonEvenTail q 0*watsonOddTail q (k+1) =
+      watsonThetaHalf q+watsonEvenA q 0 := by
+  let B (k : ℕ) := (-1:ℂ)^k * watsonEvenA q k
+  have hB : Summable B := (summable_watsonEvenA hq).norm.of_norm_bounded (by intro k; simp [B])
+  have hshift := (summable_nat_add_iff 1).2 hB
+  have htel : HasSum (fun k => B k-B (k+1)) (watsonEvenA q 0) := by
+    have h := hB.sum_add_tsum_nat_add 1
+    rw [Finset.sum_range_one] at h
+    have hh := hB.hasSum.sub hshift.hasSum
+    convert hh using 1
+    change watsonEvenA q 0 = _
+    rw [← h]
+    simp [B]
+  apply ((watsonThetaHalf_hasSum hq).add htel).congr_fun _ |>.tsum_eq
+  intro k
+  have h := watson_even_least_part_split hq k
+  dsimp [B]
+  rw [pow_succ (-1:ℂ) k]
+  linear_combination (-1:ℂ)^k*h
+
+private theorem watson_all_least_parts {q : ℂ} (hq : ‖q‖ < 1) :
+    watsonEvenTail q 0*watsonOddTail q 0-1 = watsonA q 0+watsonEvenA q 0 := by
+  have hsum := (watsonA_hasSum hq 0).add (watsonEvenA_hasSum hq 0)
+  let tail (j : ℕ) := watsonEvenTail q j*watsonOddTail q j
+  have ht : Tendsto tail atTop (𝓝 1) := by
+    simpa [tail] using (tendsto_progressionTail hq (by decide : 0<2)).mul
+      (tendsto_progressionTail hq (by decide : 0<1))
+  have hstep (j : ℕ) : tail j-tail (j+1) =
+      q^(0*0+2*j+1)*watsonOddTail q (j+1)*watsonEvenTail q (0+j) + evenChoice q 0 j := by
+    have he : watsonEvenTail q j = (1+q^(2*j+2))*watsonEvenTail q (j+1) :=
+      progression_split hq 2 j
+    have ho : watsonOddTail q j = (1+q^(2*j+1))*watsonOddTail q (j+1) :=
+      progression_split hq 1 j
+    simp only [tail, evenChoice, Nat.zero_mul, Nat.zero_add]
+    rw [he, ho]
+    ring
+  have hs := hsum.congr_fun hstep
+  simpa [tail] using tendsto_nhds_unique ((tendsto_const_nhds (x := tail 0)).sub ht)
+    (show Tendsto (fun j => tail 0-tail j) atTop _ by
+      simpa only [Finset.sum_range_sub'] using hs.tendsto_sum_nat)
+
+/-- Clearing the odd denominator in ψ(−q) and separating the least part
+gives the theta term complementary to Watson's φ identity. -/
+theorem watson_odd_product_series {q : ℂ} (hq : ‖q‖ < 1) :
+    2 * (∑' n : ℕ, (-1:ℂ)^(n+1)*q^((n+1)*(n+1))*watsonEvenTail q 0*watsonOddTail q (n+1)) =
+      watsonThetaHalf q-watsonA q 0-1 := by
+  let V (k : ℕ) := (-1:ℂ)^k*q^(k*k)*watsonEvenTail q 0*watsonOddTail q k
+  let W (k : ℕ) := (-1:ℂ)^k*q^(k*k)*watsonEvenTail q 0*watsonOddTail q (k+1)
+  obtain ⟨C,hC,ho,he⟩ := tail_bounds hq
+  have hV : Summable V := by
+    apply ((summable_geometric_of_lt_one (norm_nonneg _) hq).mul_right (C*C)).of_norm_bounded
+    intro k
+    have hp := pow_le_pow_of_le_one (norm_nonneg q) hq.le (Nat.le_mul_self k)
+    simp only [V, norm_mul, norm_pow, norm_neg, norm_one, one_pow, one_mul]
+    exact (mul_le_mul (mul_le_mul hp (he _) (norm_nonneg _) (by positivity)) (ho _)
+      (norm_nonneg _) (by positivity)).trans_eq (by ring)
+  have htail := (summable_nat_add_iff 1).2 hV
+  have hstep (k : ℕ) : V k+V (k+1) = W k := by
+    have ho' : watsonOddTail q k = (1+q^(2*k+1))*watsonOddTail q (k+1) :=
+      progression_split hq 1 k
+    dsimp [V, W]
+    rw [ho', pow_succ (-1:ℂ), show (k+1)*(k+1) = k*k+(2*k+1) by ring, pow_add q]
+    ring
+  have hW := (hV.hasSum.add htail.hasSum).congr_fun (fun k => (hstep k).symm)
+  have hv := hV.tsum_eq_zero_add
+  have hw : ∑' k, W k = watsonThetaHalf q+watsonEvenA q 0 := watson_shifted_odd_product hq
+  have he := hW.tsum_eq
+  rw [hw, hv] at he
+  have hzero : V 0 = watsonEvenTail q 0*watsonOddTail q 0 := by simp [V]
+  rw [hzero] at he
+  change 2 * (∑' k : ℕ, V (k+1)) = _
+  linear_combination -he - watson_all_least_parts hq
+
 end MockThetaAnalytic

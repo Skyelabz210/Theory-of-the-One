@@ -1,0 +1,443 @@
+{
+  "status": "PASS",
+  "modulus": 30030,
+  "input_coefficients": 4268,
+  "mpmath": "1.3.0",
+  "working_decimal_digits_and_orders": [
+    [
+      55,
+      24
+    ],
+    [
+      75,
+      36
+    ]
+  ],
+  "source_sha256": {
+    "adapters/MockThetaAnalytic/check_shadow_endpoint.py": "a1ac879d4a63a1c017051c7dfa02a4a2787ae5b17a717f89e16ccf42dd5bd45f",
+    "adapters/MockThetaAnalytic/check_shadow_period.py": "b0b24692c26e3ed69a46fa9f238890ed330324cce0667a935672fab7a11f1b34",
+    "adapters/MockThetaAnalytic/check_shadow_reconstruction.py": "2ee33be88b49c9d938dd26d23fe7f64cbb7349e6843aab63505c6efd06a4df0f",
+    "tools/check_quantum_transport34.py": "9fe9b70f7b8be42d4787738abbaf03ce3d1a118ca4a3c3a04eb0a6321bc77225"
+  },
+  "exact_controls": {
+    "diagonal_average_cutoffs": [
+      852,
+      1024,
+      2048,
+      3456,
+      3480,
+      4267
+    ],
+    "order24_polynomial": [
+      4,
+      -4,
+      4,
+      -4,
+      0,
+      0,
+      4,
+      0,
+      0,
+      4,
+      4,
+      0
+    ],
+    "raw_before_polynomial": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "raw_after_polynomial": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "sector_half_block_polynomials": [
+      [
+        0,
+        0,
+        4,
+        4,
+        0,
+        -4,
+        4,
+        -4,
+        4,
+        0,
+        0,
+        -4
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        -4,
+        -4,
+        -4,
+        0,
+        -4,
+        0,
+        0,
+        4,
+        4,
+        8
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        -4,
+        -4,
+        4,
+        0,
+        4,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        -8
+      ],
+      [
+        -4,
+        0,
+        8,
+        4,
+        0,
+        0,
+        4,
+        0,
+        4,
+        0,
+        -4,
+        -8
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        -8,
+        -8,
+        0,
+        4,
+        -4,
+        4,
+        -8,
+        0,
+        4,
+        8
+      ]
+    ],
+    "zero_sectors": [
+      1,
+      3,
+      4,
+      5,
+      9
+    ]
+  },
+  "diagonal_value": {
+    "real": "3.20366253395129",
+    "imag": "-30.6193362033989"
+  },
+  "off_diagonal_comparisons": 18,
+  "cases": [
+    {
+      "x": "-1/34",
+      "reference": {
+        "real": "-2.51133957327121",
+        "imag": "-2.938708096882487"
+      },
+      "cutoffs": [
+        {
+          "cutoff": 852,
+          "frequency_window": [
+            0,
+            144
+          ],
+          "raw_error": "1.830804352274196",
+          "averaged_error": "1.01921768211924"
+        },
+        {
+          "cutoff": 1024,
+          "frequency_window": [
+            13,
+            157
+          ],
+          "raw_error": "2.274830953393247",
+          "averaged_error": "3.93020899827253"
+        },
+        {
+          "cutoff": 2048,
+          "frequency_window": [
+            78,
+            222
+          ],
+          "raw_error": "0.3401825941954848",
+          "averaged_error": "0.6331337641418658"
+        },
+        {
+          "cutoff": 3456,
+          "frequency_window": [
+            145,
+            289
+          ],
+          "raw_error": "1.012376106378833",
+          "averaged_error": "0.409315547265708",
+          "proved_uniform_bound_evaluated": "3990.645060638693"
+        },
+        {
+          "cutoff": 3480,
+          "frequency_window": [
+            146,
+            290
+          ],
+          "raw_error": "1.174954789081931",
+          "averaged_error": "0.489977245138324",
+          "proved_uniform_bound_evaluated": "3963.123370565323"
+        },
+        {
+          "cutoff": 4267,
+          "frequency_window": [
+            177,
+            321
+          ],
+          "raw_error": "1.281093300754692",
+          "averaged_error": "0.5287530622657566",
+          "proved_uniform_bound_evaluated": "3265.073231431658"
+        }
+      ]
+    },
+    {
+      "x": "-1253/30000",
+      "reference": {
+        "real": "6.798745622572043",
+        "imag": "-29.54029775534297"
+      },
+      "cutoffs": [
+        {
+          "cutoff": 852,
+          "frequency_window": [
+            0,
+            144
+          ],
+          "raw_error": "16.88264725370419",
+          "averaged_error": "7.807661841685396"
+        },
+        {
+          "cutoff": 1024,
+          "frequency_window": [
+            13,
+            157
+          ],
+          "raw_error": "20.54795834159293",
+          "averaged_error": "9.43480110454099"
+        },
+        {
+          "cutoff": 2048,
+          "frequency_window": [
+            78,
+            222
+          ],
+          "raw_error": "3.003985760856897",
+          "averaged_error": "2.047316259296155"
+        },
+        {
+          "cutoff": 3456,
+          "frequency_window": [
+            145,
+            289
+          ],
+          "raw_error": "10.67490277254552",
+          "averaged_error": "3.276917996551702",
+          "proved_uniform_bound_evaluated": "3990.645060638693"
+        },
+        {
+          "cutoff": 3480,
+          "frequency_window": [
+            146,
+            290
+          ],
+          "raw_error": "12.32149036496536",
+          "averaged_error": "3.762142116961024",
+          "proved_uniform_bound_evaluated": "3963.123370565323"
+        },
+        {
+          "cutoff": 4267,
+          "frequency_window": [
+            177,
+            321
+          ],
+          "raw_error": "13.45154878129025",
+          "averaged_error": "4.089436799603104",
+          "proved_uniform_bound_evaluated": "3265.073231431658"
+        }
+      ]
+    },
+    {
+      "x": "-1247/30000",
+      "reference": {
+        "real": "-0.41403340631713",
+        "imag": "-29.61136293138302"
+      },
+      "cutoffs": [
+        {
+          "cutoff": 852,
+          "frequency_window": [
+            0,
+            144
+          ],
+          "raw_error": "16.70801661205718",
+          "averaged_error": "7.526211813576713"
+        },
+        {
+          "cutoff": 1024,
+          "frequency_window": [
+            13,
+            157
+          ],
+          "raw_error": "20.48074985839774",
+          "averaged_error": "9.302966383255994"
+        },
+        {
+          "cutoff": 2048,
+          "frequency_window": [
+            78,
+            222
+          ],
+          "raw_error": "2.696111718360211",
+          "averaged_error": "1.879677019108208"
+        },
+        {
+          "cutoff": 3456,
+          "frequency_window": [
+            145,
+            289
+          ],
+          "raw_error": "10.63278492603251",
+          "averaged_error": "3.215639002042643",
+          "proved_uniform_bound_evaluated": "3990.645060638693"
+        },
+        {
+          "cutoff": 3480,
+          "frequency_window": [
+            146,
+            290
+          ],
+          "raw_error": "12.34474506423362",
+          "averaged_error": "3.796519141782495",
+          "proved_uniform_bound_evaluated": "3963.123370565323"
+        },
+        {
+          "cutoff": 4267,
+          "frequency_window": [
+            177,
+            321
+          ],
+          "raw_error": "13.46342413959716",
+          "averaged_error": "4.102263837201188",
+          "proved_uniform_bound_evaluated": "3265.073231431658"
+        }
+      ]
+    }
+  ],
+  "scope": "Integer polynomial controls, plus numerical quadrature with precision replication."
+}

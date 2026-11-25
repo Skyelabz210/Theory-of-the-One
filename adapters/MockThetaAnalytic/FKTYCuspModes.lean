@@ -45,7 +45,7 @@ theorem fktyCuspPhase_add_144 (m : ℕ) : fktyCuspPhase (m+144) = -fktyCuspPhase
     ring
   rw [he, mul_neg]
 
-private theorem shadowTerm_cusp (t : ℝ) (m : ℕ) :
+theorem shadowTerm_cusp (t : ℝ) (m : ℕ) :
     shadowTerm (shadowNome ((-1/24 : ℂ) + (t : ℂ)*I)) m =
       fktyCuspPhase m * (gaussianMode (Real.pi/12) m t : ℂ) := by
   unfold shadowTerm shadowNome fktyCuspPhase gaussianMode shadowWeight

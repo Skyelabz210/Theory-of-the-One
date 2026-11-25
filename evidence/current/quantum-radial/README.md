@@ -44,7 +44,15 @@ identity from the two cusp limits and the theta transformation.
 · [Period computation](../../../tools/check_quantum_transport34.py)
 · [Numerical receipt](transport34.json)
 
+The S6 prefix replay reconstructs the theta coefficients of the same period and integrates their finite polynomial. Eight cutoffs and three real parameters exercise the endpoint error theorem. The infinite reference uses Poisson summation, with a second check from the finite cusp defect at \(-1/34\). The receipt records exact phase-shift controls and the error at every cutoff. [Period recovery and theorem](../../../docs/reviews/2026-11-22-cram-shadow-period.md) · [S6 period receipt](shadow-period.json)
+
+The two-cutoff average is checked exactly at \(-1/24\) by reducing the observed phase sums and the terminating FKTY series to integer polynomials modulo \(q^{12}+1\). The replay includes the two raw cutoff controls and numerical comparisons on both sides of the cusp. [Endpoint theorem and derivation](../../../docs/reviews/2026-11-22-cram-shadow-endpoint.md) · [Endpoint receipt](shadow-endpoint.json)
+
 At $\zeta=e^{2\pi i/34}$, independent evaluations of the defining $f$, the product $b$ and the third-order $\phi(-q)$ check the disk cancellation. For radii $0.999$, $0.9998$, $0.99995$ and $0.99999$, the distances of $f+b$ to the finite boundary are approximately $2.50$, $0.755$, $0.214$ and $0.0445$. At the last radius the opposite compensation sign gives a distance of $1.71\times10^{64}$. The receipt records both precisions and the separate truncation bounds. [Watson calculation](../../../tools/check_watson_radial34.py) · [Numerical receipt](watson34.json) · [Lean radial theorem](../../../adapters/MockThetaAnalytic/FOROrder34.lean)
+
+At every primitive order-24 root, Lean proves the radial limit of $f-b$ from the complementary identity with $\psi(-q)$. The replay checks the exact finite value and an entire period of signed mod-8 readouts, including the mod-4 sign alias. It samples the radial approach at six radii per root and checks the defining $f$ series and $b$ product independently at two radii per root. [Order-24 proof and replay](../../../docs/reviews/2026-11-22-cram-order24.md) · [Execution receipt](watson24.json)
+
+The uniform Watson-to-FOR identity and radial proof cover every primitive even root. The independent integer replay performs 44 divisions by \(X^k+1\) and 45 additional divisions by \(X^s+1\) for odd \(s\) dividing even \(k\). For \(1\le k\le44\), it checks the quadratic coefficients at all 22 odd indices and measures root multiplicity at \(-1\) for 200 half-period and prime pairs. Modulo 11 it finds 38 simple roots, two double roots, and four roots of multiplicity 11. The replay also checks the cleared identity for every even order through 192, the opposite denominator parity, the imprimitive control, and signed phase comparisons. [Universal congruences](../../../adapters/MockThetaAnalytic/FORWatsonCongruence.lean) · [Multiplicity theorem](../../../adapters/MockThetaAnalytic/FORWatsonMultiplicity.lean) · [Exact replay receipt](watson-even-roots.json)
 
 From the repository root, reproduce the finite proofs and exact checks with
 the pinned Lean toolchain. Reproduce the numerical run with Python and
@@ -54,8 +62,11 @@ the pinned Lean toolchain. Reproduce the numerical run with Python and
 python3 tools/verify_profinite_mock_theta.py --lean lean
 python3 tools/check_quantum_radial.py --dps 340 --receipt evidence/current/quantum-radial/numerical.json
 python3 tools/check_quantum_transport34.py --receipt evidence/current/quantum-radial/transport34.json
+python3 adapters/MockThetaAnalytic/check_shadow_period.py | diff -u evidence/current/quantum-radial/shadow-period.json -
+python3 adapters/MockThetaAnalytic/check_shadow_endpoint.py | diff -u evidence/current/quantum-radial/shadow-endpoint.json -
 python3 tools/check_watson_radial34.py --receipt evidence/current/quantum-radial/watson34.json
+python3 tools/check_watson_radial24.py | diff -u evidence/current/quantum-radial/watson24.json -
+python3 tools/check_watson_even_roots.py | diff -u evidence/current/quantum-radial/watson-even-roots.json -
 ```
 
-The Mathlib adapter proves the interior Taylor identification for the signed coefficients of $f$. Its diagonal cutoff theorem for finite packets at any primitive even root uses FOR’s compensated radial limit as its analytic hypothesis. At order 34 the analytic package proves that limit. [Order-34 packet theorem](../../../adapters/MockThetaAnalytic/FOROrder34.lean) · [Taylor identity and radial transfer](../../../adapters/MockThetaAnalytic/ThirdOrderTaylor.lean)
-· [Kernel audit](../../../adapters/MockThetaAnalytic/verification.json)
+The Mathlib adapter proves the interior Taylor identification for the signed coefficients of $f$. The diagonal cutoff theorem supplies compensated packet convergence at every primitive even root and the normalized FKTY value at its reflected rational cusp. The integer Watson certificate holds in the full quotient by $X^k+1$ for every positive $k$. [Even-order packet theorem](../../../adapters/MockThetaAnalytic/FOREvenRoot.lean) · [Uniform certificate](../../../adapters/MockThetaAnalytic/FORWatsonQuotient.lean) · [Kernel audit](../../../adapters/MockThetaAnalytic/verification.json)

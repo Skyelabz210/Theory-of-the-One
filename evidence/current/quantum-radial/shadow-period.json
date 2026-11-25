@@ -1,0 +1,309 @@
+{
+  "status": "PASS",
+  "modulus": 30030,
+  "input_coefficients": 4268,
+  "mpmath": "1.3.0",
+  "working_decimal_digits_and_orders": [
+    [
+      55,
+      24
+    ],
+    [
+      75,
+      36
+    ]
+  ],
+  "source_sha256": {
+    "adapters/MockThetaAnalytic/check_shadow_period.py": "b0b24692c26e3ed69a46fa9f238890ed330324cce0667a935672fab7a11f1b34",
+    "adapters/MockThetaAnalytic/check_shadow_reconstruction.py": "2ee33be88b49c9d938dd26d23fe7f64cbb7349e6843aab63505c6efd06a4df0f",
+    "tools/check_quantum_transport34.py": "9fe9b70f7b8be42d4787738abbaf03ce3d1a118ca4a3c3a04eb0a6321bc77225"
+  },
+  "shift_checks": {
+    "exact_phase_comparisons": 6336,
+    "exact_sector_comparisons": 3168,
+    "mode_one_sectors_under_144": [
+      10,
+      7
+    ]
+  },
+  "finite_integral_comparisons": 24,
+  "sector_additivity_comparisons": 48,
+  "cases": [
+    {
+      "x": "-1/34",
+      "distance_from_start": "5/408",
+      "poisson_period": {
+        "real": "-2.51133957327121",
+        "imag": "-2.938708096882487"
+      },
+      "largest_prefix_period": {
+        "real": "-1.614746872691875",
+        "imag": "-2.023655325449928"
+      },
+      "cutoffs": [
+        {
+          "coefficient_cutoff": 0,
+          "last_mode": 1,
+          "absolute_error": "10.46609849610069",
+          "proved_bound_evaluated": "19874.62468597137"
+        },
+        {
+          "coefficient_cutoff": 1,
+          "last_mode": 5,
+          "absolute_error": "6.052314823452702",
+          "proved_bound_evaluated": "3974.924937194274"
+        },
+        {
+          "coefficient_cutoff": 16,
+          "last_mode": 19,
+          "absolute_error": "9.372426026915902",
+          "proved_bound_evaluated": "1046.03287820902"
+        },
+        {
+          "coefficient_cutoff": 64,
+          "last_mode": 39,
+          "absolute_error": "8.325480703447055",
+          "proved_bound_evaluated": "509.6057611787531"
+        },
+        {
+          "coefficient_cutoff": 256,
+          "last_mode": 78,
+          "absolute_error": "1.604641441534094",
+          "proved_bound_evaluated": "254.8028805893766"
+        },
+        {
+          "coefficient_cutoff": 1024,
+          "last_mode": 156,
+          "absolute_error": "2.274830953393247",
+          "proved_bound_evaluated": "127.4014402946883"
+        },
+        {
+          "coefficient_cutoff": 2048,
+          "last_mode": 221,
+          "absolute_error": "0.3401825941954848",
+          "proved_bound_evaluated": "89.93042844330938"
+        },
+        {
+          "coefficient_cutoff": 4267,
+          "last_mode": 320,
+          "absolute_error": "1.281093300754692",
+          "proved_bound_evaluated": "62.10820214366054"
+        }
+      ],
+      "order34_checks": {
+        "finite_cusp_defect": {
+          "real": "-2.51133957327121",
+          "imag": "-2.938708096882487"
+        },
+        "poisson_and_finite_defect_agree_to": "1e-27",
+        "order34_boundary_estimate": {
+          "real": "-1.402713670484991",
+          "imag": "11.27490114323453"
+        },
+        "order34_boundary_error": "0.3698197810238739",
+        "translated_boundary": {
+          "degree": 4267,
+          "exact_truncation_bound": "24",
+          "sources": [
+            {
+              "source": 0,
+              "primary": 0,
+              "mod17": 0,
+              "exponent10": 0,
+              "exponent34": 0,
+              "estimate": {
+                "real": "-1.402713670484991",
+                "imag": "11.27490114323453"
+              },
+              "terminating_reference": {
+                "real": "-1.772474276918802",
+                "imag": "11.26828567905986"
+              },
+              "absolute_error": "0.3698197810238739"
+            },
+            {
+              "source": 30030,
+              "primary": 0,
+              "mod17": 8,
+              "exponent10": 0,
+              "exponent34": 8,
+              "estimate": {
+                "real": "-11.35623049183898",
+                "imag": "-0.3564133096609989"
+              },
+              "terminating_reference": {
+                "real": "-11.383760452618",
+                "imag": "-0.7252069805612078"
+              },
+              "absolute_error": "0.3698197810238739"
+            },
+            {
+              "source": -1,
+              "primary": 30029,
+              "mod17": 16,
+              "exponent10": 9,
+              "exponent34": 33,
+              "estimate": {
+                "real": "0.6929278438532277",
+                "imag": "11.34067248598114"
+              },
+              "terminating_reference": {
+                "real": "0.3282475260537556",
+                "imag": "11.40211299579529"
+              },
+              "absolute_error": "0.3698197810238739"
+            }
+          ]
+        },
+        "integer_cutoffs": [
+          {
+            "reciprocal_precision": 1,
+            "degree": 2457600,
+            "last_mode": 7680
+          },
+          {
+            "reciprocal_precision": 2,
+            "degree": 9830400,
+            "last_mode": 15360
+          },
+          {
+            "reciprocal_precision": 10,
+            "degree": 245760000,
+            "last_mode": 76800
+          },
+          {
+            "reciprocal_precision": 1000,
+            "degree": 2457600000000,
+            "last_mode": 7680000
+          }
+        ],
+        "omitting_half_absolute_error": "1.32088797318186"
+      }
+    },
+    {
+      "x": "0",
+      "distance_from_start": "1/24",
+      "poisson_period": {
+        "real": "-1.954714301449559e-48",
+        "imag": "1.954714301449559e-48"
+      },
+      "largest_prefix_period": {
+        "real": "0.4867882302573275",
+        "imag": "0.4957254629737176"
+      },
+      "cutoffs": [
+        {
+          "coefficient_cutoff": 0,
+          "last_mode": 1,
+          "absolute_error": "6.374767935710122",
+          "proved_bound_evaluated": "10778.52858025434"
+        },
+        {
+          "coefficient_cutoff": 1,
+          "last_mode": 5,
+          "absolute_error": "3.256392239969551",
+          "proved_bound_evaluated": "2155.705716050868"
+        },
+        {
+          "coefficient_cutoff": 16,
+          "last_mode": 19,
+          "absolute_error": "5.206887660735707",
+          "proved_bound_evaluated": "567.2909779081231"
+        },
+        {
+          "coefficient_cutoff": 64,
+          "last_mode": 39,
+          "absolute_error": "4.568464665444141",
+          "proved_bound_evaluated": "276.3725276988292"
+        },
+        {
+          "coefficient_cutoff": 256,
+          "last_mode": 78,
+          "absolute_error": "0.8711151650641096",
+          "proved_bound_evaluated": "138.1862638494146"
+        },
+        {
+          "coefficient_cutoff": 1024,
+          "last_mode": 156,
+          "absolute_error": "1.233871525641764",
+          "proved_bound_evaluated": "69.0931319247073"
+        },
+        {
+          "coefficient_cutoff": 2048,
+          "last_mode": 221,
+          "absolute_error": "0.1845764735465655",
+          "proved_bound_evaluated": "48.7716225350875"
+        },
+        {
+          "coefficient_cutoff": 4267,
+          "last_mode": 320,
+          "absolute_error": "0.6947708368646223",
+          "proved_bound_evaluated": "33.68290181329481"
+        }
+      ]
+    },
+    {
+      "x": "-1/20",
+      "distance_from_start": "1/120",
+      "poisson_period": {
+        "real": "9.594334361695734",
+        "imag": "-4.470938234423749"
+      },
+      "largest_prefix_period": {
+        "real": "8.488862134348291",
+        "imag": "-3.379445695593387"
+      },
+      "cutoffs": [
+        {
+          "coefficient_cutoff": 0,
+          "last_mode": 1,
+          "absolute_error": "10.56606311437019",
+          "proved_bound_evaluated": "24101.522602873"
+        },
+        {
+          "coefficient_cutoff": 1,
+          "last_mode": 5,
+          "absolute_error": "11.04939461128668",
+          "proved_bound_evaluated": "4820.3045205746"
+        },
+        {
+          "coefficient_cutoff": 16,
+          "last_mode": 19,
+          "absolute_error": "11.38721797218744",
+          "proved_bound_evaluated": "1268.501189624895"
+        },
+        {
+          "coefficient_cutoff": 64,
+          "last_mode": 39,
+          "absolute_error": "10.10053029935508",
+          "proved_bound_evaluated": "617.9877590480256"
+        },
+        {
+          "coefficient_cutoff": 256,
+          "last_mode": 78,
+          "absolute_error": "1.941545775466254",
+          "proved_bound_evaluated": "308.9938795240128"
+        },
+        {
+          "coefficient_cutoff": 1024,
+          "last_mode": 156,
+          "absolute_error": "2.759343631414359",
+          "proved_bound_evaluated": "154.4969397620064"
+        },
+        {
+          "coefficient_cutoff": 2048,
+          "last_mode": 221,
+          "absolute_error": "0.4131172266632382",
+          "proved_bound_evaluated": "109.0566633614163"
+        },
+        {
+          "coefficient_cutoff": 4267,
+          "last_mode": 320,
+          "absolute_error": "1.553520134326835",
+          "proved_bound_evaluated": "75.31725813397812"
+        }
+      ]
+    }
+  ],
+  "scope": "Numerical quadrature and precision replication. The uniform bound is proved in Lean."
+}

@@ -36,6 +36,9 @@ import FORPhiProduct
 import FORRankProduct
 import FORGaussLimit
 import FOROrder34
+import FOROrder24
+import FOREvenRoot
+import FORWatsonMultiplicity
 import Lean.Util.CollectAxioms
 import Lean.Elab.Command
 
@@ -271,6 +274,183 @@ example (r : ℕ → ℝ) (hr : ∀ j, 0 < r j ∧ r j < 1)
 
 end
 
+section
+open MockThetaAnalytic KElimination.MockTheta KElimination.QuantumRadial
+open ShadowPeriod
+open scoped Topology
+
+example (X : ℤ) (N34 N10 : ℕ) (h34 : 17 ≤ N34) (h10 : 5 ≤ N10) :
+    Filter.Tendsto
+      (fun D => recoveredPeriod (ShadowReadings.observe D mockCoeff) (fun _ => 1) (-1/34))
+      Filter.atTop (𝓝 (Order34Source.normalizedPacketDefect N34 N10 (Order34Source.observe X))) :=
+  recoveredPeriod_tendsto_normalizedPacketDefect X N34 N10 h34 h10
+
+example : Filter.Tendsto (fun D => recoveredBoundary34 (ShadowReadings.observe D mockCoeff))
+    Filter.atTop (𝓝 (boundaryValue 17 (integerNome (1/34)))) :=
+  recoveredBoundary34_tendsto
+
+example : ‖recoveredTranslatedBoundary34 (ShadowReadings.observe 0 mockCoeff)
+    (Order34Source.observe (-1)) 5 -
+    Order34Source.translatedPacketValue (integerNome (1/34)) 17 510510
+      Order34Source.exponent34 (Order34Source.observe (-1))‖ ≤ 7680 := by
+  simpa using recoveredTranslatedBoundary34_error 0 (-1) 17 5 (by decide) (by decide)
+
+example (n : ℕ) (hn : 0 < n) (X : ℤ) :
+    ‖recoveredTranslatedBoundary34 (ShadowReadings.observe (boundary34Degree n) mockCoeff)
+      (Order34Source.observe X) 5 - Order34Source.translatedPacketValue (integerNome (1/34))
+        17 510510 Order34Source.exponent34 (Order34Source.observe X)‖ ≤ 1 / (n : ℝ) :=
+  recoveredTranslatedBoundary34_precision _ n X 17 5 hn le_rfl (by decide) (by decide)
+
+example : boundary34ToleranceDegree 2 3 = boundary34Degree 2 := by decide
+
+example : (0 : ℤ) % 30030 = 30030 % 30030 ∧
+    Order34Source.exponent10 (Order34Source.observe 0) =
+      Order34Source.exponent10 (Order34Source.observe 30030) ∧
+    Order34Source.exponent34 (Order34Source.observe 0) ≠
+      Order34Source.exponent34 (Order34Source.observe 30030) := by decide
+
+example : ShadowEndpoint.averagedPeriod (ShadowReadings.observe 852 mockCoeff) (fun _ => 1)
+    144 (-1/24) = fktyPhi (-1/24) := by
+  apply ShadowEndpoint.averagedFullPeriod_eq_fktyPhi24
+  have h : 143 ≤ (24*852+1 : ℕ).sqrt := Nat.le_sqrt.mpr (by decide)
+  exact Nat.succ_le_succ h
+
+example (X : ℤ) : Order24Source.normalizedPacket24 12 (Order24Source.observe X) =
+    ShadowEndpoint.averagedPeriod (ShadowReadings.observe 852 mockCoeff) (fun _ => 1) 144 (-1/24) := by
+  apply Order24Source.normalizedPacket24_eq_averaged X 12 852 (by decide)
+  have h : 143 ≤ (24*852+1 : ℕ).sqrt := Nat.le_sqrt.mpr (by decide)
+  exact Nat.succ_le_succ h
+
+example (ζ : ℂ) (hζ : IsPrimitiveRoot ζ 22) (r : ℕ → ℝ)
+    (hr : ∀ j, 0 < r j ∧ r j < 1) (hl : Filter.Tendsto r Filter.atTop (𝓝[<] (1:ℝ))) :
+    ∃ K : ℕ → ℕ, (∀ j, j ≤ K j) ∧ ∀ N : ℕ → ℕ, (∀ j, K j ≤ N j) →
+      Filter.Tendsto (fun j => fPacketAtRadius (N j) 30030 (r j) ζ + radialB ((r j:ℂ)*ζ))
+        Filter.atTop (𝓝 (boundaryValue 11 ζ)) := by
+  have h := fPackets_tendsto_boundary_from_coupled_anchors (ζ := ζ) (k := 11) (M := 2730)
+    (by decide) hζ (by decide) [11] (by simp) (by decide) r hr hl
+  have hs : (-1:ℂ)^11 = -1 := by norm_num
+  simpa only [hs, neg_one_mul, sub_neg_eq_add, show
+    2730 * KElimination.CoupledAnchors.resolution 2730 [11] = 30030 by decide] using h
+
+example (ζ : ℂ) (hζ : IsPrimitiveRoot ζ 44) (r : ℕ → ℝ)
+    (hr : ∀ j, 0 < r j ∧ r j < 1) (hl : Filter.Tendsto r Filter.atTop (𝓝[<] (1:ℝ))) :
+    ∃ K : ℕ → ℕ, (∀ j, j ≤ K j) ∧ ∀ N : ℕ → ℕ, (∀ j, K j ≤ N j) →
+      Filter.Tendsto (fun j => fPacketAtRadius (N j) 60060 (r j) ζ - radialB ((r j:ℂ)*ζ))
+        Filter.atTop (𝓝 (boundaryValue 22 ζ)) := by
+  have h := fPackets_tendsto_boundary_from_coupled_anchors (ζ := ζ) (k := 22) (M := 30030)
+    (by decide) hζ (by decide) [4] (by simp) (by decide) r hr hl
+  have hs : (-1:ℂ)^22 = 1 := by norm_num
+  simpa only [hs, one_mul, show
+    30030 * KElimination.CoupledAnchors.resolution 30030 [4] = 60060 by decide] using h
+
+example : watsonBoundaryCertificate 1001 = true := watsonBoundaryCertificate_all (by decide)
+
+open Polynomial in
+example : watsonCongruenceDifference 1 (X : ℤ[X]) = (X+1)*(2*X^2-X+1) ∧
+    ¬ (X+1 : ℤ[X])^2 ∣ watsonCongruenceDifference 1 X := by
+  have h : watsonCongruenceDifference 1 (X : ℤ[X]) = (X+1)*(2*X^2-X+1) := by
+    norm_num [watsonCongruenceDifference, watsonClearedNumerator, watsonDen,
+      Finset.sum_range_succ, Finset.prod_range_succ, uPartial, uPolynomial,
+      KElimination.ResidueSeries.sumBelow, uProduct]
+    ring
+  refine ⟨h, ?_⟩
+  rw [h, pow_two, mul_dvd_mul_iff_left (by simpa using X_add_C_ne_zero (1:ℤ))]
+  intro hdvd
+  have hz := eval_eq_zero_of_dvd_of_eval_eq_zero hdvd (by simp : (X+1 : ℤ[X]).eval (-1) = 0)
+  norm_num at hz
+
+-- The denominator vanishes in this composite residue ring and the cleared sum is 6.
+example : watsonDen (-1 : ZMod 8) 2 3 = 0 ∧ watsonClearedNumerator (-1 : ZMod 8) 2 3 = 6 := by
+  have hD : watsonDen (-1 : ZMod 8) 2 3 = 0 := by decide +kernel
+  have hU : uPartial 3 (-1 : ZMod 8) = -1 := by decide +kernel
+  refine ⟨hD, ?_⟩
+  have h := watson_cleared_eq_of_half_power (by decide : (-1 : ZMod 8)^3 = -1)
+  simp only [if_neg (by decide : ¬ Even 3), hD, hU] at h
+  exact h.trans (by decide)
+
+open Polynomial in
+example : (X+1 : (ZMod 11)[X])^11 ∣ watsonCongruenceDifference 11 X := by
+  letI : Fact (Nat.Prime 11) := ⟨by decide⟩
+  simpa using watson_congruence_prime_power 11 1 1 (X : (ZMod 11)[X])
+
+section
+open Polynomial
+
+example : (watsonQuotient 11).eval (-1) = 24 := by
+  rw [watson_quotient_at_neg_one (by decide : Odd 11)]
+  norm_num
+
+example : (watsonCongruenceDifference 11 (X : (ZMod 11)[X])).rootMultiplicity (-1) = 11 ∧
+    (watsonCongruenceDifference 33 (X : (ZMod 11)[X])).rootMultiplicity (-1) = 11 ∧
+    (watsonCongruenceDifference 121 (X : (ZMod 11)[X])).rootMultiplicity (-1) = 121 := by
+  letI : Fact (Nat.Prime 11) := ⟨by decide⟩
+  exact ⟨watson_rootMultiplicity_odd_prime 11 1 1 (by decide) (by decide) (by decide) (by decide),
+    watson_rootMultiplicity_odd_prime 11 3 1 (by decide) (by decide) (by decide) (by decide),
+    watson_rootMultiplicity_odd_prime 11 1 2 (by decide) (by decide) (by decide) (by decide)⟩
+
+-- The derivative 264 reduces to 22 modulo 121, where the same root is simple.
+example : (watsonCongruenceDifference 11 (X : (ZMod 121)[X])).rootMultiplicity (-1) = 1 :=
+  watson_rootMultiplicity_one_of_nonzero_slope (by decide : Odd 11) (by decide)
+
+-- Here the quotient itself vanishes at −1 in characteristic 11.
+example : (X^21+1)*(X+1 : (ZMod 11)[X]) ∣ watsonCongruenceDifference 21 X :=
+  (watson_extra_linear_factor_iff (by decide : Odd 21)).mpr (by decide)
+
+example : (X^11+1 : ℤ[X]) ∣ watsonCongruenceDifference 22 X :=
+  watson_even_polynomial_congruence (by decide) (by decide) (by decide) (by decide)
+
+example : (watsonQuotient 21).derivative.eval (-1) = -9771 := by
+  rw [watson_quotient_derivative_at_neg_one (by decide : Odd 21) (by decide)]
+  norm_num
+
+-- The uniform theorem covers simple roots, the k+1 branch, and both parities.
+example : (watsonCongruenceDifference 17 (X : (ZMod 11)[X])).rootMultiplicity (-1) = 1 ∧
+    (watsonCongruenceDifference 21 (X : (ZMod 11)[X])).rootMultiplicity (-1) = 2 ∧
+    (watsonCongruenceDifference 22 (X : (ZMod 11)[X])).rootMultiplicity (-1) = 11 ∧
+    (watsonCongruenceDifference 242 (X : (ZMod 11)[X])).rootMultiplicity (-1) = 121 := by
+  letI : Fact (Nat.Prime 11) := ⟨by decide⟩
+  have h17 := watson_rootMultiplicity_at_neg_one (by decide : 3 < 11) (by decide : 0 < 17)
+  have h21 := watson_rootMultiplicity_at_neg_one (by decide : 3 < 11) (by decide : 0 < 21)
+  have h22 := watson_rootMultiplicity_at_neg_one (by decide : 3 < 11) (by decide : 0 < 22)
+  have h242 := watson_rootMultiplicity_at_neg_one (by decide : 3 < 11) (by decide : 0 < 242)
+  have hp : Nat.Prime 11 := Fact.out
+  have hval (e : ℕ) : (11^e*2).factorization 11 = e := by
+    rw [Nat.factorization_mul (pow_ne_zero _ (by decide)) (by decide), hp.factorization_pow,
+      Finsupp.add_apply, Finsupp.single_eq_same,
+      Nat.factorization_eq_zero_of_not_dvd (by decide : ¬ 11 ∣ 2), add_zero]
+  refine ⟨h17.trans ?_, h21.trans (by decide), h22.trans ?_, h242.trans ?_⟩
+  · rw [if_neg (by decide), Nat.factorization_eq_zero_of_not_dvd (by decide : ¬ 11 ∣ 17), pow_zero]
+  · rw [if_neg (by decide), show (22:ℕ) = 11^1*2 by decide, hval, pow_one]
+  · rw [if_neg (by decide), show (242:ℕ) = 11^2*2 by decide, hval]
+    decide
+
+example : (watsonCongruenceDifference 21 (X : (ZMod 121)[X])).rootMultiplicity (-1) = 1 ∧
+    (watsonCongruenceDifference 241 (X : (ZMod 121)[X])).rootMultiplicity (-1) = 2 :=
+  ⟨watson_rootMultiplicity_one_of_nonzero_slope (by decide : Odd 21) (by decide),
+    watson_rootMultiplicity_two_of_cast_eq_neg_one (by decide : Odd 241) (by decide) (by decide) (by decide)⟩
+
+end
+
+-- In the X^12+1 quotient an eighth root gives three denominator blocks.
+example (ζ : ℂ) (hζ : IsPrimitiveRoot ζ 8) :
+    8 * (∑ j ∈ Finset.range 12, watsonTerm 1 ζ j) = 7 * (1 + uPartial 4 ζ) := by
+  have hq4 := primitive_even_half_power (k := 4) (by decide) hζ
+  have hq12 : ζ^12 = -1 := by rw [show 12 = 4*3 by decide, pow_mul, hq4]; norm_num
+  have hD := watson_denominator_blocks (c := 1) (h := 4) (by decide) hζ (by decide) 3
+  change (∏ j ∈ Finset.range 12, (1+ζ^(2*j+1))) = (2:ℂ)^3 at hD
+  have hU : uPartial 12 ζ = uPartial 4 ζ := uPolynomial_stable 12 4 ζ ζ (by decide) hq4 (by decide)
+  have h := watson_cleared_identity hq12
+  simp only [watsonClearedDifference, if_pos (by decide : Even 12), hD, hU] at h
+  linear_combination h
+
+-- Q=1 has Q²=1 but is imprimitive at k=2. The Newton identity fails there.
+example : (∑ n ∈ Finset.range 2, pochhammer (2:ℂ) 1 n * (1:ℂ)^n) ≠
+    (2:ℂ)^(2-1:ℕ)*∑ n ∈ Finset.range 2, (pochhammer (2:ℂ) 1 n / ((2:ℂ)^n*(1:ℂ)^(n*(n+1)))) *
+      ∏ j ∈ Finset.range n, ((1:ℂ)-(1:ℂ)^(j+1)) := by
+  norm_num [Finset.sum_range_succ, Finset.prod_range_succ, pochhammer]
+
+end
+
 run_cmd do
   let env ← getEnv
   let allowed := #[``propext, ``Classical.choice, ``Quot.sound]
@@ -285,7 +465,12 @@ run_cmd do
       `FKTYThetaTransform, `EichlerPrimitive, `EichlerHorizontal, `EichlerTransportPath,
       `EichlerEndpointFTC, `EichlerPathLimits, `EichlerBridge, `Order34QuantumPackets,
       `FORRadialProducts, `FORCyclotomicBlock, `FORPhiRadial, `FineRank, `FORGaussFinite,
-      `FORRadialIdentity, `FORPhiProduct, `FORRankProduct, `FORGaussLimit, `FOROrder34]
+      `FORRadialIdentity, `FORPhiProduct, `FORRankProduct, `FORGaussLimit, `FOROrder34,
+      `ShadowReadings, `ShadowParity, `FranklinRows, `ShadowPentagonal, `ShadowHecke,
+      `ShadowReconstruction, `ShadowPeriod, `GaussianEndpoint, `ShadowEndpoint,
+      `ShadowEndpointValue24, `FORPsiRadial, `FOROrder24, `FORWatsonTerms, `FKTYReflection,
+      `FORFiniteTransform, `FORWatsonBoundary, `FORWatsonQuotient, `FOREvenRoot, `FORWatsonCongruence,
+      `FORWatsonMultiplicity]
   let mut audited := #[]
   for mod in modules do
     let some idx := env.getModuleIdx? mod | throwError "missing module {mod}"
@@ -484,6 +669,96 @@ run_cmd do
       ``MockThetaAnalytic.radialPlus_mul_radialB_eq_thetaHalf,
       ``MockThetaAnalytic.watson_compensated_identity,
       ``MockThetaAnalytic.radialF_add_radialB_tendsto_order34,
-      ``MockThetaAnalytic.fPackets34_tendsto_order10_period_unconditional]
+      ``MockThetaAnalytic.fPackets34_tendsto_order10_period_unconditional,
+      ``MockThetaAnalytic.ShadowReadings.observe_add_lifts,
+      ``MockThetaAnalytic.ShadowReadings.reciprocal_fiber_constant,
+      ``MockThetaAnalytic.ShadowReadings.shadow_fiber_constant,
+      ``MockThetaAnalytic.ShadowParity.reciprocal_euler,
+      ``MockThetaAnalytic.Franklin.flip_involution,
+      ``MockThetaAnalytic.ShadowPentagonal.reciprocal_mock_pentagonal,
+      ``MockThetaAnalytic.ShadowHecke.hecke_moment,
+      ``MockThetaAnalytic.ShadowHecke.crank_integer_basis,
+      ``MockThetaAnalytic.ShadowHecke.crank_basis_transport,
+      ``MockThetaAnalytic.ShadowHecke.size_three_fixed_mask_fails,
+      ``MockThetaAnalytic.ShadowReconstruction.mock_shadowMode_eq_cutoff,
+      ``MockThetaAnalytic.ShadowReconstruction.mock_reconstruct_xiHalf_uniform,
+      ``MockThetaAnalytic.ShadowReconstruction.mock_hecke_prefix,
+      ``MockThetaAnalytic.ShadowReconstruction.mock_hecke_uniform,
+      ``MockThetaAnalytic.ShadowPeriod.phase_add_144_changes_sector,
+      ``MockThetaAnalytic.ShadowPeriod.weightedPhase_add_1584,
+      ``MockThetaAnalytic.ShadowPeriod.recoveredPeriod_error,
+      ``MockThetaAnalytic.ShadowPeriod.recoveredFullPeriod_error,
+      ``MockThetaAnalytic.ShadowPeriod.recoveredTheta_sector,
+      ``MockThetaAnalytic.ShadowPeriod.weightedCuspTheta_sector_eq_xiHalf,
+      ``MockThetaAnalytic.ShadowPeriod.recoveredPeriod_uniform,
+      ``MockThetaAnalytic.ShadowPeriod.recoveredPeriod_tendsto_normalizedPacketDefect,
+      ``MockThetaAnalytic.ShadowPeriod.recoveredBoundary34_tendsto,
+      ``MockThetaAnalytic.ShadowPeriod.recoveredTranslatedBoundary34,
+      ``MockThetaAnalytic.ShadowPeriod.recoveredTranslatedBoundary34_error,
+      ``MockThetaAnalytic.ShadowPeriod.boundary34Degree,
+      ``MockThetaAnalytic.ShadowPeriod.recoveredTranslatedBoundary34_precision,
+      ``MockThetaAnalytic.ShadowPeriod.boundary34ToleranceDegree,
+      ``MockThetaAnalytic.ShadowPeriod.recoveredTranslatedBoundary34_tolerance,
+      ``MockThetaAnalytic.integral_rootedGaussian,
+      ``MockThetaAnalytic.integral_rootedGaussian_second_sub_le,
+      ``MockThetaAnalytic.ShadowEndpoint.integrableOn_weightedCuspPeriod,
+      ``MockThetaAnalytic.ShadowEndpoint.averagedFullPeriod_error,
+      ``MockThetaAnalytic.ShadowEndpoint.averagedPeriod_uniform,
+      ``MockThetaAnalytic.ShadowEndpoint.averagedFullPeriod_uniform,
+      ``MockThetaAnalytic.ShadowEndpoint.rawFullPeriod_cusp_no_limit,
+      ``MockThetaAnalytic.ShadowEndpoint.weightedCuspPeriod_cusp,
+      ``MockThetaAnalytic.ShadowEndpoint.fktyCuspPeriod_eq_fktyPhi24,
+      ``MockThetaAnalytic.ShadowEndpoint.averagedFullPeriod_eq_fktyPhi24,
+      ``MockThetaAnalytic.watson_odd_product_series,
+      ``MockThetaAnalytic.watson_compensated_sub_identity,
+      ``MockThetaAnalytic.order24_odd_block, ``MockThetaAnalytic.watsonPsi_radial_limit24,
+      ``MockThetaAnalytic.watsonPsi_head24, ``MockThetaAnalytic.fktyPhi_neg_one_div_24,
+      ``MockThetaAnalytic.radialF_sub_radialB_tendsto_order24,
+      ``MockThetaAnalytic.Order24Source.least_order24_packet_period,
+      ``MockThetaAnalytic.Order24Source.smaller_anchor_loses_target,
+      ``MockThetaAnalytic.Order24Source.source_winding4, ``MockThetaAnalytic.Order24Source.no_mod4_phase24,
+      ``MockThetaAnalytic.Order24Source.translatedPacket24_eq_boundary,
+      ``MockThetaAnalytic.Order24Source.translatedFPacketAtRadius24_eq,
+      ``MockThetaAnalytic.Order24Source.normalizedPacket24_eq_averaged,
+      ``MockThetaAnalytic.fPackets24_tendsto_boundary, ``MockThetaAnalytic.normalized_fPackets24_tendsto_averaged,
+      ``MockThetaAnalytic.primitive_even_half_power, ``MockThetaAnalytic.watson_denominator_block,
+      ``MockThetaAnalytic.norm_watsonTerm_radial_le, ``MockThetaAnalytic.watsonTerm_radial_limit,
+      ``MockThetaAnalytic.watsonPhi_radial_limit_of_odd, ``MockThetaAnalytic.watsonPsi_radial_limit_of_even,
+      ``MockThetaAnalytic.fNegPartial_reflection, ``MockThetaAnalytic.fktyPhi_reflected_boundary,
+      ``MockThetaAnalytic.watsonFiniteBoundary_eq_of_certificate,
+      ``MockThetaAnalytic.watson_factor_ne_zero_of_half_power, ``MockThetaAnalytic.watsonTerm_geometric,
+      ``MockThetaAnalytic.watsonBoundaryCertificate_iff_cleared_zero,
+      ``MockThetaAnalytic.even_root_order_of_half_power, ``MockThetaAnalytic.watson_denominator_blocks,
+      ``MockThetaAnalytic.watson_cleared_identity, ``MockThetaAnalytic.watsonBoundaryCertificate_all,
+      ``MockThetaAnalytic.polynomial_eq_zero_of_half_power_roots, ``MockThetaAnalytic.X_pow_add_one_dvd_iff_complex_roots,
+      ``MockThetaAnalytic.watsonBoundaryCertificate_iff_polynomial_dvd, ``MockThetaAnalytic.watson_polynomial_congruence,
+      ``MockThetaAnalytic.watson_even_polynomial_congruence,
+      ``MockThetaAnalytic.watson_congruence, ``MockThetaAnalytic.watson_cleared_eq_of_half_power,
+      ``MockThetaAnalytic.watson_congruence_prime_power,
+      ``MockThetaAnalytic.map_watsonCongruenceDifference, ``MockThetaAnalytic.watsonQuotient,
+      ``MockThetaAnalytic.watson_quotient_spec, ``MockThetaAnalytic.watson_derivative_at_neg_one,
+      ``MockThetaAnalytic.watson_quotient_at_neg_one, ``MockThetaAnalytic.watson_extra_linear_factor_iff,
+      ``MockThetaAnalytic.watson_quotient_derivative_at_neg_one,
+      ``MockThetaAnalytic.watson_second_derivative_at_neg_one,
+      ``MockThetaAnalytic.watson_derivative_at_neg_one_of_even, ``MockThetaAnalytic.watson_even_quotient_at_neg_one,
+      ``MockThetaAnalytic.watson_rootMultiplicity_one_of_nonzero_slope,
+      ``MockThetaAnalytic.watson_rootMultiplicity_odd_prime,
+      ``MockThetaAnalytic.watson_rootMultiplicity_two_of_cast_eq_neg_one,
+      ``MockThetaAnalytic.watson_rootMultiplicity_at_neg_one_of_odd,
+      ``MockThetaAnalytic.watson_rootMultiplicity_at_neg_one_of_even,
+      ``MockThetaAnalytic.watson_rootMultiplicity_at_neg_one,
+      ``MockThetaAnalytic.radialF_compensated_tendsto_boundary_of_half_power,
+      ``MockThetaAnalytic.radialF_compensated_tendsto_watson,
+      ``MockThetaAnalytic.coupled_phase_fiber_constant_iff, ``MockThetaAnalytic.order22_shadow_anchor,
+      ``MockThetaAnalytic.fPackets_tendsto_boundary_from_anchors,
+      ``MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen,
+      ``MockThetaAnalytic.radialF_compensated_tendsto_boundary_through_order34,
+      ``MockThetaAnalytic.fPackets_tendsto_boundary_through_order34,
+      ``MockThetaAnalytic.finite_root_transform, ``MockThetaAnalytic.watsonFiniteBoundary_eq_boundaryValue,
+      ``MockThetaAnalytic.finite_root_transform_at, ``MockThetaAnalytic.watson_even_reversed_numerator,
+      ``MockThetaAnalytic.watson_odd_progression_at_odd_half_period,
+      ``MockThetaAnalytic.radialF_compensated_tendsto_boundary, ``MockThetaAnalytic.fPackets_tendsto_boundary,
+      ``MockThetaAnalytic.fPackets_tendsto_boundary_from_coupled_anchors,
+      ``MockThetaAnalytic.normalized_fPackets_tendsto_fkty]
   unless required.all audited.contains do throwError "required public result missing from the audit"
   logInfo m!"PASS analytic audit: {audited.size} declarations in {modules.size} modules"

@@ -28,7 +28,7 @@ private theorem rate_pos : 0 < rate := Real.sqrt_pos.2 (by positivity)
 
 private theorem rate_sq : rate^2 = Real.pi/12 := Real.sq_sqrt (by positivity)
 
-private theorem root_I_mul (v : ℝ) (hv : 0 < v) :
+theorem root_I_mul (v : ℝ) (hv : 0 < v) :
     ((v : ℂ)*I)^(1/2 : ℂ) = (Real.sqrt v : ℂ) * I^(1/2 : ℂ) := by
   have hc := Complex.ofReal_cpow hv.le (1/2)
   push_cast at hc

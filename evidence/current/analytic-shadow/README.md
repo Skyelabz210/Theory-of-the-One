@@ -1,5 +1,7 @@
 # Third-order analytic shadow evidence
 
+The exact S6 reconstruction replay computes the coefficient residues of \(f\), reconstructs the shadow sectors and checks the first-moment Hecke square through degree 4096. Its finite and analytic proof coverage is described in the reconstruction review. [Exact receipt](reconstruction.json) · [Reconstruction review](../../../docs/reviews/2026-11-21-cram-shadow-reconstruction.md)
+
 The calculation evaluates the completion of Ramanujan's $f$ at three
 upper-half-plane points. It compares the vertical integral and complementary
 error function formulas, then independently estimates the differential operator

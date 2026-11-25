@@ -4,56 +4,76 @@
   "lean": "Lean (version 4.27.0-rc1, x86_64-unknown-linux-gnu, commit 2fcce7258eeb6e324366bc25f9058293b04b7547, Release)",
   "lake": "Lake version 5.0.0-src+2fcce72 (Lean version 4.27.0-rc1)",
   "source_sha256": {
-    "AnalyticAudit.lean": "60c414312aeb7de14cac35a8ee7fba5fb3d6ec4d3082de4ee198bc62d45017ba",
+    "AnalyticAudit.lean": "0ce515f20a8dd3ed68d91b1feade02b04349e360e1edde2ba9be06b10ba59cd2",
     "BoundaryObservation34.lean": "73318ea3eb934774e0161e6110befe6ab3b8794ca33045eda40291c324d521c6",
-    "BoundaryValues34.lean": "ddf83f243f814663b5f2a53d44e03c42dea78aff942048b5400bc8c9789d669c",
+    "BoundaryValues34.lean": "c66a4831ac0630cc459a6da9ae50c8583f360c6089e95d7015edb46bac269604",
     "CoefficientEvaluation.lean": "b2c60c60d2341f0477d6433cd1aae12627e5dcdad856d2ad232298f7572b410b",
     "EichlerBoundaryValues.lean": "bc4b95ffab3c1134f58183b7412d8b521b03c509b60d04ecf0e24ee594d360fd",
     "EichlerBridge.lean": "96623d544ffb8318d147170db48e21bf955a071bcc8864ae89163d85b8a87d5e",
-    "EichlerCuspLimit.lean": "11c0cd343080bb28e049f7904673821606a172eb6d89479a29229acf96222e5e",
+    "EichlerCuspLimit.lean": "0c1276f4b42e3321a53ea8eedab7b9b8cc29b1c8427820daf42bd76a128d2e72",
     "EichlerEndpointFTC.lean": "e799908dbd589afc5aa54216033a4f8598216fd3ba344dd001a3107dd6c343b0",
     "EichlerHorizontal.lean": "d4d194c1523207da63a2ee00511f0be55a80ddc2e43bf533536058e9236b15ea",
     "EichlerPathLimits.lean": "25e0b9a2e72d03af895ddb6d139b4bffa6c69e1d1050f77d1a1622293b44a876",
     "EichlerPrimitive.lean": "748f2a2b7511996df1055dccf7fb3eec29a1ad536537be82ab106d7bbd8a999c",
     "EichlerProfile.lean": "c93db8bd8083f1041c441373574b8e4fde411ffa115b412b084327e3ca8e626c",
     "EichlerTransportPath.lean": "d15cb87318fac091672212cd3051fe5206d84fb313d67ad8bba39b2081af9d65",
-    "FKTYCuspModes.lean": "23fa216ee1d3d6b4a606d21d28fb65d31af086d71b7e33a2def8f72ff00752cd",
+    "FKTYCuspModes.lean": "a877828f8ab5224a7fbdd49bc1fc7a08d1d83898b8b35c49e348861cb9961729",
     "FKTYCuspMoments.lean": "70230b7632f92a8e457a4f2816b9bdc79fa6f4f62187ae4439cefdbf6d5454a6",
     "FKTYPeriodRegularity.lean": "0cffbd30ddca9e89aa80f22a987231ebc3fa62df24078c9095f033f36e2dcd83",
+    "FKTYReflection.lean": "35025f9b2f7ce99442f162bdddd54a73d300703bd7805d9f6f1fb950a064c2f7",
     "FKTYTheta.lean": "e23fd95ab728c9be45d1f3763df810f6e48529f786a05adcd3fb7bd4fb86b912",
     "FKTYThetaTransform.lean": "fee7d6ec541f9ddd3f1bf999103d9f7af9e6f692b22a19c8bf53b6fada022dd4",
-    "FORCyclotomicBlock.lean": "5b3a3df8d09f5d2d8700f37d29b18d972c8717daa9856134ae4c657f000c1260",
+    "FORCyclotomicBlock.lean": "d5dc4742185bc4334861a4c391707e716e1fcd468c6cc55e5e89f14adf46d778",
+    "FOREvenRoot.lean": "83e2f61303ab4c0e6f7bad58c462c2c1412396aa62e1c60d74ec66ab00beb66c",
+    "FORFiniteTransform.lean": "9f5ab6cf7850f6faebcd1fe253244f4ed6e9e8b1f25e06c60eed999d50b0c438",
     "FORGaussFinite.lean": "bdbe1da7325240696368cd523a738c82568d6964b5a4a7f52e0d87a0bba286dc",
     "FORGaussLimit.lean": "43668db5ed571c5ebed8a132902980a8436eaed3e684d3771b3fab57c493e5ee",
+    "FOROrder24.lean": "81eddb395f20a4b2a9875f331b5d7c14d485f567c7816a86cd61162b67c04beb",
     "FOROrder34.lean": "d304d19d9398392b2f78ea450626b2673b84ccc705d7f59293b736b6262ba675",
-    "FORPhiProduct.lean": "d04f70be22a6e2fdcb50398f5e2265d2f90ec5293843916534b7ca14c43f57e0",
-    "FORPhiRadial.lean": "268b0e49817cd1456548113b46b37691ed7f081c80a5c76bb39a5f391097711e",
-    "FORRadialIdentity.lean": "04051ce5dd23d110ad85d132515c46222bdecfb09dd2b80c312eab373a87ecbe",
+    "FORPhiProduct.lean": "3c3493d82af0a1c65f2973ad9d447c8940b8afa4e81129b0a12265d2c645223b",
+    "FORPhiRadial.lean": "e69d42d42bb2af1dc319c9ae27ec0419adb0143e1832aa2f347e02cbee533522",
+    "FORPsiRadial.lean": "664627b5effa0df9310fc9084e24b301b096b3379d81f4603581e08a43ea5667",
+    "FORRadialIdentity.lean": "560bdd6f1d1f3e4b6a6be547352f192ad108f3ceb9a891bbf10f5cc1d442d34f",
     "FORRadialProducts.lean": "e8a1dbf50740c22f7f6dde9bc24cae14ec4eca04ae0676dd065c0b32ef026081",
     "FORRankProduct.lean": "b3212176e4969da5109e0160e3562a10e9367c18e5ebdc92681bf0b79a3086aa",
+    "FORWatsonBoundary.lean": "1f43f7b3643574c8faa0d934cd56b87fa31ade492d9ae0870f837e82d7f3a265",
+    "FORWatsonCongruence.lean": "1902061ebe1b52119623328b8d334e07dd52e62c62c425830ee9b80e74aac548",
+    "FORWatsonMultiplicity.lean": "3b743bbbd2965595e576c900a532744aa85121a1ab2f0523244c4dfa8351ef69",
+    "FORWatsonQuotient.lean": "863374c1d44964274e24f3440a79b83469d4f13ce7d4c13a18d24a715184952a",
+    "FORWatsonTerms.lean": "384bf346785c409307932063731f9a34c692dc02f7722a5d75a10ae4de847574",
     "FifthSeventhHolomorphic.lean": "b5b5ece3dd30833c6cc0441dccf70954d4105b7a0f4eef6b730bfc3e6d42df45",
     "FineRank.lean": "532ab7148c6f6b84944bce2b43ab4558258de453bcb86313f31cef0a7af38e7e",
+    "FranklinRows.lean": "d182ba91a08d0f1d06b0d964b42b7b11cd658c6f3d0e0f92ad53f86fa3a93145",
+    "GaussianEndpoint.lean": "2850a03f41ca2c9ccacd9435639822c9586d4999aab2a4814f30202b6728daec",
     "GaussianPairIntegrable.lean": "73959cf672fde111eaa102f1638a1b4b5146df4feb8d6b359a580910a3dd073b",
     "MockCompletion.lean": "337afd2b887661b0e1f90bcc3b900af9d3413f0106d2468d92e301a26fea4cea",
     "MockHolomorphic.lean": "b6f120d3a73965f812d620eda25fa33795d705fd0e60cf1edd3fb6a9df511589",
     "Order34QuantumPackets.lean": "0425b3535e19530fd1d8a65a561d59fc009b33f7b77c703b092fa146eaccd431",
-    "Order34Source.lean": "b0eb848c0d07c74d1a92fbc8774d652d5c89b5624cca0071922543747d2e793d",
+    "Order34Source.lean": "5a7d0deed2114ad06e737749a563db290cd10def5421a74b1bb31de71e316056",
     "PeriodicSmoothing.lean": "10a49713ca2d365807faebda6b4094ac90d3eb7e43f4d75ab10916d841f0e505",
     "QuantumRadialLimit.lean": "671b4257bb4c5e0897a356712a61ca8e99e80d2b4311f732e168a5f97094adda",
     "QuantumStrange.lean": "31f436f1457011667812f602d454116bbb39b46f39be8ba1df103d8c1b912d52",
     "QuantumTransport34.lean": "bb875181cfc16da528551a05ee1eb6b3dae48befc1766686c9f6b001614cec3b",
     "ShadowBounds.lean": "e2063b71dc32ab01aeab3aadcc2fa7b154b34a1cb80ba8c1e757a7ac8fe7ef3c",
     "ShadowConvergence.lean": "500423590e73923b515f81ed5ffd6bcfa239e2808656cdd01d5154993b2441cc",
+    "ShadowEndpoint.lean": "bda6fe117e17397a3d2698b1669ba58c69194d3d60809c92c6b428ae9ba38965",
+    "ShadowEndpointValue24.lean": "81649f1cbb664eb4b5542a666697f2ac964acdfd51d28170951d5bca86a5b4ef",
     "ShadowGaussian.lean": "00a4d8bb9ad6366efaa31d669792dc0a10b83e2844da0111f2aa08ab9d7a28f3",
+    "ShadowHecke.lean": "4f5c7c7a7685bba549db7252ba6356878dd1a481d9c77fcd97ea9a9f104ffbb5",
     "ShadowInfinite.lean": "98a7f31076c17d60fc21106093d8a68c0e985fbb5aabb21df953fa789e784ee1",
     "ShadowMode.lean": "c68b98583c3da3c50d58adff4f40576ded271f4ecc925ae98c0a59e527b8fa3d",
     "ShadowOperator.lean": "a8ee50291285dd757fc465b2c5597c5f49ce684c731cca155ec8248996556081",
+    "ShadowParity.lean": "3530a85c7a819cd8609523be4d2c76fd911a2384782133bd98fdda5d21cabb1c",
+    "ShadowPentagonal.lean": "148a2b2c349cddb3d759c2cbdeffb29b2785c1fc68a8ad9aa890b972762c09a0",
+    "ShadowPeriod.lean": "97b637aa064db5a5702008d9f864cba6f5006ae317b1810c1774b33a76b849e4",
     "ShadowProjection.lean": "d776b156477165d1f93bc6bbce7256ac5de42eeb6d0faed521d43e9d03dd6b60",
+    "ShadowReadings.lean": "c44e42e87dbaec39d6e0538116ed7f0ff6dba5697683ba3d10a68acad202c2be",
+    "ShadowReconstruction.lean": "1507fa4d744e60d6d8f12bec8b19af5959ef29164d38f411614014bc313462fb",
     "ShadowSectors.lean": "2737494692b2354190b7ff1607bc3210c4a8bf61bc241c6549291ba86404eede",
     "ThirdOrderRows.lean": "e4ab038de9d557b04d214e03034716ca66cb245bf5a5004a9c71f0100a93a339",
     "ThirdOrderTaylor.lean": "5aecf2287b8754df83ec5558f63b9de7b39aaa400affe08ce0ca2d2cc9f32466",
     "lake-manifest.json": "8d378ae8a3b5ddea4958ac94aed50eb575998f8e083c8d04aed4c52b0e5ce765",
-    "lakefile.toml": "4f3ba06b61a4d49e3b402cac075d8918d3b1b729d68a4640f3b7b6df8d376b14",
+    "lakefile.toml": "ba502b2ddcf013083eb552676f48860ba889e324d7a267f669b9b0feddbca334",
     "lean-toolchain": "194fcae7a59d3268baa175bd3e352dafab6954fe08a5b7caec13bedf36f80315",
     "verify_analytic.py": "bde7abd4e67bc96e97699f70d2df11e2ce6ac2e14fe050db5234896f19e501a3"
   },
@@ -139,8 +159,8 @@
       "declarations": 22
     },
     "BoundaryValues34": {
-      "theorems": 73,
-      "declarations": 91
+      "theorems": 111,
+      "declarations": 136
     },
     "FKTYTheta": {
       "theorems": 42,
@@ -239,12 +259,12 @@
       "declarations": 16
     },
     "FORCyclotomicBlock": {
-      "theorems": 3,
-      "declarations": 3
+      "theorems": 7,
+      "declarations": 7
     },
     "FORPhiRadial": {
-      "theorems": 15,
-      "declarations": 17
+      "theorems": 8,
+      "declarations": 10
     },
     "FineRank": {
       "theorems": 32,
@@ -255,12 +275,12 @@
       "declarations": 56
     },
     "FORRadialIdentity": {
-      "theorems": 22,
-      "declarations": 29
+      "theorems": 36,
+      "declarations": 46
     },
     "FORPhiProduct": {
-      "theorems": 14,
-      "declarations": 14
+      "theorems": 15,
+      "declarations": 15
     },
     "FORRankProduct": {
       "theorems": 16,
@@ -273,6 +293,86 @@
     "FOROrder34": {
       "theorems": 3,
       "declarations": 3
+    },
+    "ShadowReadings": {
+      "theorems": 29,
+      "declarations": 41
+    },
+    "ShadowParity": {
+      "theorems": 55,
+      "declarations": 66
+    },
+    "FranklinRows": {
+      "theorems": 128,
+      "declarations": 152
+    },
+    "ShadowPentagonal": {
+      "theorems": 96,
+      "declarations": 105
+    },
+    "ShadowHecke": {
+      "theorems": 42,
+      "declarations": 54
+    },
+    "ShadowReconstruction": {
+      "theorems": 39,
+      "declarations": 44
+    },
+    "ShadowPeriod": {
+      "theorems": 63,
+      "declarations": 78
+    },
+    "GaussianEndpoint": {
+      "theorems": 24,
+      "declarations": 26
+    },
+    "ShadowEndpoint": {
+      "theorems": 73,
+      "declarations": 81
+    },
+    "ShadowEndpointValue24": {
+      "theorems": 16,
+      "declarations": 19
+    },
+    "FORPsiRadial": {
+      "theorems": 22,
+      "declarations": 24
+    },
+    "FOROrder24": {
+      "theorems": 33,
+      "declarations": 54
+    },
+    "FORWatsonTerms": {
+      "theorems": 17,
+      "declarations": 18
+    },
+    "FKTYReflection": {
+      "theorems": 14,
+      "declarations": 16
+    },
+    "FORFiniteTransform": {
+      "theorems": 21,
+      "declarations": 25
+    },
+    "FORWatsonBoundary": {
+      "theorems": 36,
+      "declarations": 37
+    },
+    "FORWatsonQuotient": {
+      "theorems": 9,
+      "declarations": 9
+    },
+    "FOREvenRoot": {
+      "theorems": 37,
+      "declarations": 37
+    },
+    "FORWatsonCongruence": {
+      "theorems": 25,
+      "declarations": 27
+    },
+    "FORWatsonMultiplicity": {
+      "theorems": 48,
+      "declarations": 50
     }
   },
   "theorem_axioms": {
@@ -1143,6 +1243,20 @@
         "Quot.sound",
         "propext"
       ],
+      "MockThetaAnalytic.fNegPartial_reduced12": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fNegPartial_reduced12._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fNegPartial_reflection12": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
       "MockThetaAnalytic.fNegPartial_reflection17": [
         "Classical.choice",
         "Quot.sound",
@@ -1154,9 +1268,6 @@
         "propext"
       ],
       "MockThetaAnalytic.fktyPhi._proof_1": [
-        "propext"
-      ],
-      "MockThetaAnalytic.fktyPhi._proof_2": [
         "propext"
       ],
       "MockThetaAnalytic.fktyPhi.eq_1": [
@@ -1191,6 +1302,11 @@
         "Quot.sound",
         "propext"
       ],
+      "MockThetaAnalytic.fktyPhi_neg_one_div_24": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
       "MockThetaAnalytic.fktyPhi_neg_one_div_34": [
         "Classical.choice",
         "Quot.sound",
@@ -1199,10 +1315,58 @@
       "MockThetaAnalytic.fktyScale._proof_1": [
         "propext"
       ],
-      "MockThetaAnalytic.fktyScale._proof_2": [
+      "MockThetaAnalytic.hasSum_fNegPartial": [
+        "Classical.choice",
+        "Quot.sound",
         "propext"
       ],
-      "MockThetaAnalytic.hasSum_fNegPartial": [
+      "MockThetaAnalytic.polynomial_eq_zero_of_half_power_roots": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.polynomial_eq_zero_of_half_power_roots._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.polynomial_eq_zero_of_half_power_roots._proof_1_2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.polynomial_eq_zero_of_half_power_roots._proof_1_3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_iff_cleared_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonClearedDifference.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonDen.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonFiniteBoundary._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonFiniteBoundary._proof_2": [
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonFiniteBoundary.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonFiniteBoundary_eq_of_certificate": [
         "Classical.choice",
         "Quot.sound",
         "propext"
@@ -1213,6 +1377,19 @@
         "propext"
       ],
       "MockThetaAnalytic.watsonPhi_head34._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPhi_head34._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPsi_head24": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPsi_head24._proof_1_1": [
         "Quot.sound",
         "propext"
       ],
@@ -1227,7 +1404,30 @@
       "_private.BoundaryValues34.0.MockThetaAnalytic.advance.eq_1": [
         "propext"
       ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.coeff_eq_zero_of_evaluations": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.coeff_eq_zero_of_evaluations._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.coeff_eq_zero_of_evaluations._proof_1_2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
       "_private.BoundaryValues34.0.MockThetaAnalytic.constantVec.eq_1": [
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.convolution.eq_1": [
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.entry.eq_1": [],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.entry_shiftWithin": [
+        "Classical.choice",
+        "Quot.sound",
         "propext"
       ],
       "_private.BoundaryValues34.0.MockThetaAnalytic.ev_congr": [
@@ -1310,7 +1510,56 @@
       "_private.BoundaryValues34.0.MockThetaAnalytic.shiftVec.eq_1": [
         "propext"
       ],
-      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftVec_succ": [
+      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftWithin.eq_1": [
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftWithin_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftWithin_succ._proof_1_10": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftWithin_succ._proof_1_11": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftWithin_succ._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftWithin_succ._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftWithin_succ._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftWithin_succ._proof_1_6": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftWithin_succ._proof_1_7": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftWithin_succ._proof_1_8": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftWithin_succ._proof_1_9": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftWithin_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.shiftWithin_zero._simp_1_2": [
         "propext"
       ],
       "_private.BoundaryValues34.0.MockThetaAnalytic.states.eq_1": [
@@ -1322,6 +1571,15 @@
         "propext"
       ],
       "_private.BoundaryValues34.0.MockThetaAnalytic.states_succ": [
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.uPartial_reduced12": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.uPartial_reduced12._proof_1_1": [
+        "Quot.sound",
         "propext"
       ],
       "_private.BoundaryValues34.0.MockThetaAnalytic.uPartial_reduced17": [
@@ -1361,6 +1619,11 @@
         "Quot.sound",
         "propext"
       ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.val_convolution": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
       "_private.BoundaryValues34.0.MockThetaAnalytic.val_factor": [
         "Classical.choice",
         "Quot.sound",
@@ -1390,12 +1653,21 @@
         "Quot.sound",
         "propext"
       ],
-      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonAdvance.eq_1": [
-        "propext"
-      ],
-      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonDen.eq_1": [
+      "_private.BoundaryValues34.0.MockThetaAnalytic.val_shiftWithin": [
         "Classical.choice",
         "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.val_shiftWithin._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.val_watsonBoundaryDifference": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonAdvance.eq_1": [
         "propext"
       ],
       "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates.eq_1": [
@@ -1406,16 +1678,10 @@
         "Quot.sound",
         "propext"
       ],
-      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._proof_1_1": [
-        "Quot.sound",
-        "propext"
-      ],
       "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._simp_1_10": [
-        "Classical.choice",
-        "Quot.sound",
         "propext"
       ],
-      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._simp_1_11": [
+      "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._simp_1_4": [
         "propext"
       ],
       "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._simp_1_5": [
@@ -1431,6 +1697,8 @@
         "propext"
       ],
       "_private.BoundaryValues34.0.MockThetaAnalytic.watsonStates_correct._simp_1_9": [
+        "Classical.choice",
+        "Quot.sound",
         "propext"
       ]
     },
@@ -1782,12 +2050,12 @@
       "MockThetaAnalytic.Order34Source.translatedPacketValue._proof_1": [
         "propext"
       ],
-      "_private.Order34Source.0.MockThetaAnalytic.Order34Source.translatedPacketValue_eq": [
+      "MockThetaAnalytic.Order34Source.zpow_residue": [
         "Classical.choice",
         "Quot.sound",
         "propext"
       ],
-      "_private.Order34Source.0.MockThetaAnalytic.Order34Source.zpow_residue": [
+      "_private.Order34Source.0.MockThetaAnalytic.Order34Source.translatedPacketValue_eq": [
         "Classical.choice",
         "Quot.sound",
         "propext"
@@ -1864,12 +2132,12 @@
         "Quot.sound",
         "propext"
       ],
-      "MockThetaAnalytic.summable_fktyCuspModes": [
+      "MockThetaAnalytic.shadowTerm_cusp": [
         "Classical.choice",
         "Quot.sound",
         "propext"
       ],
-      "_private.FKTYCuspModes.0.MockThetaAnalytic.shadowTerm_cusp": [
+      "MockThetaAnalytic.summable_fktyCuspModes": [
         "Classical.choice",
         "Quot.sound",
         "propext"
@@ -2700,6 +2968,11 @@
         "Quot.sound",
         "propext"
       ],
+      "MockThetaAnalytic.root_I_mul": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
       "_private.EichlerCuspLimit.0.MockThetaAnalytic.eichlerTrunc_evaluation": [
         "Classical.choice",
         "Quot.sound",
@@ -2800,11 +3073,6 @@
         "propext"
       ],
       "_private.EichlerCuspLimit.0.MockThetaAnalytic.rate_sq": [
-        "Classical.choice",
-        "Quot.sound",
-        "propext"
-      ],
-      "_private.EichlerCuspLimit.0.MockThetaAnalytic.root_I_mul": [
         "Classical.choice",
         "Quot.sound",
         "propext"
@@ -3537,8 +3805,26 @@
         "Quot.sound",
         "propext"
       ],
-      "_private.FORCyclotomicBlock.0.MockThetaAnalytic.prod_one_add_pow": [
+      "MockThetaAnalytic.primitive_even_half_power": [
         "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.primitive_even_half_power._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.prod_one_add_pow": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_denominator_block": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_denominator_block._proof_1_1": [
         "Quot.sound",
         "propext"
       ]
@@ -3549,16 +3835,7 @@
         "Quot.sound",
         "propext"
       ],
-      "MockThetaAnalytic.norm_watsonPhiTerm_radial_le._proof_1_2": [
-        "Quot.sound",
-        "propext"
-      ],
       "MockThetaAnalytic.summable_norm_watsonPhiTerm": [
-        "Classical.choice",
-        "Quot.sound",
-        "propext"
-      ],
-      "MockThetaAnalytic.watsonPhiTerm.eq_1": [
         "Classical.choice",
         "Quot.sound",
         "propext"
@@ -3573,6 +3850,11 @@
         "Quot.sound",
         "propext"
       ],
+      "MockThetaAnalytic.watsonPhi_eq_two_mul_head": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
       "MockThetaAnalytic.watsonPhi_eq_two_mul_sum": [
         "Classical.choice",
         "Quot.sound",
@@ -3583,35 +3865,8 @@
         "Quot.sound",
         "propext"
       ],
-      "Nat.divModEquiv.congr_simp": [
-        "propext"
-      ],
-      "_private.FORPhiRadial.0.MockThetaAnalytic.radialFactor_le": [
+      "MockThetaAnalytic.watsonPhi_radial_limit_of_odd": [
         "Classical.choice",
-        "Quot.sound",
-        "propext"
-      ],
-      "_private.FORPhiRadial.0.MockThetaAnalytic.radialFactor_le._simp_1_1": [
-        "Classical.choice",
-        "Quot.sound",
-        "propext"
-      ],
-      "_private.FORPhiRadial.0.MockThetaAnalytic.watsonEvenFactor_ne_zero": [
-        "Classical.choice",
-        "Quot.sound",
-        "propext"
-      ],
-      "_private.FORPhiRadial.0.MockThetaAnalytic.watsonPhiTerm_continuousAt": [
-        "Classical.choice",
-        "Quot.sound",
-        "propext"
-      ],
-      "_private.FORPhiRadial.0.MockThetaAnalytic.watsonPhiTerm_geometric": [
-        "Classical.choice",
-        "Quot.sound",
-        "propext"
-      ],
-      "_private.FORPhiRadial.0.MockThetaAnalytic.watsonPhiTerm_geometric._proof_1_1": [
         "Quot.sound",
         "propext"
       ]
@@ -3982,8 +4237,49 @@
         "Quot.sound",
         "propext"
       ],
+      "MockThetaAnalytic.watson_odd_product_series": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
       "MockThetaAnalytic.watson_weighted_phi_eq_theta_add_leastOdd": [
         "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.evenChoice.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.evenChoice_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.evenChoice_bound._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.evenTailSquare.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.evenTailSquare_sub": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.evenTailSquare_sub._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.evenTailSquare_sub._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.evenTailSquare_sub._proof_1_5": [
         "Quot.sound",
         "propext"
       ],
@@ -4034,6 +4330,11 @@
         "Quot.sound",
         "propext"
       ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.summable_watsonEvenA": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
       "_private.FORRadialIdentity.0.MockThetaAnalytic.tailSquare.eq_1": [
         "Classical.choice",
         "Quot.sound",
@@ -4061,20 +4362,45 @@
         "Classical.choice",
         "Quot.sound",
         "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.watsonEvenA_hasSum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.watson_all_least_parts": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.watson_even_least_part_split": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORRadialIdentity.0.MockThetaAnalytic.watson_shifted_odd_product": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
       ]
     },
     "FORPhiProduct": {
+      "MockThetaAnalytic.radialPlus_eq_odd_mul_even": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
       "MockThetaAnalytic.radialPlus_mul_watsonPhi": [
         "Classical.choice",
         "Quot.sound",
         "propext"
       ],
+      "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_10": [
+        "propext"
+      ],
       "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_2": [
         "Classical.choice",
         "Quot.sound",
-        "propext"
-      ],
-      "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_3": [
         "propext"
       ],
       "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_4": [
@@ -4090,14 +4416,19 @@
         "propext"
       ],
       "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_8": [
+        "propext"
+      ],
+      "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_9": [
         "Classical.choice",
         "Quot.sound",
         "propext"
       ],
-      "MockThetaAnalytic.radialPlus_mul_watsonPhi._simp_1_9": [
+      "MockThetaAnalytic.watsonPhi.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
         "propext"
       ],
-      "MockThetaAnalytic.watsonPhi.eq_1": [
+      "MockThetaAnalytic.watsonPhiTerm.eq_1": [
         "Classical.choice",
         "Quot.sound",
         "propext"
@@ -4108,11 +4439,6 @@
         "propext"
       ],
       "_private.FORPhiProduct.0.MockThetaAnalytic.evenPrefix_ne_zero._proof_1_1": [
-        "Quot.sound",
-        "propext"
-      ],
-      "_private.FORPhiProduct.0.MockThetaAnalytic.radialPlus_eq_odd_mul_even": [
-        "Classical.choice",
         "Quot.sound",
         "propext"
       ],
@@ -4273,6 +4599,3621 @@
         "propext"
       ],
       "MockThetaAnalytic.watson_compensated_identity": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ShadowReadings": {
+      "KElimination.ProfiniteObservations.selectedPrimary.eq_1": [],
+      "MockThetaAnalytic.ShadowReadings.etaFromParity.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.etaMode.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.etaMode_prefix": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.eta_observation": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.observe.eq_1": [],
+      "MockThetaAnalytic.ShadowReadings.observe_add_lifts": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.observe_add_lifts._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.observes_parity": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.observes_parity._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.observes_parity._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.odd_modulus_loses_parity": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.parity.eq_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.reciprocalBit_congr": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.reciprocalBit_congr._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.reciprocalBit_congr._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.reciprocalBit_congr._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.reciprocalBit_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.reciprocalBit_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.reciprocal_fiber_constant": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.reciprocal_prefix": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.shadow_fiber_constant": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.square_lattice": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.square_lattice._proof_1_1": [],
+      "MockThetaAnalytic.ShadowReadings.square_lattice._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReadings.0.MockThetaAnalytic.ShadowReadings.reciprocalPrefix.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReadings.0.MockThetaAnalytic.ShadowReadings.reciprocalPrefix_get": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReadings.0.MockThetaAnalytic.ShadowReadings.reciprocalPrefix_get._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReadings.0.MockThetaAnalytic.ShadowReadings.reciprocalPrefix_get._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ShadowParity": {
+      "KElimination.MockTheta.oneSeries.eq_1": [],
+      "MockThetaAnalytic.ShadowParity.coeff_euler_mul_mock": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowParity.coeff_oddProduct": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowParity.coeff_oddProduct._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowParity.eulerProduct.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowParity.reciprocal_euler": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowParity.reciprocal_euler._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowParity.reciprocal_euler._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowParity.reciprocal_euler._simp_1_3": [
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowParity.signed_coeff_parity": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "ZMod.instField.congr_simp": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.agrees_mul_left": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.agrees_mul_left._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.cast_divide": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.cast_divide._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.cast_divide._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.cast_row": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.cast_summand": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.coeff_shiftedRow": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.dividedRow.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.dividedRow_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.euler_constant": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.euler_double": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.euler_double._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.euler_double._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.euler_grow": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.euler_grow._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.euler_grow._simp_1_3": [
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.euler_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.euler_times_odd": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.euler_times_odd._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.eval_oddPolynomial": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.mk_mulBinomial": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.mockPowerSeries.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.neg_series": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddPolynomial.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddPolynomial_constant": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddPolynomial_eq_row": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddPolynomial_eq_row._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddPolynomial_eq_row._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddPolynomial_eq_row._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddPolynomial_eq_row._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddPolynomial_eq_row._proof_1_6": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddPolynomial_natDegree_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddPolynomial_next": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddPolynomial_next._simp_1_1": [],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddPolynomial_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddPolynomial_succ._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.oddProduct.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.odd_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.shiftedRow.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.shiftedRow_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.shiftedRow_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.square_binomial": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowParity.0.MockThetaAnalytic.ShadowParity.sumBelow_range": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FranklinRows": {
+      "MockThetaAnalytic.Franklin.CanLower.eq_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.CanRaise.eq_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.Rows.desc": [],
+      "MockThetaAnalytic.Franklin.Rows.ext": [],
+      "MockThetaAnalytic.Franklin.Rows.ext_iff": [],
+      "MockThetaAnalytic.Franklin.Rows.mk.congr_simp": [],
+      "MockThetaAnalytic.Franklin.Rows.mk.inj": [],
+      "MockThetaAnalytic.Franklin.Rows.mk.injEq": [
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.Rows.mk.sizeOf_spec": [],
+      "MockThetaAnalytic.Franklin.Rows.zero": [],
+      "MockThetaAnalytic.Franklin.break_at_slope": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.break_at_slope._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.consecutive": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.consecutive._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.consecutive._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.consecutive._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.flip.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.flip_fixed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.flip_fixed._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.flip_fixed._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.flip_fixed._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.flip_fixed._proof_1_8": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.flip_fixed._proof_1_9": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.flip_involution": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.flip_size": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_10": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_11": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_12": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_13": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_14": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_15": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_16": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_17": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_18": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_19": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_20": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_6": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_7": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_8": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._proof_9": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower._simp_17": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower.congr_simp": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower_canRaise": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower_canRaise._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower_canRaise._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower_canRaise._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower_canRaise._proof_1_6": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower_canRaise._proof_1_7": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower_raise": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower_raise._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower_raise._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower_raise._proof_1_7": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower_size": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.lower_smallest": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise._proof_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise._proof_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise._proof_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise._proof_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise._proof_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise._proof_6": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise._proof_7": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise._proof_8": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise._proof_9": [
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise.congr_simp": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise.eq_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_canLower": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_canLower._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_canLower._proof_1_10": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_canLower._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_canLower._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_canLower._proof_1_7": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_canLower._proof_1_8": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_canLower._proof_1_9": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_lower": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_lower._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_lower._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_lower._proof_1_6": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_size": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_size._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_size._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_size._proof_1_5": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_size._simp_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_size._simp_1_4": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_slope": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_slope._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_slope._proof_1_10": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_slope._proof_1_12": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_slope._proof_1_13": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_slope._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_slope._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_slope._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_slope._proof_1_7": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_slope._proof_1_8": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_slope._proof_1_9": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.raise_slope._simp_1_11": [
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.slope_le": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.slope_le._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.slope_le._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.slope_pos": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Franklin.smallest.eq_1": [],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.consecutive_slope": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.consecutive_slope._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.consecutive_slope._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.consecutive_slope._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.consecutive_slope._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.consecutive_slope._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.consecutive_slope._proof_1_6": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.consecutive_slope._proof_1_7": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.disjoint_moves": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.exists_gap": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.exists_gap._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.part_pos": [],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.raise_length_pos": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.raise_length_pos._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.raise_length_pos._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.slope_ge_of_consecutive": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.slope_ge_of_consecutive._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.slope_ge_of_consecutive._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.slope_ge_of_consecutive._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.slope_ge_of_consecutive._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.smallest_pos": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FranklinRows.0.MockThetaAnalytic.Franklin.smallest_pos._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ShadowPentagonal": {
+      "MockThetaAnalytic.Franklin.size.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPentagonal.euler_pentagonal_mod_two": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPentagonal.reciprocal_mock_pentagonal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPentagonal.reciprocal_mock_pentagonal._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPentagonal.reciprocal_mock_pentagonal._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.pentagonalBit.eq_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.available.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.coefficient_card": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.coefficient_card._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.distinctOfSize.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.distinct_parts": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.distinct_size": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixedMagnitude.eq_1": [],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_of_square": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_of_square._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_of_square._proof_1_10": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_of_square._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_of_square._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_of_square._proof_1_4": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_of_square._proof_1_7": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_of_square._proof_1_8": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_of_square._proof_1_9": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_10": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_11": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_12": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_13": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_14": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_15": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_16": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_17": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_18": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_4": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_5": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_6": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_7": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_8": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_same_size._proof_1_9": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_square": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_square._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_square._proof_1_4": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.fixed_square._proof_1_5": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.flipParts.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.flipParts_fixed_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.flipParts_involution": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.flipParts_mem": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.mem_available": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.mem_available._proof_1_2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.mem_available._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.mem_available._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.mem_available._simp_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.ofParts._proof_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.ofParts._proof_2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.ofParts._proof_3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.ofParts._proof_4": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.ofParts.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.ofParts_parts": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.ofParts_parts._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.part_strict": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.part_strict._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.part_strict._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.part_strict._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.part_strict._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.parts.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.parts_ofParts": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.parts_pos": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.rowsList.eq_1": [],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.rowsList_sorted": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.rows_eq_staircase": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.rows_eq_staircase._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.rows_eq_staircase._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.rows_eq_staircase._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.rows_eq_staircase._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.rows_eq_staircase._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.rows_eq_staircase._proof_1_6": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.rows_eq_staircase._proof_1_8": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.rows_eq_staircase._proof_1_9": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.sortedParts.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.staircase._proof_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.staircase._proof_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.staircase._proof_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.staircase._proof_4": [
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.staircase.eq_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.staircase_bottom": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.staircase_bottom._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.staircase_slope": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.staircase_slope._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.staircase_slope._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.staircase_slope._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.sum_ofParts": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.sum_parts": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.twice_staircase_size": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPentagonal.0.MockThetaAnalytic.ShadowPentagonal.zero_not_mem": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ShadowHecke": {
+      "MockThetaAnalytic.ShadowHecke.crank_basis_transport": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.crank_integer_basis": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.crank_integer_basis._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.crank_integer_basis._proof_1_2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.crank_matrix": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.crank_matrix._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.cut.eq_1": [],
+      "MockThetaAnalytic.ShadowHecke.etaSign_five": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.etaSign_five._proof_1_1": [],
+      "MockThetaAnalytic.ShadowHecke.etaSign_five._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.firstMoment_five": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.firstMoment_five._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.hecke_moment": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.moment.eq_1": [],
+      "MockThetaAnalytic.ShadowHecke.one_loses_lookahead": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.one_loses_lookahead._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.sectorPacket.eq_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.size_three_fixed_mask_fails": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.size_three_fixed_mask_fails._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.sourceFive._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.sourceFive._proof_2": [
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.sourceFive.eq_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.sourceFive_eta": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.sourceFive_eta._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.sourceFive_eta._simp_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.sourceFive_lookahead": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.sourceFive_lookahead._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.sourceFive_lookahead._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.targetFive.eq_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.targetFive_eta_moment": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.targetFive_lookahead": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.targetFive_lookahead._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.targetFive_lookahead._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.chiFour.eq_1": [],
+      "MockThetaAnalytic.ShadowReadings.etaSign.eq_1": [],
+      "MockThetaAnalytic.ShadowReadings.firstMoment.eq_1": [],
+      "_private.ShadowHecke.0.MockThetaAnalytic.ShadowHecke.div_five": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowHecke.0.MockThetaAnalytic.ShadowHecke.div_five._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowHecke.0.MockThetaAnalytic.ShadowHecke.lower_phase": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowHecke.0.MockThetaAnalytic.ShadowHecke.lower_phase._simp_1_1": [],
+      "_private.ShadowHecke.0.MockThetaAnalytic.ShadowHecke.phase_five": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowHecke.0.MockThetaAnalytic.ShadowHecke.upper_phase": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ShadowReconstruction": {
+      "KElimination.ShadowConvergence.shadowDegreeBin.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowHecke.phase.eq_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReadings.shadowMode.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.etaMode_eq_cutoff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.etaMode_eq_cutoff._proof_1_2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.etaMode_eq_cutoff._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.etaMode_eq_cutoff._simp_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.heckePolynomial.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.hecke_from_observations": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.mock_hecke_prefix": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.mock_hecke_uniform": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.mock_reciprocal_support": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.mock_reconstruct_xiHalf_uniform": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.mock_shadowMode_eq_cutoff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.reconstruct_tail_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.reconstruct_xiHalf_uniform": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.shadowMode_eq_cutoff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.tail.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.tail_tendsto_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.tail_tendsto_zero._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowReconstruction.tail_tendsto_zero._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.chi_sign": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.chi_sign._proof_1_1": [],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.chi_sign._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.chi_sign._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.etaSign_of_off_lattice": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.etaSign_of_off_lattice._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.etaSign_of_off_lattice._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.hecke_lookahead_cutoff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.moment_etaSign": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.norm_trunc_tsum_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.reconstruct_as_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.reconstruct_as_sum._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.sectorTerm._proof_1": [
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.sectorTerm.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.sum_sectorTerm": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.summable_majorant": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.term_majorant": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowReconstruction.0.MockThetaAnalytic.ShadowReconstruction.term_majorant._simp_1_2": [
+        "propext"
+      ]
+    },
+    "ShadowPeriod": {
+      "MockThetaAnalytic.ShadowPeriod.cuspRay._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.cuspRay.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.gaussianRate._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.gaussianRate.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.modeCount.eq_1": [],
+      "MockThetaAnalytic.ShadowPeriod.modeCount_ge_two": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.modeCount_ge_two._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.modeCount_ge_two._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.phase_add_144_changes_sector": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.phase_add_144_changes_sector._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredBoundary34._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredBoundary34.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredBoundary34_tendsto": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredFullPeriod_error": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredPeriod_error": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredPeriod_tendsto_normalizedPacketDefect": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredPeriod_uniform": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredThetaUpTo._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredThetaUpTo.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredThetaUpTo_ray": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredTheta_sector": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredTranslatedBoundary34.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredTranslatedBoundary34_error": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredTranslatedBoundary34_precision": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredTranslatedBoundary34_tolerance": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.recoveredTranslatedBoundary34_tolerance._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.sectorWeight.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.squareTail_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.squareTail_le._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.weightedCuspPeriod_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.weightedCuspTheta.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.weightedCuspTheta_sector_eq_xiHalf": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.weightedModes_summable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.weightedPhase_add_1584": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowPeriod.weightedPhase_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.cuspPhase_shift": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.integral_kernel_norm_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.integral_kernel_norm_le._simp_1_1": [],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.integral_norm_gaussianMode": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.inverse_modeCount_tendsto": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.inverse_modeCount_tendsto._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.kernel.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.kernel_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.kernel_integrable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.order34_period_error": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.order34_period_error._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.pairedTail": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.pairedTail._simp_1_1": [],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.phase_shift": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.rate_pos": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.recoveredFullPeriod_tendsto_order34": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.recoveredPeriod_error_of_shift": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.recoveredPeriod_error_of_shift._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.recoveredPeriod_error_of_shift._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.recoveredPeriod_error_of_shift._simp_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.recoveredTheta_ray": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.transportTo34._proof_1": [
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.transportTo34._proof_2": [
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.transportTo34._proof_3": [
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.transportTo34._proof_4": [
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.transportTo34._proof_5": [
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.transportTo34.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowPeriod.0.MockThetaAnalytic.ShadowPeriod.weightedCuspPeriod_one_order34": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "GaussianEndpoint": {
+      "MockThetaAnalytic.integrableOn_rootedGaussian": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.integral_rootedGaussian": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.integral_rootedGaussian_second_sub_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.integral_rootedGaussian_second_sub_le._simp_1_2": [],
+      "MockThetaAnalytic.integral_rootedGaussian_second_sub_le._simp_1_3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.integral_rootedGaussian_second_sub_le._simp_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.integral_rootedGaussian_sub_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.integral_rootedGaussian_sub_le._simp_1_2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.rootedGaussian.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.gamma_five_halves": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.gamma_three_halves": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.gaussian_difference_bounds": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.gaussian_difference_bounds._simp_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.gaussian_difference_bounds._simp_1_2": [
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.gaussian_difference_bounds._simp_1_3": [
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.gaussian_difference_bounds._simp_1_4": [
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.gaussian_difference_bounds._simp_1_5": [
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.gaussian_difference_bounds._simp_1_6": [
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.gaussian_difference_bounds._simp_1_7": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.gaussian_difference_bounds._simp_1_8": [
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.integrableOn_moment": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.integral_moment": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.moment.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.GaussianEndpoint.0.MockThetaAnalytic.moment_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ShadowEndpoint": {
+      "MockThetaAnalytic.ShadowEndpoint.averagedFullPeriod_cusp": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.averagedFullPeriod_error": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.averagedFullPeriod_error._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.averagedFullPeriod_uniform": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.averagedPeriod._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.averagedPeriod_cusp": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.averagedPeriod_error": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.averagedPeriod_error._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.averagedPeriod_uniform": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.fktyCuspPeriod_cusp": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.fktyCuspPeriod_cusp._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.integrableOn_weightedCuspPeriod": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.norm_kernel_le_height": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.periodUpTo_all": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.periodUpTo_cusp": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.periodUpTo_cusp._simp_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.rawFullPeriod_cusp_no_limit": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.rawFullPeriod_cusp_no_limit._simp_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.weightedCuspPeriod_cusp": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.weightedCuspPeriod_cusp._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.averagedPeriod_control_of_shift": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.averagedPeriod_control_of_shift._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.averagedPeriod_control_of_shift._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.averagedPeriod_control_of_shift._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.averagedPeriod_control_of_shift._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.averagedPeriod_control_of_shift._proof_1_6": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.averagedPeriod_control_of_shift._simp_1_7": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.averagedPeriod_cusp_of_shift": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.averagedPeriod_cusp_of_shift._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.averagedPeriod_uniform_of_shift": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.averagedPeriod_uniform_of_shift._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.cuspPhase_add_288_mul": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.cuspPhase_add_288_mul._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.cutoffAfter_tendsto": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.cutoffBefore_tendsto": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.cutoffBefore_tendsto._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.eventually_modeCount_sub_ge": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.gaussian_average_tail": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.gaussian_average_tail._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.gaussian_average_tail._simp_1_1": [],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.integral_mode_cusp": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.integral_norm_kernel_mul_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.kernel.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.kernel_at_cusp": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.kernel_at_cusp._simp_1_2": [
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.kernel_at_cusp._simp_1_3": [
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.kernel_at_cusp._simp_1_4": [
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.kernel_at_cusp._simp_1_5": [
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.kernel_at_cusp._simp_1_6": [
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.kernel_at_cusp._simp_1_7": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.kernel_at_cusp._simp_1_8": [
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.kernel_mul_integrable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.kernel_mul_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.modeCount_after": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.modeCount_before": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.modeCount_before._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.modeCount_sub_tendsto": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.modeCount_sub_tendsto._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.modeCount_sub_tendsto._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.mode_integrable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.polynomial_integrable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.polynomial_integrable._simp_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.rate_pos": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.raw_period_after": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.raw_period_after._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.raw_period_before": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.s._proof_1": [
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.scale.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.scale_eq_fkty": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.shifted_summable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.sum_cuspPhase_period": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.sum_with_shift": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpoint.0.MockThetaAnalytic.ShadowEndpoint.v.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "ShadowEndpointValue24": {
+      "MockThetaAnalytic.ShadowEndpoint.averagedFullPeriod_eq_fktyPhi24": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.fktyCuspPeriod_eq_fktyPhi24": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.ShadowEndpoint.fktyCuspPeriod_eq_fktyPhi24._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpointValue24.0.MockThetaAnalytic.ShadowEndpoint.eval_table": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpointValue24.0.MockThetaAnalytic.ShadowEndpoint.nome_half24": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpointValue24.0.MockThetaAnalytic.ShadowEndpoint.nome_power576": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpointValue24.0.MockThetaAnalytic.ShadowEndpoint.phaseRow.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpointValue24.0.MockThetaAnalytic.ShadowEndpoint.phaseRows_eval": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpointValue24.0.MockThetaAnalytic.ShadowEndpoint.reducedSign.eq_1": [
+        "propext"
+      ],
+      "_private.ShadowEndpointValue24.0.MockThetaAnalytic.ShadowEndpoint.reduced_phase": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpointValue24.0.MockThetaAnalytic.ShadowEndpoint.reduced_phase._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpointValue24.0.MockThetaAnalytic.ShadowEndpoint.reduced_phase._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpointValue24.0.MockThetaAnalytic.ShadowEndpoint.reduced_phase._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpointValue24.0.MockThetaAnalytic.ShadowEndpoint.reduced_phase._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpointValue24.0.MockThetaAnalytic.ShadowEndpoint.row_table": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.ShadowEndpointValue24.0.MockThetaAnalytic.ShadowEndpoint.row_table._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORPsiRadial": {
+      "MockThetaAnalytic.order24_half_power": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.order24_odd_block": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPsi.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPsiTerm.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPsiTerm_add_twelve": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPsi_eq_head": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPsi_eq_head24": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPsi_radial_limit24": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonPsi_radial_limit_of_even": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_compensated_sub_identity": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPsiRadial.0.MockThetaAnalytic.oddPrefix_mul_tail": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPsiRadial.0.MockThetaAnalytic.oddPrefix_ne_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPsiRadial.0.MockThetaAnalytic.oddPrefix_ne_zero._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPsiRadial.0.MockThetaAnalytic.radialPlus_mul_watsonPsi": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPsiRadial.0.MockThetaAnalytic.radialPlus_mul_watsonPsi._simp_1_10": [
+        "propext"
+      ],
+      "_private.FORPsiRadial.0.MockThetaAnalytic.radialPlus_mul_watsonPsi._simp_1_2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORPsiRadial.0.MockThetaAnalytic.radialPlus_mul_watsonPsi._simp_1_4": [
+        "propext"
+      ],
+      "_private.FORPsiRadial.0.MockThetaAnalytic.radialPlus_mul_watsonPsi._simp_1_5": [
+        "propext"
+      ],
+      "_private.FORPsiRadial.0.MockThetaAnalytic.radialPlus_mul_watsonPsi._simp_1_6": [
+        "propext"
+      ],
+      "_private.FORPsiRadial.0.MockThetaAnalytic.radialPlus_mul_watsonPsi._simp_1_7": [
+        "propext"
+      ],
+      "_private.FORPsiRadial.0.MockThetaAnalytic.radialPlus_mul_watsonPsi._simp_1_8": [
+        "propext"
+      ],
+      "_private.FORPsiRadial.0.MockThetaAnalytic.radialPlus_mul_watsonPsi._simp_1_9": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FOROrder24": {
+      "MockThetaAnalytic.Order24Source.Lanes.mk.inj": [],
+      "MockThetaAnalytic.Order24Source.Lanes.mk.injEq": [
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.Lanes.mk.sizeOf_spec": [],
+      "MockThetaAnalytic.Order24Source.anchor_resolutions": [],
+      "MockThetaAnalytic.Order24Source.anchor_resolutions._proof_1_1": [],
+      "MockThetaAnalytic.Order24Source.exponent24.eq_1": [],
+      "MockThetaAnalytic.Order24Source.least_order24_packet_period": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.no_mod4_phase24": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.normalizedPacket24._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.normalizedPacket24._proof_2": [
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.normalizedPacket24_eq_averaged": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.normalizedPacket24_eq_cusp": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.observe.eq_1": [],
+      "MockThetaAnalytic.Order24Source.order24_quotient_requirement": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.positive_order24_root": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.smaller_anchor_loses_target": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.smaller_anchor_loses_target._proof_1_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.source_exponent24": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.source_exponent24._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.source_phase24": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.source_phase_shift": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.source_winding4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.source_winding4._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.translate.eq_1": [],
+      "MockThetaAnalytic.Order24Source.translate_observe": [
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.translatedFPacketAtRadius24_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.translatedPacket24._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.translatedPacket24.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.Order24Source.translatedPacket24_eq_boundary": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fPackets24_tendsto_boundary": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.normalized_fPackets24_tendsto_averaged": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialF_sub_radialB_tendsto_order24": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FOROrder24.0.MockThetaAnalytic.Order24Source.translated_sum24": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORWatsonTerms": {
+      "MockThetaAnalytic.norm_watsonTerm_radial_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.norm_watsonTerm_radial_le._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.norm_watsonTerm_radial_le._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialFactor_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialFactor_le._simp_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.summable_norm_watsonTerm": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonTerm.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonTerm_add_halfOrder": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonTerm_geometric": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonTerm_radial_limit": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonTerm_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonTerm_tsum_eq_two_mul_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_factor_ne_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_factor_ne_zero_of_half_power": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_factor_ne_zero_of_half_power._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_numerator_add_halfOrder": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Nat.divModEquiv.congr_simp": [
+        "propext"
+      ]
+    },
+    "FKTYReflection": {
+      "MockThetaAnalytic.fNegPartial_reflection": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fNegPartial_reflection._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fNegPartial_reflection._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fNegPartial_reflection._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fNegPartial_reflection._proof_1_4": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fNegPartial_reflection._proof_1_5": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyPhi_reflected_boundary": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyPhi_reflected_boundary._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fktyPhi_reflected_boundary._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYReflection.0.MockThetaAnalytic.reflectedProduct.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYReflection.0.MockThetaAnalytic.reflectedProduct_at_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYReflection.0.MockThetaAnalytic.reflectedProduct_shift": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYReflection.0.MockThetaAnalytic.reflectedSum.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FKTYReflection.0.MockThetaAnalytic.reflectedSum_shift": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FOREvenRoot": {
+      "MockThetaAnalytic.coupled_phase_fiber_constant_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fPackets_tendsto_boundary": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fPackets_tendsto_boundary_from_anchors": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fPackets_tendsto_boundary_from_anchors._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fPackets_tendsto_boundary_from_coupled_anchors": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fPackets_tendsto_boundary_from_coupled_anchors._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fPackets_tendsto_boundary_of_certificate": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.fPackets_tendsto_boundary_through_order34": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.normalized_fPackets_tendsto_fkty": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.normalized_fPackets_tendsto_fkty._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.order22_shadow_anchor": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.order22_shadow_anchor._proof_1_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.primitive_phase_eq_iff_residue": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialF_compensated_tendsto_boundary": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialF_compensated_tendsto_boundary_of_certificate": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialF_compensated_tendsto_boundary_of_half_power": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialF_compensated_tendsto_boundary_through_order34": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialF_compensated_tendsto_watson": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.radialF_compensated_tendsto_watson._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_10": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_11": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_12": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_13": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_14": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_15": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_16": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_17": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_4": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_5": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_6": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_7": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_8": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_through_seventeen._proof_1_9": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORFiniteTransform": {
+      "MockThetaAnalytic.finite_root_transform": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.finite_root_transform_at": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.pochhammer_eq_prod": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonCoeff.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonCoeff_step": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonCoeff_step._simp_1_2": [
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonCoeff_step._simp_1_3": [
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonCoeff_step._simp_1_4": [
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonCoeff_step._simp_1_5": [
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonCoeff_step._simp_1_6": [
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonCoeff_step._simp_1_7": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonCoeff_step._simp_1_8": [
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonFactor.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonFactor_last": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonFactor_last._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonFactor_last._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonFactor_step": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonSum.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.newtonSum_step": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.powerSum.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORFiniteTransform.0.MockThetaAnalytic.powerSum_step": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORWatsonBoundary": {
+      "MockThetaAnalytic.watsonFiniteBoundary_eq_boundaryValue": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonFiniteBoundary_eq_boundaryValue._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonFiniteBoundary_eq_boundaryValue._simp_1_2": [
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_even_reversed_numerator": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_even_reversed_numerator._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_even_reversed_numerator._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_even_reversed_numerator._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_odd_progression_at_odd_half_period": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.even_odd_factors": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.even_progression_reversed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.grouped_newton_factors": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.inv_factor": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.neg_square_pow": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.neg_square_pow._simp_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.odd_progression_reversed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.pochhammer_inv_pair": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.pochhammer_neg_pair": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.pochhammer_neg_pair._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.pochhammer_neg_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.progressionPrefix.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.progression_inv": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.progression_pochhammer": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.progression_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.progression_value": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.progression_value._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.reversed_watson_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.reversed_watson_sum._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.reversed_watson_tail": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.reversed_watson_tail._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.reversed_watson_term": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.reversed_watson_term._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.square_factorization": [
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.strange_even_pairs": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.strange_even_pairs._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.strange_even_pairs_eq_u": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonBoundary.0.MockThetaAnalytic.strange_even_pairs_eq_u._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORWatsonQuotient": {
+      "MockThetaAnalytic.even_root_order_of_half_power": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.even_root_order_of_half_power._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.even_root_order_of_half_power._proof_1_2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.even_root_order_of_half_power._proof_1_3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.even_root_order_of_half_power._proof_1_4": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_all": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_cleared_identity": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_denominator_blocks": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonQuotient.0.MockThetaAnalytic.watson_geometric_sum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORWatsonCongruence": {
+      "MockThetaAnalytic.X_pow_add_one_dvd_iff_complex_roots": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.map_watsonCongruenceDifference": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonBoundaryCertificate_iff_polynomial_dvd": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonClearedNumerator.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonCongruenceDifference._proof_1": [
+        "propext"
+      ],
+      "MockThetaAnalytic.watsonCongruenceDifference.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_cleared_eq_of_half_power": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_congruence": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_congruence_prime_power": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_even_polynomial_congruence": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_polynomial_congruence": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.eval\u2082_watsonCongruenceDifference": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.map_uPartial": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.watsonCongruenceDifference_eq_cleared": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.watsonCongruenceDifference_eq_cleared._simp_1_2": [
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.watsonCongruenceDifference_eq_cleared._simp_1_3": [
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.watsonCongruenceDifference_eq_cleared._simp_1_4": [
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.watsonCongruenceDifference_eq_cleared._simp_1_5": [
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.watsonCongruenceDifference_eq_cleared._simp_1_6": [
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.watsonCongruenceDifference_eq_cleared._simp_1_7": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.watsonCongruenceDifference_eq_cleared._simp_1_8": [
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.watson_even_difference_eq_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.watson_even_difference_eq_zero._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.watson_even_difference_eq_zero._simp_1_2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonCongruence.0.MockThetaAnalytic.watson_even_difference_eq_zero._simp_1_3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "FORWatsonMultiplicity": {
+      "MockThetaAnalytic.watson_derivative_at_neg_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_derivative_at_neg_one_of_even": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_derivative_at_neg_one_of_even._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_even_quotient_at_neg_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_extra_linear_factor_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_quotient_at_neg_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_quotient_derivative_at_neg_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_quotient_spec": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_at_neg_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_at_neg_one._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_at_neg_one_of_even": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_at_neg_one_of_even._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_at_neg_one_of_odd": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_at_neg_one_of_odd._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_at_neg_one_of_odd._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_at_neg_one_of_odd._proof_1_3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_odd_prime": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_odd_prime._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_one_of_nonzero_slope": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_one_of_nonzero_slope._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_two_of_cast_eq_neg_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_rootMultiplicity_two_of_cast_eq_neg_one._proof_1_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_second_derivative_at_neg_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "MockThetaAnalytic.watson_second_derivative_at_neg_one._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.derivative_half_period_at_neg_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.derivative_half_period_at_neg_one._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.half_period_factorization": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.map_watson_quotient_eval": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.map_watson_quotient_spec": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.oddLinearDifference._proof_1": [
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.oddLinearDifference.eq_1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.oddLinearDifference_at_neg_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.oddLinearDifference_at_neg_one._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.oddLinearDifference_at_neg_one._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.oddLinearDifference_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.odd_half_period_cofactor": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.odd_half_period_cofactor._simp_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.second_derivative_mul_at_neg_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.second_derivative_neg_X_pow_at_neg_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.uPartial_at_neg_one_first_order": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.uPartial_at_neg_one_first_order._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.uPartial_second_derivative_at_neg_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.uPartial_second_derivative_at_neg_one._proof_1_1": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.uPartial_second_derivative_at_neg_one._proof_1_2": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.uPartial_second_derivative_at_neg_one._proof_1_3": [
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.watsonClearedNumerator_succ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.watson_isRoot_neg_one_of_odd": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "_private.FORWatsonMultiplicity.0.MockThetaAnalytic.watson_odd_difference_eq": [
         "Classical.choice",
         "Quot.sound",
         "propext"

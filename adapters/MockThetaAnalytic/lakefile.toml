@@ -26,4 +26,9 @@ roots = [
   "EichlerEndpointFTC", "EichlerPathLimits", "EichlerBridge", "Order34QuantumPackets",
   "FORRadialProducts", "FORCyclotomicBlock", "FORPhiRadial", "FineRank", "FORGaussFinite",
   "FORRadialIdentity", "FORPhiProduct", "FORRankProduct", "FORGaussLimit", "FOROrder34",
+  "ShadowReadings", "ShadowParity", "FranklinRows", "ShadowPentagonal", "ShadowHecke",
+  "ShadowReconstruction", "ShadowPeriod", "GaussianEndpoint", "ShadowEndpoint", "ShadowEndpointValue24",
+  "FORPsiRadial", "FOROrder24", "FORWatsonTerms", "FKTYReflection", "FOREvenRoot",
+  "FORFiniteTransform", "FORWatsonBoundary", "FORWatsonQuotient", "FORWatsonCongruence",
+  "FORWatsonMultiplicity",
 ]

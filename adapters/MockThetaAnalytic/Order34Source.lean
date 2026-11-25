@@ -65,7 +65,7 @@ theorem source_readout_agrees_with_anchor (X : ℤ) :
 
 noncomputable section
 
-private theorem zpow_residue (X : ℤ) {b : ℕ} (hb : b ≠ 0) {ζ : ℂ}
+theorem zpow_residue (X : ℤ) {b : ℕ} (hb : b ≠ 0) {ζ : ℂ}
     (hζ : IsPrimitiveRoot ζ b) : ζ ^ (X % (b : ℤ)) = ζ ^ X := by
   have hpow : ζ ^ (b : ℤ) = 1 := by simpa only [zpow_natCast] using hζ.pow_eq_one
   calc
